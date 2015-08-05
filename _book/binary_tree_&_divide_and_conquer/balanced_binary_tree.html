@@ -4,22 +4,24 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>Introduction | Technical-Interview-Tutorial</title>
+        <title>Balanced Binary Tree | Technical-Interview-Tutorial</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <meta name="description" content="Book generated using GitBook">
+        <meta name="description" content="">
         <meta name="generator" content="GitBook 1.0.3">
         <meta name="HandheldFriendly" content="true"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
-        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
         
     
     
     
-    <link rel="next" href="./binary_tree_&amp;_divide_and_conquer/README.html" />
+    <link rel="next" href="../binary_tree_&amp;_divide_and_conquer/lowest_common_ancestor.html" />
     
+    
+    <link rel="prev" href="../binary_tree_&amp;_divide_and_conquer/maximum_depth_of_binary_tree.html" />
     
 
         
@@ -27,11 +29,11 @@
     <body>
         
         
-<link rel="stylesheet" href="gitbook/style.css">
+<link rel="stylesheet" href="../gitbook/style.css">
 
 
         
-    <div class="book"  data-level="0" data-basepath="." data-revision="1438749868378">
+    <div class="book"  data-level="1.3" data-basepath=".." data-revision="1438749868378">
     
 
 <div class="book-summary">
@@ -49,10 +51,10 @@
         
     
         
-        <li class="chapter active" data-level="0" data-path="index.html">
+        <li class="chapter " data-level="0" data-path="index.html">
             
                 
-                    <a href="./index.html">
+                    <a href="../index.html">
                         <i class="fa fa-check"></i>
                         
                          Introduction
@@ -66,7 +68,7 @@
         <li class="chapter " data-level="1" data-path="binary_tree_&amp;_divide_and_conquer/README.html">
             
                 
-                    <a href="./binary_tree_&amp;_divide_and_conquer/README.html">
+                    <a href="../binary_tree_&amp;_divide_and_conquer/README.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.</b>
@@ -83,7 +85,7 @@
         <li class="chapter " data-level="1.1" data-path="binary_tree_&amp;_divide_and_conquer/template.html">
             
                 
-                    <a href="./binary_tree_&amp;_divide_and_conquer/template.html">
+                    <a href="../binary_tree_&amp;_divide_and_conquer/template.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.1.</b>
@@ -99,7 +101,7 @@
         <li class="chapter " data-level="1.2" data-path="binary_tree_&amp;_divide_and_conquer/maximum_depth_of_binary_tree.html">
             
                 
-                    <a href="./binary_tree_&amp;_divide_and_conquer/maximum_depth_of_binary_tree.html">
+                    <a href="../binary_tree_&amp;_divide_and_conquer/maximum_depth_of_binary_tree.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.2.</b>
@@ -112,10 +114,10 @@
         </li>
     
         
-        <li class="chapter " data-level="1.3" data-path="binary_tree_&amp;_divide_and_conquer/balanced_binary_tree.html">
+        <li class="chapter active" data-level="1.3" data-path="binary_tree_&amp;_divide_and_conquer/balanced_binary_tree.html">
             
                 
-                    <a href="./binary_tree_&amp;_divide_and_conquer/balanced_binary_tree.html">
+                    <a href="../binary_tree_&amp;_divide_and_conquer/balanced_binary_tree.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.3.</b>
@@ -131,7 +133,7 @@
         <li class="chapter " data-level="1.4" data-path="binary_tree_&amp;_divide_and_conquer/lowest_common_ancestor.html">
             
                 
-                    <a href="./binary_tree_&amp;_divide_and_conquer/lowest_common_ancestor.html">
+                    <a href="../binary_tree_&amp;_divide_and_conquer/lowest_common_ancestor.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.4.</b>
@@ -147,7 +149,7 @@
         <li class="chapter " data-level="1.5" data-path="binary_tree_&amp;_divide_and_conquer/binary_tree_level_order_traversal.html">
             
                 
-                    <a href="./binary_tree_&amp;_divide_and_conquer/binary_tree_level_order_traversal.html">
+                    <a href="../binary_tree_&amp;_divide_and_conquer/binary_tree_level_order_traversal.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.5.</b>
@@ -245,7 +247,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="./" >Technical-Interview-Tutorial</a>
+        <a href="../" >Technical-Interview-Tutorial</a>
     </h1>
 </div>
 
@@ -253,9 +255,36 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_1039">
+                    <section class="normal" id="section-gitbook_1041">
                     
-                        <h1 id="technical-interview-tutorial">Technical-Interview-Tutorial</h1>
+                        <h1 id="balanced-binary-tree">Balanced Binary Tree</h1>
+<p>可利用修改過後的maxdepth程式來達到我們要的目的 ，因maxdepth可幫我們算出高度，
+因此我們只要去比較高度是否差一即可，程式如下：</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isBalanced</span><span class="hljs-params">(TreeNode root)</span> </span>{
+        <span class="hljs-keyword">if</span> (root == <span class="hljs-keyword">null</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+        }
+        <span class="hljs-function"><span class="hljs-keyword">return</span> <span class="hljs-title">maxDepth</span><span class="hljs-params">(root)</span> !</span>= -<span class="hljs-number">1</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxDepth</span><span class="hljs-params">(TreeNode root)</span> </span>{
+        <span class="hljs-keyword">if</span> (root == <span class="hljs-keyword">null</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+        }
+        <span class="hljs-keyword">int</span> left = maxDepth(root.left);
+        <span class="hljs-keyword">int</span> right = maxDepth(root.right);
+
+        <span class="hljs-keyword">if</span> (left == -<span class="hljs-number">1</span> || right == -<span class="hljs-number">1</span> || Math.abs(left - right) &gt; <span class="hljs-number">1</span>) {
+            <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+        }
+        <span class="hljs-keyword">return</span> Math.max(left, right) + <span class="hljs-number">1</span>;
+    }
+}
+</code></pre>
+<blockquote>
+<p>時間複雜度：O(n)</p>
+</blockquote>
 
                     
                     </section>
@@ -266,21 +295,23 @@
         </div>
 
         
+        <a href="../binary_tree_&amp;_divide_and_conquer/maximum_depth_of_binary_tree.html" class="navigation navigation-prev " aria-label="Previous page: Maximum Depth of Binary Tree"><i class="fa fa-angle-left"></i></a>
         
-        <a href="./binary_tree_&amp;_divide_and_conquer/README.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Binary Tree &amp; Divide and Conquer"><i class="fa fa-angle-right"></i></a>
+        
+        <a href="../binary_tree_&amp;_divide_and_conquer/lowest_common_ancestor.html" class="navigation navigation-next " aria-label="Next page: Lowest common Ancestor"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
 
         
-<script src="gitbook/app.js"></script>
+<script src="../gitbook/app.js"></script>
 
     
     <script src="https://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
 
     
-    <script src="gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
     
 
 <script>
