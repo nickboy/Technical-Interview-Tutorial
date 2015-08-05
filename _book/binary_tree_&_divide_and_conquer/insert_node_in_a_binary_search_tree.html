@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>Balanced Binary Tree | Technical-Interview-Tutorial</title>
+        <title>Insert Node in a Binary Search Tree | Technical-Interview-Tutorial</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.0.3">
@@ -18,10 +18,8 @@
     
     
     
-    <link rel="next" href="../binary_tree_&amp;_divide_and_conquer/lowest_common_ancestor.html" />
     
-    
-    <link rel="prev" href="../binary_tree_&amp;_divide_and_conquer/maximum_depth_of_binary_tree.html" />
+    <link rel="prev" href="../binary_tree_&amp;_divide_and_conquer/valid_binary_search_tree.html" />
     
 
         
@@ -33,7 +31,7 @@
 
 
         
-    <div class="book"  data-level="1.4" data-basepath=".." data-revision="1438752405769">
+    <div class="book"  data-level="1.9" data-basepath=".." data-revision="1438752405769">
     
 
 <div class="book-summary">
@@ -130,7 +128,7 @@
         </li>
     
         
-        <li class="chapter active" data-level="1.4" data-path="binary_tree_&amp;_divide_and_conquer/balanced_binary_tree.html">
+        <li class="chapter " data-level="1.4" data-path="binary_tree_&amp;_divide_and_conquer/balanced_binary_tree.html">
             
                 
                     <a href="../binary_tree_&amp;_divide_and_conquer/balanced_binary_tree.html">
@@ -210,7 +208,7 @@
         </li>
     
         
-        <li class="chapter " data-level="1.9" data-path="binary_tree_&amp;_divide_and_conquer/insert_node_in_a_binary_search_tree.html">
+        <li class="chapter active" data-level="1.9" data-path="binary_tree_&amp;_divide_and_conquer/insert_node_in_a_binary_search_tree.html">
             
                 
                     <a href="../binary_tree_&amp;_divide_and_conquer/insert_node_in_a_binary_search_tree.html">
@@ -319,36 +317,39 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_1654">
+                    <section class="normal" id="section-gitbook_1658">
                     
-                        <h1 id="balanced-binary-tree">Balanced Binary Tree</h1>
-<p>可利用修改過後的maxdepth程式來達到我們要的目的 ，因maxdepth可幫我們算出高度，
-因此我們只要去比較高度是否差一即可，程式如下：</p>
+                        <h1 id="insert-node-in-a-binary-search-tree">Insert Node in a Binary Search Tree</h1>
 <pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isBalanced</span><span class="hljs-params">(TreeNode root)</span> </span>{
+    <span class="hljs-javadoc">/**
+     *<span class="hljs-javadoctag"> @param</span> root: The root of the binary search tree.
+     *<span class="hljs-javadoctag"> @param</span> node: insert this node into the binary search tree
+     *<span class="hljs-javadoctag"> @return</span>: The root of the new binary search tree.
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> TreeNode <span class="hljs-title">insertNode</span><span class="hljs-params">(TreeNode root, TreeNode node)</span> </span>{
+        <span class="hljs-comment">// write your code here</span>
         <span class="hljs-keyword">if</span> (root == <span class="hljs-keyword">null</span>) {
-            <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+            <span class="hljs-keyword">return</span> node;
         }
-        <span class="hljs-function"><span class="hljs-keyword">return</span> <span class="hljs-title">maxDepth</span><span class="hljs-params">(root)</span> !</span>= -<span class="hljs-number">1</span>;
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxDepth</span><span class="hljs-params">(TreeNode root)</span> </span>{
-        <span class="hljs-keyword">if</span> (root == <span class="hljs-keyword">null</span>) {
-            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+        TreeNode cur = root;
+        TreeNode prev = <span class="hljs-keyword">null</span>;
+        <span class="hljs-keyword">while</span> (cur != <span class="hljs-keyword">null</span>) {
+            prev = cur;
+            <span class="hljs-keyword">if</span> (cur.val &lt; node.val) {
+                cur = cur.right;
+            } <span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">if</span> <span class="hljs-params">(cur.val &gt; node.val)</span> </span>{
+                cur = cur.left;
+            }
         }
-        <span class="hljs-keyword">int</span> left = maxDepth(root.left);
-        <span class="hljs-keyword">int</span> right = maxDepth(root.right);
-
-        <span class="hljs-keyword">if</span> (left == -<span class="hljs-number">1</span> || right == -<span class="hljs-number">1</span> || Math.abs(left - right) &gt; <span class="hljs-number">1</span>) {
-            <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+        <span class="hljs-keyword">if</span> (prev.val &lt; node.val) {
+            prev.right = node;
+        } <span class="hljs-keyword">else</span> {
+            prev.left = node;
         }
-        <span class="hljs-keyword">return</span> Math.max(left, right) + <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">return</span> root;
     }
 }
 </code></pre>
-<blockquote>
-<p>時間複雜度：O(n)</p>
-</blockquote>
 
                     
                     </section>
@@ -359,10 +360,8 @@
         </div>
 
         
-        <a href="../binary_tree_&amp;_divide_and_conquer/maximum_depth_of_binary_tree.html" class="navigation navigation-prev " aria-label="Previous page: Maximum Depth of Binary Tree"><i class="fa fa-angle-left"></i></a>
+        <a href="../binary_tree_&amp;_divide_and_conquer/valid_binary_search_tree.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Valid Binary Search Tree"><i class="fa fa-angle-left"></i></a>
         
-        
-        <a href="../binary_tree_&amp;_divide_and_conquer/lowest_common_ancestor.html" class="navigation navigation-next " aria-label="Next page: Lowest common Ancestor"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

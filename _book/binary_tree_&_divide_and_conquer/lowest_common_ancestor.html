@@ -33,7 +33,7 @@
 
 
         
-    <div class="book"  data-level="1.4" data-basepath=".." data-revision="1438749868378">
+    <div class="book"  data-level="1.5" data-basepath=".." data-revision="1438752405769">
     
 
 <div class="book-summary">
@@ -98,13 +98,29 @@
         </li>
     
         
-        <li class="chapter " data-level="1.2" data-path="binary_tree_&amp;_divide_and_conquer/maximum_depth_of_binary_tree.html">
+        <li class="chapter " data-level="1.2" data-path="binary_tree_&amp;_divide_and_conquer/inorder_traversal.html">
+            
+                
+                    <a href="../binary_tree_&amp;_divide_and_conquer/inorder_traversal.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                         Inorder Traversal
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.3" data-path="binary_tree_&amp;_divide_and_conquer/maximum_depth_of_binary_tree.html">
             
                 
                     <a href="../binary_tree_&amp;_divide_and_conquer/maximum_depth_of_binary_tree.html">
                         <i class="fa fa-check"></i>
                         
-                            <b>1.2.</b>
+                            <b>1.3.</b>
                         
                          Maximum Depth of Binary Tree
                     </a>
@@ -114,13 +130,13 @@
         </li>
     
         
-        <li class="chapter " data-level="1.3" data-path="binary_tree_&amp;_divide_and_conquer/balanced_binary_tree.html">
+        <li class="chapter " data-level="1.4" data-path="binary_tree_&amp;_divide_and_conquer/balanced_binary_tree.html">
             
                 
                     <a href="../binary_tree_&amp;_divide_and_conquer/balanced_binary_tree.html">
                         <i class="fa fa-check"></i>
                         
-                            <b>1.3.</b>
+                            <b>1.4.</b>
                         
                          Balanced Binary Tree
                     </a>
@@ -130,13 +146,13 @@
         </li>
     
         
-        <li class="chapter active" data-level="1.4" data-path="binary_tree_&amp;_divide_and_conquer/lowest_common_ancestor.html">
+        <li class="chapter active" data-level="1.5" data-path="binary_tree_&amp;_divide_and_conquer/lowest_common_ancestor.html">
             
                 
                     <a href="../binary_tree_&amp;_divide_and_conquer/lowest_common_ancestor.html">
                         <i class="fa fa-check"></i>
                         
-                            <b>1.4.</b>
+                            <b>1.5.</b>
                         
                          Lowest common Ancestor
                     </a>
@@ -146,15 +162,63 @@
         </li>
     
         
-        <li class="chapter " data-level="1.5" data-path="binary_tree_&amp;_divide_and_conquer/binary_tree_level_order_traversal.html">
+        <li class="chapter " data-level="1.6" data-path="binary_tree_&amp;_divide_and_conquer/binary_tree_level_order_traversal.html">
             
                 
                     <a href="../binary_tree_&amp;_divide_and_conquer/binary_tree_level_order_traversal.html">
                         <i class="fa fa-check"></i>
                         
-                            <b>1.5.</b>
+                            <b>1.6.</b>
                         
                          Binary Tree Level Order Traversal
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.7" data-path="binary_tree_&amp;_divide_and_conquer/binary_tree_maximum_path_sum.html">
+            
+                
+                    <a href="../binary_tree_&amp;_divide_and_conquer/binary_tree_maximum_path_sum.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                         Binary Tree Maximum Path Sum
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.8" data-path="binary_tree_&amp;_divide_and_conquer/valid_binary_search_tree.html">
+            
+                
+                    <a href="../binary_tree_&amp;_divide_and_conquer/valid_binary_search_tree.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.8.</b>
+                        
+                         Valid Binary Search Tree
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.9" data-path="binary_tree_&amp;_divide_and_conquer/insert_node_in_a_binary_search_tree.html">
+            
+                
+                    <a href="../binary_tree_&amp;_divide_and_conquer/insert_node_in_a_binary_search_tree.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.9.</b>
+                        
+                         Insert Node in a Binary Search Tree
                     </a>
                 
             
@@ -255,7 +319,7 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_1043">
+                    <section class="normal" id="section-gitbook_1659">
                     
                         <h1 id="lowest-common-ancestor">Lowest common Ancestor</h1>
 <p>當每個節點只有left與right兩個指針時，使用以下解法，
@@ -287,6 +351,36 @@
 }
 </code></pre>
 <p>若是只有父節點的話，先把兩個節點到root的path列出來，接著一一比較，一直比較到不同的上一個則是最低共同父節點</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-javadoc">/**
+     *<span class="hljs-javadoctag"> @param</span> root: The root of the binary search tree.
+     *<span class="hljs-javadoctag"> @param</span> A and B: two nodes in a Binary.
+     *<span class="hljs-javadoctag"> @return</span>: Return the least common ancestor(LCA) of the two nodes.
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">private</span> ArrayList&lt;TreeNode&gt; <span class="hljs-title">getPath2Root</span><span class="hljs-params">(TreeNode node)</span> </span>{
+        ArrayList&lt;TreeNode&gt; list = <span class="hljs-keyword">new</span> ArrayList&lt;TreeNode&gt;();
+        <span class="hljs-keyword">while</span> (node != <span class="hljs-keyword">null</span>) {
+            list.add(node);
+            node = node.parent;
+        }
+        <span class="hljs-keyword">return</span> list;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> TreeNode <span class="hljs-title">lowestCommonAncestor</span><span class="hljs-params">(TreeNode node1, TreeNode node2)</span> </span>{
+        ArrayList&lt;TreeNode&gt; list1 = getPath2Root(node1);
+        ArrayList&lt;TreeNode&gt; list2 = getPath2Root(node2);
+
+        <span class="hljs-keyword">int</span> i, j;
+        <span class="hljs-keyword">for</span> (i = list1.size() - <span class="hljs-number">1</span>, j = list2.size() - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span> &amp;&amp; j &gt;= <span class="hljs-number">0</span>; i--, j--) {
+            <span class="hljs-keyword">if</span> (list1.get(i) != list2.get(j)) {
+                <span class="hljs-keyword">return</span> list1.get(i).parent;
+            }
+        }
+        <span class="hljs-keyword">return</span> list1.get(i+<span class="hljs-number">1</span>);
+    }
+
+
+}
+</code></pre>
 
                     
                     </section>

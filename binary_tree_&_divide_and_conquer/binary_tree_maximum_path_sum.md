@@ -1,4 +1,5 @@
-#Binary Tree & Divide and Conquer
+# Binary Tree Maximum Path Sum
+
 
 ```java
 public class Solution {
@@ -45,4 +46,3 @@ public class Solution {
     }
 }
 ```
-
