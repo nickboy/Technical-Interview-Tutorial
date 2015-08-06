@@ -15,5 +15,5 @@
    * [Heap](heap.md)
        * 介紹
    * [Linked List](linked_list.md)
-       * Remove Nth Node From End of Lis
+       * [Remove Nth Node From End of Lis](remove_nth_node_from_end_of_lis.md)
 
