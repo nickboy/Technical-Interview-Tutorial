@@ -14,4 +14,5 @@
 * [Draft](draft.md)
    * [Heap](heap.md)
        * 介紹
+   * Linked List
 
