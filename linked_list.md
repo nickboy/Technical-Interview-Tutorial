@@ -7,6 +7,8 @@ How to implement Linked List data structure
 
 LinkedList Template
 
-LinkedList 特殊解法 ( fast slow pointer )
+common mistake in Linked List
+
+LinkedList 特殊解法 ( Dummy Node, Fast-n-Slow pointer )
 
 Linked List 題目
