@@ -28,5 +28,5 @@
        * [Sort Colors](draft/array/sort_colors.md)
        * [Recover Rotated Sorted Array](draft/array/recover_rotated_sorted_array.md)
        * [Remove Duplicates from Sorted Array](draft/array/remove_duplicates_from_sorted_array.md)
-       * Search a 2D Array
+       * [Search a 2D Array](search_a_2d_array.md)
 
