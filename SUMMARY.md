@@ -13,7 +13,7 @@
    * [Insert Node in a Binary Search Tree](binary_tree_&_divide_and_conquer/insert_node_in_a_binary_search_tree.md)
    * Lowest Common Ancestor
 * [Draft](draft.md)
-   * String
+   * [String](draft/string.md)
    * [Heap](draft/heap.md)
        * 介紹
    * [Linked List](draft/linked_list.md)
