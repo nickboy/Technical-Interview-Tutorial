@@ -23,4 +23,7 @@
        * [Find Peak Element](find_peak_element.md)
        * [Find Minimum in Rotated Sorted Array](find_minimum_in_rotated_sorted_array.md)
        * [First Bad Version](first_bad_version.md)
+       * [Median of Two Sorted Arrays](median_of_two_sorted_arrays.md)
+       * [Merge Sorted Array](merge_sorted_array.md)
+       * [Sort Colors](sort_colors.md)
 
