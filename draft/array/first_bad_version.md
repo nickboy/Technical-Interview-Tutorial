@@ -1,6 +1,8 @@
 # First Bad Version
 [原題網址](http://www.lintcode.com/en/problem/first-bad-version/)
 
+>解法：其實這題就是二分搜尋的變形
+
 ```java
 public int findFirstBadVersion(int n) {
     if ( n == 1 ) {
