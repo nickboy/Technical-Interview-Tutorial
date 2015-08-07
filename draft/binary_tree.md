@@ -11,7 +11,6 @@
 public ArrayList<Integer> preorderTraversal(TreeNode root) {
     // write your code here
     ArrayList<Integer> result = new ArrayList<Integer>();
-    
     if ( root == null ) {
         return result;
     }
@@ -19,7 +18,6 @@ public ArrayList<Integer> preorderTraversal(TreeNode root) {
     // Divide
     ArrayList<Integer> left = preorderTraversal(root.left);
     ArrayList<Integer> right = preorderTraversal(root.right);
-    
     // Conquer
     result.add(root.val);
     result.addAll(left);
@@ -31,11 +29,11 @@ public ArrayList<Integer> preorderTraversal(TreeNode root) {
 
 ```java
 public ArrayList<Integer> preorderTraversal(TreeNode root) {
-    // write your code here
     ArrayList<Integer> result = new ArrayList<Integer>();
     traverse(result, root);
     return result;
 }
+
 public void traverse(ArrayList<Integer> result, TreeNode node) {
     if ( node == null ) {
         return;
@@ -116,12 +114,8 @@ public ArrayList<Integer> inorderTraversal(TreeNode root) {
 ```java
 public ArrayList<Integer> inorderTraversal(TreeNode root) {
     ArrayList<Integer> result = new ArrayList<Integer>();
-    if ( root == null ) {
-        return result;
-    }
-    
     Stack<TreeNode> stack = new Stack<TreeNode>();
-    
+
     TreeNode current = root;
     while ( current != null || !stack.isEmpty() ) {
         while ( current != null ) {
@@ -139,6 +133,78 @@ public ArrayList<Integer> inorderTraversal(TreeNode root) {
 
 [原題網址](http://www.lintcode.com/en/problem/binary-tree-postorder-traversal/)
 
+
+```java
+public ArrayList<Integer> postorderTraversal(TreeNode root) {
+    ArrayList<Integer> result = new ArrayList<Integer>();
+    if ( root == null ) {
+        return result;
+    }
+    // Divide
+    ArrayList<Integer> left = postorderTraversal(root.left);
+    ArrayList<Integer> right = postorderTraversal(root.right);
+    // Conquer
+    result.addAll(left);
+    result.addAll(right);
+    result.add(root.val);
+    
+    return result;
+}
+```
+
+```java
+public ArrayList<Integer> postorderTraversal(TreeNode root) {
+    ArrayList<Integer> result = new ArrayList<Integer>();
+
+    traverse(result, root);
+    return result;
+}
+
+public void traverse(ArrayList<Integer> result, TreeNode node) {
+    if ( node == null ) {
+        return;
+    }
+    
+    traverse(result, node.left);
+    traverse(result, node.right);
+    result.add(node.val);
+}
+```
+
+非遞迴
+```java
+public ArrayList<Integer> postorderTraversal(TreeNode root) {
+    ArrayList<Integer> result = new ArrayList<Integer>();
+    if ( root == null ) {
+        return result;
+    }
+    Stack<TreeNode> stack = new Stack<TreeNode>();
+    TreeNode current = root;
+    TreeNode prev = root;
+    while ( current != null || !stack.isEmpty() ) {
+        while ( current != null ) {
+            stack.push(current);
+            current = current.left;
+        } 
+        if ( !stack.isEmpty() ) {    
+            // 偷看 stack.peek() 的右子
+            TreeNode temp = stack.peek().right; 
+            if ( temp == null || temp == prev ) {  
+            // 如果 stack.peek() 沒有右子樹 或 這個右子樹已經走過：
+            // 這個 stack.peek() 是下一個要走的目標
+                current = stack.pop();    
+                result.add(current.val);    
+                prev = current;    
+                current = null;    
+            } else {    
+            // 被偷窺的 stack.peek() 他的右子是目標
+                current = temp;    
+            }
+        }
+    }
+    return result;
+}
+```
 
 方法：
 D&C
