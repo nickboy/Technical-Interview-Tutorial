@@ -5,11 +5,12 @@
 
 * 前序 Pre-order
 
+[原題網址](http://www.lintcode.com/en/problem/binary-tree-preorder-traversal/)
+
 ```java
 public ArrayList<Integer> preorderTraversal(TreeNode root) {
     // write your code here
     ArrayList<Integer> result = new ArrayList<Integer>();
-    // traverse(result, root);
     
     if ( root == null ) {
         return result;
@@ -26,7 +27,15 @@ public ArrayList<Integer> preorderTraversal(TreeNode root) {
     
     return result;
 }
+```
 
+```java
+public ArrayList<Integer> preorderTraversal(TreeNode root) {
+    // write your code here
+    ArrayList<Integer> result = new ArrayList<Integer>();
+    traverse(result, root);
+    return result;
+}
 public void traverse(ArrayList<Integer> result, TreeNode node) {
     if ( node == null ) {
         return;
@@ -64,6 +73,66 @@ public ArrayList<Integer> preorderTraversal(TreeNode root) {
 
 * 中序 In-order
 
+```java
+public ArrayList<Integer> inorderTraversal(TreeNode root) {
+    ArrayList<Integer> result = new ArrayList<Integer>();
+    
+    traverse(result, root);
+    return result;
+}
+
+public void traverse(ArrayList<Integer> result, TreeNode node) {
+    if ( node == null ) {
+        return;
+    }
+    
+    traverse(result, node.left);
+    result.add(node.val);
+    traverse(result, node.right);
+}
+```
+
+```java
+public ArrayList<Integer> inorderTraversal(TreeNode root) {
+    ArrayList<Integer> result = new ArrayList<Integer>();
+    if ( root == null ) {
+        return result;
+    }
+
+    ArrayList<Integer> left = inorderTraversal(root.left);
+    ArrayList<Integer> right = inorderTraversal(root.right);
+    
+    result.addAll(left);
+    result.add(root.val);
+    result.addAll(right);
+    
+    return result;
+}
+```
+
+非遞歸
+```java
+public ArrayList<Integer> inorderTraversal(TreeNode root) {
+    ArrayList<Integer> result = new ArrayList<Integer>();
+    if ( root == null ) {
+        return result;
+    }
+    
+    Stack<TreeNode> stack = new Stack<TreeNode>();
+    
+    TreeNode current = root;
+    while ( current != null || !stack.isEmpty() ) {
+        while ( current != null ) {
+            stack.push(current);
+            current = current.left;
+        }
+        current = stack.pop();
+        result.add(current.val);
+        current = current.right;
+    }
+    return result;
+}
+```
 * 後序 Post-order
 
 
