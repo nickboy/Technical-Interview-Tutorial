@@ -29,4 +29,5 @@
        * [Sort Colors](draft/array/sort_colors.md)
        * [Recover Rotated Sorted Array](draft/array/recover_rotated_sorted_array.md)
        * [Remove Duplicates from Sorted Array](draft/array/remove_duplicates_from_sorted_array.md)
-
+   * [Binary Tree](draft/binary_tree.md)
+   * 
