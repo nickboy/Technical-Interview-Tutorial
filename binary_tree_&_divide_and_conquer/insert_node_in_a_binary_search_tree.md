@@ -33,9 +33,7 @@ public TreeNode insertNode(TreeNode root, TreeNode node) {
 }
 ```
 
-> 時間複雜度 O(logn)
-
-這題有個小挑戰，如果不准使用遞回方式，要如何處理呢？面對樹的處理，若不是要將所有樹節點遍歷一次，僅是要尋找樹中的特定位置，個人建議輕鬆面對，只要把樹的觀念回到簡單 Linked List 去思考，都能輕鬆解決！
+這題有個小挑戰，如果不准使用遞回方式，要如何處理呢？面對樹的處理，若不是要將所有樹節點遍歷一次，僅是要尋找樹中的特定位置，個人建議輕鬆面對，只要把樹的觀念回到簡單 Linked List 去思考，都能輕鬆解決！回想 Linked List 的模板，每次都要在 `while` 迴圈最後讓 `head = head.next` 。在面對樹關鍵就是，什麼時候要往左邊的叉路`左子樹`，什麼時候要往右邊叉路`右子樹`前進？再來就是我們要找到將要加入新數字 `node` 的父節點 `prev` ，而非位置本身 `cur` ，不然會連不起來，程序如下：
 
 ```java
 public class Solution {
@@ -65,4 +63,4 @@ public class Solution {
 }
 ```
 
-
+> 時間複雜度 O(logn)
