@@ -13,8 +13,6 @@
    * [Insert Node in a Binary Search Tree](binary_tree_&_divide_and_conquer/insert_node_in_a_binary_search_tree.md)
    * Lowest Common Ancestor
 * [Draft](draft.md)
-   * [String](draft/string.md)
-       * Anagrams
    * [Heap](draft/heap.md)
        * 介紹
    * [Linked List](draft/linked_list.md)
@@ -35,6 +33,8 @@
        * [Search for a Range](draft/dynamic_programming/search_for_a_range.md)
    * [Binary Tree](draft/binary_tree.md)
        * Maximum Depth of Binary Tree
+   * [String](draft/string.md)
+       * Anagrams
    * [Dynamic Programming](draft/dynamic_programming.md)
        * [Jump Game](draft/dynamic_programming/jump_game.md)
        * [Longest Increasing Subsequence](draft/dynamic_programming/longest_increasing_subsequence.md)
