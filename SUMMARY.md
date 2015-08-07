@@ -32,5 +32,5 @@
        * [Remove Duplicates from Sorted Array](draft/array/remove_duplicates_from_sorted_array.md)
    * [Binary Tree](draft/binary_tree.md)
        * Maximum Depth of Binary Tree
-   * Dynamic Programming
+   * [Dynamic Programming](draft/dynamic_programming.md)
 
