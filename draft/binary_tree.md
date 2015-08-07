@@ -36,6 +36,31 @@ public void traverse(ArrayList<Integer> result, TreeNode node) {
     traverse(result, node.right);
 }
 ```
+非遞迴
+
+```java
+public ArrayList<Integer> preorderTraversal(TreeNode root) {
+    ArrayList<Integer> result = new ArrayList<Integer>();
+    if ( root == null ) {
+        return result;
+    }
+    
+    Stack<TreeNode> stack = new Stack<TreeNode>();
+    stack.push(root);
+    
+    while ( !stack.isEmpty() ) {
+        TreeNode current = stack.pop();
+        result.add(current.val);
+        if ( current.right != null ) {
+            stack.push(current.right);
+        }
+        if ( current.left != null ) {
+            stack.push(current.left);
+        }
+    }
+    return result;
+}
+```
 
 * 中序 In-order
 
