@@ -73,6 +73,8 @@ public ArrayList<Integer> preorderTraversal(TreeNode root) {
 
 * 中序 In-order
 
+[原題網址](http://www.lintcode.com/en/problem/binary-tree-inorder-traversal/)
+
 ```java
 public ArrayList<Integer> inorderTraversal(TreeNode root) {
     ArrayList<Integer> result = new ArrayList<Integer>();
@@ -135,7 +137,7 @@ public ArrayList<Integer> inorderTraversal(TreeNode root) {
 ```
 * 後序 Post-order
 
-
+[原題網址](http://www.lintcode.com/en/problem/binary-tree-postorder-traversal/)
 
 
 方法：
