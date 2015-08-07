@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [Binary Tree & Divide and Conquer](binary_tree_&_divide_and_conquer/README.md)
+* [Binary Tree](binary_tree_&_divide_and_conquer/README.md)
    * [Template](binary_tree_&_divide_and_conquer/template.md)
    * [Inorder Traversal](binary_tree_&_divide_and_conquer/inorder_traversal.md)
    * [Maximum Depth of Binary Tree](binary_tree_&_divide_and_conquer/maximum_depth_of_binary_tree.md)
