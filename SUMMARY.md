@@ -38,4 +38,5 @@
        * [Longest Increasing Subsequence](draft/dynamic_programming/longest_increasing_subsequence.md)
        * [Triangle](draft/dynamic_programming/triangle.md)
        * [Word Break](draft/dynamic_programming/word_break.md)
+   * String
 
