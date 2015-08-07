@@ -1,9 +1,15 @@
 #Recover Rotated Sorted Array
 
+[原題網址](http://www.lintcode.com/en/problem/recover-rotated-sorted-array/)
+
+
+
 ```java
 public class Solution {
+
     public void recoverRotatedSortedArray(ArrayList<Integer> nums) {
-        // write your code
+        
+        // 首先找出最小值的前一位，即分割點
         int pos = 0;
         for (int i = 0; i < nums.size() - 1; i++) {
             if (nums.get(i) > nums.get(i+1)) {
@@ -32,3 +38,4 @@ public class Solution {
     }
 }
 ```
+>Time Complexity : O(n)
