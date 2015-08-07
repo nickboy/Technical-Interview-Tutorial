@@ -13,6 +13,7 @@
    * [Insert Node in a Binary Search Tree](binary_tree_&_divide_and_conquer/insert_node_in_a_binary_search_tree.md)
    * Lowest Common Ancestor
 * [Draft](draft.md)
+   * String
    * [Heap](draft/heap.md)
        * 介紹
    * [Linked List](draft/linked_list.md)
@@ -38,5 +39,4 @@
        * [Longest Increasing Subsequence](draft/dynamic_programming/longest_increasing_subsequence.md)
        * [Triangle](draft/dynamic_programming/triangle.md)
        * [Word Break](draft/dynamic_programming/word_break.md)
-   * String
 
