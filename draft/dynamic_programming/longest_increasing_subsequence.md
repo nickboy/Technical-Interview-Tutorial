@@ -26,3 +26,4 @@ public int longestIncreasingSubsequence(int[] nums) {
     
 }
 ```
+>Time Complexity：O(n)
