@@ -25,30 +25,30 @@ public class TreeNode {
 }
 ```
 ```java
-public TreeNode sortedListToBST(ListNode head) {  
+public TreeNode sortedListToBST(ListNode head) {
     if ( head == null ) {
         return null;
     }
-    
+
     ListNode dummy = new ListNode(0);
     dummy.next = head;
     ListNode slow = dummy;
     ListNode fast = head;
-    
+
     while ( fast != null && fast.next != null ) {
         slow = slow.next;
         fast = fast.next.next;
     }
-    
+
     TreeNode root = new TreeNode(slow.next.val);
-    
+
     TreeNode right = sortedListToBST(slow.next.next);
     slow.next = null;
     TreeNode left = sortedListToBST(dummy.next);
-        
+
     root.right = right;
     root.left = left;
-    
+
     return result;
 }
 ```

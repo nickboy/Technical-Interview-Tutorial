@@ -13,7 +13,7 @@ public class ListNode {
         this.next = null;
     }
 }
- 
+
 ```
 
 
@@ -27,11 +27,11 @@ public class ListNode {
 ```java
 ListNode removeNthFromEnd(ListNode head, int n) {
     // write your code here
-    
+
     ListNode dummy = new ListNode(0);
     dummy.next = head;
     ListNode slow = dummy;
-    
+
     while ( head != null && n > 0 ) {
         head = head.next;
         n--;
@@ -50,18 +50,18 @@ ListNode removeNthFromEnd(ListNode head, int n) {
 第二種解法
 ```java
 ListNode removeNthFromEnd(ListNode head, int n) {
-    
+
     ListNode dummy = new ListNode(0);
     dummy.next = head;
     ListNode target = dummy;
-    
+
     for ( int i = 0 ; i < n ; i ++ ) {
         if ( head == null ) {
             return null;
         }
         head = head.next;
     }
-        
+
     while ( head != null ) {
         target = target.next;
         head = head.next;

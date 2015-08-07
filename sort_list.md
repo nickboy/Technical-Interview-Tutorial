@@ -3,20 +3,20 @@
 
 
 ```java
-public ListNode sortList(ListNode head) {  
-        
+public ListNode sortList(ListNode head) {
+
         if ( head == null || head.next == null ) {
             return head;
         }
-        
+
         ListNode mid = findMiddle(head);
         ListNode right = sortList(mid.next);
         mid.next = null;
         ListNode left = sortList(head);
-        
+
         return mergeLists(left, right);
     }
-    
+
     public ListNode findMiddle(ListNode head) {
         ListNode slow = head, fast = head.next;
         while ( fast != null && fast.next != null ) {
@@ -25,7 +25,7 @@ public ListNode sortList(ListNode head) {
         }
         return slow;
     }
-    
+
     public ListNode mergeLists(ListNode head1, ListNode head2) {
         ListNode dummy = new ListNode(0);
         ListNode head = dummy;

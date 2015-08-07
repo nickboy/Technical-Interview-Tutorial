@@ -19,4 +19,6 @@
        * [Convert Sorted List to Binary Search Tree](convert_sorted_list_to_binary_search_tree.md)
        * [Copy List with Random Pointer](copy_list_with_random_pointer.md)
        * [Sort List](sort_list.md)
+   * [Array](array.md)
+       * [Find Minimum in Rotated Sorted Array](find_minimum_in_rotated_sorted_array.md)
 

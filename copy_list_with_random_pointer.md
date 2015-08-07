@@ -4,11 +4,11 @@
 
 ```java
 public RandomListNode copyRandomList(RandomListNode head) {
-    
+
     RandomListNode dummy = new RandomListNode(0);
     RandomListNode last = dummy, newNode;
     HashMap<RandomListNode, RandomListNode> map= new HashMap<RandomListNode, RandomListNode>();
-    
+
     while ( head != null ) {
         if ( map.containsKey(head) ) {
             newNode = map.get(head);
@@ -17,7 +17,7 @@ public RandomListNode copyRandomList(RandomListNode head) {
             map.put(head, newNode);
         }
         last.next = newNode;
-        
+
         if ( head.random != null ) {
             if ( map.containsKey(head.random) ) {
                 newNode = map.get(head.random);
@@ -30,6 +30,6 @@ public RandomListNode copyRandomList(RandomListNode head) {
         last = last.next;
         head = head.next;
     }
-    return dummy.next;   
+    return dummy.next;
 }
 ```

@@ -15,4 +15,4 @@
 3. Heap
 4. Tree
 5. Linked List
-6. 
+6.
