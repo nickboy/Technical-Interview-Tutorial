@@ -17,5 +17,5 @@
    * [Linked List](linked_list.md)
        * [Remove Nth Node From End of Lis](remove_nth_node_from_end_of_lis.md)
        * [Convert Sorted List to Binary Search Tree](convert_sorted_list_to_binary_search_tree.md)
-       * Copy List with Random Pointer
+       * [Copy List with Random Pointer](copy_list_with_random_pointer.md)
 
