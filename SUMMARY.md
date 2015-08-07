@@ -14,7 +14,7 @@
 * [Draft](draft.md)
    * [Heap](Draft/heap.md)
        * 介紹
-   * [Linked List](draft/Linked_list.md)
+   * [Linked List](draft/linked_list.md)
        * [Remove Nth Node From End of Lis](draft/linked_list/remove_nth_node_from_end_of_lis.md)
        * [Convert Sorted List to Binary Search Tree](draft/linked_list/convert_sorted_list_to_binary_search_tree.md)
        * [Copy List with Random Pointer](draft/linked_list/copy_list_with_random_pointer.md)
