@@ -1,4 +1,5 @@
 #Triangle
+[原題網址](http://www.lintcode.com/en/problem/triangle/)
 
 ```java
 public int minimumTotal(ArrayList<ArrayList<Integer>> triangle) {
@@ -24,3 +25,4 @@ public int minimumTotal(ArrayList<ArrayList<Integer>> triangle) {
     return res[0][0];
 }
 ```
+>Time Complexity：O(N)
