@@ -1,6 +1,9 @@
 # Remove Duplicates from Sorted Array I
 [原題網址](http://www.lintcode.com/en/problem/remove-duplicates-from-sorted-array/)
 
+最暴力的解法就是新建一個array，每個值只加一次，但是這需要花 O(n) 的空間複雜度，因此有一個 in space 的解法是利用兩個指針 (pos 與 i)， pos 負責遍歷整個 array ， i 負責維護 unique element 的最後一個位置，如果遇到與前一個相同的 element 則直接移動 pos ，否則將該 pos 的值 assign 給 i 的位置。
+
+
 ```java
 public int removeDuplicates(int[] nums) {
     // write your code here
@@ -29,6 +32,8 @@ public int removeDuplicates(int[] nums) {
 >Follow up for "Remove Duplicates":
 
 >What if duplicates are allowed at most twice?
+
+此題解法與上個類似，但需要增加一個變數來紀錄重複的次數。
 
 ```java
 public int removeDuplicates(int[] nums) {
