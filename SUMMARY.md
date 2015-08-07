@@ -35,6 +35,7 @@
        * Maximum Depth of Binary Tree
    * [String](draft/string.md)
        * [Anagrams](draft/string/anagrams.md)
+       * Compare Strings
    * [Dynamic Programming](draft/dynamic_programming.md)
        * [Jump Game](draft/dynamic_programming/jump_game.md)
        * [Longest Increasing Subsequence](draft/dynamic_programming/longest_increasing_subsequence.md)
