@@ -19,7 +19,7 @@
        * [Convert Sorted List to Binary Search Tree](draft/linked_list/convert_sorted_list_to_binary_search_tree.md)
        * [Copy List with Random Pointer](draft/linked_list/copy_list_with_random_pointer.md)
        * [Sort List](draft/linked_list/sort_list.md)
-       * Reverse Linked List
+       * [Reverse Linked List](draft/linked_list/reverse_linked_list.md)
    * [Array](draft/array.md)
        * [Find Peak Element](draft/array/find_peak_element.md)
        * [Find Minimum in Rotated Sorted Array](draft/array/find_minimum_in_rotated_sorted_array.md)
