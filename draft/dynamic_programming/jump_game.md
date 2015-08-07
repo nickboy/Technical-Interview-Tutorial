@@ -1,5 +1,5 @@
 # Jump Game
-
+[原題網址]
 ```java
 public boolean canJump(int[] A) {
     // wirte your code here
