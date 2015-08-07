@@ -16,7 +16,7 @@
 ```
 
 考慮到重複一直做相同動作`比較->左或右`，用遞迴的方式去編寫這個程式是最直覺的，並且想法是帶有 Divide & Conquer 的觀念。
-如果新加入的節點 `node` 是要加入`右子樹`， `root` 的右子樹就是會一個加入 `node` 後回傳的一棵樹。
+如果新加入的節點 `node` 是要加入`右子樹`， `root` 的右子樹就是會一個加入 `node` 後回傳的一棵樹，也就是再呼叫程式自己本身而得到的樹：
 
 ```java
 public TreeNode insertNode(TreeNode root, TreeNode node) {
@@ -32,6 +32,8 @@ public TreeNode insertNode(TreeNode root, TreeNode node) {
     return root;
 }
 ```
+
+> 時間複雜度 O(logn)
 
 這題有個小挑戰，如果不准使用遞回方式，要如何處理呢？面對樹的處理，若不是要將所有樹節點遍歷一次，僅是要尋找樹中的特定位置，個人建議輕鬆面對，只要把樹的觀念回到簡單 Linked List 去思考，都能輕鬆解決！
 
