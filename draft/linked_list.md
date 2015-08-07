@@ -43,7 +43,7 @@ while ( head != null ) {
     head = temp;
 }
 ```
-這個用法我們將會在反轉 Linked List ([Reverse Linked List](/linked_list/)) 題目中見到。
+這個用法我們將會在反轉 Linked List ([Reverse Linked List](/linked_list/reverse_linked_list.md)) 題目中見到。
 - - -
 common mistake in Linked List
 
