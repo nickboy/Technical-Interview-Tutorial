@@ -19,6 +19,7 @@
        * [Convert Sorted List to Binary Search Tree](draft/linked_list/convert_sorted_list_to_binary_search_tree.md)
        * [Copy List with Random Pointer](draft/linked_list/copy_list_with_random_pointer.md)
        * [Sort List](draft/linked_list/sort_list.md)
+       * Reverse Linked List
    * [Array](draft/array.md)
        * [Find Peak Element](draft/array/find_peak_element.md)
        * [Find Minimum in Rotated Sorted Array](draft/array/find_minimum_in_rotated_sorted_array.md)
@@ -28,5 +29,4 @@
        * [Sort Colors](draft/array/sort_colors.md)
        * [Recover Rotated Sorted Array](draft/array/recover_rotated_sorted_array.md)
        * [Remove Duplicates from Sorted Array](draft/array/remove_duplicates_from_sorted_array.md)
-       * [Search a 2D Array](search_a_2d_array.md)
 
