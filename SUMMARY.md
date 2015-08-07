@@ -26,4 +26,6 @@
        * [Median of Two Sorted Arrays](median_of_two_sorted_arrays.md)
        * [Merge Sorted Array](merge_sorted_array.md)
        * [Sort Colors](sort_colors.md)
+       * [Recover Rotated Sorted Array](recover_rotated_sorted_array.md)
+       * [Remove Duplicates from Sorted Array](remove_duplicates_from_sorted_array.md)
 
