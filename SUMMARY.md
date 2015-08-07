@@ -12,7 +12,7 @@
    * [Valid Binary Search Tree](binary_tree_&_divide_and_conquer/valid_binary_search_tree.md)
    * [Insert Node in a Binary Search Tree](binary_tree_&_divide_and_conquer/insert_node_in_a_binary_search_tree.md)
 * [Draft](draft.md)
-   * [Heap](Draft/heap.md)
+   * [Heap](draft/heap.md)
        * 介紹
    * [Linked List](draft/linked_list.md)
        * [Remove Nth Node From End of Lis](draft/linked_list/remove_nth_node_from_end_of_lis.md)
