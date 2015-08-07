@@ -43,20 +43,20 @@ public class Solution {
         if (root == null) {
             return node;
         }
-        TreeNode cur = root;
-        TreeNode prev = null;
-        while (cur != null) {
-            prev = cur;
-            if (cur.val < node.val) {
-                cur = cur.right;
-            } else if (cur.val > node.val) {
-                cur = cur.left;
+        TreeNode current = root;
+        TreeNode previous = null;
+        while ( current != null ) {
+            previous = current;
+            if ( current.val < node.val) {
+                current = current.right;
+            } else {  // if ( current.val > node.val)
+                current = current.left;
             }
         }
-        if (prev.val < node.val) {
-            prev.right = node;
+        if ( previous.val < node.val) {
+            previous.right = node;
         } else {
-            prev.left = node;
+            previous.left = node;
         }
         return root;
     }
