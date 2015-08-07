@@ -1,4 +1,9 @@
-# Validate Binary Search Tree
+# Validate Binary Search Tree
+
+[原題網址](http://www.lintcode.com/en/problem/validate-binary-search-tree/)
+
+> Given a binary tree, determine if it is a valid binary search tree (BST).
+
 不是單單查找左右子節點是否符合即可，得需要檢查特定的範圍
 因此用了lower與upper來確保值是正確的。
 ```java
@@ -29,4 +34,47 @@ public class Solution {
         }
     }
 }
+```
+```java
+     
+    public class ResultType {
+        boolean isValidBST;
+        int max, min;
+        
+        ResultType(boolean isValidBST, int max, int min) {
+            this.isValidBST = isValidBST;
+            this.max = max;
+            this.min = min;
+        }
+    }
+    
+    public boolean isValidBST(TreeNode root) {
+        // write your code here
+        if ( root == null ) {
+            return true;
+        }
+        
+        ResultType result = helper(root, Integer.MAX_VALUE, Integer.MIN_VALUE);
+        
+        return result.isValidBST;
+    }
+    
+    public ResultType helper(TreeNode root, int max, int min) {
+        if ( root == null ) {
+            return new ResultType(true, max, min );
+        }
+        
+        ResultType result = new ResultType(true, Integer.MAX_VALUE, Integer.MIN_VALUE );
+        
+        ResultType left = helper(root.left, root.val-1, min);
+        ResultType right = helper(root.right, max, root.val+1);
+        
+        if ( !left.isValidBST || !right.isValidBST || root.val > max || root.val < min) {
+            result.isValidBST = false;
+            return result;
+        }
+        
+        return result; 
+    }
+    
 ```
