@@ -1,4 +1,4 @@
-#Binary Tree & Divide and Conquer
+#Binary Tree
 
 ```java
 public class Solution {
