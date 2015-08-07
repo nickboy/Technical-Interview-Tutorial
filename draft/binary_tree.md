@@ -5,6 +5,38 @@
 
 * 前序 Pre-order
 
+```java
+public ArrayList<Integer> preorderTraversal(TreeNode root) {
+    // write your code here
+    ArrayList<Integer> result = new ArrayList<Integer>();
+    // traverse(result, root);
+    
+    if ( root == null ) {
+        return result;
+    }
+    
+    // Divide
+    ArrayList<Integer> left = preorderTraversal(root.left);
+    ArrayList<Integer> right = preorderTraversal(root.right);
+    
+    // Conquer
+    result.add(root.val);
+    result.addAll(left);
+    result.addAll(right);
+    
+    return result;
+}
+
+public void traverse(ArrayList<Integer> result, TreeNode node) {
+    if ( node == null ) {
+        return;
+    }
+    result.add(node.val);
+    traverse(result, node.left);
+    traverse(result, node.right);
+}
+```
+
 * 中序 In-order
 
 * 後序 Post-order
