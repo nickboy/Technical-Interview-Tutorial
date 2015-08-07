@@ -20,5 +20,7 @@
        * [Copy List with Random Pointer](copy_list_with_random_pointer.md)
        * [Sort List](sort_list.md)
    * [Array](array.md)
+       * [Find Peak Element](find_peak_element.md)
        * [Find Minimum in Rotated Sorted Array](find_minimum_in_rotated_sorted_array.md)
+       * [First Bad Version](first_bad_version.md)
 
