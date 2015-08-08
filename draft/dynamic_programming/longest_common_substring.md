@@ -32,4 +32,4 @@ public int longestCommonSubstring(String A, String B) {
 }
 ```
 
->Time Complexity：O(n)
+>Time Complexity：O(n^2)
