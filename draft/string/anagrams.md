@@ -2,7 +2,7 @@
 
 [原題網址](http://www.lintcode.com/en/problem/anagrams/)
 
-解題思路：利用 [Compare String](draft/string/compare_strings.md) 的那個程式，去跟陣列中的每個字串作比較，為了不作太多不必要的運算，在此使用了 hasAnagram 陣列，只要之有找到可搭配的 anagram 則把該位置設為真，一但遇到為真，則把該字串加入結果裡。
+解題思路：利用 [Compare String](draft/string/compare_strings.md) 中的程式來算兩者是否為 Anagram ，去跟陣列中的每個字串作比較，為了不作太多不必要的運算，在此使用了 hasAnagram 陣列，只要之有找到可搭配的 anagram 則把該位置設為真，一但遇到為真，則把該字串加入結果裡。
 
 ```java
 public class Solution {
