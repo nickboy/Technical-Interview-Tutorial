@@ -1,26 +1,28 @@
 #Compare Strings
 
-解題思路：利用
+解題思路：利用一個陣列代表字串中出現的字元，若出現在 s 字串，則陣列該位置加一，若出現在 t 字串，則陣列該位置減一，最後利用一個循環確保陣列中每個值皆為零即可。
 
 ```java
-public boolean compareStrings(String A, String B) {
-    HashMap<Character, Integer> map = new HashMap<Character,Integer>();
-    for (int i = 0; i < A.length(); i++) {
-        char c = A.charAt(i);
-        if (!map.containsKey(c)) {
-            map.put(c, 1);
-        } else {
-            map.put(c, map.get(c) + 1);
-        }
+private boolean isAnagram(String s, String t) {
+
+    if (s.length() != t.length()) {
+        return false;
     }
-    for (int i = 0; i < B.length(); i++) {
-        char c = B.charAt(i);
-        if (!map.containsKey(c) || map.get(c) == 0) {
+
+    int[] map = new int[256];
+    for (int i = 0; i < s.length(); i++) {
+        map[s.charAt(i) - 'a']++;
+        map[t.charAt(i) - 'a']--;
+    }
+
+    for (int i = 0; i < 256; i++) {
+        if (map[i] != 0) {
             return false;
-        } else {
-            map.put(c, map.get(c) - 1);
         }
     }
+
     return true;
 }
 ```
+
+>Time Complexity：O(n)
