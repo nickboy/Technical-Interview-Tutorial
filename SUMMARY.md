@@ -32,7 +32,7 @@
        * [Remove Duplicates from Sorted Array](draft/array/remove_duplicates_from_sorted_array.md)
        * [Search for a Range](draft/dynamic_programming/search_for_a_range.md)
    * [Binary Tree](draft/binary_tree.md)
-       * Construct Binary Tree from Preorder and Inorder Traversal
+       * [Construct Binary Tree from Preorder and Inorder Traversal](draft/binary_tree/construct_binary_tree_from_preorder_and_inorder_traversal.md)
    * [String](draft/string.md)
        * [Anagrams](draft/string/anagrams.md)
        * [Compare Strings](draft/string/compare_strings.md)
