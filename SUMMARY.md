@@ -33,6 +33,7 @@
        * [Search for a Range](draft/dynamic_programming/search_for_a_range.md)
    * [Binary Tree](draft/binary_tree.md)
        * Maximum Depth of Binary Tree
+       * Construct Binary Tree from Preorder and Inorder Traversal
    * [String](draft/string.md)
        * [Anagrams](draft/string/anagrams.md)
        * [Compare Strings](draft/string/compare_strings.md)
