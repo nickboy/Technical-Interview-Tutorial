@@ -6,7 +6,7 @@
 
 > 給你一顆二元樹的後序遍歷和後續遍歷，要把原本的樹重新構建出來。
 
-想法跟[Construct Binary Tree from Preorder and Inorder Traversal](draft/binary_tree/draft/binary_tree/construct_binary_tree_from_preorder_and_inorder_traversal.md)一模一樣
+想法跟[Construct Binary Tree from Preorder and Inorder Traversal](/draft/binary_tree/draft/binary_tree/construct_binary_tree_from_preorder_and_inorder_traversal.md)一模一樣
 
 
 ```java
