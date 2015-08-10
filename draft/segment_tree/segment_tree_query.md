@@ -42,3 +42,11 @@ public int query(SegmentTreeNode root, int start, int end) {
     return Math.max(leftMax, rightMax);
 }
 ```
+
+
+#Segment Tree Query II
+
+請注意，此題為求和型線段樹，與第一題不同
+
+[原題網址](http://www.lintcode.com/en/problem/segment-tree-query-ii/)
+
