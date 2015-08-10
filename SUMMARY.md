@@ -45,4 +45,5 @@
    * [Segment Tree](draft/segment_tree.md)
        * [Segment Tree Query](draft/segment_tree/segment_tree_query.md)
        * [Segment Tree Build](draft/segment_tree/segment_tree_build.md)
+       * Segment Tree Modify
 
