@@ -46,5 +46,5 @@
        * [Segment Tree Query](draft/segment_tree/segment_tree_query.md)
        * [Segment Tree Build](draft/segment_tree/segment_tree_build.md)
        * [Segment Tree Modify](draft/segment_tree/segment_tree_modify.md)
-       * Interval Sum
+       * [Interval Sum](draft/segment_tree/interval_sum.md)
 
