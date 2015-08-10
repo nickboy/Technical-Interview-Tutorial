@@ -43,4 +43,5 @@
        * [Word Break](draft/dynamic_programming/word_break.md)
        * [Longest Common Substring](draft/dynamic_programming/longest_common_substring.md)
    * [Segment Tree](draft/segment_tree.md)
+       * Segment Tree Query
 
