@@ -36,7 +36,7 @@
        * [Construct Binary Tree from Inorder and Postorder Traversal](draft/binary_tree/construct_binary_tree_from_inorder_and_postorder_traversal.md)
        * [Binary Tree Level Order Traversal](draft/binary_tree/binary_tree_level_order_traversal.md)
        * [Search Range in Binary Search Tree](draft/binary_tree/search_range_in_binary_search_tree.md)
-       * Remove Node in Binary Search Tree
+       * [Remove Node in Binary Search Tree](draft/binary_tree/remove_node_in_binary_search_tree.md)
    * [String](draft/string.md)
        * [Anagrams](draft/string/anagrams.md)
        * [Compare Strings](draft/string/compare_strings.md)
