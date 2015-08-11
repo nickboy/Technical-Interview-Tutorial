@@ -25,32 +25,28 @@ public TreeNode removeNode(TreeNode root, int value) {
 }
 ```
 
+刪除頭的時候有以下三種情況：
+
+1. **沒有左子樹也沒有右子樹**，換言之，在一棵樹上最底層的葉子。這種情況非常簡單，我們直接刪除不用考慮太多，回傳一顆空的樹 `null` 。
+2. **只有一左邊子樹或右邊子樹**，這種情況也很容易解決。將節點一邊的子樹直接整串提上來回傳即可。
+3. **同時有左子樹與右子樹**，這是一個必須仔細思考的情況。這時候有兩種解法，一種是將左邊子樹中最大的的節點取代現在的節點；或是將右邊子樹中最小的節點取代現在的節點。程式碼將實現前種方法。一種取巧的想法，如果我們將左邊數中的最大值 `TreeNode target` 取代現在的節點時，代表這個節點將被從左子樹中移除，我們遞迴地呼叫 `removeNode(TreeNode root, int value)` 來獲得正確的左子樹。
 
 ```java
 public TreeNode removeRoot(TreeNode root, int value) {
     
     if ( root.left == null && root.right == null ) {
         return null;
-    } else 
-    if ( root.left == null || root.right == null ) {
+    } else if ( root.left == null || root.right == null ) {
         if ( root.left == null ) {
             return root.right;
         } else {
             return root.left;
         }
     } else {
-        if ( root.left.right == null ) {
-            root.left.right = root.right;
-            return root.left;
-        } else if ( root.right.left == null ) {
-            root.right.left = root.left;
-            return root.right;
-        } else {
-            TreeNode target = findMax(root.left);
-            target.left = removeNode(root.left, target.val);
-            target.right = root.right;
-            return target;
-        }
+        TreeNode target = findMax(root.left);
+        target.left = removeNode(root.left, target.val);
+        target.right = root.right;
+        return target;
     }
 }
 
@@ -61,3 +57,4 @@ public TreeNode findMax(TreeNode root) {
     return root;
 }
 ```
+
