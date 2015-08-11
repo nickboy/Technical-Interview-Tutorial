@@ -47,10 +47,10 @@
        * [Longest Common Substring](draft/dynamic_programming/longest_common_substring.md)
    * [Segment Tree](draft/segment_tree.md)
        * [Segment Tree Query](draft/segment_tree/segment_tree_query.md)
+       * [Segment Tree Query II](draft/segment_tree/segment_tree_query_ii.md)
        * [Segment Tree Build](draft/segment_tree/segment_tree_build.md)
        * [Segment Tree Modify](draft/segment_tree/segment_tree_modify.md)
        * [Interval Sum](draft/segment_tree/interval_sum.md)
        * [Interval Sum II](draft/segment_tree/interval_sum_ii.md)
        * [Count of Smaller Number](draft/segment_tree/count_of_smaller_number.md)
-       * [Segment Tree Query II](draft/segment_tree/segment_tree_query_ii.md)
 
