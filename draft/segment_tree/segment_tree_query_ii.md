@@ -9,7 +9,7 @@ public int query(SegmentTreeNode root, int start, int end) {
         return 0;
     }
     
-    //注意這裡，
+    //注意這裡，與傳統型線段樹不同！
     if (start <= root.start && root.end <= end) {
         return root.count;
     }
