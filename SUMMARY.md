@@ -51,4 +51,5 @@
        * [Segment Tree Modify](draft/segment_tree/segment_tree_modify.md)
        * [Interval Sum](draft/segment_tree/interval_sum.md)
        * [Count of Smaller Number](draft/segment_tree/count_of_smaller_number.md)
+       * Interval Sum II
 
