@@ -1,3 +1,12 @@
+# 2 Sum
+
+[原題網址](http://www.lintcode.com/en/problem/2-sum/)
+
+> Given an array of integers, find two numbers such that they add up to a specific target number.
+
+> The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2. Please note that your returned answers (both index1 and index2) are NOT zero-based.
+
+
 
 ```java
 public int[] twoSum(int[] numbers, int target) {
