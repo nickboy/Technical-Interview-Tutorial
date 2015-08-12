@@ -2,6 +2,16 @@
 
 [Combinations](unknown/combinations.md)
 
-[Combination Sum](unknown/combanation_sum.md)
+[Combination Sum](unknown/combination_sum.md)
+
+[Combination Sum II](unknown/combination_sum_ii.md)
+
+[Topological Sorting](unknown/topological_sorting.md)
+
+[Word Ladder](unknown/word_ladder.md)
+
+[N-Queens](unknown/n-queens.md)
+
+
 
 
