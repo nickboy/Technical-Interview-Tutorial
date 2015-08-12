@@ -41,13 +41,13 @@
        * [Anagrams](draft/string/anagrams.md)
        * [Compare Strings](draft/string/compare_strings.md)
    * [Dynamic Programming](draft/dynamic_programming.md)
+       * Palindrome Partition
+           * draft/dynamic_programming/palindrome_partition
        * [Jump Game](draft/dynamic_programming/jump_game.md)
        * [Longest Increasing Subsequence](draft/dynamic_programming/longest_increasing_subsequence.md)
        * [Triangle](draft/dynamic_programming/triangle.md)
        * [Word Break](draft/dynamic_programming/word_break.md)
        * [Longest Common Substring](draft/dynamic_programming/longest_common_substring.md)
-       * Palindrome Partition
-           * draft/dynamic_programming/palindrome_partition
        * [Palindrome Partition II](draft/dynamic_programming/palindrome_partition_ii.md)
    * [Segment Tree](draft/segment_tree.md)
        * [Segment Tree Query](draft/segment_tree/segment_tree_query.md)
