@@ -63,5 +63,6 @@
        * [Topological Sorting](draft/unknown/topological_sorting.md)
        * [Word Ladder](draft/unknown/word_ladder.md)
        * [N-Queens](draft/unknown/n-queens.md)
-   * [Graph](/draft/graph.md)
+   * [Graph](draft/graph.md)
+       * Find the Connected Component in the Undirected Graph
 
