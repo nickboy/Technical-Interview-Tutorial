@@ -41,8 +41,6 @@
        * [Anagrams](draft/string/anagrams.md)
        * [Compare Strings](draft/string/compare_strings.md)
    * [Dynamic Programming](draft/dynamic_programming.md)
-       * Palindrome Partition
-           * draft/dynamic_programming/palindrome_partition
        * [Jump Game](draft/dynamic_programming/jump_game.md)
        * [Longest Increasing Subsequence](draft/dynamic_programming/longest_increasing_subsequence.md)
        * [Triangle](draft/dynamic_programming/triangle.md)
