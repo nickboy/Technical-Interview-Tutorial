@@ -60,5 +60,5 @@
        * [Combination Sum](draft/unknown/combination_sum.md)
        * [Combination Sum II](draft/unknown/combination_sum_ii.md)
        * [Topological Sorting](draft/unknown/topological_sorting.md)
-       * Word Ladder
+       * [Word Ladder](draft/unknown/word_ladder.md)
 
