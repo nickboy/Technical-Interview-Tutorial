@@ -65,5 +65,5 @@
        * [N-Queens](draft/unknown/n-queens.md)
    * [Graph](draft/graph.md)
        * [Find the Connected Component in the Undirected Graph](draft/graph/find_the_connected_component_in_the_undirected_graph.md)
-   * High Frequency
+   * [High Frequency](draft/high_frequency.md)
 
