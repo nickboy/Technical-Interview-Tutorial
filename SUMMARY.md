@@ -68,4 +68,5 @@
    * [High Frequency](draft/high_frequency.md)
        * [Sum](draft/hight_frequency/sum.md)
            * [2 Sum](draft/high_frequency/sum/2_sum.md)
+           * 3 Sum
 
