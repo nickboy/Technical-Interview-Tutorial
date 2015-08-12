@@ -61,4 +61,5 @@
        * [Combination Sum II](draft/unknown/combination_sum_ii.md)
        * [Topological Sorting](draft/unknown/topological_sorting.md)
        * [Word Ladder](draft/unknown/word_ladder.md)
+       * N-Queens
 
