@@ -62,7 +62,7 @@
        * [Combination Sum](draft/unknown/combination_sum.md)
        * [Combination Sum II](draft/unknown/combination_sum_ii.md)
        * [Topological Sorting](draft/unknown/topological_sorting.md)
-       * [Word Ladder](draft/unknown/word_ladder.md)
+       * [Word Ladder I & II](draft/unknown/word_ladder.md)
        * [N-Queens](draft/unknown/n-queens.md)
    * [Graph](draft/graph.md)
        * [Find the Connected Component in the Undirected Graph](draft/graph/find_the_connected_component_in_the_undirected_graph.md)
