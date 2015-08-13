@@ -58,6 +58,7 @@
        * [Interval Sum](draft/segment_tree/interval_sum.md)
        * [Interval Sum II](draft/segment_tree/interval_sum_ii.md)
        * [Count of Smaller Number](draft/segment_tree/count_of_smaller_number.md)
+       * Interval Minimum Number
    * [unknown](draft/unknown.md)
        * [Combinations](draft/unknown/combinations.md)
        * [Combination Sum](draft/unknown/combination_sum.md)
