@@ -7,72 +7,54 @@
 > Each solution contains a distinct board configuration of the n-queens' placement, where 'Q' and '.' both indicate a queen and an empty space respectively.
 
 ```java
-ArrayList<ArrayList<String>> solveNQueens(int n) {
-    ArrayList<ArrayList<String>> answer = new ArrayList<ArrayList<String>>();
-    
-    if ( n<=0 ) {
-        return answer;
+public ArrayList<ArrayList<String>> solveNQueens(int n) {
+    ArrayList<ArrayList<String>> result = new ArrayList<ArrayList<String>>();
+    if ( n < 1 ) {
+        return result;
     }
-    
-    ArrayList<Integer> list = new ArrayList<Integer>();
-    ArrayList<Integer> nums = new ArrayList<Integer>();
-    for ( int i=0 ; i<n ; i++ ) {
-        nums.add(i);
-    }
-    permuteHelper(answer, list, nums, n);
-    
-    return answer;
+    helper(result, new ArrayList<Integer>(), n);
+    return result;
 }
 
-public void permuteHelper(ArrayList<ArrayList<String>> answer, ArrayList<Integer> list, ArrayList<Integer> nums, int n) {
-    
-    if( list.size() == n ) {
-        answer.add(drawBoard(new ArrayList<Integer>(list)));
+public void helper(ArrayList<ArrayList<String>> result, ArrayList<Integer> list, int n) {
+    if ( list.size() == n ) {
+        // result.add(new ArrayList<Integer>(list));
+        result.add(draw(list));
         return;
     }
     
-    for ( int i=0 ; i<nums.size() ; i++ ) {
-        if( !isValid(list, nums.get(i))) {
+    for ( int i = 0 ; i < n ; i++ ) {
+        if ( !isValid(list, i) ) {
             continue;
         }
-        
-        list.add(nums.get(i));
-        nums.remove(i);
-        permuteHelper(answer, list, nums, n);
-        nums.add(i, list.get(list.size()-1));
+        list.add(i);
+        helper(result, list, n);
         list.remove(list.size()-1);
-    } 
+    }
 }
 
-public Boolean isValid(ArrayList<Integer> cols, int col) {
-    
-    for( int i=0 ; i<cols.size() ; i++ ) {
-        // right-top to left-bottom
-        if( cols.get(i)+cols.size()-i == col ) {
+public boolean isValid(ArrayList<Integer> list, int n) {
+    for ( int i = 0 ; i < list.size() ; i++ ) {
+        if ( list.get(i).equals(n) ) {
             return false;
         }
-        // left-top to right-bottom
-        if( cols.get(i)-cols.size()+i == col ) {
-            return false;   
+        if ( list.size() + n == i + list.get(i) ) {
+            return false;
+        }
+        if ( list.size() - n == i - list.get(i) ) {
+            return false;
         }
     }
     return true;
 }
 
-public ArrayList<String> drawBoard(ArrayList<Integer> cols) {
-    
+public ArrayList<String> draw(ArrayList<Integer> list) {
     ArrayList<String> board = new ArrayList<String>();
-    
-    for( int i=0 ; i<cols.size() ; i++ ) {
-        String row = "";
-        for( int k=0 ; k<cols.size() ; k++ ) {
-            if ( k == cols.get(i) ) {
-                row += "Q";
-            } else {
-                row += ".";
-            }
-        }
-        board.add(row);
+    for ( int i = 0 ; i < list.size() ; i++ ) {
+        char[] row = new char[list.size()];
+        Arrays.fill(row, '.');
+        row[list.get(i)] = 'Q';
+        board.add(new String(row));
     }
     return board;
 }
