@@ -4,8 +4,6 @@
 
 與第一題相同，唯一不同的地方是陣列的值會改變，若使用原始的暴力法或排序搜尋法複雜度會相當高，在此用線段樹來實作，可達到查詢與修改只要 O(logN) 的複雜度。
 
-程式如下，不知為何 lintcode 過不了，可能有小 bug ，日後若找出 bug 再進行修改。
-
 ```java
 public class Solution {
     
@@ -62,7 +60,7 @@ public class Solution {
     
     public int queryST(SegmentTreeNode root, int start, int end) {
         
-        if (root.start == start || root.end == end) {
+        if (root.start == start && root.end == end) {
             return root.sum;
         }
         
