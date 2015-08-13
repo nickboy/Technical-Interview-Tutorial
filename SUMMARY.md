@@ -48,6 +48,7 @@
        * [Longest Common Substring](draft/dynamic_programming/longest_common_substring.md)
        * [Palindrome Partition II](draft/dynamic_programming/palindrome_partition_ii.md)
        * [Palindrome Partition](draft/dynamic_programming/palindrome_partition.md)
+       * Edit Distance
    * [Segment Tree](draft/segment_tree.md)
        * [Segment Tree Query](draft/segment_tree/segment_tree_query.md)
        * [Segment Tree Query II](draft/segment_tree/segment_tree_query_ii.md)
