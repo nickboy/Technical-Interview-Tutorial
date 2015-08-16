@@ -75,6 +75,7 @@
        * [Number of Islands](draft/graph/number_of_islands.md)
        * [Number of Islands II](draft/graph/number_of_islands_ii.md)
        * [Trapping Rain Water](draft/graph/trapping_rain_water.md)
+       * Find the Connected Set in the Directed Graph
    * [High Frequency](draft/high_frequency.md)
        * [Sum](draft/hight_frequency/sum.md)
            * [2 Sum](draft/high_frequency/sum/2_sum.md)
