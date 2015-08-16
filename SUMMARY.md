@@ -19,6 +19,7 @@
    * [Remove Node in Binary Search Tree](binary_tree/remove_node_in_binary_search_tree.md)
 * [Heap](heap.md)
    * [Heapify](heap/heapify.md)
+   * [Data Stream Median](heap/data_stream_median.md)
 * [Linked List](linked_list.md)
    * [Remove Nth Node From End of Lis](linked_list/remove_nth_node_from_end_of_lis.md)
    * [Convert Sorted List to Binary Search Tree](linked_list/convert_sorted_list_to_binary_search_tree.md)
@@ -79,3 +80,4 @@
    * [Topological Sorting](unknown/topological_sorting.md)
    * [Word Ladder I & II](unknown/word_ladder.md)
    * [N-Queens](unknown/n-queens.md)
+

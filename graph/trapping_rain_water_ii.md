@@ -82,7 +82,7 @@ public class Solution {
                     // 記得trap I的是找最高的，所以記得跟原本的高度作比較再offer進 queue中。
                     queue.offer(new Pillar(newX, newY, Math.max(cur.height,heights[newX][newY])));
                     
-                    // 重點是怎麼處理答案，就是把目前的高度與鄰居的高度相減，如果鄰居較高(把鄰居當牆)，
+                    // 重點是怎麼處理答案，就是把目前的高度與鄰居的高度相減，如果鄰居較低(把自己當牆)，
                     // 則代表我們可以灌水進去，否則放棄。
                     ans += Math.max(0, cur.height - heights[newX][newY]);
                 }
