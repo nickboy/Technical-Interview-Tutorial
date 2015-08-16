@@ -1,5 +1,9 @@
 # Data Stream Median
-[原題連結]()
+[原題連結](http://www.lintcode.com/en/problem/data-stream-median/)
+
+題意：求陣列中每個階段的中位數，Result[i]即求nums[0]到nums[i]的中間數
+
+解題思路：詳述於註解中，程式碼如下。
 
 ```java
 public int[] medianII(int[] nums) {
