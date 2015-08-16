@@ -33,6 +33,7 @@
        * [Recover Rotated Sorted Array](draft/array/recover_rotated_sorted_array.md)
        * [Remove Duplicates from Sorted Array](draft/array/remove_duplicates_from_sorted_array.md)
        * [Search for a Range](draft/dynamic_programming/search_for_a_range.md)
+       * Partition Array by Odd and Even
    * [Binary Tree](draft/binary_tree.md)
        * [Construct Binary Tree from Preorder and Inorder Traversal](draft/binary_tree/construct_binary_tree_from_preorder_and_inorder_traversal.md)
        * [Construct Binary Tree from Inorder and Postorder Traversal](draft/binary_tree/construct_binary_tree_from_inorder_and_postorder_traversal.md)
