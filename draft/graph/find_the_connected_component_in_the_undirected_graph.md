@@ -1,6 +1,6 @@
 # Find the Connected Component in the Undirected Graph
 
-[原題網址](Find the Connected Component in the Undirected Graph)
+[原題網址](http://www.lintcode.com/en/problem/find-the-connected-component-in-the-undirected-graph/)
 
 解題思路：使用併查集( Union & Find) 來幫助我們找出所有 Connected Components，不斷的遍歷所圖中的所有節點，並不斷的作 union 的動作把相同 component 的節點放入同一個集合中。
 
