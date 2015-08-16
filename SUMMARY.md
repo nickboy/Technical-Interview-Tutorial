@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-   * Stack
+* Stack
 * [Binary Tree](binary_tree.md)
    * [Template](binary_tree/template.md)
    * [Inorder Traversal](binary_tree/inorder_traversal.md)
