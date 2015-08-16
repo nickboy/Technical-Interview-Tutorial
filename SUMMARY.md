@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
 * Stack
+   * Evaluate Reverse Polish Notation
 * [Binary Tree](binary_tree.md)
    * [Template](binary_tree/template.md)
    * [Inorder Traversal](binary_tree/inorder_traversal.md)
