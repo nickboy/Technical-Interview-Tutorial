@@ -1,6 +1,6 @@
-#Number of Islands
+# Number of Islands
 
-[]()
+[原題網址](http://www.lintcode.com/en/problem/number-of-islands/)
 
 題意：0代表海洋，1代表陸地，找出連通陸地的個數
 
@@ -62,3 +62,43 @@ public class Solution {
 ```
 
 >Time Complexity：O($$N^{2}$$)
+
+```java
+public int numIslands(boolean[][] grid) {
+    if ( grid == null || grid.length == 0 || grid[0].length == 0 ) {
+        return 0;
+    }
+    
+    int[] dx = {1,0,-1,0};
+    int[] dy = {0,-1,0,1};
+    int m = grid.length;
+    int n = grid[0].length;
+    
+    Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+    int count = 0;
+    
+    for ( int i = 0 ; i < m ; i++ ) {
+        for ( int j = 0 ; j < n ; j++ ) {
+            if ( grid[i][j] && !map.containsKey(j*m+i) ) {
+                Queue<Integer> queue = new LinkedList<Integer>();
+                queue.offer(j*m + i);
+                count++;
+                while ( !queue.isEmpty() ) {
+                    int current = queue.poll();
+                    map.put(current, count);
+                    int x = current%m;
+                    int y = current/m;
+                    for ( int l = 0 ; l < 4 ; l++ ) {
+                        int new_x = x + dx[l];
+                        int new_y = y + dy[l];
+                        if ( new_x >= 0 && new_x < m && new_y >= 0 && new_y < n && grid[new_x][new_y] && !map.containsKey(new_y*m+new_x) ) {
+                            queue.offer(new_y*m+new_x);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    return count;
+}
+```
