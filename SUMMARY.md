@@ -84,5 +84,5 @@
    * [N-Queens](unknown/n-queens.md)
 * [Sliding Window](sliding_window.md)
    * [Sliding Window Median](sliding_window/sliding_window_median.md)
-   * Sliding Window Maximum
+   * [Sliding Window Maximum](sliding_window/sliding_window_maximum.md)
 
