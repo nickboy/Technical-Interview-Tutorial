@@ -30,7 +30,7 @@ public ArrayList<Integer> maxSlidingWindow(int[] nums, int k) {
 }
 ```
 ---
-維護maxheap的方法，也會超時
+維護maxheap的方法，也會超時，除非加入hashheap來幫助加速刪除的動作
 
 ```java
 public ArrayList<Integer> maxSlidingWindow(int[] nums, int k) {
