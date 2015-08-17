@@ -83,5 +83,5 @@
    * [Word Ladder I & II](unknown/word_ladder.md)
    * [N-Queens](unknown/n-queens.md)
 * [Sliding Window](sliding_window.md)
-   * Sliding Window Median
+   * [Sliding Window Median](sliding_window/sliding_window_median.md)
 
