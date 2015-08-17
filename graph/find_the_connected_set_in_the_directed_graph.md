@@ -1,4 +1,4 @@
-# Find the Connected Set in the Directed Graph
+# Find the Weak Connected Component in the Directed Graph
 
 [原題網址](http://www.lintcode.com/en/problem/find-the-weak-connected-component-in-the-directed-graph/)
 
@@ -128,3 +128,72 @@ public class Solution {
     }
 }
 ```
+
+```java
+/**
+ * Definition for Directed graph.
+ * class DirectedGraphNode {
+ *     int label;
+ *     ArrayList<DirectedGraphNode> neighbors;
+ *     DirectedGraphNode(int x) { label = x; neighbors = new ArrayList<DirectedGraphNode>(); }
+ * };
+ */
+public class Solution {
+    /**
+     * @param nodes a array of Directed graph node
+     * @return a connected set of a directed graph
+     */
+    Map<DirectedGraphNode, DirectedGraphNode> father = new HashMap<DirectedGraphNode, DirectedGraphNode>();
+    
+    public List<List<Integer>> connectedSet2(ArrayList<DirectedGraphNode> nodes) {
+        // union join
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
+        for ( DirectedGraphNode node : nodes ) {
+            father.put(node, node);
+        }
+        for ( DirectedGraphNode node : nodes ) {
+            for ( DirectedGraphNode neighbor : node.neighbors ) {
+                if ( find(node) != find(neighbor) ) {
+                    union(node, neighbor);
+                }
+            }
+        }
+        
+        Map<Integer, List<Integer>> map = new HashMap<Integer, List<Integer>>(); 
+        
+        for ( DirectedGraphNode node : nodes ) {
+            if ( !map.containsKey(find(node).label) ) {
+                map.put(find(node).label, new ArrayList<Integer>());
+            }
+            List<Integer> row = map.get(find(node).label);
+            row.add(node.label);
+        }
+        
+        for ( List<Integer> row : map.values() ) {
+            Collections.sort(row);
+            result.add(row);
+        }
+        return result;
+        
+    }
+    
+    public void union(DirectedGraphNode node1, DirectedGraphNode node2) {
+        DirectedGraphNode fa_1 = find(node1);
+        DirectedGraphNode fa_2 = find(node2);
+        
+        if ( fa_1 != fa_2 ) {
+            father.put(fa_1, fa_2);
+        }
+    }
+    
+    public DirectedGraphNode find(DirectedGraphNode node) {
+        DirectedGraphNode parent = father.get(node);
+        while ( parent != father.get(parent) ) {
+            parent = father.get(parent);
+        }
+        return parent;
+    }
+}
+
+```
+
