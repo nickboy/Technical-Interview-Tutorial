@@ -63,6 +63,8 @@ public class Solution {
 
 >Time Complexity：O($$N^{2}$$)
 
+---
+
 ```java
 public int numIslands(boolean[][] grid) {
     if ( grid == null || grid.length == 0 || grid[0].length == 0 ) {
