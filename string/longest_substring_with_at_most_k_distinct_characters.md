@@ -41,3 +41,42 @@ public int lengthOfLongestSubstringKDistinct(String s, int k) {
     return maxLength;
 }
 ```
+
+---
+九章解法
+
+```java
+public int lengthOfLongestSubstringKDistinct(String s, int k) {
+        
+    if (s == null || s.length() == 0 || k == 0) {
+        return 0;
+    }
+    
+    int maxLength = 0;
+    HashMap<Character, Integer> map = new HashMap<Character, Integer>();
+
+    for (int j = 0, i = 0; j < s.length(); j++) {
+        
+        char c = s.charAt(j);
+        if (map.containsKey(c)) {
+            map.put(c, map.get(c) + 1);
+        } else {
+            map.put(c, 1);
+            while (map.size() > k) {
+                char charToBeDelete = s.charAt(i);
+                int count = map.get(charToBeDelete);
+                if (count > 1) {
+                    map.put(charToBeDelete, map.get(charToBeDelete) - 1);
+                } else {
+                    map.remove(charToBeDelete);
+                }
+                i++;
+            }
+        }
+        
+        maxLength = Math.max(maxLength, j - i + 1);
+    }
+    
+    return maxLength;
+}
+```
