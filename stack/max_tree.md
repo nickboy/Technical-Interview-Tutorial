@@ -1,6 +1,6 @@
 #Max Tree
 
-[]()
+[原題連結](http://www.lintcode.com/en/problem/max-tree/)
 
 題意：給定一個陣列，以此陣列建構出 Max Tree，Max Tree的條件如下：
 
