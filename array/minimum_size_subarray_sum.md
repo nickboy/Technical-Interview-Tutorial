@@ -43,4 +43,4 @@ public int minimumSize(int[] nums, int s) {
     
 }
 ```
->Time Complexity：$$O(2N) = O(N)$$，因i與j各需移動N次
+>Time Complexity：$$O(2N) = O(N)$$，因 i 與 j 各需移動N次
