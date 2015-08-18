@@ -46,6 +46,7 @@
    * [Anagrams](string/anagrams.md)
    * [Compare Strings](string/compare_strings.md)
    * [Longest Substring Without Repeating Characters](string/longest_substring_without_repeating_characters.md)
+   * Minimum Window Substring
 * [Dynamic Programming](dynamic_programming.md)
    * [Jump Game](dynamic_programming/jump_game.md)
    * [Longest Increasing Subsequence](dynamic_programming/longest_increasing_subsequence.md)
