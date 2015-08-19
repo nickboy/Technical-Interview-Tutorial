@@ -7,6 +7,7 @@
    * [Expression Tree Build](stack/expression_tree_build.md)
 * [Math](math.md)
    * [Sqrt(x)](math/sqrtx.md)
+   * Trailing Zeros
 * [Binary Tree](binary_tree.md)
    * [Template](binary_tree/template.md)
    * [Inorder Traversal](binary_tree/inorder_traversal.md)
