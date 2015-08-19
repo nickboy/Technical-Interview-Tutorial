@@ -43,3 +43,41 @@ public int singleNumberII(int[] A) {
     return result;
 }
 ```
+
+---
+另有一解法是根據陣列中每個元素的每個位元作處理，將個數的每個元位作加總後再取模3，使用推來推去法把要處理的位元取出來並與結果合併。
+
+假如陣列為[5,5,5,3,3,3,4]， single number 為 4
+
+| Decimal | Binary | 
+| ------- |:----:| 
+| 5       | 1001 |
+| 5       | 1001 |
+| 5       | 1001 |
+| 3       | 0011 |
+| 3       | 0011 |
+| 3       | 0011 |
+| 4       | 0100 |
+
+加總後等於：3146，接著每個位元取mod 3，會變成0110，轉為十進制後，答案為4。
+
+
+
+```java
+public int singleNumberII(int[] A) {
+    int result = 0;
+    int[] bit = new int[32];
+    for (int i = 0; i <32; i++) {
+        for (int j = 0; j < A.length; j++) {
+            // 把A array中的每個數取出第i個binary值作相加再除以3
+            bit[i] += (A[j] >> i) & 1; 
+            bit[i] = bit[i] % 3;
+        }
+        // 接著把bit合成result即可
+        // 模3後的結果可以直接傳回二進位，因為每個數皆出現三次，且只有一個數出現一次
+        // 不會有出現2次的，所以模三的結果不是1就是0; 
+        result = result | (bit[i] << i);
+    }
+    return result;
+}
+```
