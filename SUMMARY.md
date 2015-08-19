@@ -47,7 +47,7 @@
    * [Search A 2D Array](array/search_a_2d_array.md)
    * [Minimum Size Subarray Sum](array/minimum_size_subarray_sum.md)
    * [Minimum Subarray](array/minimum_subarray.md)
-   * Maximum Subarray
+   * [Maximum Subarray](array/maximum_subarray.md)
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Compare Strings](string/compare_strings.md)
