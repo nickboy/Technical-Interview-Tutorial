@@ -5,7 +5,7 @@
    * [Evaluate Reverse Polish Notation](stack/evaluate_reverse_polish_notation.md)
    * [Max Tree](stack/max_tree.md)
    * [Expression Tree Build](stack/expression_tree_build.md)
-* Math
+* [Math](math.md)
 * [Binary Tree](binary_tree.md)
    * [Template](binary_tree/template.md)
    * [Inorder Traversal](binary_tree/inorder_traversal.md)
