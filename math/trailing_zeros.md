@@ -16,7 +16,7 @@ public long trailingZeros(long n) {
 }
 ```
 
-因此改用遞迴的方式操作
+因此改用遞迴的方式實作，程式碼如下：
 
 ```java
 public long trailingZeros(long n) {
