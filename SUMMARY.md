@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
+   * Math
 * Stack
    * [Evaluate Reverse Polish Notation](stack/evaluate_reverse_polish_notation.md)
    * [Max Tree](stack/max_tree.md)
