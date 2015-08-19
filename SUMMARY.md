@@ -52,6 +52,7 @@
    * [Single Number](array/single_number.md)
    * [Single Number II](array/single_number_ii.md)
    * [Single Number III](array/single_number_iii.md)
+   * Majority Number II
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Compare Strings](string/compare_strings.md)
