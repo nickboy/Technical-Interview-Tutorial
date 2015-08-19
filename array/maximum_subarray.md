@@ -32,7 +32,9 @@ public int maxSubArray(ArrayList<Integer> nums) {
 >Time Complexity：$$O(N)$$
 
 ---
-Prefix Sum 解法：
+###Prefix Sum 解法
+
+解題思路：
 利用一個 ```sum``` 陣列，```sum[i]``` 代表```nums[0] + ... + nums[i]```的和，若要求```sum[i..j]```的話，直接求 ```sum[j] - sum[i - 1]```即可。空間複雜度為$$O(N)$$，下面程式解法只利用一個```sum```與```minSum```變數來記錄當前的最小下限為多少，利用```minSum```來當作```sum[i-1]```，```sum```即為```sum[j]```。
 
 ```java
