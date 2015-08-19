@@ -50,7 +50,7 @@
    * [Minimum Subarray](array/minimum_subarray.md)
    * [Maximum Subarray](array/maximum_subarray.md)
    * [Single Number II](array/single_number_ii.md)
-   * Single Number III
+   * [Single Number III](array/single_number_iii.md)
    * [Single Number](array/single_number.md)
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
