@@ -1,4 +1,4 @@
-# Best Time to Buy and Sell Stock
+# Best Time to Buy and Sell Stock II
 
 [原題連結](http://www.lintcode.com/en/problem/best-time-to-buy-and-sell-stock-ii/)
 
