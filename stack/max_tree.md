@@ -57,3 +57,35 @@ public TreeNode maxTree(int[] A) {
     return head;
 }
 ```
+
+
+```java
+public TreeNode maxTree(int[] A) {
+    
+    Stack<TreeNode> stack = new Stack<TreeNode>();
+
+    for ( int i = 0 ; i < A.length+1 ; i++ ) {
+        int num;
+        if ( i < A.length ) {
+            num = A[i];
+        } else {
+            num = Integer.MAX_VALUE;
+        }
+        TreeNode now = new TreeNode(num);
+        if ( stack.isEmpty() || stack.peek().val > now.val ) {
+            stack.push(now);
+        } else {
+            while ( stack.peek().val < now.val ) {
+                TreeNode target = stack.pop();
+                if ( stack.isEmpty() || stack.peek().val > now.val ) {
+                    now.left = target;
+                    stack.push(now);
+                } else {
+                    stack.peek().right = target;
+                }
+            }
+        }
+    }
+    return stack.peek().left;
+}
+```
