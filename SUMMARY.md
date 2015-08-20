@@ -90,7 +90,7 @@
    * [Sum](high_frequency/sum.md)
    * [2 Sum](high_frequency/2_sum.md)
    * [3 Sum](high_frequency/3_sum.md)
-   * Best Time to Buy and Sell Stock
+   * [Best Time to Buy and Sell Stock](high_frequency/best_time_to_buy_and_sell_stock.md)
 * [Unknown](unknown.md)
    * [Combinations](unknown/combinations.md)
    * [Combination Sum](unknown/combination_sum.md)
