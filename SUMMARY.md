@@ -85,6 +85,9 @@
    * [2 Sum](high_frequency/2_sum.md)
    * [3 Sum](high_frequency/3_sum.md)
    * [3 Sum Closest](high_frequency/3sum_closest_md.md)
+   * [Best Time to Buy and Sell Stock](high_frequency/best_time_to_buy_and_sell_stock.md)
+   * [Best Time to Buy and Sell Stock II](high_frequency/best_time_to_buy_and_sell_stock_ii.md)
+   * [Best Time to Buy and Sell Stock III](high_frequency/best_time_to_buy_and_sell_stock_iii.md)
 * [Unknown](unknown.md)
    * [Combinations](unknown/combinations.md)
    * [Combination Sum](unknown/combination_sum.md)
@@ -95,4 +98,3 @@
 * [Sliding Window](sliding_window.md)
    * [Sliding Window Median](sliding_window/sliding_window_median.md)
    * [Sliding Window Maximum](sliding_window/sliding_window_maximum.md)
-
