@@ -1,6 +1,9 @@
 # Summary
 
 * [Introduction](README.md)
+* [Math](math.md)
+   * [Sqrt(x)](math/sqrtx.md)
+   * [Trailing Zeros](math/trailing_zeros.md)
 * [Stack](stack.md)
    * [Evaluate Reverse Polish Notation](stack/evaluate_reverse_polish_notation.md)
    * [Max Tree](stack/max_tree.md)
@@ -45,6 +48,12 @@
    * [Partition Array by Odd and Even](array/partition_array_by_odd_and_even.md)
    * [Search A 2D Array](array/search_a_2d_array.md)
    * [Minimum Size Subarray Sum](array/minimum_size_subarray_sum.md)
+   * [Minimum Subarray](array/minimum_subarray.md)
+   * [Maximum Subarray](array/maximum_subarray.md)
+   * [Single Number](array/single_number.md)
+   * [Single Number II](array/single_number_ii.md)
+   * [Single Number III](array/single_number_iii.md)
+   * [Majority Number II](array/majority_number_ii.md)
    * [Product of Array Exclude itself](array/product_of_array_exclude_itself.md)
    * [Triangle](array/triangle.md)
    * [Subarray Sum Closest](array/subarray_sum_closest.md)
@@ -99,4 +108,3 @@
 * [Sliding Window](sliding_window.md)
    * [Sliding Window Median](sliding_window/sliding_window_median.md)
    * [Sliding Window Maximum](sliding_window/sliding_window_maximum.md)
-
