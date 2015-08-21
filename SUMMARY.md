@@ -38,7 +38,7 @@
    * [Median of Two Sorted Arrays](array/median_of_two_sorted_arrays.md)
    * [Merge Sorted Array](array/merge_sorted_array.md)
    * [Sort Colors](array/sort_colors.md)
-   * Sort Color II
+   * [Sort Color II](array/sort_color_ii.md)
    * [Recover Rotated Sorted Array](array/recover_rotated_sorted_array.md)
    * [Remove Duplicates from Sorted Array](array/remove_duplicates_from_sorted_array.md)
    * [Search for a Range](array/search_for_a_range.md)
