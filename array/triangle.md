@@ -15,7 +15,7 @@ For example, given the following triangle
 
 The minimum path sum from top to bottom is 11 (i.e., 2 + 3 + 5 + 1 = 11).
 
-解題思路：由下往上作，每一層找出下一層相鄰且較小成本的點，把該點成本與本身的成本相加即可。
+解題思路：由下往上作，每一層找出下一層相鄰且較小成本的點，把該點成本與本身的成本相加即可，程式碼如下：
 
 ```java
 public int minimumTotal(ArrayList<ArrayList<Integer>> triangle) {
