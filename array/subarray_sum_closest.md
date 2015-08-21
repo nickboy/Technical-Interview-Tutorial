@@ -95,3 +95,7 @@ public class Solution {
 
 
 ```
+
+---
+###Reference
+1. http://www.jiuzhang.com/solutions/subarray-sum-closest/
