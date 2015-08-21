@@ -90,6 +90,8 @@ public class Solution {
                 
                 int[] temp = new int[]{sums[i].index - 1, sums[i - 1].index - 1};
                 Arrays.sort(temp);
+                
+                // 因要排除temp[0]之前的元素和，因此將第一個index 加1
                 res.add(temp[0] + 1);
                 res.add(temp[1]);
             }
