@@ -46,6 +46,7 @@
    * [Search A 2D Array](array/search_a_2d_array.md)
    * [Minimum Size Subarray Sum](array/minimum_size_subarray_sum.md)
    * [Product of Array Exclude itself](array/product_of_array_exclude_itself.md)
+   * Triangle
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Compare Strings](string/compare_strings.md)
