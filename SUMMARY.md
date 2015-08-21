@@ -38,13 +38,13 @@
    * [Median of Two Sorted Arrays](array/median_of_two_sorted_arrays.md)
    * [Merge Sorted Array](array/merge_sorted_array.md)
    * [Sort Colors](array/sort_colors.md)
+   * Sort Color II
    * [Recover Rotated Sorted Array](array/recover_rotated_sorted_array.md)
    * [Remove Duplicates from Sorted Array](array/remove_duplicates_from_sorted_array.md)
    * [Search for a Range](array/search_for_a_range.md)
    * [Partition Array by Odd and Even](array/partition_array_by_odd_and_even.md)
    * [Search A 2D Array](array/search_a_2d_array.md)
    * [Minimum Size Subarray Sum](array/minimum_size_subarray_sum.md)
-   * Sort Color II
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Compare Strings](string/compare_strings.md)
