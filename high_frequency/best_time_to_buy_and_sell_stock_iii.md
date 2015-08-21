@@ -6,6 +6,8 @@
 
 解題思路：從左掃到右，找出最大獲利值，再從右掃到左，找最大獲利值，接著找出 i ，使得 right[i] + left[i] 為最大。
 
+[注意] 在初始化 max 值時，不能取 Integer.MIN_VALUE，會出錯，目前仍不解，日後有想法再更新。
+
 ```java
 public int maxProfit(int[] prices) {
     
