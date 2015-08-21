@@ -8,6 +8,8 @@
 
 [注意] 在初始化 max 值時，不能取 Integer.MIN_VALUE，會出錯，目前仍不解，日後有想法再更新。
 
+[更新] 將 min 初始化為 prices[0]，會比較一致。
+
 ```java
 public int maxProfit(int[] prices) {
     
@@ -20,7 +22,7 @@ public int maxProfit(int[] prices) {
    int[] right = new int[len];
    
    int profit = 0;
-   int min = Integer.MAX_VALUE;
+   int min = prices[0];
    
    for (int i = 0; i < len; i++) {
        profit = Math.max(profit, prices[i] - min);
