@@ -44,6 +44,7 @@
    * [Partition Array by Odd and Even](array/partition_array_by_odd_and_even.md)
    * [Search A 2D Array](array/search_a_2d_array.md)
    * [Minimum Size Subarray Sum](array/minimum_size_subarray_sum.md)
+   * Sort Color II
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Compare Strings](string/compare_strings.md)
