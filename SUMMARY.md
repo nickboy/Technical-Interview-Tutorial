@@ -84,7 +84,7 @@
    * [Sum](high_frequency/sum.md)
    * [2 Sum](high_frequency/2_sum.md)
    * [3 Sum](high_frequency/3_sum.md)
-   * [3 Sum Closest](3_sum_closest.md)
+   * [3 Sum Closest](high_frequency/3sum_closest_md.md)
 * [Unknown](unknown.md)
    * [Combinations](unknown/combinations.md)
    * [Combination Sum](unknown/combination_sum.md)
