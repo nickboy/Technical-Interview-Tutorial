@@ -4,6 +4,14 @@
 
 > Given an array S of n integers, are there elements a, b, c in S such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.
 
+解題思路：這題若使用暴力法的話會花到$$O(N^{3})$$的時間複雜度，因此使用了一個另一個方法，步驟如下：
+
++ 先將陣列排序，花 $$O(NlogN)$$。
++ 固定一點 j，
++ j後面的數用兩根指針方式來找出一對數，使得該數相加的和為-num[j]。
++ 若找到則將 j , start, end加入答案。
++ [注意] 為了確保答案不會重複，將當前答案加入最終答案後，記得用while循環不斷的跳過與答案相同的元素。
+
 ```java
 public ArrayList<ArrayList<Integer>> threeSum(int[] numbers) {
     // write your code here
