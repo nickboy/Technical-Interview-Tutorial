@@ -56,4 +56,36 @@ public ArrayList<Long> productExcludeItself(ArrayList<Integer> A) {
 ```
 
 ---
-另有一 $$O(1)$$ 空間複雜度的作法
+另有一 $$O(1)$$ 空間複雜度的作法，直接在原本的陣列中作
+
+程式碼如下，需要注意的是要使用 long long 否則會出現 overflow：
+
+```java
+public ArrayList<Long> productExcludeItself(ArrayList<Integer> A) {
+        
+    ArrayList<Long> res = new ArrayList<Long>();
+    
+    if (A == null || A.size() == 0) {
+        return res;
+    }
+    
+    int len = A.size();
+    res.add(1);
+    
+    for (int i = 1; i < len; i++) {
+        res.add( res.get(i - 1) * A.get(i - 1));
+    }
+    
+    // 因怕值會被蓋掉，因此使用一個temp來保存目前的乘積
+    int temp = 1;
+    for (int i = len - 1; i >= 0; i--) {
+        res.set(i, res.get(i) * temp);
+        temp *= A.get(i);
+    }
+    
+    return res;
+    
+}
+```
+
+>credit to : http://algorithm.yuanbin.me/zh-cn/integer_array/product_of_array_exclude_itself.html
