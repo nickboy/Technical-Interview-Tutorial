@@ -47,7 +47,7 @@
    * [Minimum Size Subarray Sum](array/minimum_size_subarray_sum.md)
    * [Product of Array Exclude itself](array/product_of_array_exclude_itself.md)
    * [Triangle](array/triangle.md)
-   * Subarray Sum Closest
+   * [Subarray Sum Closest](array/subarray_sum_closest.md)
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Compare Strings](string/compare_strings.md)
