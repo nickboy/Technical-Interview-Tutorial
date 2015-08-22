@@ -1,6 +1,6 @@
 #Maximum Subarray Difference
 
-[]()
+[原題連結](http://www.lintcode.com/en/problem/maximum-subarray-difference/)
 
 題意：給定一個陣列，找出兩個子陣列的差為最大。
 
