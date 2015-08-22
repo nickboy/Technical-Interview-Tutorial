@@ -57,7 +57,7 @@
    * [Product of Array Exclude itself](array/product_of_array_exclude_itself.md)
    * [Triangle](array/triangle.md)
    * [Subarray Sum Closest](array/subarray_sum_closest.md)
-   * Maximum Subarray Difference
+   * [Maximum Subarray Difference](array/maximum_subarray_difference.md)
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Compare Strings](string/compare_strings.md)
