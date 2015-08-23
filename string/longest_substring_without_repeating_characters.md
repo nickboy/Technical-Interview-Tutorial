@@ -5,6 +5,7 @@
 題意：給定一個字串，找出最長的子字串其中不含重複字元
 
 解題思路：與 [Minimum Size Subarray Sum](array/minimum_size_subarray_sum.md)一樣使用兩根指針的模板。假設字符為 ASCII 編碼，因此利用一個256大小的陣列來紀錄當前字符的出現次數即可。
+原本使用了hashmap，但是刪除需要花大量的時間，會超時。
 
 ```java
 public int lengthOfLongestSubstring(String s) {
