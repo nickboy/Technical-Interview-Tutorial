@@ -4,6 +4,7 @@
 * [Math](math.md)
    * [Sqrt(x)](math/sqrtx.md)
    * [Trailing Zeros](math/trailing_zeros.md)
+   * Add Digits
 * [Stack](stack.md)
    * [Evaluate Reverse Polish Notation](stack/evaluate_reverse_polish_notation.md)
    * [Max Tree](stack/max_tree.md)
