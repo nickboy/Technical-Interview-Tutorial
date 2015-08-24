@@ -77,7 +77,7 @@
    * [Palindrome Partition II](dynamic_programming/palindrome_partition_ii.md)
    * [Palindrome Partition](dynamic_programming/palindrome_partition.md)
    * [Edit Distance](dynamic_programming/edit_distance.md)
-   * House Robber
+   * [House Robber](dynamic_programming/house_robber.md)
 * [Segment Tree](segment_tree.md)
    * [Segment Tree Query](segment_tree/segment_tree_query.md)
    * [Segment Tree Query II](segment_tree/segment_tree_query_ii.md)
