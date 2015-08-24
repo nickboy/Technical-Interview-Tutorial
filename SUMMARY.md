@@ -60,6 +60,7 @@
    * [Triangle](array/triangle.md)
    * [Subarray Sum Closest](array/subarray_sum_closest.md)
    * [Maximum Subarray Difference](array/maximum_subarray_difference.md)
+   * Maximum Product Subarray
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Compare Strings](string/compare_strings.md)
