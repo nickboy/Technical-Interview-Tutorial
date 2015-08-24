@@ -61,6 +61,7 @@
    * [Subarray Sum Closest](array/subarray_sum_closest.md)
    * [Maximum Subarray Difference](array/maximum_subarray_difference.md)
    * [Maximum Product Subarray](array/maximum_product_subarray.md)
+   * Longest Continuous Increasing Subsequence
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Compare Strings](string/compare_strings.md)
