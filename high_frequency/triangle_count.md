@@ -37,4 +37,4 @@ public int triangleCount(int S[]) {
 }
 ```
 
->Time Complexity：$$O(Nlog{N})$$
+>Time Complexity：$$O(Nlog{N} + N^{2})$$，此為花在排序的時間，與後面兩根指針運算。
