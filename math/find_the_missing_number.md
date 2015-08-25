@@ -1,0 +1,36 @@
+#Find The Missing Number
+
+[]()
+
+題意：給定一陣列有N個元素，找出在 0...N 中不在陣列裡的那個元素。
+
+解題思路：
+
+1. 先利用梯形公式把原本應該的總數算出來，接著再把元素和與總數相減即可得出消失的數，原始碼如下：
+
+```java
+public int findMissing(int[] nums) {
+    
+    if (nums == null || nums.length == 0) {
+        return 0;
+    }
+    
+    int len = nums.length;
+    int total = len * (len + 1) / 2;
+    int sum = 0;
+    for (int i = 0; i < nums.length; i++) {
+        sum += nums[i];
+    }
+    
+    return total - sum;
+}
+```
+
+>Time Complexity：$$O(N)$$
+
+---
+2.利用 ```xor``` 的特性來幫助我們解這道題，有點類似 [Single Number](array/single_number.md) 那道題，把所有元素全xor起來，接著再xor從0到N，最後把這兩個相 xor 即可得到消失的數，原始碼如下：
+
+```java
+
+```
