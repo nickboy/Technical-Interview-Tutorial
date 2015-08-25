@@ -6,6 +6,7 @@
    * [Trailing Zeros](math/trailing_zeros.md)
    * [Add Digits](math/add_digits.md)
    * [Triangle](math/triangle.md)
+   * Find The Missing Number
 * [Stack](stack.md)
    * [Evaluate Reverse Polish Notation](stack/evaluate_reverse_polish_notation.md)
    * [Max Tree](stack/max_tree.md)
