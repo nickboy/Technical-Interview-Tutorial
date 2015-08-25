@@ -55,7 +55,7 @@ class Solution {
                 right--;
             }
         }
-        
+        // 使用變形的partion 方法來把正負數交錯排列
         while (posPointer < len && negPointer < len) {
             while (posPointer < len && A[posPointer] >= 0) {
                 posPointer += 2;
