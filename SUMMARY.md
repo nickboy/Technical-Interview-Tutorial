@@ -64,6 +64,7 @@
    * [Maximum Product Subarray](array/maximum_product_subarray.md)
    * [Longest Continuous Increasing Subsequence](array/longest_continuous_increasing_subsequence.md)
    * [The Smallest Difference](array/the_smallest_difference.md)
+   * Interleaving Positive and Negative Numbers
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Compare Strings](string/compare_strings.md)
