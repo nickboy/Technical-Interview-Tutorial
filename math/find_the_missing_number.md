@@ -32,5 +32,25 @@ public int findMissing(int[] nums) {
 2.利用 ```xor``` 的特性來幫助我們解這道題，有點類似 [Single Number](array/single_number.md) 那道題，把所有元素全xor起來，接著再xor從0到N，最後把這兩個相 xor 即可得到消失的數，原始碼如下：
 
 ```java
-
+public int findMissing(int[] nums) {
+    
+    if (nums == null || nums.length == 0) {
+        return 0;
+    }
+    
+    int len = nums.length;
+    int total = len * (len + 1) / 2;
+    int xorOne = nums[0];
+    for (int i = 1; i < len; i++) {
+        xorOne ^= nums[i];
+    }
+    
+    int xorTwo = 1;
+    for (int i = 2; i <= len; i++) {
+        xorTwo ^= i;
+    }
+    
+    return xorTwo ^ xorOne;
+}
 ```
+>Time Complexity：$$O(N)$$
