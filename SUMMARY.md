@@ -27,6 +27,7 @@
    * [Binary Tree Level Order Traversal](binary_tree/binary_tree_level_order_traversal.md)
    * [Search Range in Binary Search Tree](binary_tree/search_range_in_binary_search_tree.md)
    * [Remove Node in Binary Search Tree](binary_tree/remove_node_in_binary_search_tree.md)
+   * Convert Sorted Array to Binary Search Tree With Minimal Height
 * [Heap](heap.md)
    * [Heapify](heap/heapify.md)
    * [Data Stream Median](heap/data_stream_median.md)
