@@ -86,6 +86,7 @@
    * [House Robber](dynamic_programming/house_robber.md)
    * [Coins in a Line](dynamic_programming/coins_in_a_line.md)
    * [Coins in a Line II](dynamic_programming/coins_in_a_line_ii.md)
+   * Coins in a Line III
 * [Segment Tree](segment_tree.md)
    * [Segment Tree Query](segment_tree/segment_tree_query.md)
    * [Segment Tree Query II](segment_tree/segment_tree_query_ii.md)
