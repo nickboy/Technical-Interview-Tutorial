@@ -114,7 +114,7 @@
    * [Best Time to Buy and Sell Stock](high_frequency/best_time_to_buy_and_sell_stock.md)
    * [Best Time to Buy and Sell Stock II](high_frequency/best_time_to_buy_and_sell_stock_ii.md)
    * [Best Time to Buy and Sell Stock III](high_frequency/best_time_to_buy_and_sell_stock_iii.md)
-   * Best Time to Buy and Sell Stock IV
+   * [Best Time to Buy and Sell Stock IV](high_frequency/best_time_to_buy_and_sell_stock_iv.md)
    * [Triangle Count](high_frequency/triangle_count.md)
 * [Unknown](unknown.md)
    * [Combinations](unknown/combinations.md)
