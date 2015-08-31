@@ -48,3 +48,6 @@ public int maxProfit(int[] prices) {
 ```
 
 >Time Complexity：$$O(N)$$
+
+---
+除了上題的作法，還可以使用動態規劃來幫助我們解決這題，
