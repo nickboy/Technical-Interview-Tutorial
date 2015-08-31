@@ -98,7 +98,7 @@
    * [Interval Minimum Number](segment_tree/interval_minimum_number.md)
    * [Count of Smaller Number before itself](segment_tree/count_of_smaller_number_before_itself.md)
    * [Interleaving String](dynamic_programming/interleaving_string.md)
-   * Segment Tree Build II
+   * [Segment Tree Build II](segment_tree/segment_tree_build_ii.md)
 * [Graph](graph.md)
    * [Find the Connected Component in the Undirected Graph](graph/find_the_connected_component_in_the_undirected_graph.md)
    * [Number of Islands](graph/number_of_islands.md)
