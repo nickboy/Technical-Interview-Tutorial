@@ -34,7 +34,7 @@ public class Solution {
         for (int i = 0; i < len; i++) {
             
             int duplicate = 1;
-            int tempMax = Integer.MIN_VALUE;
+            int tempMax = 0;
             double slope = 0.0;
             map.clear();
             Point A = points[i];
@@ -46,8 +46,11 @@ public class Solution {
                     continue;
                 }
                 
+                // look 0.0+(double)(points[j].y-points[i].y)/(double)(points[j].x-points[i].x)
+                // because (double)0/-1 is -0.0, so we should use 0.0+-0.0=0.0 to solve 0.0 !=-0.0
+                // problem
                 if (A.x != B.x) {
-                    slope = 1.0 * (A.y - B.y) / (A.x - B.x);
+                    slope = 0.0 + (double)(A.y - B.y) / (double)(A.x - B.x);
                 } else if ((A.x == B.x) && (A.y == B.y)) {
                     duplicate++;
                     continue;
@@ -76,3 +79,5 @@ public class Solution {
 
 ---
 ###Reference
+
+1. http://www.jiuzhang.com/solutions/max-points-on-a-line/
