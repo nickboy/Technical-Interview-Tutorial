@@ -8,6 +8,7 @@
    * [Triangle](math/triangle.md)
    * [Find The Missing Number](math/find_the_missing_number.md)
    * [Integer to Roman](math/integer_to_roman.md)
+   * Insert Interval
 * [Stack](stack.md)
    * [Evaluate Reverse Polish Notation](stack/evaluate_reverse_polish_notation.md)
    * [Max Tree](stack/max_tree.md)
