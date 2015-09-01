@@ -10,7 +10,7 @@
    * [Integer to Roman](math/integer_to_roman.md)
    * [Insert Interval](math/insert_interval.md)
    * [Max Points in a Line](math/max_points_in_a_line.md)
-   * Roman to Integer
+   * [Roman to Integer](math/roman_to_integer.md)
 * [Stack](stack.md)
    * [Evaluate Reverse Polish Notation](stack/evaluate_reverse_polish_notation.md)
    * [Max Tree](stack/max_tree.md)
