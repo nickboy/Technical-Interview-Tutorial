@@ -9,7 +9,7 @@
    * [Find The Missing Number](math/find_the_missing_number.md)
    * [Integer to Roman](math/integer_to_roman.md)
    * [Insert Interval](math/insert_interval.md)
-   * Max Points in a Line
+   * [Max Points in a Line](math/max_points_in_a_line.md)
 * [Stack](stack.md)
    * [Evaluate Reverse Polish Notation](stack/evaluate_reverse_polish_notation.md)
    * [Max Tree](stack/max_tree.md)
