@@ -59,7 +59,7 @@
    * [Minimum Size Subarray Sum](array/minimum_size_subarray_sum.md)
    * [Minimum Subarray](array/minimum_subarray.md)
    * [Maximum Subarray](array/maximum_subarray.md)
-   * Maximum Subarray III
+   * [Maximum Subarray III](array/maximum_subarray_iii.md)
    * [Single Number](array/single_number.md)
    * [Single Number II](array/single_number_ii.md)
    * [Single Number III](array/single_number_iii.md)
