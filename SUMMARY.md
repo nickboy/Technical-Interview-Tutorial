@@ -59,6 +59,7 @@
    * [Minimum Size Subarray Sum](array/minimum_size_subarray_sum.md)
    * [Minimum Subarray](array/minimum_subarray.md)
    * [Maximum Subarray](array/maximum_subarray.md)
+   * Maximum Subarray III
    * [Single Number](array/single_number.md)
    * [Single Number II](array/single_number_ii.md)
    * [Single Number III](array/single_number_iii.md)
@@ -71,7 +72,6 @@
    * [Longest Continuous Increasing Subsequence](array/longest_continuous_increasing_subsequence.md)
    * [The Smallest Difference](array/the_smallest_difference.md)
    * [Interleaving Positive and Negative Numbers](array/interleaving_positive_and_negative_numbers.md)
-   * Maximum Subarray III
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Compare Strings](string/compare_strings.md)
