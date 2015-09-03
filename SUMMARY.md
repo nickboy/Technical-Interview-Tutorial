@@ -71,6 +71,7 @@
    * [Longest Continuous Increasing Subsequence](array/longest_continuous_increasing_subsequence.md)
    * [The Smallest Difference](array/the_smallest_difference.md)
    * [Interleaving Positive and Negative Numbers](array/interleaving_positive_and_negative_numbers.md)
+   * Maximum Subarray III
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Compare Strings](string/compare_strings.md)
