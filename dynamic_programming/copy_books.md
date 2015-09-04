@@ -25,6 +25,29 @@ Could you do this in O(n*k) time ?
 >
 
 
+|i \ j  | 3 (index 0) | 2 (index 1)| 4 (index 2)|
+| -- | -- | -- | -- |
+| 1 | 3 | 5 | 9 |
+| 2 | 3 | 3 | 5 |
+
+$$sum[] = {3, 5, 9}$$
+
+$$mins[2][0] = sumFromStart[0]$$，因只有一本書，直接assign給其中一位
+
+$$mins[2][1]$$ ：
+
+* $$max (mins[1][0], sumFromStart[1] - sumFromStart[0]) = max(3, 5 - 3) = 3$$
+    * 前面一位抄第一本書，剩下那本書給第二個人抄。
+
+$$mins[2][2]$$ (會有以下兩種情況)：
+* $$max (mins[1][1], sumFromStart[2] - sumFromStart[1]) = max (5, 9 - 5) = 5 $$
+    * 前面那位抄前兩本書，後面那位抄最後一本書。
+* $$max (mins[1][0], sumFromStart[2] - sumFromStart[0]) = max (3, 9 - 3) = 6 $$
+    * 前面那位抄前兩本書，後面那位抄最後一本書。
+* 因5比6小，因此取5 
+
+
+
 ```java
 public int copyBooks(int[] pages, int k) {
     
