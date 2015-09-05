@@ -93,7 +93,7 @@
    * [Coins in a Line II](dynamic_programming/coins_in_a_line_ii.md)
    * [Coins in a Line III](dynamic_programming/coins_in_a_line_iii.md)
    * [Copy Books](dynamic_programming/copy_books.md)
-   * Longest Palindrome Substring
+   * [Longest Palindrome Substring](dynamic_programming/longest_palindrome_substring.md)
 * [Segment Tree](segment_tree.md)
    * [Segment Tree Query](segment_tree/segment_tree_query.md)
    * [Segment Tree Query II](segment_tree/segment_tree_query_ii.md)
