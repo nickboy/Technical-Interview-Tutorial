@@ -77,7 +77,7 @@
    * [Minimum Window Substring](string/minimum_window_substring.md)
    * [Longest Substring with at Most k Distinct Characters](string/longest_substring_with_at_most_k_distinct_characters.md)
    * [One Edit Distance](string/one_edit_distance.md)
-   * Length of Last Word
+   * [Length of Last Word](string/length_of_last_word.md)
 * [Dynamic Programming](dynamic_programming.md)
    * [Jump Game](dynamic_programming/jump_game.md)
    * [Longest Increasing Subsequence](dynamic_programming/longest_increasing_subsequence.md)
