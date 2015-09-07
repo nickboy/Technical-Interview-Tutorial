@@ -1,6 +1,6 @@
 #House Robber
 
-[]()
+[原題網址](http://www.lintcode.com/en/problem/house-robber/#)
 
 題意：給予一陣列，陣列中每一元素代表每個家的財產，小偷不能連續偷兩間房，求最大獲利。
 
@@ -38,3 +38,53 @@ public long houseRobber(int[] A) {
 >Time Complexity：$$O(N)$$，只需遍歷一次陣列即可。
 
 >Space Complexity： $$O(N)$$，此可用滾動陣列來優化到 $$O(1)$$。
+
+---
+解法二：使用動態規劃加遞迴來作，但會耗用太多 stack 空間，解法如下：
+
+```java
+public class Solution {
+    /**
+     * @param A: An array of non-negative integers.
+     * return: The maximum amount of money you can rob tonight
+     */
+    public long houseRobber(int[] A) {
+        
+        if (A == null || A.length == 0) {
+            return 0;
+        }
+        
+        int len = A.length;
+        long[] dp = new long[len];
+        long max = 0;
+        
+        Arrays.fill(dp, -1);
+        memorySearch(A, dp, len - 1);
+        
+        return dp[len - 1];
+    }
+    
+    private long memorySearch(int[] A, long dp[], int i) {
+        
+        if (i < 0) {
+            return 0;
+        }
+        
+        if (dp[i] != -1) {
+            return dp[i];
+        }
+        
+        if (i == 0) {
+            dp[0] = A[0];
+        } else if (i == 1) {
+            dp[1] = Math.max(A[0], A[1]);
+        } else if (i == 2) {
+            dp[2] = Math.max(A[0] + A[2], A[1]);
+        } else {
+            dp[i] = Math.max(memorySearch(A, dp, i - 2), memorySearch(A, dp, i - 3)) + A[i];
+        }
+        
+        return dp[i];
+    }
+}
+```
