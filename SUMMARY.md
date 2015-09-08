@@ -32,6 +32,7 @@
    * [Remove Node in Binary Search Tree](binary_tree/remove_node_in_binary_search_tree.md)
    * [Convert Sorted Array to Binary Search Tree With Minimal Height](binary_tree/convert_sorted_array_to_binary_search_tree_with_minimal_height.md)
    * [Binary Tree Path](binary_tree/binary_tree_path.md)
+   * Kth Smallest Element in a BST
 * [Heap](heap.md)
    * [Heapify](heap/heapify.md)
    * [Data Stream Median](heap/data_stream_median.md)
