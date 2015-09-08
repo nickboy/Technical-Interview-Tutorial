@@ -20,11 +20,11 @@ public class Solution {
         TreeNode left = lowestCommonAncestor(root.left, A, B);
         TreeNode right = lowestCommonAncestor(root.right, A, B);
 
-        //代表左右子樹都找不到以ab為代表的最低共同父節點，因此返回根節點
+        // 表示 p 與 q皆在同一邊，回傳root即可
         if (left != null && right != null) {
             return root;
         }
-        //返回其中之一不為空的結果即可
+        //否則pq可能在左邊或是右邊，返回其中之一不為空的結果即可
         return left != null? left:right;
     }
 }
@@ -64,3 +64,6 @@ public class Solution {
 }
 
 ```
+---
+###Reference
+1. http://wp.javayu.me/2014/02/lowest-common-ancestor-of-a-binary-tree/
