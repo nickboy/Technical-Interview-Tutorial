@@ -13,17 +13,19 @@ public class Solution {
             return null;
         }
 
-        //因題目說a或b可包含在root內，因此判斷若a或b為root，則直接返回root
+        // 若在路徑上先遇到了其中一個，代表該點即是要找的節點，因再往下找一定找不到了。
         if (root == A || root == B) {
             return root;
         }
+        
         TreeNode left = lowestCommonAncestor(root.left, A, B);
         TreeNode right = lowestCommonAncestor(root.right, A, B);
 
-        // 表示 p 與 q皆在同一邊，回傳root即可
+        // 表示 p 與 q皆在根節點的父親的其中一邊，回傳root即可
         if (left != null && right != null) {
             return root;
         }
+        
         //否則pq可能在左邊或是右邊，返回其中之一不為空的結果即可
         return left != null? left:right;
     }
