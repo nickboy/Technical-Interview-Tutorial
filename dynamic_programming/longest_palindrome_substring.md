@@ -55,10 +55,11 @@ public String longestPalindrome(String s) {
 ```
 ---
 $$O(N)$$解法：待補完
-test
 
 ---
 ###Reference
 1. http://www.cnblogs.com/yuzhangcmu/p/4189068.html
 2. http://blog.csdn.net/hopeztm/article/details/7932245
+3. http://bangbingsyb.blogspot.com/2014/11/leetcode-longest-palindromic-substring.html
+4. http://articles.leetcode.com/2011/11/longest-palindromic-substring-part-i.html
 
