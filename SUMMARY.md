@@ -33,7 +33,7 @@
    * [Convert Sorted Array to Binary Search Tree With Minimal Height](binary_tree/convert_sorted_array_to_binary_search_tree_with_minimal_height.md)
    * [Binary Tree Path](binary_tree/binary_tree_path.md)
    * [Kth Smallest Element in a BST](binary_tree/kth_smallest_element_in_a_bst.md)
-   * Binary Tree Zigzag Level Order Traversal
+   * [Binary Tree Zigzag Level Order Traversal](binary_tree/binary_tree_zigzag_level_order_traversal.md)
 * [Heap](heap.md)
    * [Heapify](heap/heapify.md)
    * [Data Stream Median](heap/data_stream_median.md)
