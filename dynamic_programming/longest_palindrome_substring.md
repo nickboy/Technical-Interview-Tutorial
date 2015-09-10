@@ -55,7 +55,7 @@ public String longestPalindrome(String s) {
 ```
 ---
 $$O(N)$$解法：待補完
-
+test
 
 ---
 ###Reference
