@@ -63,3 +63,57 @@ public ArrayList<ArrayList<Integer>> zigzagLevelOrder(TreeNode root) {
     return res;
 }
 ```
+
+---
+網友 [喜刷刷](http://bangbingsyb.blogspot.com/2014/11/leetcode-binary-tree-zigzag-level-order.html) 的解法
+
+解題思路：利用兩個 Stack 不斷的交替使用，由於 Stack 是先進後出，籍由判斷 ```leftToRight``` 變數來決定存放的順序，接著再把兩個 stack 交換。
+
+```java
+public ArrayList<ArrayList<Integer>> zigzagLevelOrder(TreeNode root) {
+    
+    ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
+    
+    if (root == null) {
+        return res;
+    }
+    
+    Stack<TreeNode> curLevel = new Stack<TreeNode>();
+    Stack<TreeNode> nextLevel = new Stack<TreeNode>();
+    curLevel.push(root);
+    boolean leftToRight = true;
+    
+    while (!curLevel.isEmpty()) {
+        ArrayList<Integer> tempRes = new ArrayList<Integer>();
+        
+        while (!curLevel.isEmpty()) {
+            TreeNode cur = curLevel.pop();
+            tempRes.add(cur.val);
+            
+            if (leftToRight) {
+                if (cur.left != null) {
+                    nextLevel.push(cur.left);
+                }
+                if (cur.right != null) {
+                    nextLevel.push(cur.right);
+                }
+            } else {
+                if (cur.right != null) {
+                    nextLevel.push(cur.right);
+                }
+                if (cur.left != null) {
+                    nextLevel.push(cur.left);
+                }
+            }
+        }
+        res.add(tempRes);
+        Stack<TreeNode> temp = curLevel;
+        curLevel = nextLevel;
+        nextLevel = temp;
+        leftToRight = !leftToRight;
+        
+    }
+    
+    return res;
+}
+```
