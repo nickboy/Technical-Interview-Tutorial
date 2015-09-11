@@ -43,7 +43,7 @@
    * [Copy List with Random Pointer](linked_list/copy_list_with_random_pointer.md)
    * [Sort List](linked_list/sort_list.md)
    * [Reverse Linked List](linked_list/reverse_linked_list.md)
-   * Reverse Linked List II
+   * [Reverse Linked List II](linked_list/reverse_linked_list_ii.md)
    * [List Cycle II](linked_list/list_cycle_ii.md)
    * [Remove Duplicates from Sorted List](linked_list/remove_duplicates_from_sorted_list.md)
    * [Remove Duplicates from Sorted List II](linked_list/remove_duplicates_from_sorted_list_ii.md)
