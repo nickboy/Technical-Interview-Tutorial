@@ -91,6 +91,7 @@
    * [Length of Last Word](string/length_of_last_word.md)
 * [Dynamic Programming](dynamic_programming.md)
    * [Jump Game](dynamic_programming/jump_game.md)
+   * Jump Game II
    * [Longest Increasing Subsequence](dynamic_programming/longest_increasing_subsequence.md)
    * [Triangle](dynamic_programming/triangle.md)
    * [Word Break](dynamic_programming/word_break.md)
@@ -98,7 +99,6 @@
    * [Palindrome Partition II](dynamic_programming/palindrome_partition_ii.md)
    * [Palindrome Partition](dynamic_programming/palindrome_partition.md)
    * [Edit Distance](dynamic_programming/edit_distance.md)
-   * Jump Game II
    * [House Robber](dynamic_programming/house_robber.md)
    * [Coins in a Line](dynamic_programming/coins_in_a_line.md)
    * [Coins in a Line II](dynamic_programming/coins_in_a_line_ii.md)
