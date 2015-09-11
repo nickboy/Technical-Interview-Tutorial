@@ -106,6 +106,7 @@
    * [Longest Palindrome Substring](dynamic_programming/longest_palindrome_substring.md)
    * [Maximal Square](dynamic_programming/maximal_square.md)
    * [Longest Increasing Continuous subsequence II](dynamic_programming/longest_increasing_continuous_subsequence_ii.md)
+   * Jump Game II
 * [Segment Tree](segment_tree.md)
    * [Segment Tree Query](segment_tree/segment_tree_query.md)
    * [Segment Tree Query II](segment_tree/segment_tree_query_ii.md)
