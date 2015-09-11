@@ -46,6 +46,7 @@
    * [List Cycle II](linked_list/list_cycle_ii.md)
    * [Remove Duplicates from Sorted List](linked_list/remove_duplicates_from_sorted_list.md)
    * [Remove Duplicates from Sorted List II](linked_list/remove_duplicates_from_sorted_list_ii.md)
+   * Reverse Linked List II
 * [Array](array.md)
    * [Find Peak Element](array/find_peak_element.md)
    * [Find Minimum in Rotated Sorted Array](array/find_minimum_in_rotated_sorted_array.md)
