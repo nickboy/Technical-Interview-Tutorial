@@ -98,6 +98,7 @@
    * [Palindrome Partition II](dynamic_programming/palindrome_partition_ii.md)
    * [Palindrome Partition](dynamic_programming/palindrome_partition.md)
    * [Edit Distance](dynamic_programming/edit_distance.md)
+   * Jump Game II
    * [House Robber](dynamic_programming/house_robber.md)
    * [Coins in a Line](dynamic_programming/coins_in_a_line.md)
    * [Coins in a Line II](dynamic_programming/coins_in_a_line_ii.md)
@@ -106,7 +107,6 @@
    * [Longest Palindrome Substring](dynamic_programming/longest_palindrome_substring.md)
    * [Maximal Square](dynamic_programming/maximal_square.md)
    * [Longest Increasing Continuous subsequence II](dynamic_programming/longest_increasing_continuous_subsequence_ii.md)
-   * Jump Game II
 * [Segment Tree](segment_tree.md)
    * [Segment Tree Query](segment_tree/segment_tree_query.md)
    * [Segment Tree Query II](segment_tree/segment_tree_query_ii.md)
