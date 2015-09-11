@@ -33,8 +33,44 @@ public int removeDuplicates(int[] nums) {
 
 >What if duplicates are allowed at most twice?
 
+解題思路：
+
 此題解法與上個類似，但需要增加一個變數來紀錄重複的次數。
 
+```java
+public int removeDuplicates(int[] nums) {
+        
+    if (nums == null || nums.length == 0) {
+        return 0;
+    }
+    
+    // pos 用來紀錄目前要assign值的位置
+    // count 表示 目前相同的元素出現過幾次
+    int pos = 0;
+    int count = 0;
+    for (int i = 0; i < nums.length; i++) {
+        if (i > 0 && nums[i - 1] == nums[i]) {
+            count++;
+            if (count >= 3) {
+                continue;
+            }
+        } else {
+            // 遇到第一個元素或是遇到第一次相同的兩個元素，
+            // 則 count 為 1
+            count = 1;
+        }
+        
+        // 每次皆把值assign給pos的位置，除非 count 大於 2
+        nums[pos++] = nums[i];
+    }
+    
+    return pos;
+}
+```
+
+---
+
+另一寫法
 ```java
 public int removeDuplicates(int[] nums) {
     int len = nums.length;
