@@ -1,0 +1,67 @@
+
+#Count Primes
+
+[原題網址](https://leetcode.com/problems/count-primes/)
+
+題意：給一個數 n ，找出所有小於 n 的質數。
+
+解題思路：
+
+>[Wiki](https://zh.wikipedia.org/wiki/%E7%B4%A0%E6%95%B0)
+
+>驗證一個數字 n 是否為質數的一種簡單但緩慢的方法為試除法。此一方法會測試 n 是否為任一在2與$$\sqrt{n}$$之間的整數之倍數。比試除法更加有效率的演算法已被發現用來測試較大的數字是否為質數。
+
+暴力法：檢查所有 2與$$\sqrt{n}$$ 的數，令為 i ，則檢查 i是否能被任到小於i 的數整除，若是，則非質數，若非，則是質數，所花的時間為 $$O(N^{2})$$
+
+
+改進：首先使用一個陣列 isPrime 來判斷該數是否為質數，預先全設為 true ，接著對於每個數 n ，只要該數為質數，則把它的倍數的isPrime設為 false，最後留下來的便全是質數
+
+如 n = 10 則只需檢查 2 到 $$\sqrt{10} = 3.16...$$ 的倍數，即
+
+一開始isprime的陣列內容如下：
+
+2  3  4  5  6  7  8  9  10
+
+T  T  T  T  T  T  F  F  F
+
+i = 2 時，把所有2的倍數，即4，6，8，10，全改為false。 
+
+2  3  4  5  6  7  8  9  10
+
+T  T  F  T  F  T  F  F  F
+
+i = 3 時，把所有3的倍數，即6，9全改為false。  
+
+完成後 isprime的陣列內容如下
+
+2  3  4  5  6  7  8  9  10
+
+T  T  F  T  F  T  F  F  F
+
+
+```java
+public int countPrimes(int n) {
+    if (n <= 1)
+        return 0;
+        
+    boolean[] isPrime = new boolean[n];
+    Arrays.fill(isPrime, true);
+    double sqrtNum = Math.sqrt(n);
+    
+    for(int i = 2; i < sqrtNum; i++ ) {
+        if(isPrime[i]) {
+            for(int j = i*i; j < n; j = j + i) {
+                isPrime[j] = false;
+            }
+        }
+        
+    }
+    
+    int count = 0;
+    for(int i = 2; i < n; i++) {
+        count += isPrime[i] ? 1 : 0; 
+    }
+    
+    return count;
+}
+```
