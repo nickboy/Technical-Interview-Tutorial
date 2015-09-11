@@ -91,7 +91,7 @@
    * [Length of Last Word](string/length_of_last_word.md)
 * [Dynamic Programming](dynamic_programming.md)
    * [Jump Game](dynamic_programming/jump_game.md)
-   * Jump Game II
+   * [Jump Game II](dynamic_programming/jump_game_ii.md)
    * [Longest Increasing Subsequence](dynamic_programming/longest_increasing_subsequence.md)
    * [Triangle](dynamic_programming/triangle.md)
    * [Word Break](dynamic_programming/word_break.md)
