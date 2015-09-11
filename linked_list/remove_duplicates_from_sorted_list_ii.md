@@ -1,6 +1,6 @@
 #Remove Duplicates from Sorted List II
 
-[]()
+[原題網址](http://www.lintcode.com/en/problem/remove-duplicates-from-sorted-list-ii/)
 
 題意：為 [Remove Duplicates from Sorted List ](linked_list/remove_duplicates_from_sorted_list.md) 的變形，只要遇到有相同的值，則把所有節點全刪了。
 
