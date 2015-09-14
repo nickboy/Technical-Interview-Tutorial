@@ -54,7 +54,46 @@ public String longestPalindrome(String s) {
 }
 ```
 ---
-$$O(N)$$解法：待補完
+另一解法，由每個字元為中心，不斷向兩旁延伸，考慮奇數長度與偶數長度。
+
+```java
+public class Solution {
+    public String longestPalindrome(String s) {
+        
+        if (s == null || s.length() <= 1) {
+            return s;
+        }
+        
+        // 取第一個字元
+        String res = s.substring(0, 1);
+        for (int i = 0; i < s.length(); i++) {
+            
+            //考慮奇數長度
+            String temp = helper(s, i, i);
+            if (temp.length() > res.length()) {
+                res = temp;
+            }
+            
+            //考慮偶數長度
+            temp = helper(s, i, i+ 1);
+            if (temp.length() > res.length()) {
+                res = temp;
+            }
+        }
+        
+        return res;
+    }
+    
+    private String helper(String s, int start, int end) {
+        while ((start >= 0) && (end <= s.length() - 1) && (s.charAt(start) == s.charAt(end))) {
+            start--;
+            end++;
+        }
+        //考慮substring的特性，雖然start與end已改變，但修正回來上一個成立的子字串
+        return s.substring(start + 1, end);
+    }
+}
+```
 
 ---
 ###Reference
@@ -62,4 +101,5 @@ $$O(N)$$解法：待補完
 2. http://blog.csdn.net/hopeztm/article/details/7932245
 3. http://bangbingsyb.blogspot.com/2014/11/leetcode-longest-palindromic-substring.html
 4. http://articles.leetcode.com/2011/11/longest-palindromic-substring-part-i.html
+5. http://www.programcreek.com/2013/12/leetcode-solution-of-longest-palindromic-substring-java/
 
