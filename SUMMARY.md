@@ -12,6 +12,7 @@
    * [Max Points in a Line](math/max_points_in_a_line.md)
    * [Roman to Integer](math/roman_to_integer.md)
    * [Count Primes](math/count_primes.md)
+   * Print Numbers by Recursion
 * [Stack](stack.md)
    * [Evaluate Reverse Polish Notation](stack/evaluate_reverse_polish_notation.md)
    * [Max Tree](stack/max_tree.md)
