@@ -92,6 +92,7 @@
    * [One Edit Distance](string/one_edit_distance.md)
    * [Length of Last Word](string/length_of_last_word.md)
    * [ZigZag Conversion](string/zigzag_conversion.md)
+   * Longest Common Prefix
 * [Dynamic Programming](dynamic_programming.md)
    * [Jump Game](dynamic_programming/jump_game.md)
    * [Jump Game II](dynamic_programming/jump_game_ii.md)
