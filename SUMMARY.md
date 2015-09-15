@@ -85,6 +85,7 @@
    * [Interleaving Positive and Negative Numbers](array/interleaving_positive_and_negative_numbers.md)
    * [H-Index](array/h-index.md)
    * [Subarray Sum](array/subarray_sum.md)
+   * Set Matrix Zeroes
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Compare Strings](string/compare_strings.md)
