@@ -13,7 +13,7 @@
    * [Roman to Integer](math/roman_to_integer.md)
    * [Count Primes](math/count_primes.md)
    * [Print Numbers by Recursion](math/print_numbers_by_recursion.md)
-   * Gray Code
+   * [Gray Code](math/gray_code.md)
 * [Stack](stack.md)
    * [Evaluate Reverse Polish Notation](stack/evaluate_reverse_polish_notation.md)
    * [Max Tree](stack/max_tree.md)
