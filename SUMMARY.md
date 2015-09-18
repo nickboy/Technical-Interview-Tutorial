@@ -88,6 +88,7 @@
    * [Subarray Sum](array/subarray_sum.md)
    * [Set Matrix Zeroes](matrix/set_matrix_zeroes.md)
    * [Submatrix Sum](array/submatrix_sum.md)
+   * Nth Smallest Number in Matrix
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Compare Strings](string/compare_strings.md)
