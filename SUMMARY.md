@@ -15,7 +15,7 @@
    * [Print Numbers by Recursion](math/print_numbers_by_recursion.md)
    * [Gray Code](math/gray_code.md)
    * [Permutation](math/permutation.md)
-   * Permutation II
+   * [Permutation II](math/permutation_ii.md)
 * [Stack](stack.md)
    * [Evaluate Reverse Polish Notation](stack/evaluate_reverse_polish_notation.md)
    * [Max Tree](stack/max_tree.md)
