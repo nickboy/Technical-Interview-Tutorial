@@ -53,11 +53,16 @@ public class Solution {
                 }
             }
             
+            for (int k = 0; k < cols; k++) {
+                sum[k] -= matrix[top][k];
+            }
+            
         }
         
         return res;
     }
 }
+
 ```
 ---
 ###Reference
