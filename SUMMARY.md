@@ -16,6 +16,7 @@
    * [Gray Code](math/gray_code.md)
    * [Permutation](math/permutation.md)
    * [Permutation II](math/permutation_ii.md)
+   * Ugly Number
 * [Stack](stack.md)
    * [Evaluate Reverse Polish Notation](stack/evaluate_reverse_polish_notation.md)
    * [Max Tree](stack/max_tree.md)
