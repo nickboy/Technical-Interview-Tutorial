@@ -87,7 +87,7 @@
    * [H-Index](array/h-index.md)
    * [Subarray Sum](array/subarray_sum.md)
    * [Set Matrix Zeroes](matrix/set_matrix_zeroes.md)
-   * Submatrix Sum
+   * [Submatrix Sum](array/submatrix_sum.md)
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Compare Strings](string/compare_strings.md)
