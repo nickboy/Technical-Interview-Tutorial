@@ -2,6 +2,17 @@
 
 [原題網址](http://www.lintcode.com/en/problem/segment-tree-query/)
 
+解題思路：
+
+首先需要知道樹是怎麼對切的：
+
+左邊的index 的上限是到mid，右邊的index的下限是mid + 1，之後就好作了，但請記得以下兩個條件：
+
+1. 是比較 root.start == root.end來判斷終止條件，而非 start == end。
+2. 切mid是用 root.start 與 root.end而非 start 與 end
+
+接著判斷start 與 end範圍是否在左邊、右邊或跨區域。 
+
 ```java
 public int query(SegmentTreeNode root, int start, int end) {
     
