@@ -92,6 +92,7 @@
    * [Set Matrix Zeroes](matrix/set_matrix_zeroes.md)
    * [Submatrix Sum](array/submatrix_sum.md)
    * [Nth Smallest Number in SortedMatrix](array/nth_smallest_number_in_sorted_matrix.md)
+   * Subarray Sum II
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Compare Strings](string/compare_strings.md)
