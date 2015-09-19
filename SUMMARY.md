@@ -89,7 +89,7 @@
    * [Interleaving Positive and Negative Numbers](array/interleaving_positive_and_negative_numbers.md)
    * [H-Index](array/h-index.md)
    * [Subarray Sum](array/subarray_sum.md)
-   * Subarray Sum II
+   * [Subarray Sum II](array/subarray_sum_ii.md)
    * [Set Matrix Zeroes](matrix/set_matrix_zeroes.md)
    * [Submatrix Sum](array/submatrix_sum.md)
    * [Nth Smallest Number in SortedMatrix](array/nth_smallest_number_in_sorted_matrix.md)
