@@ -1,6 +1,6 @@
 #Continuous Subarray Sum
 
-[]()
+[原題網址](http://www.lintcode.com/en/problem/continuous-subarray-sum/)
 
 題意：給一矩陣，找出最大的連續子矩陣和。
 
@@ -51,3 +51,6 @@ public ArrayList<Integer> continuousSubarraySum(int[] A) {
     return res;
 }
 ```
+---
+###Reference
+1. http://cherylintcode.blogspot.com/2015/07/continuous-subarray-sum.html
