@@ -1,11 +1,11 @@
 #Building Outline
 
-[]()
+[原題網址](http://www.lintcode.com/en/problem/building-outline/)
 
 
 解題思路：
 
-根據 [網友] () 提供以下思路：
+根據 [網友](https://codesolutiony.wordpress.com/2015/06/01/leetcode-the-skyline-problem-lintcode-building-outline/) 提供以下思路：
 
 把每一個building拆成兩個edge，一個入一個出。所有的edge加入到一個list中。再對這個list進行排序。
 
