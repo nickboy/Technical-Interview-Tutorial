@@ -1,6 +1,6 @@
 #Maximal Square
 
-[]()
+[原題網址](http://www.lintcode.com/submission/1540325/)
 
 題意：
 
