@@ -1,7 +1,11 @@
 #Search for a Range
 [原題網址](http://www.lintcode.com/en/problem/search-for-a-range/)
 
->解法：跑兩次二分搜尋，第一次找目標值的第一個發生的位置，第二次找目標值最後發生的位置。
+>解法：因有可能有多個相同的值，需跑兩次二分搜尋找上下限，第一次找目標值的第一個發生的位置，第二次找目標值最後發生的位置。
+
+找下標：當 A[mid] == target 時，把 end 指向 mid 繼續往前搜尋可能相同的值，assign 下標時，記得先從 start開始比，因為我們要找目標值的第一個發生的位置。
+
+找上標：當 A[mid] == target 時，把 start 指向 mid 繼續往後搜尋可能相同的值，assign 上標時，記得先從 end 開始比，因為我們要找目標值最後發生的位置。
 
 ```java
 public ArrayList<Integer> searchRange(ArrayList<Integer> A, int target) {
