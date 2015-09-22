@@ -75,3 +75,7 @@ public int largestRectangleArea(int[] height) {
     return max;
 }
 ```
+
+---
+###Reference
+1. http://www.cnblogs.com/lichen782/p/leetcode_Largest_Rectangle_in_Histogram.html
