@@ -4,19 +4,18 @@
 
 題意：
 
-Given an array of integers and a number k, find k non-overlapping subarrays which have the largest sum.
+Given a 2D binary matrix filled with 0's and 1's, find the largest square containing all 1's and return its area.
 
-The number in each subarray should be contiguous.
+For example, given the following matrix:
 
-Return the largest sum.
+```
+1 0 1 0 0
+1 0 1 1 1
+1 1 1 1 1
+1 0 0 1 0
+```
 
-**Example**
-
-Given $$[-1,4,-2,3,-2,3]$$, $$k=2$$, return $$8$$
-
-**Note**
-
-The subarray should contain at least one number
+return 4
 
 解題思路：
 
