@@ -49,7 +49,7 @@ Given two strings s1 and s2 of the same length, determine if s2 is a scrambled s
 
 解題思路：
 
-以下參考網友 [Yu Zhang](http://www.cnblogs.com/yuzhangcmu/p/4189152.html) 的解題思路
+>以下四種解法參考網友 [Yu Zhang](http://www.cnblogs.com/yuzhangcmu/p/4189152.html) 的解題思路
 
 暴力法：
 
@@ -155,6 +155,12 @@ private boolean helper(String s1, String s2) {
     return false;
 }
 ```
+
+解法三：**加上記憶矩陣**
+
+我們在遞歸中加上記憶矩陣，也可以減少重複運算，但是我們現在就改一下之前遞歸的結構以方便加上記憶矩陣，我們用index1記憶S1起始地址，index2記憶S2起始地址，len 表示字符串的長度。這樣我們可以用一個三維數組來記錄計算過的值，同樣可以通過leetcode的檢查。這個三維數組一個是N^3的複雜度，在每一個遞歸中，要從1-len地計算一次所有的子串，所以一共的複雜度是N^4
+
+
 ---
 ###Reference
 
