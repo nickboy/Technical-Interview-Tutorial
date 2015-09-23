@@ -66,6 +66,7 @@ Given two strings s1 and s2 of the same length, determine if s2 is a scrambled s
 看了你的不少文章，感覺收穫良多！只是有點小問題想請教：按照我的理解，那個遞歸算法在最差情況下應該是O(3^n)，而非O(n^2)。理由是：假設函數運行時間為f(n)，那麼由於在每次函數調用中都要考慮1~n之間的所有長度，並且正反都要檢查，所以有
 f(n) = 2[f(1) + f(n-1)] +2[f(2) + f(n-2)] … + 2[f(n/2) + f(n/2+1)]. 易推得f(n+1) = 3(fn), 故f(n) = O(3^n)。當然這是最差情況下的時間複雜度。那麼你提到的O(n^2)，是否是通過其他數學方法得到的更tight的上限？歡迎探討！
 
+>複雜度太高，可透過lintcode但無法通過leetcode！
 
 ```java
 public class Solution {
