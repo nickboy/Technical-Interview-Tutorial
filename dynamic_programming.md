@@ -49,5 +49,15 @@ Given two strings s1 and s2 of the same length, determine if s2 is a scrambled s
 
 解題思路：
 
+以下參考網友 [Yu Zhang](http://www.cnblogs.com/yuzhangcmu/p/4189152.html) 的解題思路
+
 暴力法：
 
+
+
+
+---
+###Reference
+
+1. http://www.cnblogs.com/yuzhangcmu/p/4189152.html
+2. 
