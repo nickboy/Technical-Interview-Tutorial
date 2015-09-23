@@ -117,6 +117,44 @@ public class Solution {
 
 ```
 
+解法二：**遞迴法加減枝**
+
+ 來避免掉不必要的遞迴，在作遞迴前，先將兩個字串作排序，若有不同的字元則直接返回 false ，否則繼續往下檢查，可通過leetcode，但面試官應該不夠滿意。
+
+```java
+private boolean helper(String s1, String s2) {
+    if (s1.length() == 1) {
+        return s1.equals(s2);
+    }
+    
+    char[] s1Char = s1.toCharArray();
+    Arrays.sort(s1Char);
+    char[] s2Char = s2.toCharArray();
+    Arrays.sort(s2Char);
+    
+    for (int i = 0; i < s1Char.length; i++) {
+        if (s1Char[i] != s2Char[i]) {
+            return false;
+        }
+    }
+    
+    
+    int len = s1.length();
+    for (int i = 1; i < len; i++) {
+        if (helper(s1.substring(0, i), s2.substring(0, i))
+            && helper(s1.substring(i, len), s2.substring(i, len))) {
+                return true;
+        }
+        
+        if (helper(s1.substring(0, i), s2.substring(len - i, len))
+            && helper(s1.substring(i, len), s2.substring(0, len - i))) {
+                return true;
+            }
+    }
+    
+    return false;
+}
+```
 ---
 ###Reference
 
