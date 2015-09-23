@@ -158,9 +158,62 @@ private boolean helper(String s1, String s2) {
 
 解法三：**加上記憶矩陣**
 
-我們在遞歸中加上記憶矩陣，也可以減少重複運算，但是我們現在就改一下之前遞歸的結構以方便加上記憶矩陣，我們用index1記憶S1起始地址，index2記憶S2起始地址，len 表示字符串的長度。這樣我們可以用一個三維數組來記錄計算過的值，同樣可以通過leetcode的檢查。這個三維數組一個是N^3的複雜度，在每一個遞歸中，要從1-len地計算一次所有的子串，所以一共的複雜度是N^4
+我們在遞歸中加上記憶矩陣，也可以減少重複運算，但是我們現在就改一下之前遞歸的結構以方便加上記憶矩陣，我們用index1記憶S1起始地址，index2記憶S2起始地址，len 表示字符串的長度。這樣我們可以用一個三維數組來記錄計算過的值，同樣可以通過leetcode的檢查。這個三維數組一個是$$O(N^{3})$$的複雜度，在每一個遞歸中，要從1-len地計算一次所有的子串，所以一共的複雜度是N^4
+
+> 因我們並未對原本的字串作任何改變，因此我們使用起始點(index1, index2) 加上長度 (len) 來幫助我們處用子字串的部份。
 
 
+```java
+public class Solution {
+    public boolean isScramble(String s1, String s2) {
+        if (s1 == null || s2 == null || s1.length() != s2.length()) {
+            return false;
+        }
+        
+        int len = s1.length();
+        int[][][] mem = new int[len][len][len];
+        for (int i = 0; i < len; i++) {
+            for (int j = 0; j < len; j++) {
+                for (int k = 0; k < len; k++) {
+                    mem[i][j][k] = -1;
+                }
+            }
+        }
+        
+        return helper(s1, 0, s2, 0, len, mem);
+    }
+    
+    private boolean helper(String s1, int index1, String s2, int index2, int len, int[][][] mem) {
+    
+        if (s1.length() == 1) {
+            // 不能直接用 equals，因為我們沒有對原本的字串作任何改變。
+            return s1.charAt(index1) == s2.charAt(index2);
+        }
+        
+        int res = mem[index1][index2][len - 1];
+        if (res != -1) {
+            return (res == 1) ? true : false;
+        }
+        
+        res = 0;
+        
+        for (int i = 1; i < len; i++) {
+            if (helper(s1, index1, s2, index2, i, mem) && helper(s1, index1 + i, s2, index2 + i, len - i, mem)) {
+                res = 1;
+                break;
+            }
+            
+            if (helper(s1, index1, s2, index2 + len - i, i, mem) && helper(s1, index1 + i, s2, index2, len - i, mem)) {
+                res = 1;
+                break;
+            }
+        }
+        
+        mem[index1][index2][len - 1] = res;
+        return (res == 1) ? true : false;
+    }
+}
+```
 ---
 ###Reference
 
