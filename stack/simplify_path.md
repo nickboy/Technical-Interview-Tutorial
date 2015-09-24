@@ -1,6 +1,6 @@
 #Simplify Path
 
-[]()
+[原題網址](http://www.lintcode.com/en/problem/simplify-path/)
 
 題意：
 
