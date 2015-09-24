@@ -77,9 +77,9 @@ public String simplifyPath(String path) {
 
 直接使用 split 函數來作，但得看面試官給不給用，需要注意的是在這裡我沒沒用一個res來存放當下的path，是處理完後再一次將 path  還原，這時候我們需要還原path。但是不能彈出 stack，因為按照要求 stack 底元素應該為最先還原的目錄path。
 
-例如：原始path是 /a/b/c/，棧裡的順序是：a b c，如果依次彈棧還原的話是：/c/b/a（錯誤！），正確答案為：/a/b/c
+例如：原始path是 /a/b/c/，stack 裡的順序是：a b c，如果依次 pop 還原的話是：/c/b/a（錯誤！），正確答案為：/a/b/c
 
-所以這裡我應用了第二個棧，先將第一個棧元素彈出入棧到第二個棧，然後再利用第二個棧還原回初始path。
+所以這裡我應用了第二個 stack ，先將第一個 stack 元素彈出入 stack 到第二個 stack ，然後再利用第二個 stack 還原回初始 path 。
 
 原始碼如下：
 
