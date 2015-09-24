@@ -97,7 +97,7 @@
    * [Nth Smallest Number in SortedMatrix](array/nth_smallest_number_in_sorted_matrix.md)
    * [Continuous Subarray Sum](array/continuous_subarray_sum.md)
    * [First Missing Positive](array/first_missing_positive.md)
-   * Merge Intervals
+   * [Merge Intervals](array/merge_intervals.md)
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Compare Strings](string/compare_strings.md)
