@@ -128,8 +128,45 @@ public String simplifyPath(String path) {
 
 ```
 
+>在網上還看到有人寫的最後還原path沒用到第二個 stack ，是因為可以利用Java中LinkedList 來表示第一個 stack 。LinkedList 很強大，包含了 stack 和 queue
+的實現。所以最後還原時調用removeLast()函數就可以解決順序問題。
+
+以下程式碼 由 [http://blog.csdn.net/linhuanmars/article/details/23972563](http://blog.csdn.net/linhuanmars/article/details/23972563) 提供
+
+```java
+public static String simplifyPath(String path) {  
+        if(path.length() == 0){  
+            return path;  
+        }  
+          
+        String[] splits = path.split("/");  
+        LinkedList<String> stack = new LinkedList<String>();  
+        for (String s : splits) {  
+            if(s.length()==0 || s.equals(".")){  
+                continue;  
+            }else if(s.equals("..")){  
+                if(!stack.isEmpty()){  
+                    stack.pop();  
+                }  
+            }else{  
+                stack.push(s);  
+            }  
+        }  
+          
+        if(stack.isEmpty()){  
+            stack.push("");  
+        }  
+        String ret = "";  
+        while(!stack.isEmpty()){  
+            ret += "/" + stack.removeLast();  
+        }  
+          
+        return ret;  
+    }
+```
 ---
 ###Reference
 1. http://www.cnblogs.com/springfor/p/3869666.html
 2. http://bangbingsyb.blogspot.com/2014/11/leetcode-simplify-path.html
+3. http://blog.csdn.net/linhuanmars/article/details/23972563
 3. http://fisherlei.blogspot.com/2013/01/leetcode-simplify-path.html
