@@ -23,7 +23,7 @@
    * [Expression Tree Build](stack/expression_tree_build.md)
    * [Largest Rectangle in Histogram](stack/largest_rectangle_in_histogram.md)
    * [Maximal Square](stack/maximal_square.md)
-   * Simplify Path
+   * [Simplify Path](stack/simplify_path.md)
 * [Binary Tree](binary_tree.md)
    * [Template](binary_tree/template.md)
    * [Inorder Traversal](binary_tree/inorder_traversal.md)
