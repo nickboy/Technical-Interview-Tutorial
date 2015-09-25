@@ -17,7 +17,7 @@
    * [Permutation](math/permutation.md)
    * [Permutation II](math/permutation_ii.md)
    * [Ugly Number](math/ugly_number.md)
-   * Cosine Similarity
+   * [Cosine Similarity](math/cosine_similarity.md)
    * Valid Number
 * [Stack](stack.md)
    * [Evaluate Reverse Polish Notation](stack/evaluate_reverse_polish_notation.md)
