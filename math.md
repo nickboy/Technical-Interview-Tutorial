@@ -1,6 +1,6 @@
 #Cosine Similarity
 
-[]()
+[原題網址](http://www.lintcode.com/en/problem/cosine-similarity/)
 
 題意：
 
@@ -27,72 +27,37 @@ Return 2.0000
 水題，照著 wiki上的公式直接寫即可，程式碼如下：
 
 ```java
-public class Solution {
+class Solution {
     /**
-     * @param A an integer array
-     * @return  A list of integers includes the index of the first number and the index of the last number
+     * @param A: An integer array.
+     * @param B: An integer array.
+     * @return: Cosine similarity.
      */
-    public ArrayList<Integer> continuousSubarraySumII(int[] A) {
+    public double cosineSimilarity(int[] A, int[] B) {
         
-        ArrayList<Integer> res = new ArrayList<Integer>();
-        if (A == null || A.length == 0) {
-            return res;
+        if (A.length == 0 || A.length == 1 && A[0] == B[0]) {
+            return 2.0;
         }
         
-        int start = 0;
-        int end = 0;
-        int sum = A[0];
-        int max = A[0];
-        int totalSum = A[0];
-        res.add(0);
-        res.add(0);
-        
-        for (int i = 1; i < A.length; i++) {
-            if (sum < 0) {
-                start = i;
-                sum = A[i];
-            } else {
-                sum += A[i];
-            }
-            end = i;
-            
-            if (sum > max) {
-                max = sum;
-                res.set(0, start);
-                res.set(1, end);
-            }
-            
-            totalSum += A[i]; // for latter use.
-        }
-        
-        int[] negativeA = new int[A.length];
+        double productSum = 0;
+        double aSquare = 0;
+        double bSquare = 0;
         for (int i = 0; i < A.length; i++) {
-            negativeA[i] = -A[i];
+            productSum += A[i] * B[i];
+            aSquare += A[i] * A[i];
+            bSquare += B[i] * B[i];
         }
         
-        start = 0;
-        end = 0;
-        sum = negativeA[0];
-        for (int i = 1; i < negativeA.length; i++) {
-            if (sum < 0) {
-                start = i;
-                sum = negativeA[i];
-            } else {
-                sum += negativeA[i];
-            }
-            end = i;
-            
-            if (totalSum + sum > max) {
-                max = totalSum + sum;
-                res.set(0, end + 1);
-                res.set(1, start - 1);
-            }
+        double aSquareRoot = Math.sqrt(aSquare);
+        double bSquareRoot = Math.sqrt(bSquare);
+        if (aSquareRoot * bSquareRoot != 0) {
+            return productSum / (aSquareRoot * bSquareRoot);
+        } else {
+            return 2.0;
         }
-        
-        return res;
-        
-        
         
     }
 }
+
+
 ```
