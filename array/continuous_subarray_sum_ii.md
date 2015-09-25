@@ -102,7 +102,80 @@ public class Solution {
 
 >Time Complexity：$$O(N)$$，Space Complexity：$$O(N)$$ for negative Array.
 
+---
 
+網友 [glaciersilent](http://www.1point3acres.com/bbs/forum.php?mod=viewthread&action=printable&tid=137556) 提供了以下方法，使用兩個array 來達到one pass通過，程式碼如下：
+
+```java
+public class Solution {
+    /**
+     * @param A an integer array
+     * @return  A list of integers includes the index of the first number and the index of the last number
+     */
+    public ArrayList<Integer> continuousSubarraySumII(int[] A) {
+        
+        if (A == null || A.length == 0) {
+            return new ArrayList<Integer>();
+        }
+        
+        int len = A.length;
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
+        ArrayList<Integer> maxIndex = new ArrayList<Integer>();
+        ArrayList<Integer> minIndex = new ArrayList<Integer>();
+        maxIndex.add(0);
+        maxIndex.add(0);
+        minIndex.add(0);
+        minIndex.add(0);
+        
+        int[] maxArray = new int[len];
+        int[] minArray = new int[len];
+        int[] maxStart = new int[len];
+        int[] minStart = new int[len];
+        maxArray[0] = A[0];
+        minArray[0] = A[0];
+        int sum = A[0];
+        
+        for (int i = 1; i < len; i++) {
+            sum += A[i];
+            if (maxArray[i - 1] > 0) {
+                maxArray[i] = maxArray[i - 1] + A[i];
+                maxStart[i] = maxStart[i - 1];
+            } else {
+                maxArray[i] = A[i];
+                maxStart[i] = i;
+            }
+            
+            if (minArray[i - 1] < 0) {
+                minArray[i] = minArray[i - 1] + A[i];
+                minStart[i] = minStart[i - 1];
+            } else {
+                minArray[i] = A[i];
+                minStart[i] = i;
+            }
+            
+            if (maxArray[i] > max) {
+                max = maxArray[i];
+                maxIndex.set(0, maxStart[i]);
+                maxIndex.set(1, i);
+            }
+            
+            if (minArray[i] < min) {
+                min = minArray[i];
+                minIndex.set(0, (i + 1) % len);
+                minIndex.set(1, minStart[i] - 1 >= 0 ? minStart[i] - 1 : A.length - 1);
+            }
+        }
+        
+        if (max > sum - min || min == sum) {
+            return maxIndex;
+        } else {
+            return minIndex;
+        }
+    }
+}
+
+```
 ---
 ###Reference
 1. http://www.1point3acres.com/bbs/forum.php?mod=viewthread&action=printable&tid=137556
