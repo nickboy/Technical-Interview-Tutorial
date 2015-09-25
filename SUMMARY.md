@@ -99,7 +99,7 @@
    * [Continuous Subarray Sum](array/continuous_subarray_sum.md)
    * [First Missing Positive](array/first_missing_positive.md)
    * [Merge Intervals](array/merge_intervals.md)
-   * Continuous Subarray Sum II
+   * [Continuous Subarray Sum II](array/continuous_subarray_sum_ii.md)
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Compare Strings](string/compare_strings.md)
