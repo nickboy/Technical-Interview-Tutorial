@@ -18,6 +18,7 @@
    * [Permutation II](math/permutation_ii.md)
    * [Ugly Number](math/ugly_number.md)
    * Cosine Similarity
+   * Valid Number
 * [Stack](stack.md)
    * [Evaluate Reverse Polish Notation](stack/evaluate_reverse_polish_notation.md)
    * [Max Tree](stack/max_tree.md)
