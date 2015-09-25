@@ -101,7 +101,6 @@
    * [Merge Intervals](array/merge_intervals.md)
    * [Continuous Subarray Sum II](array/continuous_subarray_sum_ii.md)
    * [Spiral Matrix](array/spiral_matrix.md)
-   * Continuous Subarray Sum II
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Compare Strings](string/compare_strings.md)
