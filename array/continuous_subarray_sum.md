@@ -8,6 +8,8 @@
 
 後來找到網友[Techinpad](http://techinpad.blogspot.com/2015/06/lintcode-continuous-subarray-sum.html) 提供的解法較容易懂，類似把改良版的 subarray sum，其程式碼如下：
 
+sum 表示必含 A[i] 的最大和為多少
+
 ```java
 public ArrayList<Integer> continuousSubarraySum(int[] A) {
         
