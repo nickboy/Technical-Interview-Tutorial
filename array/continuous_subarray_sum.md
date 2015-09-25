@@ -6,6 +6,45 @@
 
 解題思路：
 
+後來找到網友[Techinpad](http://techinpad.blogspot.com/2015/06/lintcode-continuous-subarray-sum.html) 提供的解法較容易懂，類似把改良版的 subarray sum，其程式碼如下：
+
+```java
+public ArrayList<Integer> continuousSubarraySum(int[] A) {
+        
+    ArrayList<Integer> res = new ArrayList<Integer>();
+    if (A == null || A.length == 0) {
+        return res;
+    }
+    
+    int start = 0;
+    int end = 0;
+    int sum = A[0];
+    int max = A[0];
+    res.add(0); //start
+    res.add(0); //end
+    
+    for (int i = 1; i < A.length; i++) {
+        if (sum < 0) {
+            start = i;
+            sum = A[i];
+        } else {
+            sum += A[i];
+        }
+        end = i;
+        
+        if (sum > max) {
+            max = sum;
+            res.set(0, start);
+            res.set(1, end);
+        }
+    }
+    
+    return res;
+}
+```
+
+---
+
 使用 sum 來紀錄當前總和，max來紀錄目前最大的總和，若sum > max 則代表找到更好的子矩陣，更新它。需注意若當前加起來的值小於0，捨棄前面的總和，從當前的元素開始，需特別注意的地方是我們總是在下一次才檢查是否更新上一次的結果，因此 for 循環結束後，我們需要再檢查一次，其代碼如下：
 
 程式碼如下：
@@ -57,3 +96,4 @@ public ArrayList<Integer> continuousSubarraySum(int[] A) {
 ---
 ###Reference
 1. http://cherylintcode.blogspot.com/2015/07/continuous-subarray-sum.html
+2. http://techinpad.blogspot.com/2015/06/lintcode-continuous-subarray-sum.html
