@@ -19,3 +19,14 @@ Give ```[3, 1, -100, -3, 4]```, return ```[4,1]```.
 1和Continuous Subarray Sum I相同，就不多說了。
 
 2等價於找一個範圍[j+1 ~i-1]，使得這個範圍內的數組和最小。這又等價於將原數組取負號，然後在這個負數組中找最大和的[j+1 ~ i+1]範圍即可。
+
+
+網友 momocoisapeach 亦提供以下思路：
+
+思路是這樣的，像樓上說的兩種情況，不rotate的 和rorate的。不rotate的和Continuous Subarray Sum I做法一樣，不說了。rotate的，可以這樣想，rotate的結果其實相當於是把原來的array中間挖了一段連續的array，那麼挖哪一段呢？肯定是和最小的一段連續array。這樣解法就出來了。" Y, r, p3 }. a
+類似Continuous Subarray Sum I，在I裡面是找到連續和最大的一段subarray，在這裡，不僅找到和最大的一段連續array，並且也找到和最小的一段連續array，然後用整個array的sum減去這個最小的和，如果大於不rotate的最大和，那麼解就是挖去的這段array的（尾+1， 頭-1）6 t" C' P% I& `8 D
+
+
+---
+###Reference
+1. http://www.1point3acres.com/bbs/forum.php?mod=viewthread&action=printable&tid=137556
