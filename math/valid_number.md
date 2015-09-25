@@ -56,15 +56,18 @@ public class Solution {
         int len = s.length();
         boolean isValid = false;
         
+        // 忽略正負號與 leading whitespaces
         while (i < len && (s.charAt(i) == '-' || s.charAt(i) == '+' || Character.isWhitespace(s.charAt(i)))) {
             i++;
         }
         
+        // 一一檢查每個digit是否為數字
         while (i < len && Character.isDigit(s.charAt(i))) {
             i++;
             isValid = true;
         }
         
+        // 若含小數的話，則繼續往下檢查
         if (i < len && s.charAt(i) == '.') {
             i++;
             while (i < len && Character.isDigit(s.charAt(i))) {
@@ -73,10 +76,12 @@ public class Solution {
             }
         }
         
+        // 忽略 trailing spaces
         while (i < len && Character.isWhitespace(s.charAt(i))) {
             i++;
         }
         
+        //除了檢查isvalid外，記得注意i是否到底了。
         return isValid && i == len;
         
     }
