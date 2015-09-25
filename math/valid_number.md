@@ -87,3 +87,17 @@ public class Solution {
     }
 }
 ```
+
+若考慮科學符號 $$e$$ 的話，則需要再多加一段code，在小數點檢查之後。
+
+```java
+if (isNumeric && i < n && s.charAt(i) == 'e') {
+   i++;
+   isNumeric = false;
+   if (i < n && (s.charAt(i) == '+' || s.charAt(i) == '-')) i++;
+   while (i < n && Character.isDigit(s.charAt(i))) {
+i++;
+      isNumeric = true;
+   }
+}
+```
