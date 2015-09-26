@@ -6,7 +6,7 @@
 
 給出m個村莊及其距離，給出n個郵局，要求怎麼建n個郵局使代價最小.
 
-On one line there are n houses. Give you an array of integer means the the position of each house. Now you need to pick k position to build k post office, so that the sum distance of each house to the nearest post office is the smallest. Return the least possible sum of all distances between each village and its nearest post office.
+On one line there are n houses. Give you an array of integer means the position of each house. Now you need to pick k position to build k post office, so that the sum distance of each house to the nearest post office is the smallest. Return the least possible sum of all distances between each village and its nearest post office.
 
 Example
 
