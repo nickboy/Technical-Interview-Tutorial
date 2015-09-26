@@ -1,6 +1,6 @@
 #Post Office Problem
 
-[]()
+[Lintcode](http://www.lintcode.com/en/problem/post-office-problem/)
 
 題意：
 
