@@ -133,7 +133,7 @@
    * [Maximal Square](dynamic_programming/maximal_square.md)
    * [Longest Increasing Continuous subsequence II](dynamic_programming/longest_increasing_continuous_subsequence_ii.md)
    * [Scramble String](dynamic_programming/scramble_string.md)
-   * Post Office Problem
+   * [Post Office Problem](dynamic_programming/post_office_problem.md)
 * [Segment Tree](segment_tree.md)
    * [Segment Tree Query](segment_tree/segment_tree_query.md)
    * [Segment Tree Query II](segment_tree/segment_tree_query_ii.md)
