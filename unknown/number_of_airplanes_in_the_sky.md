@@ -1,6 +1,6 @@
 #Number of airplanes in the sky
 
-[Lintcode]()
+[Lintcode](http://www.lintcode.com/en/problem/number-of-airplanes-in-the-sky/)
 
 題意：
 
