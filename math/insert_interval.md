@@ -20,6 +20,10 @@ Insert ```[3, 4]``` into ```[[1,2], [5,9]]```, we get ```[[1,2], [3,4], [5,9]]``
 1. 當前區間在新區間前面，且兩者不重疊，則直接把當前區間放入結果。
 2. 當前區間在新區間後面，且兩者不重疊，則把新區間放入結果並更新新區間為舊區間。
 3. 當兩者重疊，則分別找出兩個區間的最小值與最大值，並建立新的區間，以合併兩個區間。
+    - 在此只是先把 newInterval 更新並末加入 list 中，待下一次再檢查
+
+
+> 因很有可能newInterval 比 intervals 的最後一個還大，或是第三個狀況更新了 newInterval 而還沒加入，記得在最後把 newInterval 加入到 list中。
 
 程式碼如下：
 
@@ -40,12 +44,16 @@ public ArrayList<Interval> insert(ArrayList<Interval> intervals, Interval newInt
             result.add(newInterval);
             newInterval = interval;
         } else if (newInterval.start <= interval.end || newInterval.end >= interval.start) {
+            // 在此只是先把 newInterval更新並末加入 list中
             int start = Math.min(newInterval.start, interval.start);
             int end = Math.max(newInterval.end, interval.end);
             newInterval = new Interval(start, end);
         }
     }
     
+    // 因很有可能newInterval 比 intervals 的最後一個還大，
+    // 或是第三個狀況更新了 newInterval 而還沒加入
+    // 記得在最後把 newInterval 加入到 list中。
     result.add(newInterval);
     
     return result;
