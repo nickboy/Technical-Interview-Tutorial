@@ -21,7 +21,6 @@ If landing and flying happens at the same time, we consider landing should happe
     - 在每個時間點，檢查是起飛還是降落
 
         - 起飛的話，則count加一
-
         - 降落的話，則count減一
         
         
