@@ -1,7 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-   * Bit Manipulation
 * [Math](math.md)
    * [Sqrt(x)](math/sqrtx.md)
    * [Trailing Zeros](math/trailing_zeros.md)
