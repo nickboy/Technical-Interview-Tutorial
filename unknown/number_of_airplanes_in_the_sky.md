@@ -16,9 +16,7 @@ If landing and flying happens at the same time, we consider landing should happe
 
 - 只有在有飛機起飛還是降落時，數目才會改變，因此只要check這兩個狀況發生的時間點即可
 
-- 每個起飛或落降的時間點，產出一個pair為(plane, time)，按照時間(time)排序，
-
-    - 在每個時間點，檢查是起飛還是降落
+- 每個起飛或落降的時間點，產出一個pair為(plane, time)，按照時間(time)排序，在每個時間點，檢查是起飛還是降落
 
         - 起飛的話，則count加一
         - 降落的話，則count減一
