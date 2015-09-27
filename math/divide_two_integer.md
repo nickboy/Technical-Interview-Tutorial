@@ -19,7 +19,7 @@
 
 ```result = (((dividend ^ divisor) >> 31) & 1) == 1 ? -result: result;```
 
-其程式碼如下：
+其程式碼如下，搞了老半天，仍是會TLE：
 
 ```java
 public int divide(int dividend, int divisor) {
@@ -78,7 +78,10 @@ public int divide(int dividend, int divisor) {
 }
 ```
 
+下面為 [九章算法](http://www.jiuzhang.com/solutions/divide-two-integers/) 提供的解法
+
 
 ---
 ###Reference
 1. http://www.cnblogs.com/yuzhangcmu/p/4049170.html
+2. http://www.jiuzhang.com/solutions/divide-two-integers/
