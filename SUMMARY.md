@@ -20,6 +20,7 @@
    * [Cosine Similarity](math/cosine_similarity.md)
    * [Valid Number](math/valid_number.md)
    * [Divide Two Integer](math/divide_two_integer.md)
+   * Bitwise AND of Numbers Range
 * [Stack](stack.md)
    * [Evaluate Reverse Polish Notation](stack/evaluate_reverse_polish_notation.md)
    * [Max Tree](stack/max_tree.md)
