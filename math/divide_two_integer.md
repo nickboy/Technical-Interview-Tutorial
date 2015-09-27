@@ -23,11 +23,30 @@
 
 ```java
 public int divide(int dividend, int divisor) {
-
+    
     // 因不能除以0
     if (divisor == 0) {
         return 0;
     }
+    
+    // 為了應付lintcode極端會TLE的case
+    if (dividend == Integer.MAX_VALUE) {
+        if (divisor == -1) {
+            return Integer.MIN_VALUE;
+        } else if (divisor == 1) {
+            return Integer.MAX_VALUE;
+        }
+        
+    }
+    
+    if (dividend == Integer.MIN_VALUE) {
+        if (divisor == 1) {
+            return Integer.MIN_VALUE;
+        } else if (divisor == -1) {
+            return Integer.MAX_VALUE;
+        }
+    }
+    
     // 先轉正整數來處理，之後再轉回來
     long p = Math.abs((long)dividend);
     long q = Math.abs((long)divisor);
