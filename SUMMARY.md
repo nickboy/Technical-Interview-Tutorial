@@ -19,6 +19,7 @@
    * [Ugly Number](math/ugly_number.md)
    * [Cosine Similarity](math/cosine_similarity.md)
    * [Valid Number](math/valid_number.md)
+   * Divide Two Integer
 * [Stack](stack.md)
    * [Evaluate Reverse Polish Notation](stack/evaluate_reverse_polish_notation.md)
    * [Max Tree](stack/max_tree.md)
