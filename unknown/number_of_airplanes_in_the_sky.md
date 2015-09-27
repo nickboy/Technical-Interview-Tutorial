@@ -30,3 +30,74 @@ If landing and flying happens at the same time, we consider landing should happe
 - s代表升起，t代表降落，Ti代表時間i
 - 把每個降落升起分別設為**(s1,Ti)**，對Ti作排序
 - count + 1 代表起點，若又有另一個升起則count再加一，降落則減一
+
+程式碼如下：
+
+```java
+/**
+ * Definition of Interval:
+ * public classs Interval {
+ *     int start, end;
+ *     Interval(int start, int end) {
+ *         this.start = start;
+ *         this.end = end;
+ *     }
+ */
+
+class Solution {
+    /**
+     * @param intervals: An interval array
+     * @return: Count of airplanes are in the sky.
+     */
+     
+    public class TimeEdge implements Comparator<TimeEdge>{
+        int time;
+        int flag;
+        public TimeEdge(int time, int flag) {
+            this.time = time;
+            this.flag = flag;
+        }
+        
+        public int compare(TimeEdge e1, TimeEdge e2) {
+            if (e1.time == e2.time) {
+                return e1.flag - e2.flag;
+            } else {
+                return e1.time - e2.time;
+            }
+        }
+        
+        public TimeEdge(){}
+    }
+    public int countOfAirplanes(List<Interval> airplanes) { 
+        
+        if (airplanes == null || airplanes.size() == 0) {
+            return 0;
+        }
+        
+        
+        ArrayList<TimeEdge> timeList = new ArrayList<TimeEdge>();
+        for (Interval airplane : airplanes) {
+            timeList.add(new TimeEdge(airplane.start, 1));
+            timeList.add(new TimeEdge(airplane.end, 0));
+        }
+        
+        Collections.sort(timeList, new TimeEdge());
+        
+        int max = 0;
+        int count = 0;
+        for (TimeEdge time : timeList) {
+            if (time.flag == 1) {
+                count++;
+            } else {
+                count--;
+            }
+            if (count > max) {
+                max = count;
+            }
+        }
+        
+        return max;
+    }
+}
+
+```
