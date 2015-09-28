@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [Math](math.md)
-   * Add Binary
+   * [Add Binary](math/add_binary.md)
    * [Sqrt(x)](math/sqrtx.md)
    * [Trailing Zeros](math/trailing_zeros.md)
    * [Add Digits](math/add_digits.md)
