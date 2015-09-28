@@ -1,8 +1,8 @@
 # Summary
 
 * [Introduction](README.md)
-   * Add Binary
 * [Math](math.md)
+   * Add Binary
    * [Sqrt(x)](math/sqrtx.md)
    * [Trailing Zeros](math/trailing_zeros.md)
    * [Add Digits](math/add_digits.md)
