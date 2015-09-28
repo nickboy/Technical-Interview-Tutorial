@@ -70,3 +70,11 @@ class Solution {
 
 
 ```
+
+另有數學解法：
+
+
+---
+###Reference
+1. http://blog.hfknight.com/?p=1303
+2. 
