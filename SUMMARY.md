@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
+   * Add Binary
 * [Math](math.md)
    * [Sqrt(x)](math/sqrtx.md)
    * [Trailing Zeros](math/trailing_zeros.md)
