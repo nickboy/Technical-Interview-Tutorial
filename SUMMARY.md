@@ -172,6 +172,7 @@
    * [Best Time to Buy and Sell Stock IV](high_frequency/best_time_to_buy_and_sell_stock_iv.md)
    * [Triangle Count](high_frequency/triangle_count.md)
    * [Number of Airplanes in the Sky](high_frequency/number_of_airplanes_in_the_sky.md)
+   * Text Justification
 * [Unknown](unknown.md)
    * [Combinations](unknown/combinations.md)
    * [Combination Sum](unknown/combination_sum.md)
