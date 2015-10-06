@@ -7,6 +7,28 @@
 解題思路：
 
 * **暴力法**：可使用兩條 for 循環來枚舉所有牆的組合來找到高的組合，但需花費 $$O(N^{2})$$。
+
+
+```java
+public int maxArea(int[] heights) {
+    if (heights == null || heights.length < 0) {
+        return 0;
+    }
+    
+    int len = heights.length;
+    int maxCapacity = 0;
+    
+    for (int i = 0; i < len - 1; i++) {
+        for (int j = i + 1; j < len; j++) {
+            int height = Math.min(heights[i], heights[j]);
+            int capacity = height * (j - i);
+            maxCapacity = (capacity > maxCapacity) ? capacity : maxCapacity;
+        }
+    }
+    
+    return maxCapacity;
+}
+```
 * **排序**：對高度作排序，因 index 經過排序後順序會亂掉，因此需要自創一個屬性來紀錄原本的 index ，接著由後往前解，因為最高牆在最後面。
 * **兩個指針**：使用前後兩根指針來計算，每次移動較小的指針，因如果小的指針不移動的話，不管較大指針怎麼移動，都不會改變水位的高度。程式碼如下：
 
