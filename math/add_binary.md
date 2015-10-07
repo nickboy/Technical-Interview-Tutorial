@@ -113,6 +113,53 @@ public String addBinary(String a, String b) {
     return rst;
 }
 ```
+
+updated 2015.10.6
+
+```java
+public class Solution {
+    public String addBinary(String a, String b) {
+        
+        
+        if (a == null || a.length() == 0) {
+            return b;
+        } else if (b == null || b.length() == 0) {
+            return a;
+        } 
+        
+        StringBuilder sb = new StringBuilder();
+        int idxA = a.length() - 1;
+        int idxB = b.length() - 1;
+        int carry = 0;
+        while (idxA >= 0 && idxB >= 0) {
+            int aBit = a.charAt(idxA) - '0';
+            int bBit = b.charAt(idxB) - '0';
+            int sum = aBit + bBit + carry;
+            sb.append(sum % 2);
+            carry = sum / 2;
+            idxA--;
+            idxB--;
+        }
+        while (idxA >= 0) {
+            int sum = carry + (a.charAt(idxA) - '0');
+            sb.append(sum % 2);
+            carry = sum / 2;
+            idxA--;
+        }
+        while (idxB >= 0) {
+            int sum = carry + (b.charAt(idxB) - '0');
+            sb.append(sum % 2);
+            carry = sum / 2;
+            idxB--;
+        }
+        if (carry == 1) {
+            sb.append('1');
+        }
+        
+        return sb.reverse().toString();
+    }
+}
+```
 ---
 ###Reference
 1. http://www.jiuzhang.com/solutions/add-binary/
