@@ -44,3 +44,14 @@ public int minimumSize(int[] nums, int s) {
 }
 ```
 >Time Complexity：$$O(2N) = O(N)$$，因 i 與 j 各需移動N次
+
+網友 [Grandyang]() 提供了以下 O(N) 解法的思路：
+
+"這個解法要用到二分查找法，思路是，我們建立一個比原數組長一位的sums數組，其中sums[i]表示nums數組中[0, i - 1]的和，然後我們對於sums中每一個值sums[i]，用二分查找法找到子數組的右邊界位置，使該子數組之和大於sums[i] + s，然後我們更新最短長度的距離即可。"
+
+
+
+
+---
+###Reference
+1. http://www.cnblogs.com/grandyang/p/4501934.html
