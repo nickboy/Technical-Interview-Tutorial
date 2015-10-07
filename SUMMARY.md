@@ -120,7 +120,7 @@
    * [ZigZag Conversion](string/zigzag_conversion.md)
    * [Longest Common Prefix](string/longest_common_prefix.md)
    * [Count and Say](string/count_and_say.md)
-   * Regular Expression Matching
+   * [Regular Expression Matching](string/regular_expression_matching.md)
 * [Dynamic Programming](dynamic_programming.md)
    * [Jump Game](dynamic_programming/jump_game.md)
    * [Jump Game II](dynamic_programming/jump_game_ii.md)
