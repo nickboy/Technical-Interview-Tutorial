@@ -111,6 +111,7 @@
    * [Valid Sudoku](array/valid_sudoku.md)
    * [Largest Number](array/largest_number.md)
    * [Search Insert Position](array/search_insert_position.md)
+   * Search in Rotated Sorted Array
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Compare Strings](string/compare_strings.md)
