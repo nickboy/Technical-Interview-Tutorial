@@ -61,7 +61,12 @@ public class Solution {
                 return isMatch(s.substring(1), p.substring(1));
             }
         }
+        
         // 檢查下一個字元是否為 '*'
+        // 處理 "a*"之類的，所以是檢查它下一個是否為 '*'
+        // 若不是的話。則檢查當前的字元是否相同，
+        // 若不同則直接返回 false，不用繼續往下比了。
+        // 若相同，則從下一個字元再繼續往下遞迴
         if (p.charAt(1) != '*') {
             if (s.length() < 1) {
                 return false;
@@ -71,10 +76,15 @@ public class Solution {
                 return isMatch(s.substring(1), p.substring(1));
             }
         } else {
+            // 如果下一個字元是 '*'
+            // 則跳過當前星號，繼續往下比
+            // 若後面字串皆比過對了，則返回 true
             if (isMatch(s, p.substring(2))) {
                 return true;
             }
             
+            // 否則不斷的枚舉s的子字串與跳過星號來比
+            // 前提是 星號前面的字元與 s 字串的第i個字元符合
             int i = 0;
             while (i < s.length() && (s.charAt(i) == p.charAt(0) || p.charAt(0) == '.')) {
                 if (isMatch(s.substring(i + 1), p.substring(2))) {
@@ -83,6 +93,7 @@ public class Solution {
                 i++;
             }
             
+            // 比到最後還是沒達到match的話，則返回 false
             return false;
         }
     }
