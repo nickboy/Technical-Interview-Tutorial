@@ -1,6 +1,31 @@
 # Find Minimum in Rotated Sorted Array
 
-[原題網址](http://www.lintcode.com/en/problem/find-minimum-in-rotated-sorted-array/)
+[Lintcode](http://www.lintcode.com/en/problem/find-minimum-in-rotated-sorted-array/)
+
+題意：
+
+Medium Find Minimum in Rotated Sorted Array Show result 
+
+
+Suppose a sorted array is rotated at some pivot unknown to you beforehand.
+
+(i.e., 0 1 2 4 5 6 7 might become 4 5 6 7 0 1 2).
+
+Find the minimum element.
+
+
+Given [4, 5, 6, 7, 0, 1, 2] return 0
+
+Note
+You may assume no duplicate exists in the array.
+
+解題思路：
+
+因陣列會旋轉，我們需要固定一點 target(在此選陣列中最後一個元素)不斷的拿中間元素與該點比較，會有以下兩個狀況：
+
+1. 若 num[mid] <= target，則 mid在右下，最小值可能在左半邊，移動 end 來繼續找左半邊
+2. 若 num[mid] > target，則 mid 在左上，最小值可能在右半邊，移動 start來繼續找右半邊
+
 ```java
 public int findMin(int[] nums) {
     // write your code here
@@ -29,3 +54,7 @@ public int findMin(int[] nums) {
     }
 }
 ```
+
+---
+###Reference
+1. http://www.jiuzhang.com/solutions/find-minimum-in-rotated-sorted-array/
