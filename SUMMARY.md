@@ -21,7 +21,7 @@
    * [Cosine Similarity](math/cosine_similarity.md)
    * [Valid Number](math/valid_number.md)
    * [Divide Two Integer](math/divide_two_integer.md)
-   * Bitwise AND of Numbers Range
+   * [Bitwise AND of Numbers Range](array/bitwise_and_of_numbers_range.md)
    * [Permutation Sequence](math/permutation_sequence.md)
 * [Stack](stack.md)
    * [Evaluate Reverse Polish Notation](stack/evaluate_reverse_polish_notation.md)
