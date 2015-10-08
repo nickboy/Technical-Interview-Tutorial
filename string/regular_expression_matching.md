@@ -89,6 +89,42 @@ public class Solution {
 }
 
 ```
+
+處理中間兩個case 的程式碼皆一樣，因此可以進而簡化成下面的程式碼：
+
+```java
+public class Solution {
+    public boolean isMatch(String s, String p) {
+        if (p.length() == 0) {
+            return s.length() == 0;
+        }
+        
+        if (p.length() == 1 || (p.length() > 1 && p.charAt(1) != '*')) {
+            if (s.length() < 1) {
+                return false;
+            } else if (p.charAt(0) != s.charAt(0) && p.charAt(0) != '.') {
+                return false;
+            } else {
+                return isMatch(s.substring(1), p.substring(1));
+            }
+        }else {
+            if (isMatch(s, p.substring(2))) {
+                return true;
+            }
+            
+            int i = 0;
+            while (i < s.length() && (s.charAt(i) == p.charAt(0) || p.charAt(0) == '.')) {
+                if (isMatch(s.substring(i + 1), p.substring(2))) {
+                    return true;
+                }
+                i++;
+            }
+            
+            return false;
+        }
+    }
+}
+```
 ---
 ###Reference
 1. http://simpleandstupid.com/2014/10/14/regular-expression-matching-leetcode-%E8%A7%A3%E9%A2%98%E7%AC%94%E8%AE%B0/
