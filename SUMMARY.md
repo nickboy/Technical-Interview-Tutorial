@@ -110,6 +110,7 @@
    * [Spiral Matrix](array/spiral_matrix.md)
    * [Valid Sudoku](array/valid_sudoku.md)
    * [Largest Number](array/largest_number.md)
+   * Search Insert Position
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Compare Strings](string/compare_strings.md)
