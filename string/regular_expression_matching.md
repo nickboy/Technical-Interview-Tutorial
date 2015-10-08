@@ -38,6 +38,57 @@ isMatch("aab", "c*a*b") → true
 對於每次對比，還要注意p的第一個字符是否為 .，如果是，則match，繼續比較後面的。
 "
 
+```java
+public class Solution {
+    /**
+     * @param s: A string 
+     * @param p: A string includes "." and "*"
+     * @return: A boolean
+     */
+    public boolean isMatch(String s, String p) {
+        
+        if (p.length() == 0) {
+            return s.length() == 0;
+        }
+        
+        if (p.length() == 1) {
+            
+            if (s.length() < 1) {
+                return false;
+            } else if (p.charAt(0) != s.charAt(0) && p.charAt(0) != '.') {
+                return false;
+            } else {
+                return isMatch(s.substring(1), p.substring(1));
+            }
+        }
+        // 檢查下一個字元是否為 '*'
+        if (p.charAt(1) != '*') {
+            if (s.length() < 1) {
+                return false;
+            } else if (s.charAt(0) != p.charAt(0) && p.charAt(0) != '.') {
+                return false;
+            } else {
+                return isMatch(s.substring(1), p.substring(1));
+            }
+        } else {
+            if (isMatch(s, p.substring(2))) {
+                return true;
+            }
+            
+            int i = 0;
+            while (i < s.length() && (s.charAt(i) == p.charAt(0) || p.charAt(0) == '.')) {
+                if (isMatch(s.substring(i + 1), p.substring(2))) {
+                    return true;
+                }
+                i++;
+            }
+            
+            return false;
+        }
+    }
+}
+
+```
 ---
 ###Reference
 1. http://simpleandstupid.com/2014/10/14/regular-expression-matching-leetcode-%E8%A7%A3%E9%A2%98%E7%AC%94%E8%AE%B0/
