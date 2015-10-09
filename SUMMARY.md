@@ -112,6 +112,7 @@
    * [Largest Number](array/largest_number.md)
    * [Search Insert Position](array/search_insert_position.md)
    * [Search in Rotated Sorted Array](array/search_in_rotated_sorted_array.md)
+   * Maximum Gap
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Compare Strings](string/compare_strings.md)
