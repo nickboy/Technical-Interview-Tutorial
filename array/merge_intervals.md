@@ -61,6 +61,51 @@ public List<Interval> merge(List<Interval> intervals) {
 }
 ```
 
+updated 2015.10.9
+
+```java
+/**
+ * Definition for an interval.
+ * public class Interval {
+ *     int start;
+ *     int end;
+ *     Interval() { start = 0; end = 0; }
+ *     Interval(int s, int e) { start = s; end = e; }
+ * }
+ */
+public class Solution {
+    public List<Interval> merge(List<Interval> intervals) {
+        List<Interval> res = new ArrayList<Interval>();
+        if (intervals == null || intervals.size() == 0) {
+            return res;
+        }
+        
+        Collections.sort(intervals, new Comparator<Interval>() {
+           public int compare(Interval iOne, Interval iTwo) {
+               return iOne.start - iTwo.start;
+           } 
+        });
+        
+        Interval prev = intervals.get(0);
+        for (int i = 1; i < intervals.size(); i++) {
+            Interval cur = intervals.get(i);
+            if (prev.end < cur.start) {
+                res.add(prev);
+                prev = cur;
+            } else if (cur.end < prev.start) {
+                res.add(cur);
+            } else {
+                int start = Math.min(prev.start, cur.start);
+                int end = Math.max(prev.end, cur.end);
+                prev = new Interval(start, end);
+            }
+        }
+        res.add(prev);
+        return res;
+    }
+}
+```
+
 ---
 ###Reference
 1. http://bangbingsyb.blogspot.com/2014/11/leetcode-merge-intervals.html
