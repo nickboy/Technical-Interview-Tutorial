@@ -33,9 +33,9 @@ class Solution {
         int keyB = startB + k / 2 - 1 < B.length ? B[startB + k / 2 - 1] : Integer.MAX_VALUE;
 
         if (keyA < keyB) {
-            return helper(A, startA + k / 2 - 1, B, startB, k - k / 2);
+            return helper(A, startA + k / 2, B, startB, k - k / 2);
         } else {
-            return helper(A, startA, B, startB + k / 2 - 1, k - k / 2);
+            return helper(A, startA, B, startB + k / 2, k - k / 2);
         }
     }
 }
