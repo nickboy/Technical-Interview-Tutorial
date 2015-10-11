@@ -1,8 +1,8 @@
 # Summary
 
 * [Introduction](README.md)
-   * [Trie](trie.md)
-       * Implement Trie
+* [Trie](trie.md)
+   * Implement Trie
 * [Math](math.md)
    * [Add Binary](math/add_binary.md)
    * [Sqrt(x)](math/sqrtx.md)
