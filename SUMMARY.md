@@ -129,7 +129,7 @@
    * [Count and Say](string/count_and_say.md)
    * [Regular Expression Matching](string/regular_expression_matching.md)
    * [Word Search](string/word_search.md)
-   * Word Search II
+   * [Word Search II](string/word_search_ii.md)
 * [Dynamic Programming](dynamic_programming.md)
    * [Jump Game](dynamic_programming/jump_game.md)
    * [Jump Game II](dynamic_programming/jump_game_ii.md)
