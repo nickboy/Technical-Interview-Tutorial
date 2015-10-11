@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
+   * Trie
 * [Math](math.md)
    * [Add Binary](math/add_binary.md)
    * [Sqrt(x)](math/sqrtx.md)
