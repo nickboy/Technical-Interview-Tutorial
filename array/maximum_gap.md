@@ -26,3 +26,16 @@ public class Solution {
 }
 ```
 
+O(N) 的解法，利用桶排序，以下為 leetcode官網的解法：
+
+Suppose there are N elements and they range from A to B.
+
+Then the maximum gap will be no smaller than ceiling[(B - A) / (N - 1)]
+
+Let the length of a bucket to be len = ceiling[(B - A) / (N - 1)], then we will have at most num = (B - A) / len + 1 of bucket
+
+for any number K in the array, we can easily find out which bucket it belongs by calculating loc = (K - A) / len and therefore maintain the maximum and minimum elements in each bucket.
+
+Since the maximum difference between elements in the same buckets will be at most len - 1, so the final answer will not be taken from two elements in the same buckets.
+
+For each non-empty buckets p, find the next non-empty buckets q, then q.min - p.max could be the potential answer to the question. Return the maximum of all those values.
