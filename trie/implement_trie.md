@@ -51,14 +51,12 @@ public class Solution {
         for (int i = 0; i < word.length(); i++) {
             char c = word.charAt(i);
             
-            TrieNode t;
-            if (children.containsKey(c)) {
-                t = children.get(c);
-            } else {
-                children.put(c, new TrieNode(c));
-                t = children.get(c);
-            }
             
+            if (!children.containsKey(c)) {
+                children.put(c, new TrieNode(c));
+            } 
+            
+            TrieNode t = children.get(c);
             children = t.children;
             
             // 到最後一個詞了，設為leaf
