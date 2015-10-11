@@ -1,6 +1,6 @@
 # Rotate List
 
-[Lintcode]()
+[Lintcode](https://leetcode.com/problems/rotate-list/)
 
 題意：
 
@@ -82,3 +82,44 @@ public class Solution {
 
 首先從head開始跑，直到最後一個節點，這時可以得出鏈表長度len。然後將尾指針指向頭指針，將整個圈連起來，接著往前跑len – k%len，從這裡斷開，就是要求的結果了。
 
+
+```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public ListNode rotateRight(ListNode head, int k) {
+        if (head == null || head.next == null || k == 0) {
+            return head;
+        }
+        
+        //先把 list 接起來
+        ListNode cur = head;
+        int len = 1;
+        while (cur.next != null) {
+            cur = cur.next;
+            len++;
+        }
+        cur.next = head;
+        
+        k = len - k % len;
+        int step = 0;
+        while (step < k) {
+            cur = cur.next;
+            step++;
+        }
+        head = cur.next;
+        cur.next = null;
+        return head;
+    }
+}
+```
+
+---
+###Reference
+1. http://fisherlei.blogspot.com/2013/01/leetcode-rotate-list.html
