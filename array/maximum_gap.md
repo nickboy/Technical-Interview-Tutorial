@@ -26,7 +26,7 @@ public class Solution {
 }
 ```
 
-O(N) 的解法，利用桶排序，以下為 leetcode官網的解法：
+O(N) 的解法，利用桶排序，以下為 leetcode官網的說明：
 
 Suppose there are N elements and they range from A to B.
 
