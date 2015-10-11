@@ -70,6 +70,7 @@
    * [Delete Node in the Middle of Singly Linked List](linked_list/delete_node_in_the_middle_of_singly_linked_list.md)
    * [Merge K Sorted Lists](linked_list/merge_k_sorted_lists.md)
    * [Reorder List](linked_list/reorder_list.md)
+   * Rotate List
 * [Array](array.md)
    * [Find Peak Element](array/find_peak_element.md)
    * [Find Minimum in Rotated Sorted Array](array/find_minimum_in_rotated_sorted_array.md)
