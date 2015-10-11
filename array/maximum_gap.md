@@ -47,7 +47,67 @@ For each non-empty buckets p, find the next non-empty buckets q, then q.min - p.
 3. 最後掃瞄N-1個筐，每個筐最小值減去前面最大值
 
 
+> 使用簡單版的基數排序，因最大的gap不可能在同一個桶子裡，只要不斷的去把當前桶子的最小值去與上一個有值的桶子之最大值相減，就可算出gap。
+
+其程式碼如下：
+
+```java
+class Solution {
+    /**
+     * @param nums: an array of integers
+     * @return: the maximum difference
+     */
+    public int maximumGap(int[] nums) {
+        
+        if (nums == null || nums.length < 2) {
+            return 0;
+        } 
+        
+        int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
+        for (int i : nums) {
+            min = Math.min(min, i);
+            max = Math.max(max, i);
+        }
+        
+        int len = nums.length;
+        int average = (max - min) / (len - 1) + 1; // + 1是取 ceiling
+        int[] mins = new int[len - 1];
+        int[] maxs = new int[len - 1];
+        Arrays.fill(mins, Integer.MAX_VALUE);
+        Arrays.fill(maxs, Integer.MIN_VALUE);
+        
+        for (int i : nums) {
+            if (i == min || i == max) {
+                continue;
+            }
+            int index = (i - min) / average;
+            mins[index] = Math.min(i, mins[index]);
+            maxs[index] = Math.max(i, maxs[index]);
+        }
+        
+        int res = Integer.MIN_VALUE;
+        int previous = min;
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (mins[i] == Integer.MAX_VALUE && maxs[i] == Integer.MIN_VALUE) {
+                continue;
+            }
+            res = Math.max(res, mins[i] - previous);
+            // 改為當前最大的，因接下來要相減的值在下一個桶子裡，
+            // 要保有排序後的連續性，直接找最大的，去與下一個桶子裡最小的相減
+            previous = maxs[i]; 
+        }
+        
+        res = Math.max(res, max - previous);
+        return res;
+        
+    }
+}
+
+```
+
 ---
 ###Reference
 1. http://www.cnblogs.com/higerzhang/p/4176108.html
-2. 
+2. http://www.programcreek.com/2014/03/leetcode-maximum-gap-java/
+3. http://blog.hushlight.com/2015/04/leetcode-maximum-gap/
