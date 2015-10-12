@@ -27,7 +27,7 @@ X O X X
 
 [Code Ganker](http://blog.csdn.net/linhuanmars/article/details/22904855) 提供這是一個著名的 [Flood fill](https://zh.wikipedia.org/wiki/Flood_fill) 圖形演算法，其實就是從一個點出發對周圍區域進行目標顏色的填充。
 
-由網友 [ojshilu](http://blog.csdn.net/ojshilu/article/details/22600449)提供以下思路
+另外網友 [ojshilu](http://blog.csdn.net/ojshilu/article/details/22600449)提供以下思路
 
 首先，外圍一圈上的O肯定會保留下來。然後，從外圍的O能達到的O也要保留。剩下其他的O就是內部的O。
 
