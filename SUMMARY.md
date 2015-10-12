@@ -185,7 +185,7 @@
    * [Triangle Count](high_frequency/triangle_count.md)
    * [Number of Airplanes in the Sky](high_frequency/number_of_airplanes_in_the_sky.md)
    * [Text Justification](high_frequency/text_justification.md)
-   * The Skyline Problem
+   * [The Skyline Problem](high_frequency/the_skyline_problem.md)
 * [Unknown](unknown.md)
    * [Combinations](unknown/combinations.md)
    * [Combination Sum](unknown/combination_sum.md)
