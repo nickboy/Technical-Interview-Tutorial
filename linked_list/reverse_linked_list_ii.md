@@ -25,28 +25,51 @@ mNode.next = postN;
 其原始碼如下：
 
 ```java
-public static ListNode deleteDuplicates(ListNode head) {
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public ListNode reverseBetween(ListNode head, int m, int n) {
+        if (head == null || head.next == null || m == n) {
+            return head;
+        }
         
-    if (head == null) {
-        return head;
-    }
-    
-    ListNode dummy = new ListNode(0);
-    dummy.next = head;
-    head = dummy;
-    
-    while (head.next != null && head.next.next != null) {
-        if (head.next.val == head.next.next.val) {
-            int val = head.next.val;
-            while (head.next != null && head.next.val == val) {
-                head.next = head.next.next;
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        head = dummy;
+        
+        for (int i = 1; i < m; i++) {
+            if (head == null) {
+                return null;
             }
-        } else {
             head = head.next;
         }
+        
+        ListNode preM = head;
+        ListNode mNode = head.next;
+        ListNode nNode = mNode;
+        ListNode postN = mNode.next;
+        for (int i = m; i < n; i++) {
+            
+            if (postN == null) {
+                return null;
+            }
+            ListNode next = postN.next;
+            postN.next = nNode;
+            nNode = postN;
+            postN = next;
+        }
+        
+        preM.next = nNode;
+        mNode.next = postN;
+        return dummy.next;
+        
     }
-    
-    return dummy.next;
 }
 ```
 
