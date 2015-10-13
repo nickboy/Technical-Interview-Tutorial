@@ -55,7 +55,7 @@
    * [Subtree](binary_tree/subtree.md)
    * [Binary Search Tree Iterator](binary_tree/binary_search_tree_iterator.md)
    * [Unique Binary Search Trees](binary_tree/uniquebinary_search_trees.md)
-   * Unique Binary Search Trees II
+   * [Unique Binary Search Trees II](binary_tree/unique_binary_search_trees_ii.md)
 * [Heap](heap.md)
    * [Heapify](heap/heapify.md)
    * [Data Stream Median](heap/data_stream_median.md)
