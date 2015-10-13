@@ -73,7 +73,7 @@
    * [Merge K Sorted Lists](linked_list/merge_k_sorted_lists.md)
    * [Reorder List](linked_list/reorder_list.md)
    * [Rotate List](linked_list/rotate_list.md)
-   * Add Two Numbers
+   * [Add Two Numbers](linked_list/add_two_numbers.md)
 * [Array](array.md)
    * [Find Peak Element](array/find_peak_element.md)
    * [Find Minimum in Rotated Sorted Array](array/find_minimum_in_rotated_sorted_array.md)
