@@ -54,7 +54,7 @@
    * [Binary Tree Zigzag Level Order Traversal](binary_tree/binary_tree_zigzag_level_order_traversal.md)
    * [Subtree](binary_tree/subtree.md)
    * [Binary Search Tree Iterator](binary_tree/binary_search_tree_iterator.md)
-   * Unique Binary Search Tree
+   * [Unique Binary Search Tree](binary_tree/unique_binary_search_tree.md)
 * [Heap](heap.md)
    * [Heapify](heap/heapify.md)
    * [Data Stream Median](heap/data_stream_median.md)
