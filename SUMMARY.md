@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 * [Trie](trie.md)
    * [Implement Trie](trie/implement_trie.md)
-* Bit Manipulation
+* [Bit Manipulation](bit_manipulation.md)
 * [Math](math.md)
    * [Add Binary](math/add_binary.md)
    * [Sqrt(x)](math/sqrtx.md)
