@@ -1,9 +1,9 @@
 # Summary
 
 * [Introduction](README.md)
-   * Bit Manipulation
 * [Trie](trie.md)
    * [Implement Trie](trie/implement_trie.md)
+* Bit Manipulation
 * [Math](math.md)
    * [Add Binary](math/add_binary.md)
    * [Sqrt(x)](math/sqrtx.md)
