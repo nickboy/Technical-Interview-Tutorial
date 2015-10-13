@@ -63,6 +63,7 @@ public class Solution {
             total += diff;
         }
         
+        // total是否為正，若為負則表示沒有任何答案，返回-1，否則返回startindex
         if (total < 0) {
             return -1;
         } else {
