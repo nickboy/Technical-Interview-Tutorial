@@ -16,7 +16,7 @@ Given n = 3, there are a total of 5 unique BST's.
 
 解題思路：
 
-此題可用 Catalan Number 來算
+一開始只知道可用 Catalan Number 來算，但不知怎列式子，多舉幾個例子即可推出算式。
 
 >網友 [Code Ganker](http://blog.csdn.net/linhuanmars/article/details/21145563) 提供了以下解說：
 
