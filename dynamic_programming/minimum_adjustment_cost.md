@@ -14,7 +14,7 @@ Given [1,4,2,3] and target = 1, one of the solutions is [2,3,2,3], the adjustmen
 
 Return 2.
 
->即給一個陣列與一個 target，試著調整每個陣列元素使得與鄰近的陣列元素大於 target值，但求最小的調整成本。
+>即給一個陣列與一個 target，試著調整每個陣列元素使得與鄰近的陣列元素**小於** target值，但求最小的調整成本。
 
 解題思路：
 
@@ -120,4 +120,22 @@ public class Solution {
     }
 }
 ```
+
+最後我們可以透過動態規劃來達到
+
+引用網友 [Yu Zhang](http://www.cnblogs.com/yuzhangcmu/p/4153927.html) 的解說
+>f[i][v] 前i個數，第i個數調整為v，滿足相鄰兩數<= target，所需要的最小代價
+>
+**即把index = i的值修改為v，所需要的最小花費**
+
+>function: f[i][v] = min(f[i-1][v'] + |A[i]-v|, |v-v'| <= target)
+
+就是當前index為v時，我們把上一個index從1-100全部過一次，取其中的最小值（判斷一下前一個跟當前的是不是abs <= target）
+
+
+
+
+---
+#Reference
+1. http://www.cnblogs.com/yuzhangcmu/p/4153927.html
 
