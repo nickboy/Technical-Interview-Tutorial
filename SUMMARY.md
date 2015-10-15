@@ -125,6 +125,7 @@
    * [Maximum Gap](array/maximum_gap.md)
    * [Sorrounded Regions](array/sorrounded_regions.md)
    * [Rotate Image](array/rotate_image.md)
+   * Remove Element
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Compare Strings](string/compare_strings.md)
