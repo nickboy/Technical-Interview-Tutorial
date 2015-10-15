@@ -51,7 +51,42 @@ class Solution {
 * 當某一位的數字小於i時，那麼該位出現i的次數為：更高位數字x當前位數
 * 當某一位的數字等於i時，那麼該位出現i的次數為：更高位數字x當前位數+低位數字+1
 * 當某一位的數字大於i時，那麼該位出現i的次數為：(更高位數字+1)x當前位數
-* 
+
+>不是很好理解，之後清楚了再來寫解說
+
+```java
+class Solution {
+    /*
+     * param k : As description.
+     * param n : As description.
+     * return: An integer denote the count of digit k in 1..n
+     */
+    public int digitCounts(int k, int n) {
+        
+        int res = 0;
+        int base = 1;
+        while ( n / base > 0) {
+            int cur = (n / base) % 10;
+            int low = n - (n / base) * base;
+            int high = n / (base * 10);
+            
+            if (cur == k) {
+                res += high * base + low + 1;
+            } else if (cur < k) {
+                res += high * base;
+            } else {
+                res += (high + 1) * base;
+            }
+            
+            base *= 10;
+        }
+        
+        return res;
+    }
+};
+
+
+```
 
 
 
