@@ -139,4 +139,4 @@ public class Solution {
 ---
 ###Reference
 1. http://simpleandstupid.com/2014/10/14/regular-expression-matching-leetcode-%E8%A7%A3%E9%A2%98%E7%AC%94%E8%AE%B0/
-2. 
+2. http://hehejun.blogspot.com/2014/11/leetcoderegular-expression-matching_4.html
