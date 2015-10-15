@@ -132,8 +132,52 @@ public class Solution {
 
 就是當前index為v時，我們把上一個index從1-100全部過一次，取其中的最小值（判斷一下前一個跟當前的是不是abs <= target）
 
+其程式碼如下：
 
-
+```java
+public class Solution {
+    /**
+     * @param A: An integer array.
+     * @param target: An integer.
+     */
+    public int MinAdjustmentCost(ArrayList<Integer> A, int target) {
+        
+        if (A == null || A.size() == 0) {
+            return 0;
+        }
+        
+        int[][] f = new int[A.size()][101]; //第1行不使用，讓code比較簡潔點
+        
+        int len = A.size();
+        
+        for (int i = 0; i <len; i++) {
+            for (int j = 1; j <= 100; j++) {
+                f[i][j] = Integer.MAX_VALUE;
+                if (i == 0) {
+                    f[i][j] = Math.abs(j - A.get(i)); // 因是第一位數，只需要知道把改成j的成本為多少即可
+                } else {
+                    for (int k = 1; k <= 100; k++) {
+                        if (Math.abs(j - k) > target) {
+                            continue;
+                        }
+                        
+                        int diff = Math.abs(j - A.get(i)) + f[i-1][k];
+                        f[i][j] = Math.min(f[i][j], diff);
+                    }
+                }
+            }
+        }
+        
+        // 因只計算了最後一位數各為1-100的最小成本為多少，因此需要一個for loop來找出最小值
+        int min = Integer.MAX_VALUE;
+        for (int i = 1; i <= 100; i++) {
+            min = Math.min(min, f[len - 1][i]);
+        }
+        
+        return min;
+    }
+}
+```
 
 ---
 #Reference
