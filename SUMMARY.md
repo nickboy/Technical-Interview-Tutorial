@@ -158,7 +158,7 @@
    * [Scramble String](dynamic_programming/scramble_string.md)
    * [Post Office Problem](dynamic_programming/post_office_problem.md)
    * [Candy](dynamic_programming/candy.md)
-   * Minimum Adjustment Cost
+   * [Minimum Adjustment Cost](dynamic_programming/minimum_adjustment_cost.md)
 * [Segment Tree](segment_tree.md)
    * [Segment Tree Query](segment_tree/segment_tree_query.md)
    * [Segment Tree Query II](segment_tree/segment_tree_query_ii.md)
