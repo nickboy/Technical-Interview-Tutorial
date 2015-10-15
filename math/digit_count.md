@@ -51,10 +51,12 @@ class Solution {
 * 當某一位的數字小於i時，那麼該位出現i的次數為：更高位數字x當前位數
 * 當某一位的數字等於i時，那麼該位出現i的次數為：更高位數字x當前位數+低位數字+1
 * 當某一位的數字大於i時，那麼該位出現i的次數為：(更高位數字+1)x當前位數
+* 
+
 
 
 
 ---
 ###Reference
 1. http://www.cnblogs.com/EdwardLiu/p/4274497.html 
-2. http://www.hawstein.com/posts/20.4.html (解說相當精闢)
+2. http://www.hawstein.com/posts/20.4.html (內含詳細分析，解說相當精闢)
