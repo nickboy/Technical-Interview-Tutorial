@@ -1,6 +1,6 @@
 # Route Between Two Nodes in Graph
 
-[]()
+[Lintcode](http://www.lintcode.com/en/problem/route-between-two-nodes-in-graph/)
 
 題意：
 
