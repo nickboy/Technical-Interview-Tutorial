@@ -123,7 +123,7 @@
    * [Search in Rotated Sorted Array](array/search_in_rotated_sorted_array.md)
    * [Maximum Gap](array/maximum_gap.md)
    * [Sorrounded Regions](array/sorrounded_regions.md)
-   * Rotate Image
+   * [Rotate Image](array/rotate_image.md)
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Compare Strings](string/compare_strings.md)
