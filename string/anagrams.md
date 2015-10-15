@@ -4,7 +4,7 @@
 
 解題思路：利用 [Compare String](draft/string/compare_strings.md) 中的程式來算兩者是否為 Anagram ，去跟陣列中的每個字串作比較，為了不作太多不必要的運算，在此使用了 hasAnagram 陣列，只要之有找到可搭配的 anagram 則把該位置設為真，一但遇到為真，則把該字串加入結果裡。
 
-不過此法複雜度較高，需要近$$O(N^3)$$因每次皆要與其他字串作anagram判斷。
+>有一個特點：單詞裡的字母的種類和數目沒有改變，只是改變了字母的排列順序，由此我們可以想到，只要將幾個單詞按照字母順序進行排序，就可以通過比較判斷他們是否是anagrams。
 
 ```java
 public class Solution {
@@ -63,49 +63,4 @@ public class Solution {
 }
 
 ```
->Time Complexity：$O(N^3)
-
-另外我們可以使用排序法來幫助我們解這道題，使用一個hashmap ，key為排序過後的string，value為所有排序結果相同的字串。
-
-
-```java
-public class Solution {
-    /**
-     * @param strs: A list of strings
-     * @return: A list of strings
-     */
-    public List<String> anagrams(String[] strs) {
-        
-        List<String> res = new ArrayList<String>();
-        if(strs == null || strs.length == 0) {
-            return res;
-        }
-        
-        HashMap<String, List<String>> map = new HashMap<String, List<String>>();
-        for (int i = 0; i < strs.length; i++) {
-            char[] charArr = strs[i].toCharArray();
-            Arrays.sort(charArr);
-            String str = charArr.toString();
-            if (map.containsKey(str)) {
-                map.get(str).add(strs[i]);
-            } else {
-                List<String> list = new ArrayList<String>();
-                list.add(strs[i]);
-                map.put(str, list);
-            }
-        }
-        
-        // 注意怎麼iterate一個map的value
-        Iterator iter = map.values().iterator();
-        while(iter.hasNext()) {
-            List<String> item = (ArrayList<String>)iter.next();
-            if (item.size() > 1) {
-                res.addAll(item);
-            }
-        }
-        
-        return res;
-    }
-}
-
-```
+>Time Complexity：$$O(N^3)$$
