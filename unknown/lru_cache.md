@@ -14,9 +14,11 @@ Design and implement a data structure for Least Recently Used (LRU) cache. It sh
 
 首先要知道LRU(Least Recently Used) Cache是什麼，由於cache是memory的子集，cache會存放最近使用的page，當cache滿的時候需要讀入新的page時，他會將最不常使用的page移出cache才有空間讀入新的page。
 
-我們可以使用一個雙向鍊表來幫助我們，因為我們常常要從尾部把頁面移除，從前面加入新頁面。
+我們可以使用一個雙向鍊表(Double Linked List)來幫助我們，因為我們常常要從尾部把頁面移除，從前面加入新頁面。
 
+加上HashMap幫助我們快速訂位該node在哪裡，一但知道node在哪裡，刪除node或移動node到頭只需要 O(1) 的時間複雜度。
 
+其程式碼如下：
 
 
 ```java
