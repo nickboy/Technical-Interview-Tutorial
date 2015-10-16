@@ -24,3 +24,4 @@ public boolean isUgly(int n) {
             ((n % 5 == 0) && isUgly(n / 5));
 }
 ```
+
