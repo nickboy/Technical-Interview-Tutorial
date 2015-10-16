@@ -23,13 +23,13 @@
    * [Permutation](math/permutation.md)
    * [Permutation II](math/permutation_ii.md)
    * [Ugly Number](math/ugly_number.md)
+   * Ugly Number II
    * [Cosine Similarity](math/cosine_similarity.md)
    * [Valid Number](math/valid_number.md)
    * [Divide Two Integer](math/divide_two_integer.md)
    * [Bitwise AND of Numbers Range](array/bitwise_and_of_numbers_range.md)
    * [Permutation Sequence](math/permutation_sequence.md)
    * [Digit Count](math/digit_count.md)
-   * Ugly Number II
 * [Stack](stack.md)
    * [Evaluate Reverse Polish Notation](stack/evaluate_reverse_polish_notation.md)
    * [Max Tree](stack/max_tree.md)
