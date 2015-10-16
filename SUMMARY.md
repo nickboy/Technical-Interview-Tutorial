@@ -23,7 +23,7 @@
    * [Permutation](math/permutation.md)
    * [Permutation II](math/permutation_ii.md)
    * [Ugly Number](math/ugly_number.md)
-   * Ugly Number II
+   * [Ugly Number II](math/ugly_number_ii.md)
    * [Cosine Similarity](math/cosine_similarity.md)
    * [Valid Number](math/valid_number.md)
    * [Divide Two Integer](math/divide_two_integer.md)
