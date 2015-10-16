@@ -141,7 +141,7 @@
    * [Word Search](string/word_search.md)
    * [Word Search II](string/word_search_ii.md)
    * [Wildcard Matching](string/wildcard_matching.md)
-   * Letter Combinations of a Phone Number
+   * [Letter Combinations of a Phone Number](string/letter_combinations_of_a_phone_number.md)
 * [Dynamic Programming](dynamic_programming.md)
    * [Jump Game](dynamic_programming/jump_game.md)
    * [Jump Game II](dynamic_programming/jump_game_ii.md)
