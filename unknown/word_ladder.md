@@ -53,3 +53,9 @@ public String replace(String origin, int pos, char c) {
     return new String(chars);
 }
 ```
+
+
+
+---
+#Reference
+1. http://www.cnblogs.com/TenosDoIt/p/3443512.html
