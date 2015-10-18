@@ -212,6 +212,7 @@
    * [Number of Airplanes in the sky](unknown/number_of_airplanes_in_the_sky.md)
    * [Gas Station](unknown/gas_station.md)
    * [LRU Cache](unknown/lru_cache.md)
+   * Word Ladder II
 * [Sliding Window](sliding_window.md)
    * [Sliding Window Median](sliding_window/sliding_window_median.md)
    * [Sliding Window Maximum](sliding_window/sliding_window_maximum.md)
