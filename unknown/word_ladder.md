@@ -7,6 +7,12 @@
 > 1. Only one letter can be changed at a time
 > 2. Each intermediate word must exist in the dictionary
 
+
+解題思路：
+
+使用bfs來幫助我們解這道題，每一次只更換一個字元，並檢查是否在dict中，若在的話，便加入queue以利下一次繼續往下搜尋，每次加入queue中時，記得把dict相同的字刪除，以避免循環的問題發生。
+
+
 ```java
 public int ladderLength(String start, String end, Set<String> dict) {
     // write your code here
