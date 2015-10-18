@@ -1,5 +1,7 @@
 # Word Ladder II
 
+[Lintcode]()
+
 題意：
 
 與[Word Ladder I](unknown/word_ladder_i.md)一樣，但不同的是要找出所有可能的最優解路徑
@@ -26,3 +28,10 @@
 * 
 
 
+
+
+---
+###Reference
+1. http://bangbingsyb.blogspot.com/2014/11/leetcode-word-ladder-i-ii.html
+2. http://blog.csdn.net/niaokedaoren/article/details/8884938
+3. http://rangerway.com/way/leetcode-word-ladder-ii/
