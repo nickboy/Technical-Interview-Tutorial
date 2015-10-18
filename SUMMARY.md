@@ -205,7 +205,7 @@
    * [Combination Sum](unknown/combination_sum.md)
    * [Combination Sum II](unknown/combination_sum_ii.md)
    * [Topological Sorting](unknown/topological_sorting.md)
-   * [Word Ladder I & II](unknown/word_ladder.md)
+   * [Word Ladder I](unknown/word_ladder_i.md)
    * [N-Queens](unknown/n-queens.md)
    * [Next Permutation](unknown/next_permutation.md)
    * [Building Outline](unknown/building_outline.md)
