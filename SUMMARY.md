@@ -31,6 +31,7 @@
    * [Permutation Sequence](math/permutation_sequence.md)
    * [Digit Count](math/digit_count.md)
    * [Permutation Index](math/permutation_index.md)
+   * Permutation Index II
 * [Stack](stack.md)
    * [Evaluate Reverse Polish Notation](stack/evaluate_reverse_polish_notation.md)
    * [Max Tree](stack/max_tree.md)
