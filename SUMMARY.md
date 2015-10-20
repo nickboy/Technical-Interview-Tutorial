@@ -82,7 +82,7 @@
    * [Add Two Numbers](linked_list/add_two_numbers.md)
    * [Remove Linked List Elements](linked_list/remove_linked_list_elements.md)
    * [Swap Nodes in Pairs](linked_list/swap_nodes_in_pairs.md)
-   * Palindrome Linked List
+   * [Palindrome Linked List](linked_list/palindrome_linked_list.md)
 * [Array](array.md)
    * [Find Peak Element](array/find_peak_element.md)
    * [Find Minimum in Rotated Sorted Array](array/find_minimum_in_rotated_sorted_array.md)
