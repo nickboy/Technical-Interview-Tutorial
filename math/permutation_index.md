@@ -30,7 +30,7 @@ Given [1,2,4], return 1.
 
 123；x = 0，y=0，index = 0
 
-321；x= 2，y=1，index = 2*2！+1*1！ = 5
+321；x= 2，y=1，index = 2 x 2！+1 x 1！ = 5
 
 這裡的下標是從0開始的。"
 
@@ -49,7 +49,7 @@ public class Solution {
             return 0;
         }
         
-        long index = 0;
+        long index = 1;
         long factor = 1;
         for (int i = A.length - 2; i>= 0; i--) {
             int rank = 0;
@@ -65,7 +65,6 @@ public class Solution {
         return index;
     }
 }
-
 ```
 
 ---
