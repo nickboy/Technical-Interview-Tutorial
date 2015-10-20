@@ -30,7 +30,7 @@
    * [Bitwise AND of Numbers Range](array/bitwise_and_of_numbers_range.md)
    * [Permutation Sequence](math/permutation_sequence.md)
    * [Digit Count](math/digit_count.md)
-   * Permutation Index
+   * [Permutation Index](math/permutation_index.md)
 * [Stack](stack.md)
    * [Evaluate Reverse Polish Notation](stack/evaluate_reverse_polish_notation.md)
    * [Max Tree](stack/max_tree.md)
