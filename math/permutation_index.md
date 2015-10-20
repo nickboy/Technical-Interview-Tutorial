@@ -34,7 +34,39 @@ Given [1,2,4], return 1.
 
 這裡的下標是從0開始的。"
 
+>就是由後往前作，每固定一個數，去算後面比該數小的元素個數，index再加上元素個數乘上factor即可。
 
+程式碼如下
+```java
+public class Solution {
+    /**
+     * @param A an integer array
+     * @return a long integer
+     */
+    public long permutationIndex(int[] A) {
+        
+        if (A == null || A.length == 0) {
+            return 0;
+        }
+        
+        long index = 0;
+        long factor = 1;
+        for (int i = A.length - 2; i>= 0; i--) {
+            int rank = 0;
+            for (int j = i + 1; j < A.length; j++) {
+                if (A[i] > A[j]) {
+                    rank++;
+                }
+            }
+            index += rank * factor;
+            factor *= (A.length - i);
+        }
+        
+        return index;
+    }
+}
+
+```
 
 ---
 ###Reference
