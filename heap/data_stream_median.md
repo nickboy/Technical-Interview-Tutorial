@@ -49,3 +49,43 @@ public int[] medianII(int[] nums) {
     return result;
 }
 ```
+
+Leetcode 版，要求我們實作add與find這兩個function，整體思路就是先加再來作調整。程式碼如下：
+
+```java
+class MedianFinder {
+    PriorityQueue<Integer> minHeap = new PriorityQueue<Integer>();
+    PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>(10, Collections.reverseOrder());
+    // Adds a number into the data structure.
+    public void addNum(int num) {
+       if (maxHeap.isEmpty() || maxHeap.peek() > num) {
+           maxHeap.offer(num);
+       } else {
+           minHeap.offer(num);
+       }
+       
+       if (maxHeap.size() < minHeap.size()) {
+           maxHeap.offer(minHeap.poll());
+       }
+       if (minHeap.size() + 1 < maxHeap.size()) {
+           minHeap.offer(maxHeap.poll());
+       }
+    }
+
+    // Returns the median of current data stream
+    public double findMedian() {
+        if (maxHeap.size() - minHeap.size() == 1) {
+            return maxHeap.peek();
+        } else {
+            int medianOne = maxHeap.peek();
+            int medianTwo = minHeap.peek();
+            return (medianOne + medianTwo) / 2.0;
+        }
+    }
+};
+
+// Your MedianFinder object will be instantiated and called as such:
+// MedianFinder mf = new MedianFinder();
+// mf.addNum(1);
+// mf.findMedian();
+```
