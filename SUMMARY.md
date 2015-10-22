@@ -150,6 +150,7 @@
    * [Wildcard Matching](string/wildcard_matching.md)
    * [Letter Combinations of a Phone Number](string/letter_combinations_of_a_phone_number.md)
    * [String to Integer (atoi)](string/string_to_integer_atoi.md)
+   * Word Pattern
 * [Dynamic Programming](dynamic_programming.md)
    * [Jump Game](dynamic_programming/jump_game.md)
    * [Jump Game II](dynamic_programming/jump_game_ii.md)
