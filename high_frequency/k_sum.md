@@ -73,6 +73,43 @@ public class Solution {
 }
 ```
 
+但上面的解法複雜度相當高，我們可以把matrix的最外層移掉，因dp的前半部份 dp[i][j][t] += dp[i - 1][j][t] ，表示第i層的值是由上一層所累加來的，但為了不被覆蓋掉而造成後面的結果錯了，我們在算時，從後面往前算。
+
+> 還不是很理解為什麼少了加dp[j - 1][t] 的部份，表示必取第i個數嗎？
+
+```java
+public class Solution {
+    /**
+     * @param A: an integer array.
+     * @param k: a positive integer (k <= length(A))
+     * @param target: a integer
+     * @return an integer
+     */
+    public int kSum(int A[], int k, int target) {
+        
+        if (A == null || A.length == 0 || target < 0) {
+            return 0;
+        }
+        
+        int len = A.length;
+        int[][] dp = new int[k + 1][target + 1];
+        dp[0][0] = 1;
+        for (int i = 1; i <= len; i++) {
+            for (int t = target; t > 0; t--) {
+                for (int j = 1; j <= k; j++) {
+                    if (t - A[i - 1] >= 0) {
+                        dp[j][t] += dp[j - 1][t - A[i - 1]];
+                    }
+                }
+            }
+        }
+        
+        return dp[k][target];
+    }
+}
+
+
+```
 
 ---
 ###Reference
