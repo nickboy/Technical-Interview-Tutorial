@@ -200,8 +200,8 @@
    * [Sum](high_frequency/sum.md)
    * [2 Sum](high_frequency/2_sum.md)
    * [3 Sum](high_frequency/3_sum.md)
-   * K Sum
    * [3 Sum Closest](high_frequency/3sum_closest_md.md)
+   * K Sum
    * [Best Time to Buy and Sell Stock](high_frequency/best_time_to_buy_and_sell_stock.md)
    * [Best Time to Buy and Sell Stock II](high_frequency/best_time_to_buy_and_sell_stock_ii.md)
    * [Best Time to Buy and Sell Stock III](high_frequency/best_time_to_buy_and_sell_stock_iii.md)
