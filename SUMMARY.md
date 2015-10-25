@@ -32,7 +32,7 @@
    * [Digit Count](math/digit_count.md)
    * [Permutation Index](math/permutation_index.md)
    * [Permutation Index II](math/permutation_index_ii.md)
-   * A + B Problem
+   * [A + B Problem](math/a_+_b_problem.md)
 * [Stack](stack.md)
    * [Evaluate Reverse Polish Notation](stack/evaluate_reverse_polish_notation.md)
    * [Max Tree](stack/max_tree.md)
