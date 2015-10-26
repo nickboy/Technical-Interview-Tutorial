@@ -44,3 +44,46 @@ public ListNode reverse(ListNode head) {
     return prev;
 }
 ```
+
+網上看到了一個不用改變指針的方式，先紀錄一下
+
+```java
+
+public class Solution {
+     
+    ListNode left = null;
+    boolean meet = false;
+    public ListNode reverse(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+        
+        left = head;
+        meet = false;
+        helper(head);
+        return head;
+    }
+    
+    public ListNode helper(ListNode head) {
+        if (head.next == null) {
+            return head;
+        }
+        
+        ListNode right = helper(head.next);
+        if (!meet) {
+            int tmp = left.val;
+            left.val = right.val;
+            right.val = tmp;
+            if (left == right || left.next == right) {
+                meet = true;
+            }
+            
+            left = left.next;
+        }
+        
+        return head;
+    }
+}
+
+
+```
