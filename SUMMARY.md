@@ -229,7 +229,7 @@
    * [Gas Station](unknown/gas_station.md)
    * [LRU Cache](unknown/lru_cache.md)
    * [Nuts & Bolts Problem](unknown/nuts_&_bolts_problem.md)
-   * Previous Permutation
+   * [Previous Permutation](unknown/previous_permutation.md)
 * [Sliding Window](sliding_window.md)
    * [Sliding Window Median](sliding_window/sliding_window_median.md)
    * [Sliding Window Maximum](sliding_window/sliding_window_maximum.md)
