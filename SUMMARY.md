@@ -6,7 +6,7 @@
 * [Bit Manipulation](bit_manipulation.md)
    * [Flip Bits](bit_manipulation/flip_bits.md)
    * [Update Bits](bit_manipulation/update_bits.md)
-   * Binary Representation
+   * [Binary Representation](bit_manipulation/binary_representation.md)
 * [Math](math.md)
    * [Add Binary](math/add_binary.md)
    * [Sqrt(x)](math/sqrtx.md)
