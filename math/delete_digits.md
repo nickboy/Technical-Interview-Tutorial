@@ -4,7 +4,17 @@
 
 題意：
 
+Given string A representative a positive integer which has N digits, remove any k digits of the number, the remaining digits are arranged according to the original order to become a new positive integer.
 
+Find the smallest integer after remove k digits.
+
+N <= 240 and k <= N,
+
+Example
+
+Given an integer ```A = "178542", k = 4```
+
+return a string ```"12"```
 
 解題思路：
 
@@ -66,8 +76,57 @@ public class Solution {
 
 ```
 
-看起來需要O(Nk)時間複雜度，但其實用一個Stack，再記錄pop了幾次，O(2N)就好了
+看起來需要O(Nk)時間複雜度，但其實用一個Stack，再記錄pop了幾次，O(2N)就好了，作法有點類似我們之前作 Container 那題，利用一個stack來維護一個遞增的序列，如果進來的數比 stack 頂端的數還大的話，直接push，否則pop。
 
+程式碼如下：
+
+```java
+public class Solution {
+    /**
+     *@param A: A positive integer which has N digits, A is a string.
+     *@param k: Remove k digits.
+     *@return: A string
+     */
+    public String DeleteDigits(String A, int k) {
+        
+        Stack<Integer> s = new Stack<Integer>();
+        int popCount = 0;
+        StringBuffer res = new StringBuffer();
+        
+        for (int i = 0; i < A.length(); i++) {
+            int num = (int)(A.charAt(i) - '0');
+            if (s.isEmpty() || num >= s.peek()) {
+                s.push(num);
+            } else {
+                if (popCount < k) {
+                    st.pop();
+                    i--;
+                    popCount++;
+                } else {
+                    s.push(num);
+                }
+            }
+        }
+        
+        while (popCount < k) {
+            s.pop();
+            popCount++;
+        }
+        
+        while (!s.isEmpty()) {
+            res.insert(0, s.pop());
+        }
+        
+        while (res.length() > 1 && res.charAt(0) == '0') {
+            res.deleteCharAt(0);
+        }
+        
+        return res.toString();
+    }
+}
+```
+
+>Time Complexity：O(N)，Space Complexity：O(N)
 
 
 
