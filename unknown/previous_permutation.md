@@ -1,6 +1,6 @@
 # Previous Permutation
 
-[]()
+[Lintcode](http://www.lintcode.com/en/problem/previous-permutation/)
 
 
 題意：
@@ -73,3 +73,7 @@ public class Solution {
     }
 }
 ```
+---
+###Reference
+1. http://www.cnblogs.com/tonix/p/4916200.html
+2. 
