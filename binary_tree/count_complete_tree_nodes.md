@@ -53,8 +53,80 @@ public class Solution {
 }
 ```
 
+參考了網友 [Jikai Tang](http://www.tangjikai.com/algorithms/leetcode-222-complete-tree-nodes) 的作法。
+
+二分搜尋法：首先找出樹的總高度，接著來算出最後一層如果是full bt的話該有多少節點，接著再不斷的去作二分來找出最後一層的最後一個節點在哪裡。
+
+其程式碼如下：
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public int countNodes(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        
+        TreeNode temp = root;
+        int depth = 0;
+        while(temp != null) {
+            depth++;
+            temp = temp.left;
+        }
+        
+        // 找出最底層如果是full bt的話該有多少個子節點
+        int num = (int)Math.pow(2, depth - 1);
+        int l = 0;
+        int r = num - 1;
+        
+        // 表示為full的，直接把1到h-1層的節點數全加上並返回即可
+        if (getDepth(root, r, num) == depth) {
+            return num * 2 - 1;
+        }
+        
+        while (l < r) {
+            int mid = l + (r - l) / 2;
+            if (getDepth(root, mid, num) == depth) {
+                l = mid + 1;
+            } else {
+                r = mid;
+            }
+        }
+        
+        return (num - 1) + l;
+    }
+    
+    // 此method是要找出值為idx的節點在樹中的第幾層
+    private int getDepth(TreeNode root, int idx, int num) {
+        int depth = 0;
+        
+        while (root != null) {
+            depth += 1; //往下找因此depth加一
+            num /= 2; // 找出中間index值
+            
+            // 作binary search
+            if (idx >= num) {
+                root = root.right;
+                idx -= num; // 因idx比num大，因此往右邊找idx為 idx -= num的，
+            } else {
+                root = root.left;
+            }
+        }
+        return depth;
+    }
+}
+```
 
 
 ---
 ###Reference
 1. http://bookshadow.com/weblog/2015/06/06/leetcode-count-complete-tree-nodes/
+2. http://www.tangjikai.com/algorithms/leetcode-222-complete-tree-nodes
