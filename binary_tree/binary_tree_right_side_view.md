@@ -1,6 +1,6 @@
 # Binary Tree Right Side View
 
-[Leetcode]()
+[Leetcode](https://leetcode.com/problems/binary-tree-right-side-view/)
 
 題意：
 
