@@ -52,7 +52,7 @@ public class Solution {
     }
 }
 ```
-
+---
 參考了網友 [Jikai Tang](http://www.tangjikai.com/algorithms/leetcode-222-complete-tree-nodes) 的作法，不是很好理解最後二分的部份，待理解後再來補全思路。
 
 二分搜尋法：首先找出樹的總高度，接著來算出最後一層如果是full bt的話該有多少節點，接著再不斷的去作二分來找出最後一層的最後一個節點在哪裡。
