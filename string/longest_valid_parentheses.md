@@ -54,3 +54,34 @@ public class Solution {
     }
 }
 ```
+
+另外可用 stack 法，stack中存放尚未配對的括號，只要一但找到能配對的括號，則pop掉，並算長度，否則就push進去。
+
+程式碼如下：
+
+```java
+public class Solution {
+    public int longestValidParentheses(String s) {
+        if (s == null || s.length() == 0) {
+            return 0;
+        }
+        
+        Stack<Integer> stack = new Stack<Integer>();
+        int res = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (!stack.isEmpty() && s.charAt(i) == ')' && s.charAt(stack.peek()) == '(') {
+                stack.pop();
+                if (stack.isEmpty()) {
+                    res = i + 1;
+                } else {
+                    res = Math.max(res, i - stack.peek());
+                }
+            } else {
+                stack.push(i);
+            }
+        }
+        
+        return res;
+    }
+}
+```
