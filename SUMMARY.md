@@ -66,6 +66,7 @@
    * [Unique Binary Search Trees II](binary_tree/unique_binary_search_trees_ii.md)
    * [Flatten Binary Tree to Linked List](binary_tree/flatten_binary_tree_to_linked_list.md)
    * [Binary Tree Right Side View](binary_tree/binary_tree_right_side_view.md)
+   * Count Complete Tree Nodes
 * [Heap](heap.md)
    * [Heapify](heap/heapify.md)
    * [Data Stream Median](heap/data_stream_median.md)
