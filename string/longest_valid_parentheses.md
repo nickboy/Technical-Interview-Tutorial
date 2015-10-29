@@ -85,3 +85,7 @@ public class Solution {
     }
 }
 ```
+
+---
+###Reference
+1. https://leetcodenotes.wordpress.com/2013/10/19/leetcode-longest-valid-parentheses/
