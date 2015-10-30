@@ -8,6 +8,8 @@
 
 其實跟解n queen一樣，每放入一個合法的格，再往下一格寫，直到解完整個數獨，在這裡使用true false來判所是否這條路可行，若不可行，則不繼續往下走。
 
+> 當當前元素為數字時，記得返回 helper(board, i, j + 1) 往下一個元素運算，否則上一層會認為是錯的則把board[i][j] 改回'.'，等於白算了。
+
 ```java
 public class Solution {
     public void solveSudoku(char[][] board) {
