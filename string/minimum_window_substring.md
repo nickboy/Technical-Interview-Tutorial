@@ -69,3 +69,59 @@ public class Solution {
 }
 
 ```
+
+Updated by 2015.10.30
+
+```java
+public class Solution {
+    public String minWindow(String s, String t) {
+        if (s == null || t == null) {
+            return "";
+        }
+        
+        // 假設為ascii編碼，只需要O(1)的空間來當hash table
+        // 先把所有target字串中的每個字元個數紀錄在tHash中。
+        int[] sHash = new int[256];
+        int[] tHash = new int[256];
+        Arrays.fill(sHash, 0);
+        Arrays.fill(tHash, 0);
+        int tCount = t.length();
+        for (int i = 0; i < t.length(); i++) {
+            tHash[t.charAt(i)]++;
+        }
+        
+        // i 代表子字串的尾
+        // j 代表子字串的頭
+        int j = 0;
+        int sCount = 0;
+        int minLength = Integer.MAX_VALUE;
+        String minStr = "";
+        for (int i = 0; i < s.length(); i++) {
+            if (tHash[s.charAt(i)] > 0) {
+                sCount++;
+            }
+            tHash[s.charAt(i)]--;
+            
+            // 表示已包含所有 target的字元，並
+            while(sCount >= tCount) {
+                if (minLength > i - j + 1) {
+                    minLength = i - j + 1;
+                    minStr = s.substring(j , i + 1);
+                }
+                // 準備要把s字串的第j個字符刪掉並把j往前移了，因此把target該字元的數加回來
+                tHash[s.charAt(j)]++;
+                if (tHash[s.charAt(j)] > 0) {
+                    sCount--;
+                }
+                j++;
+            }
+        }
+        
+        return minStr;
+    }
+}
+```
+
+---
+###Reference
+1. http://www.jiuzhang.com/solutions/minimum-window-substring/
