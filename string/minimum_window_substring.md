@@ -70,7 +70,7 @@ public class Solution {
 
 ```
 
-Updated by 2015.10.30
+Updated by 2015.10.30，思路類似，不同的事此時j當作substring的頭，i當尾。
 
 ```java
 public class Solution {
