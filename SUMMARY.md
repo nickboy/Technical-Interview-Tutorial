@@ -160,7 +160,7 @@
    * [Word Pattern](string/word_pattern.md)
    * [Longest Valid Parentheses](string/longest_valid_parentheses.md)
    * [Substring with Concatenation of All Words](string/substring_with_concatenation_of_all_words.md)
-   * Multiply Strings
+   * [Multiply Strings](string/multiply_strings.md)
 * [Dynamic Programming](dynamic_programming.md)
    * [Jump Game](dynamic_programming/jump_game.md)
    * [Jump Game II](dynamic_programming/jump_game_ii.md)
