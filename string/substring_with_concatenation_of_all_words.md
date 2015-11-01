@@ -107,3 +107,6 @@ public class Solution {
     }
 }
 ```
+---
+###Reference
+1. http://blog.csdn.net/linhuanmars/article/details/20343903
