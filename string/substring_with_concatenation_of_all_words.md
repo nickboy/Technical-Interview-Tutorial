@@ -47,12 +47,14 @@ public class Solution {
             curMap.clear(); //清除之前的紀錄繼續往下
             
             int count = 0;
-            int left = i; // 重要，表示此substring的頭
+            int left = i; // 重要，表示此substring的頭, 如果透過這個頭往後可以找出所有值，則把left加入
             
             // 從第i個元素往後枚舉, 終止條件為 j-worlen
-            for (int j = i; j <= j - wordLen; j = j + wordLen) {
+            for (int j = i; j <= s.length() - wordLen; j = j + wordLen) {
                 String str = s.substring(j, j + wordLen);
                 
+                
+                // 有含這個字才有戲唱，否則直接往下一個字取
                 if (map.containsKey(str)){
                     
                     // 把每個元素都放到curmap中
