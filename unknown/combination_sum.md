@@ -48,4 +48,34 @@ public int sum(List<Integer> list) {
 }
 ```
 
+
+非遞迴寫法
+
+```java
+public List<List<Integer>> combinationSum(int[] candidates, int target) {
+    Arrays.sort(candidates);
+    List<List<List<Integer>>> dp = new ArrayList<List<List<Integer>>>();
+    for (int i = 1; i <= target; i++) {
+        List<List<Integer>> list_i = new ArrayList<List<Integer>>();
+        for (int j = 0; j < candidates.length && candidates[j] <= i; j++) {
+            if (i == candidates[j]).
+                list_i.add(Arrays.asList(candidates[j]));
+            else {
+                for (List<Integer> l : dp.get(i - 1 - candidates[j])) {
+                    if (candidates[j] <= l.get(0)) {
+                        List<Integer> tmp = new ArrayList<Integer>();
+                        tmp.add(candidates[j]);
+                        tmp.addAll(l);
+                        if (!list_i.contains(tmp)). From 1point 3acres bbs
+                            list_i.add(tmp);. 1point3acres.com/bbs
+                    }
+                }
+            }
+        }
+.       dp.add(list_i);
+    }
+    return dp.get(target - 1);
+}
+```
+
 進階 [Combination Sum II](combination_sum_ii.md)
