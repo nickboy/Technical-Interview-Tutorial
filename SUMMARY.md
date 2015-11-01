@@ -159,6 +159,7 @@
    * [String to Integer (atoi)](string/string_to_integer_atoi.md)
    * [Word Pattern](string/word_pattern.md)
    * [Longest Valid Parentheses](string/longest_valid_parentheses.md)
+   * Substring with Concatenation of All Words
 * [Dynamic Programming](dynamic_programming.md)
    * [Jump Game](dynamic_programming/jump_game.md)
    * [Jump Game II](dynamic_programming/jump_game_ii.md)
