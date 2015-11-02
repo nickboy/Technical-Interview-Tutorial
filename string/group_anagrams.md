@@ -1,6 +1,6 @@
 # Group Anagrams
 
-[]()
+[Leetcode](https://leetcode.com/problems/anagrams/)
 
 題意：
 
