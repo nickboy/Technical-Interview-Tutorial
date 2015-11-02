@@ -22,7 +22,7 @@ The number of ways decoding "12" is 2.
 
 解題思路：
 
-此題可以利用[Climb Stairs]() 的動態規劃方法來幫助我們解，我們另外需要兩個function來幫助我們驗證是否正確的編碼，分別驗證一個char與兩個char，遞迴公式如下
+此題可以利用[Climb Stairs]() 的動態規劃方法來幫助我們解這道題，我們另外需要兩個function來幫助我們驗證是否正確的編碼，分別驗證一個char與兩個char，遞迴公式如下
 
 >nums[i] += nums[i - 1] if checkOne(s.charAt(i)) == true
 >nums[i] += nums[i - 1] + nums[i - 2] if checkOne(s.charAt(i)) == true && checkTwo(s.charAt(i - 1), s.charAt(i - 2))
