@@ -187,7 +187,7 @@
    * [Nim Game](dynamic_programming/nim_game.md)
    * [Unique Paths](dynamic_programming/unique_paths.md)
    * [Unique Paths II](dynamic_programming/unique_paths_ii.md)
-   * Decode Ways
+   * [Decode Ways](dynamic_programming/decode_ways.md)
 * [Segment Tree](segment_tree.md)
    * [Segment Tree Query](segment_tree/segment_tree_query.md)
    * [Segment Tree Query II](segment_tree/segment_tree_query_ii.md)
