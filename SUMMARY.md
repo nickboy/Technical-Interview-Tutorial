@@ -241,6 +241,7 @@
    * [Nuts & Bolts Problem](unknown/nuts_&_bolts_problem.md)
    * [Previous Permutation](unknown/previous_permutation.md)
    * [Sudoku Solver](unknown/sudoku_solver.md)
+   * Restore IP Addresses
 * [Sliding Window](sliding_window.md)
    * [Sliding Window Median](sliding_window/sliding_window_median.md)
    * [Sliding Window Maximum](sliding_window/sliding_window_maximum.md)
