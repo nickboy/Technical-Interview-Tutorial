@@ -171,6 +171,7 @@
    * [Longest Increasing Subsequence](dynamic_programming/longest_increasing_subsequence.md)
    * [Triangle](dynamic_programming/triangle.md)
    * [Word Break](dynamic_programming/word_break.md)
+   * Word Break II
    * [Longest Common Substring](dynamic_programming/longest_common_substring.md)
    * [Palindrome Partition II](dynamic_programming/palindrome_partition_ii.md)
    * [Palindrome Partition](dynamic_programming/palindrome_partition.md)
@@ -191,7 +192,6 @@
    * [Unique Paths](dynamic_programming/unique_paths.md)
    * [Unique Paths II](dynamic_programming/unique_paths_ii.md)
    * [Decode Ways](dynamic_programming/decode_ways.md)
-   * Word Break II
 * [Segment Tree](segment_tree.md)
    * [Segment Tree Query](segment_tree/segment_tree_query.md)
    * [Segment Tree Query II](segment_tree/segment_tree_query_ii.md)
