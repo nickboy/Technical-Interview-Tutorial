@@ -69,7 +69,7 @@
    * [Count Complete Tree Nodes](binary_tree/count_complete_tree_nodes.md)
    * [Populating Next Right Pointers in Each Node](binary_tree/populating_next_right_pointers_in_each_node.md)
    * [Populating Next Right Pointers in Each Node ii](binary_tree/populating_next_right_pointers_in_each_node_ii.md)
-   * Recover Binary Search Tree
+   * [Recover Binary Search Tree](binary_tree/recover_binary_search_tree.md)
 * [Heap](heap.md)
    * [Heapify](heap/heapify.md)
    * [Data Stream Median](heap/data_stream_median.md)
