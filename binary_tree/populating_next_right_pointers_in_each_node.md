@@ -114,7 +114,7 @@ public class Solution {
             if (p.left != null) {
                 p.left.next = p.right;
             } else {
-                break;
+                break; // 若為空了，表示下面一定也沒有值可以走了，直接break
             }
             
             // 如果next不為空，因為為complete bt，所以表示當下的右節點一定有值，
