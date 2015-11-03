@@ -84,3 +84,51 @@ public class Solution {
 }
 ```
 
+非遞迴解法
+
+```java
+/**
+ * Definition for binary tree with next pointer.
+ * public class TreeLinkNode {
+ *     int val;
+ *     TreeLinkNode left, right, next;
+ *     TreeLinkNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public void connect(TreeLinkNode root) {
+        if (root == null) {
+            return;
+        }
+        
+        // p 記錄當前的節點
+        // first紀錄下一層的最左邊那個節點，下次走訪從那邊開始走。
+        TreeLinkNode p = root;
+        TreeLinkNode first = null;
+        while (p != null) {
+            // 如果first是空的，則指向左邊的節點
+            if (first == null) {
+                first = p.left;
+            }
+            
+            if (p.left != null) {
+                p.left.next = p.right;
+            } else {
+                break;
+            }
+            
+            // 如果next不為空，因為為complete bt，所以表示當下的右節點一定有值，
+            // 把p.next.left 指向p.right.next
+            if (p.next != null) {
+                p.right.next = p.next.left;
+                p = p.next;
+                continue;
+            } else {
+                p = first;
+                first = null;
+            }
+        }
+    }
+}
+```
+
