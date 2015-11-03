@@ -1,6 +1,7 @@
 # Gas Station
 
 [Lintcode](http://www.lintcode.com/en/problem/gas-station/)
+[Leetcode](https://leetcode.com/problems/gas-station/)
 
 題意：
 
