@@ -52,6 +52,8 @@ public class Solution {
 }
 ```
 
+另有O(1)空間複雜度與O(N)時間複雜度的解法
+
 ---
 ###Reference
 1. http://fisherlei.blogspot.com/2012/12/leetcode-recover-binary-search-tree.html
