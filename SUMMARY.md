@@ -171,7 +171,7 @@
    * [Longest Increasing Subsequence](dynamic_programming/longest_increasing_subsequence.md)
    * [Triangle](dynamic_programming/triangle.md)
    * [Word Break](dynamic_programming/word_break.md)
-   * Word Break II
+   * [Word Break II](dynamic_programming/word_break_ii.md)
    * [Longest Common Substring](dynamic_programming/longest_common_substring.md)
    * [Palindrome Partition II](dynamic_programming/palindrome_partition_ii.md)
    * [Palindrome Partition](dynamic_programming/palindrome_partition.md)
