@@ -1,6 +1,6 @@
 #Merge K Sorted Lists
 
-[]()
+[Lintcode](http://www.lintcode.com/en/problem/merge-k-sorted-lists/)
 
 題意：
 
@@ -17,7 +17,7 @@ public class  DPSolution {
      * @return: The head of one sorted list.
      */
 
-    // 在此用dp解法，不斷把k 個lists對半切處理，直到剩下兩個list，再call merge 2 lists的方法。
+    // 在此用dc解法，不斷把k 個lists對半切處理，直到剩下兩個list，再call merge 2 lists的方法。
     public ListNode mergeKLists(List<ListNode> lists) {  
         // write your code here
         if (lists == null || lists.size() == 0) {
