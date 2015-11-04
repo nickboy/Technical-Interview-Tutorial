@@ -35,3 +35,4 @@
 1. http://bangbingsyb.blogspot.com/2014/11/leetcode-word-ladder-i-ii.html
 2. http://blog.csdn.net/niaokedaoren/article/details/8884938
 3. http://rangerway.com/way/leetcode-word-ladder-ii/
+4. http://www.1point3acres.com/bbs/thread-51646-1-1.html
