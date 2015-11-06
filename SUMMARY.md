@@ -145,6 +145,7 @@
    * [Rotate Image](array/rotate_image.md)
    * [Remove Element](array/remove_element.md)
    * [Read N Characters Given Read4](array/read_n_characters_given_read4.md)
+   * Search in a Big Sorted Array
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Longest Substring Without Repeating Characters](string/longest_substring_without_repeating_characters.md)
