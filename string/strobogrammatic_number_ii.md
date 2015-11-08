@@ -67,3 +67,45 @@ public class Solution {
     }
 }
 ```
+
+法二：用遞迴下去作，每次從兩旁不斷延伸，別忘了要加0，其程式碼如下：
+
+```java
+public class Solution {
+    public List<String> findStrobogrammatic(int n) {
+        return helper(n, n);
+    }
+    
+    private List<String> helper(int n, int m) {
+        List<String> res = new ArrayList<String>();
+        if (n == 0) {
+            res.add("");
+            return res;
+        }
+        if (n == 1) {
+            res.add("0");
+            res.add("1");
+            res.add("8");
+            return res;
+        }
+        
+        List<String> list = helper(n - 2, m);
+        
+        for (int i = 0; i < list.size(); i++) {
+            String cur = list.get(i);
+            if (n != m) {
+                res.add("0" + cur + "0");
+            }
+            res.add("1" + cur + "1");
+            res.add("6" + cur + "9");
+            res.add("8" + cur + "8");
+            res.add("9" + cur + "6");
+        }
+        
+        return res;
+    }
+}
+```
+---
+###Reference
+1. https://leetcode.com/discuss/50412/ac-clean-java-solution
