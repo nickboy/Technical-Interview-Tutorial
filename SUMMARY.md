@@ -169,6 +169,7 @@
    * [Multiply Strings](string/multiply_strings.md)
    * [Group Anagrams](string/group_anagrams.md)
    * [Unique Word Abbreviation](string/unique_word_abbreviation.md)
+   * Summary Ranges
 * [Dynamic Programming](dynamic_programming.md)
    * [Jump Game](dynamic_programming/jump_game.md)
    * [Jump Game II](dynamic_programming/jump_game_ii.md)
