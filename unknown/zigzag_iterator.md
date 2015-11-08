@@ -1,6 +1,6 @@
 # Zigzag Iterator
 
-[]()
+[Leetcode](https://leetcode.com/problems/zigzag-iterator/)
 
 題意：
 
