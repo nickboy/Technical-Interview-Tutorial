@@ -170,7 +170,7 @@
    * [Group Anagrams](string/group_anagrams.md)
    * [Unique Word Abbreviation](string/unique_word_abbreviation.md)
    * [Summary Ranges](string/summary_ranges.md)
-   * Strobogrammatic Number
+   * [Strobogrammatic Number](string/strobogrammatic_number.md)
 * [Dynamic Programming](dynamic_programming.md)
    * [Jump Game](dynamic_programming/jump_game.md)
    * [Jump Game II](dynamic_programming/jump_game_ii.md)
