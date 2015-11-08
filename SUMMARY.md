@@ -146,6 +146,7 @@
    * [Remove Element](array/remove_element.md)
    * [Read N Characters Given Read4](array/read_n_characters_given_read4.md)
    * [Search in a Big Sorted Array](array/search_in_a_big_sorted_array.md)
+   * Wiggle Sort
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Longest Substring Without Repeating Characters](string/longest_substring_without_repeating_characters.md)
