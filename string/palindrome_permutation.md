@@ -51,4 +51,28 @@ public class Solution {
         }
     }
 }
-``
+```
+
+網友提供更精簡的作法，利用一個set，每個char在當前set中最多出現一次，如果沒在set中，則加入，在set中，則把set中的char移除，最後判斷set的size是否為0 或1。
+
+```java
+public class Solution {
+    public boolean canPermutePalindrome(String s) {
+        if (s == null || s.length() < 2) {
+            return true;
+        }
+        
+        HashSet<Character> set = new HashSet<Character>();
+        for (int i = 0; i < s.length(); i++) {
+            char cur = s.charAt(i);
+            if (!set.contains(cur)){
+                set.add(cur);
+            } else {
+                set.remove(cur);
+            }
+        }
+        
+        return set.size() == 0 || set.size() == 1;
+    }
+}
+```
