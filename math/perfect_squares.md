@@ -63,8 +63,20 @@ public class Solution {
 }
 ```
 
+數論法：
+
+This problem is completely solved, in the sense of being reduced to simple checks of a number's prime factorization.
+一個自然數可能是:
+
+一個平方數 if and only if each prime factor occurs to an even power in the number's prime factorization.
+
+兩個平方數之和 if and only if each prime factor that's 3 modulo 4 occurs to an even power in the number's prime factorization.
+
+三個平方數之和 if and only if it's not of the form 4a(8b+7) with integers a and b.
+四個平方數之和. Period. No condition. You never need more than four.
 
 
 ---
 ###Reference
 1. http://www.cnblogs.com/grandyang/p/4800552.html
+2. http://www.hihuyue.com/hihuyue/codepractise/leetcode/leetcode201-perfect-squares-%E6%9C%80%E5%B0%91%E5%B9%B3%E6%96%B9%E5%92%8C%E6%95%B0
