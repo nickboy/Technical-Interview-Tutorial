@@ -261,5 +261,5 @@
    * [Sliding Window Median](sliding_window/sliding_window_median.md)
    * [Sliding Window Maximum](sliding_window/sliding_window_maximum.md)
 * [Iterator](iterator.md)
-   * Peeking Iterator
+   * [Peeking Iterator](iterator/peeking_iterator.md)
 
