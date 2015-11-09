@@ -1,6 +1,6 @@
 # Palindrome Permutation
 
-[]()
+[Leetcode](https://leetcode.com/problems/palindrome-permutation/)
 
 題意：
 
