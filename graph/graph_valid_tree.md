@@ -123,7 +123,39 @@ public class Solution {
 }
 ```
 
+法三：使用quick-union來作
+
+```java
+public class Solution {
+    public boolean validTree(int n, int[][] edges) {
+        int[] root = new int[n]; // 類似union find的father hashmap
+        for (int i = 0; i < n; i++) {
+            root[i] = i; // 作初始化，每個節點為自己的父親
+        }
+        
+        for (int i = 0; i < edges.length; i++) {
+            int root1 = find(root, edges[i][0]);
+            int root2 = find(root, edges[i][1]);
+            if (root1 == root2) {
+                return false;
+            }
+            root[root2] = root1;
+        }
+        return edges.length == n - 1;
+    }
+    
+    private int find(int[] root, int e) {
+        if (root[e] == e) {
+            return e;
+        } else {
+            return find(root, root[e]);
+        }
+    }
+}
+```
+
 ---
 ###Reference
 1. http://www.cnblogs.com/jcliBlogger/p/4738788.html
 2. http://likesky3.iteye.com/blog/2240154
+3. http://www.fgdsb.com/2015/02/16/valid-tree/
