@@ -226,7 +226,7 @@
    * [Building Outline](graph/building_outline.md)
    * [Route Between Two Nodes in Graph](graph/route_between_two_nodes_in_graph.md)
    * [Course Schedule](graph/course_schedule.md)
-   * Meeting Room
+   * [Meeting Room](graph/meeting_room.md)
 * [High Frequency](high_frequency.md)
    * [Sum](high_frequency/sum.md)
    * [2 Sum](high_frequency/2_sum.md)
