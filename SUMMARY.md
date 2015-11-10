@@ -228,7 +228,7 @@
    * [Course Schedule](graph/course_schedule.md)
    * [Meeting Room](graph/meeting_room.md)
    * [Meeting Room II](graph/meeting_room_ii.md)
-   * Graph Valid Tree
+   * [Graph Valid Tree](graph/graph_valid_tree.md)
 * [High Frequency](high_frequency.md)
    * [Sum](high_frequency/sum.md)
    * [2 Sum](high_frequency/2_sum.md)
