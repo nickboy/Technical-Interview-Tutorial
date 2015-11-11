@@ -266,7 +266,7 @@
    * [Zigzag Iterator](unknown/zigzag_iterator.md)
    * [Game of Life](unknown/game_of_life.md)
    * [Flip Game](unknown/flip_game.md)
-   * Flip Game II
+   * [Flip Game II](unknown/flip_game_ii.md)
 * [Sliding Window](sliding_window.md)
    * [Sliding Window Median](sliding_window/sliding_window_median.md)
    * [Sliding Window Maximum](sliding_window/sliding_window_maximum.md)
