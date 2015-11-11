@@ -78,4 +78,48 @@ public List<List<Integer>> combinationSum(int[] candidates, int target) {
 }
 ```
 
+
+11.9.2015 updated
+
+```java
+public class Solution {
+    public List<List<Integer>> combinationSum(int[] candidates, int target) {
+        List<List<Integer>> res = new ArrayList<List<Integer>>();
+        if (candidates == null || candidates.length == 0) {
+            return res;
+        }
+        Arrays.sort(candidates);
+        helper(candidates, target, new ArrayList<Integer>(), res, 0);
+        return res;
+    }
+    
+    private void helper(int[] candidates, int target, List<Integer> tempRes, List<List<Integer>> res, int pos) {
+        if (target == 0) {
+            res.add(new ArrayList<Integer>(tempRes));
+            return;
+        }
+        
+        //用prev來判斷是否有重複的
+        int prev = -1;
+        
+        for (int i = pos; i < candidates.length; i++) {
+            
+            // 一旦比target大，後面也不用比了
+            if (candidates[i] > target) {
+                break;
+            }
+            
+            if (prev != -1 && prev == candidates[i]) {
+                continue;
+            }
+            
+            tempRes.add(candidates[i]);
+            helper(candidates, target - candidates[i], tempRes, res, i);
+            tempRes.remove(tempRes.size() - 1);
+            prev = candidates[i];
+        }
+    }
+}
+```
+
 進階 [Combination Sum II](combination_sum_ii.md)
