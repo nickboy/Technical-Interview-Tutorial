@@ -36,6 +36,7 @@
    * [A + B Problem](math/a_+_b_problem.md)
    * [Delete DIgits](math/delete_digits.md)
    * [Perfect Squares](math/perfect_squares.md)
+   * Expression Add Operators
 * [Stack](stack.md)
    * [Evaluate Reverse Polish Notation](stack/evaluate_reverse_polish_notation.md)
    * [Max Tree](stack/max_tree.md)
