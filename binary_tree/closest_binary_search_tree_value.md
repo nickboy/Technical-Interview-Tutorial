@@ -57,3 +57,41 @@ public class Solution {
     }
 }
 ```
+
+法二：非遞迴作法
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public int closestValue(TreeNode root, double target) {
+        if (root == null) {
+            return 0;
+        }
+        int closestVal = root.val;
+        while(root != null) {
+            // 比較原本的比較接近target還是root
+            closestVal = (Math.abs(target - root.val) < Math.abs(target - closestVal)) ? root.val : closestVal;
+            // 表示找到，直接返回即可
+            if (closestVal == target) {
+                return closestVal;
+            }
+            // 再根據target與root的關係來決定往左往右走
+            root = (root.val > target) ? root.left : root.right;
+        }
+        
+        return closestVal;
+    }
+}
+```
+
+---
+###Reference
+1. https://leetcode.com/discuss/55460/simple-iterative-java-solution-with-explaination
