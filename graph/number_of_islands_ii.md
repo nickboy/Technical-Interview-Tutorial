@@ -120,6 +120,8 @@ updated 2015.11.15
 
 其實不需要實作整套的union & find，我們只需要quick find即可，其程式碼如下：
 
+> 記住 index的轉換為 x * n + y，而非x * m + y
+
 ```java
 public class Solution {
     public List<Integer> numIslands2(int m, int n, int[][] positions) {
