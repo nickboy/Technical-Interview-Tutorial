@@ -115,4 +115,58 @@ public class Solution {
 }
 
 ```
+
+updated 2015.11.15
+
+其實不需要實作整套的union & find，我們只需要quick find即可，其程式碼如下：
+
+```java
+public class Solution {
+    public List<Integer> numIslands2(int m, int n, int[][] positions) {
+        
+        // 直接使用一維陣列即可
+        int[] roots = new int[m * n];
+        Arrays.fill(roots, -1);
+        
+        int[] xOffset = {0, 0, 1, -1};
+        int[] yOffset = {1, -1, 0, 0};
+        int count = 0;
+        List<Integer> res = new ArrayList<Integer>();
+        for (int i = 0; i < positions.length; i++) {
+            int x = positions[i][0];
+            int y = positions[i][1];
+            roots[x * n + y] = x * n + y;
+            
+            count++;
+            
+            for (int j = 0; j < 4; j++) {
+                int newX = x + xOffset[j];
+                int newY = y + yOffset[j];
+                if (newX >= 0 && newX < m && newY >= 0 && newY < n) {
+                    if (roots[newX * n + newY] != -1) {
+                        int root1 = find(x * n + y, roots);
+                        int root2 = find(newX * n + newY, roots);
+                        if (root1 != root2) {
+                            count--;
+                            roots[root1] = root2;
+                        }
+                    }
+                }
+            }
+            res.add(count);
+        }
+        
+        return res;
+    }
+    
+    private int find(int target, int[] roots) {
+        if (roots[target] == target) {
+            return target;
+        }
+        roots[target] = find(roots[target], roots);
+        return roots[target];
+    }
+}
+```
+
 >時間複雜度：$$O(M \times N \times K)$$
