@@ -105,6 +105,37 @@ public class Solution {
 }
 ```
 
+其實最後我們連stack都可以省略，因我們只需要stack頂端的元素，但是此時我們就需要更改到原本的preorder array了，我們使用另一個idx來指向當前stack頂端的元素，idx指向的指比當前元素還小，則low改成當前的preorder[idx]，且idx - 1，表示已將頂端元素pop掉，最後要插入新的值到stack時，只要把idx+1，然後把idx指向的值改為當前的preorder[i]即可。
+
+
+```java
+public class Solution {
+    public boolean verifyPreorder(int[] preorder) {
+        if (preorder == null || preorder.length < 2) {
+            return true;
+        }
+        
+        int low = Integer.MIN_VALUE;
+        int idx = -1;
+        for (int i = 0 ; i < preorder.length; i++) {
+            // inorder 內的數是已經處理完了，如果後面還找得到比inorder當前最後一個數還小的話，
+            // 則不是有效的bst
+            if (low > preorder[i]) {
+                return false;
+            }
+            while (idx >= 0 && preorder[idx] < preorder[i]) {
+                low = preorder[idx];
+                idx -= 1;
+            }
+            idx += 1;
+            preorder[idx] = preorder[i];
+        }
+        
+        return true;
+    }
+}
+```
+
 ---
 ###Reference
 1. https://www.youtube.com/watch?v=oVGen17RUf0
