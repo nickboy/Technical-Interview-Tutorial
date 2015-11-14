@@ -154,6 +154,7 @@
    * [Wiggle Sort](array/wiggle_sort.md)
    * [Flatten 2D Vector](array/flatten_2d_vector.md)
    * [Move Zeros](array/move_zeros.md)
+   * Longest Consecutive Sequence
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Longest Substring Without Repeating Characters](string/longest_substring_without_repeating_characters.md)
