@@ -1,2 +1,78 @@
 # Verify Preorder Sequence in Binary Search Tree
 
+[]()
+
+題意：
+
+Given an array of numbers, verify whether it is the correct preorder traversal sequence of a binary search tree.
+
+You may assume each number in the sequence is unique.
+
+Follow up:
+Could you do it using only constant space complexity?
+
+解題思路：
+
+用遞迴的暴力法，找出root後，再判斷第一個比root大的值，就為切割點，把值切成兩半遞迴下去作，但可能corner case沒考慮到，只過了38個case，其程式碼如下，之後再改進：
+
+```java
+public class Solution {
+    public boolean verifyPreorder(int[] preorder) {
+        if (preorder == null || preorder.length < 2) {
+            return true;
+        }
+        
+        return helper(preorder, 0, preorder.length - 1);
+    }
+    
+    public boolean helper(int[] preorder, int start, int end) {
+        if (start > end) {
+            return true;
+        }
+        
+        int root = preorder[start];
+        int i;
+        for (i = start + 1; i <= end; i++) {
+            if (preorder[i] > root) {
+                break;
+            }
+        }
+        
+        boolean left = helper(preorder, start + 1, i - 1);
+        boolean right = helper(preorder, i, end);
+        
+        return left && right;
+    }
+}
+```
+
+可以使用類似 water container使用stack的方式來作，首先使用stack，裡面的值只可能是遞減的，如果目前的p比stack頂端的值還大的話，便不斷的把頂端的值pop到一個list中，list存的便是inorder的順序即遞增，因有效的bst的inorder是遞增的，如果找到一個值比inorder的最後一個數還小的話，則表示這是不是有效的bst。
+
+其程式碼如下：
+
+
+```java
+public class Solution {
+    public boolean verifyPreorder(int[] preorder) {
+        if (preorder == null || preorder.length < 2) {
+            return true;
+        }
+        
+        ArrayList<Integer> inorder = new ArrayList<Integer>();
+        Stack<Integer> s = new Stack<Integer>();
+        for (int i = 0 ; i < preorder.length; i++) {
+            // inorder 內的數是已經處理完了，如果後面還找得到比inorder當前最後一個數還小的話，
+            // 則不是有效的bst
+            if (inorder.size() != 0 && inorder.get(inorder.size() - 1) > preorder[i]) {
+                return false;
+            }
+            while (!s.isEmpty() && s.peek() < preorder[i]) {
+                inorder.add(s.pop());
+            }
+            s.push(preorder[i]);
+        }
+        
+        return true;
+    }
+}
+```
