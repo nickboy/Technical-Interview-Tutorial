@@ -76,3 +76,35 @@ public class Solution {
     }
 }
 ```
+
+其實我們都是比inorder中的最後一個數，所以我們只要用一個low 值來紀錄當前inorder的最後一個數值即可，可省下一個list，程式碼如下：
+
+```java
+public class Solution {
+    public boolean verifyPreorder(int[] preorder) {
+        if (preorder == null || preorder.length < 2) {
+            return true;
+        }
+        
+        int low = Integer.MIN_VALUE;
+        Stack<Integer> s = new Stack<Integer>();
+        for (int i = 0 ; i < preorder.length; i++) {
+            // inorder 內的數是已經處理完了，如果後面還找得到比inorder當前最後一個數還小的話，
+            // 則不是有效的bst
+            if (low > preorder[i]) {
+                return false;
+            }
+            while (!s.isEmpty() && s.peek() < preorder[i]) {
+                low = s.pop();
+            }
+            s.push(preorder[i]);
+        }
+        
+        return true;
+    }
+}
+```
+
+---
+###Reference
+1. https://www.youtube.com/watch?v=oVGen17RUf0
