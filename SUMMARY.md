@@ -74,7 +74,7 @@
    * [Recover Binary Search Tree](binary_tree/recover_binary_search_tree.md)
    * [Closest Binary Search Tree Value](binary_tree/closest_binary_search_tree_value.md)
    * [Closest Binary Search Tree Value II](binary_tree/closest_binary_search_tree_value_ii.md)
-   * Verify Preorder Sequence in Binary Search Tree
+   * [Verify Preorder Sequence in Binary Search Tree](binary_tree/verify_preorder_sequence_in_binary_search_tree.md)
 * [Heap](heap.md)
    * [Heapify](heap/heapify.md)
    * [Data Stream Median](heap/data_stream_median.md)
