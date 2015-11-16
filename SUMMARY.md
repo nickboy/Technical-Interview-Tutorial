@@ -38,6 +38,7 @@
    * [Perfect Squares](math/perfect_squares.md)
    * [Expression Add Operators](math/expression_add_operators.md)
    * [Expression Evaluator](math/expression_evaluator.md)
+   * Basic Calculator
 * [Stack](stack.md)
    * [Evaluate Reverse Polish Notation](stack/evaluate_reverse_polish_notation.md)
    * [Max Tree](stack/max_tree.md)
