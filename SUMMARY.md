@@ -186,6 +186,7 @@
    * [Strobogrammatic Number II](string/strobogrammatic_number_ii.md)
    * [Palindrome Permutation](string/palindrome_permutation.md)
    * [Encode and Decode Strings](string/encode_and_decode_strings.md)
+   * Alien Dictionary
 * [Dynamic Programming](dynamic_programming.md)
    * [Jump Game](dynamic_programming/jump_game.md)
    * [Jump Game II](dynamic_programming/jump_game_ii.md)
