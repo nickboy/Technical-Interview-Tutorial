@@ -86,22 +86,23 @@ public class Solution {
         s = s.trim(); // remove leading and trailing spaces
         
         for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i) == '(') {
+            char cur = s.charAt(i);
+            if (cur == '(') {
                 st.push(sign);
-            } else if (s.charAt(i) == ')') {
+            } else if (cur == ')') {
                 st.pop();
-            } else if (s.charAt(i) == '+' || s.charAt(i) == '-') {
+            } else if (cur == '+' || cur == '-') {
                 // 一旦遇到ops時，得先把之前的處理完，再更新sign
                 // 並把val重設為0，準備讀下一個val
                 res += sign * val;
                 val = 0;
                 if (!st.isEmpty()) {
-                    sign = s.charAt(i) == '-' ? st.peek()*(-1) : st.peek();
+                    sign = cur == '-' ? st.peek()*(-1) : st.peek();
                 } else {
-                    sign = s.charAt(i) == '-' ? -1 : 1;
+                    sign = cur == '-' ? -1 : 1;
                 }
-            } else if (s.charAt(i) != ' ') {
-                val = val * 10 + (s.charAt(i) - '0');
+            } else if (cur != ' ') {
+                val = val * 10 + (cur - '0');
             }
         }
         
