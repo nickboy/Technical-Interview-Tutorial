@@ -279,7 +279,7 @@
    * [Flip Game](unknown/flip_game.md)
    * [Flip Game II](unknown/flip_game_ii.md)
    * [Bulls and Cows](unknown/bulls_and_cows.md)
-   * Find the Celebrity
+   * [Find the Celebrity](unknown/find_the_celebrity.md)
 * [Sliding Window](sliding_window.md)
    * [Sliding Window Median](sliding_window/sliding_window_median.md)
    * [Sliding Window Maximum](sliding_window/sliding_window_maximum.md)
