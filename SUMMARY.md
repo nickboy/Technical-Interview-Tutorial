@@ -40,6 +40,7 @@
    * [Expression Evaluator](math/expression_evaluator.md)
    * [Basic Calculator](math/basic_calculator.md)
    * [Reverse Integer](math/reverse_integer.md)
+   * Palindrome Number
 * [Stack](stack.md)
    * [Evaluate Reverse Polish Notation](stack/evaluate_reverse_polish_notation.md)
    * [Max Tree](stack/max_tree.md)
