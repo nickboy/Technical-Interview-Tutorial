@@ -1,7 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-   * Difficult Problems
 * [Trie](trie.md)
    * [Implement Trie](trie/implement_trie.md)
 * [Bit Manipulation](bit_manipulation.md)
@@ -287,6 +286,7 @@
 * [Sliding Window](sliding_window.md)
    * [Sliding Window Median](sliding_window/sliding_window_median.md)
    * [Sliding Window Maximum](sliding_window/sliding_window_maximum.md)
+* Difficult Problems
 * [Iterator](iterator.md)
    * [Peeking Iterator](iterator/peeking_iterator.md)
 
