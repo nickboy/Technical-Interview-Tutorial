@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
+   * Difficult Problems
 * [Trie](trie.md)
    * [Implement Trie](trie/implement_trie.md)
 * [Bit Manipulation](bit_manipulation.md)
