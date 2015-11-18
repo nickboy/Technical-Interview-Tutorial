@@ -163,6 +163,55 @@ public class Solution {
     }
 }
 ```
+
+更簡潔的作法，但仍TLE：
+
+```java
+public class Solution {
+    public List<Integer> findSubstring(String s, String[] words) {
+        List<Integer> res = new ArrayList<>();
+        
+        if (s == null || s.length() == 0 || words == null || words.length == 0) {
+            return res;
+        }
+        
+        HashMap<String, Integer> map = new HashMap<>();
+        for (String word : words) {
+            map.put(word, map.getOrDefault(word, 0) + 1);
+        }
+        
+        int wordLen = words[0].length();
+        int numOfWords = words.length;
+        HashMap<String, Integer> curMap = new HashMap<>();
+        for (int i = 0; i <= s.length() - wordLen * numOfWords; i++) {
+            
+            String stub = s.substring(i, i + wordLen);
+            if (map.containsKey(stub)) {
+                curMap.clear(); // 清除之前的結果，新的開始
+                
+                for (int j = 0; j < numOfWords; j++) {
+                    // 不斷的加下一個字，如果有則延伸，否則break
+                    int startIdx = i + j * wordLen;
+                    String word = s.substring(startIdx, startIdx + wordLen);
+                    if (map.containsKey(word)) {
+                        curMap.put(word, curMap.getOrDefault(word, 0) + 1);
+                        
+                        // 太多了則break:
+                        if (curMap.get(word) > map.get(word)) {
+                            break;
+                        }
+                    }
+                }
+                if (map.equals(curMap)) {
+                    res.add(i);
+                }
+            }
+        }
+        
+        return res;
+    }
+}
+```
 ---
 ###Reference
 1. http://blog.csdn.net/linhuanmars/article/details/20343903
