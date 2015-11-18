@@ -189,6 +189,7 @@
    * [Palindrome Permutation](string/palindrome_permutation.md)
    * [Encode and Decode Strings](string/encode_and_decode_strings.md)
    * [Alien Dictionary](string/alien_dictionary.md)
+   * Implement strStr()
 * [Dynamic Programming](dynamic_programming.md)
    * [Jump Game](dynamic_programming/jump_game.md)
    * [Jump Game II](dynamic_programming/jump_game_ii.md)
