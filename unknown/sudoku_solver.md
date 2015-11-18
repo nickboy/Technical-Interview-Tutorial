@@ -75,6 +75,66 @@ public class Solution {
 }
 ```
 
+updated 2015.11.18
+
+```java
+public class Solution {
+    public void solveSudoku(char[][] board) {
+        if (board == null || board.length < 9) {
+            return;
+        }
+        
+        helper(board, 0, 0);
+    }
+    
+    private boolean helper(char[][] board, int x, int y) {
+        if (y >= 9) {
+            return helper(board, x + 1, 0);
+        }
+        if ( x == 9) {
+            return true;
+        }
+        
+        if (board[x][y] == '.') {
+            for (int i = 1; i <= 9; i++) {
+                board[x][y] = (char) (i + '0');
+                if (isValid(board, x, y)) {
+                    if (helper(board, x, y + 1)) {
+                        return true; // 不能直接返回 false
+                    }
+                }
+                board[x][y] = '.';
+            }
+        } else {
+            return helper(board, x, y + 1);
+        }
+        return false;
+    }
+    
+    
+    private boolean isValid(char[][] board, int x, int y) {
+        // check columns and rows
+        for (int i = 0; i < 9; i++) {
+            if (i != x && board[i][y] == board[x][y]) {
+                return false;
+            }
+            if (i != y && board[x][i] == board[x][y]) {
+                return false;
+            }
+        }
+        
+        for (int i = x / 3 * 3; i < x / 3 * 3 + 3; i++) {
+            for (int j = y / 3 * 3; j < y / 3 * 3 + 3; j++) {
+                if ((i != x || j != y) && board[i][j] == board[x][y]) {
+                    return false;
+                }
+            }
+        }
+        
+        return true;
+    }
+}
+```
 ---
 ###Reference
 1. http://blog.csdn.net/linhuanmars/article/details/20748761
