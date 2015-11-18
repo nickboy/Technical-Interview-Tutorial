@@ -107,6 +107,62 @@ public class Solution {
     }
 }
 ```
+
+updated 2015.11.18
+
+```java
+public class Solution {
+    public List<Integer> findSubstring(String s, String[] words) {
+        List<Integer> res = new ArrayList<>();
+        if (s == null || s.length() == 0 || words == null || words.length == 0) {
+            return res;
+        }
+        int wordLen = words[0].length();
+        int numOfWords = words.length;
+        HashMap<String, Integer> map = new HashMap<String, Integer>();
+        HashMap<String, Integer> curMap = new HashMap<String, Integer>();
+        for (String word : words) {
+            if (map.containsKey(word)) {
+                map.put(word, map.get(word) + 1);
+            } else {
+                map.put(word, 1);
+            }
+        }
+        
+        // 由i不斷枚舉s中的起始位置，一但i後面的值小於所有words加起來的長度時，
+        // 後面也不必算了，因此我們算到 sLen - numOfWords * wordLen即可
+        for (int i = 0; i <= s.length() - numOfWords * wordLen; i++) {
+            curMap.clear();
+            int j;
+            for (j = 0; j < numOfWords; j++) {
+                int idx = i + j * wordLen; // 算出下一個字的起始位置
+                String stub = s.substring(idx, idx + wordLen); // 取出下一個字
+                if (!map.containsKey(stub)) {
+                    // 因為要求是要包含所有字，但這個字根本沒出現在原本的list中，
+                    // 所以後面也不用算了，直接break
+                    break; 
+                }
+                if (!curMap.containsKey(stub)) {
+                    curMap.put(stub, 1);
+                } else {
+                    curMap.put(stub, curMap.get(stub) + 1);
+                }
+                
+                if (curMap.get(stub) > map.get(stub)) {
+                    break;
+                }
+            }
+            if (j == numOfWords) {
+                res.add(i);
+            }
+        }
+        
+        return res;
+        
+        
+    }
+}
+```
 ---
 ###Reference
 1. http://blog.csdn.net/linhuanmars/article/details/20343903
