@@ -289,4 +289,5 @@
 * [Iterator](iterator.md)
    * [Peeking Iterator](iterator/peeking_iterator.md)
 * [Difficult Problems](difficult_problems.md)
+   * Reverse Nodes in k-Group
 
