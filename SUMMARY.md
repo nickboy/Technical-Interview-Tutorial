@@ -190,7 +190,7 @@
    * [Encode and Decode Strings](string/encode_and_decode_strings.md)
    * [Alien Dictionary](string/alien_dictionary.md)
    * [Implement strStr()](String/implement_strstr.md)
-   * Repeated DNA Sequences
+   * [Repeated DNA Sequences](string/repeated_dna_sequences.md)
 * [Dynamic Programming](dynamic_programming.md)
    * [Jump Game](dynamic_programming/jump_game.md)
    * [Jump Game II](dynamic_programming/jump_game_ii.md)
