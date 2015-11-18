@@ -282,7 +282,7 @@
    * [Flip Game II](unknown/flip_game_ii.md)
    * [Bulls and Cows](unknown/bulls_and_cows.md)
    * [Find the Celebrity](unknown/find_the_celebrity.md)
-   * Generate Parentheses
+   * [Generate Parentheses](unknown/generate_parentheses.md)
 * [Sliding Window](sliding_window.md)
    * [Sliding Window Median](sliding_window/sliding_window_median.md)
    * [Sliding Window Maximum](sliding_window/sliding_window_maximum.md)
