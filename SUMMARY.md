@@ -288,5 +288,5 @@
    * [Sliding Window Maximum](sliding_window/sliding_window_maximum.md)
 * [Iterator](iterator.md)
    * [Peeking Iterator](iterator/peeking_iterator.md)
-* Difficult Problems
+* [Difficult Problems](difficult_problems.md)
 
