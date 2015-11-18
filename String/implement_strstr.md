@@ -10,7 +10,7 @@ Returns the index of the first occurrence of needle in haystack, or -1 if needle
 
 解題思路：
 
-brute force，
+brute force，注意，一但needle為空時，直接返回0而非-1。
 
 ```java
 public class Solution {
