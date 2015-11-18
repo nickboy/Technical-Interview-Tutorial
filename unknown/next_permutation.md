@@ -87,6 +87,55 @@ public class Solution {
 }
 ```
 
+updated 2015.11.18
+
+```java
+public class Solution {
+    public void nextPermutation(int[] nums) {
+        if (nums == null || nums.length < 2) {
+            return;
+        }
+        
+        int pos = -1;
+        int len = nums.length;
+        for (int i = len - 2; i >= 0; i--) {
+            if (nums[i] < nums[i + 1]) {
+                pos = i;
+                break;
+            }
+        }
+        
+        if (pos == -1) {
+            reverse(nums, 0, len -1);
+            return;
+        }
+        
+        int k = len - 1;
+        for (; k > pos; k--) {
+            if (nums[pos] < nums[k]) {
+                break;
+            }
+        }
+        swap(nums, pos, k);
+        reverse(nums, pos + 1, len - 1);
+    }
+    
+    private void swap(int[] nums, int i, int j) {
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
+    }
+    
+    private void reverse(int[] nums, int start, int end) {
+        while (start < end) {
+            swap(nums, start, end);
+            start++;
+            end--;
+        }
+    }
+}
+```
+
 >Time Complexity：$$O(N)$$
 
 ---
