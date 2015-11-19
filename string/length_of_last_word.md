@@ -39,3 +39,31 @@ public int lengthOfLastWord(String s) {
 }
 ```
 
+updated 2015.11.19
+
+```java
+public class Solution {
+    public int lengthOfLastWord(String s) {
+        if (s == null || s.length() == 0) {
+            return 0;
+        }
+        
+        int count = 0;
+        boolean isMeetSpace = false;
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == ' ') {
+                isMeetSpace = true;
+            } else {
+               
+               if (isMeetSpace) {
+                   count = 0;
+                   isMeetSpace = false;
+               }
+               count++;
+            }
+            
+        }
+        return count;
+    }
+}
+```
