@@ -286,7 +286,7 @@
    * [Bulls and Cows](unknown/bulls_and_cows.md)
    * [Find the Celebrity](unknown/find_the_celebrity.md)
    * [Generate Parentheses](unknown/generate_parentheses.md)
-   * N-Queen II
+   * [N-Queen II](unknown/n-queen_ii.md)
 * [Sliding Window](sliding_window.md)
    * [Sliding Window Median](sliding_window/sliding_window_median.md)
    * [Sliding Window Maximum](sliding_window/sliding_window_maximum.md)
