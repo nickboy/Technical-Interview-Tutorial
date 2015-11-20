@@ -42,7 +42,7 @@
    * [Reverse Integer](math/reverse_integer.md)
    * [Palindrome Number](math/palindrome_number.md)
    * [Pow(x,n)](math/powx,n.md)
-   * Plus One
+   * [Plus One](math/plus_one.md)
 * [Stack](stack.md)
    * [Evaluate Reverse Polish Notation](stack/evaluate_reverse_polish_notation.md)
    * [Max Tree](stack/max_tree.md)
