@@ -22,6 +22,43 @@ In this case, you should ignore redundant slashes and return "/home/foo".
 
 解題思路：
 
+Updated 2015.11.20
+
+網友 [shpolsky](https://leetcode.com/discuss/22592/java-10-lines-solution-with-stack) 提供了神之解法：
+
+使用deque的原因是stack 的iterator有問題，請參考以下的連結：
+
+http://stackoverflow.com/questions/16992758/is-there-a-bug-in-java-util-stacks-iterator
+
+其程式碼如下：
+
+```java
+public class Solution {
+    public String simplifyPath(String path) {
+        Deque<String> stack = new LinkedList<>();
+        Set<String> skip = new HashSet<>(Arrays.asList("..",".",""));
+        
+        for (String dir : path.split("/")) {
+            if (dir.equals("..") && !stack.isEmpty()) {
+                stack.pop();
+            } else if (!skip.contains(dir)) {
+                stack.push(dir);
+            }
+        }
+        StringBuilder sb = new StringBuilder();
+        for (String dir : stack) {
+            sb.insert(0, "/" + dir);
+        }
+        
+        if (sb.length() != 0) {
+            return sb.toString();
+        } else {
+            return "/";
+        }
+    }
+}
+```
+
 由網友[水中的魚](http://fisherlei.blogspot.com/2013/01/leetcode-simplify-path.html) 提供
 
 可利用 stack 的特性，透過 "/" 把字串分割成 n 個子字串，根據 子字串 分成以下四種狀況來討論：
