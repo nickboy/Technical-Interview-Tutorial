@@ -54,24 +54,25 @@ updated 2015.11.20
  */
 public class Solution {
     public ListNode deleteDuplicates(ListNode head) {
-        if (head == null ||| head.next == null) {
+        if (head == null || head.next == null) {
             return head;
         }
         
         ListNode dummy = new ListNode(0);
         dummy.next = head;
         ListNode prev = dummy;
-        while (head != null) {
-            if (head.next != null && head.next.val == head.val) {
-                head = head.next;
+        ListNode cur = head;
+        while (cur != null) {
+            while (cur.next != null && cur.next.val == cur.val) {
+                cur = cur.next;
             }
             // head沒移動，表示沒有遇到重複的
-            if (prev.next == head) {
+            if (prev.next == cur) {
                 prev = prev.next;
             } else {
-                prev.next = head.next;
+                prev.next = cur.next;
             }
-            head = head.next;
+            cur = cur.next;
         }
         return dummy.next;
     }
