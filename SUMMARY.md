@@ -162,7 +162,7 @@
    * [Move Zeros](array/move_zeros.md)
    * [Longest Consecutive Sequence](array/longest_consecutive_sequence.md)
    * [3Sum Smaller](array/3sum_smaller.md)
-   * Spiral Matrix II
+   * [Spiral Matrix II](array/spiral_matrix_ii.md)
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Longest Substring Without Repeating Characters](string/longest_substring_without_repeating_characters.md)
