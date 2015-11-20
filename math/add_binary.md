@@ -160,6 +160,27 @@ public class Solution {
     }
 }
 ```
+
+
+網友[NathanNi](https://leetcode.com/discuss/67571/my-simple-4ms-java-solution-clean-and-consice) 超級簡潔的作法，收藏下來：
+
+```java
+public String addBinary(String a, String b) {
+    int aLength = a.length();
+    int bLength = b.length();
+    StringBuilder sb = new StringBuilder();
+    int carry = 0;
+    while(Math.max(aLength, bLength) > 0) {
+        int aNum = aLength > 0 ? (a.charAt(aLength---1) - '0') : 0;
+        int bNum = bLength > 0 ? (b.charAt(bLength---1) - '0') : 0;
+        int cNum = aNum + bNum + carry;
+        sb.append(cNum%2);
+        carry = cNum / 2;
+    }
+    
+    return (carry == 1)?sb.append(1).reverse().toString():sb.reverse().toString();
+}
+```
 ---
 ###Reference
 1. http://www.jiuzhang.com/solutions/add-binary/
