@@ -120,6 +120,44 @@ public class Solution {
 }
 ```
 
+updated 2015.11.19，會忘，再紀錄一下。
+
+```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public ListNode rotateRight(ListNode head, int k) {
+        if (head == null || k == 0) {
+            return head;
+        }
+        
+        int len = 1;
+        ListNode copyHead = head;
+        while (copyHead.next != null) {
+            copyHead = copyHead.next;
+            len++;
+        }
+        
+        copyHead.next = head;
+        for (int i = 1; i < len - k % len; i++) {
+            head = head.next;
+        }
+        
+        copyHead = head.next;
+        head.next = null;
+        
+        return copyHead;
+        
+    }
+}
+```
+
 ---
 ###Reference
 1. http://fisherlei.blogspot.com/2013/01/leetcode-rotate-list.html
