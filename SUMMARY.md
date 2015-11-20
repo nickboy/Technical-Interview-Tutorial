@@ -222,6 +222,7 @@
    * [Unique Paths II](dynamic_programming/unique_paths_ii.md)
    * [Decode Ways](dynamic_programming/decode_ways.md)
    * [Paint Fence](dynamic_programming/paint_fence.md)
+   * Minimum Path Sum
 * [Segment Tree](segment_tree.md)
    * [Segment Tree Query](segment_tree/segment_tree_query.md)
    * [Segment Tree Query II](segment_tree/segment_tree_query_ii.md)
