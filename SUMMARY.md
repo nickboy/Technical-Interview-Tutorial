@@ -224,6 +224,7 @@
    * [Decode Ways](dynamic_programming/decode_ways.md)
    * [Paint Fence](dynamic_programming/paint_fence.md)
    * [Minimum Path Sum](dynamic_programming/minimum_path_sum.md)
+   * Climbing Stairs
 * [Segment Tree](segment_tree.md)
    * [Segment Tree Query](segment_tree/segment_tree_query.md)
    * [Segment Tree Query II](segment_tree/segment_tree_query_ii.md)
