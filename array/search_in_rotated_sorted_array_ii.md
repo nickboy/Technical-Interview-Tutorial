@@ -14,7 +14,7 @@ Write a function to determine if a given target is in the array.
 
 解題思路：
 
-九章模版
+九章模版，差別在於，如果有遇到重複的，則直接start往前移。
 
 ```java
 public class Solution {
