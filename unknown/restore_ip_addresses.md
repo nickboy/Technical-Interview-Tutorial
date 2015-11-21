@@ -68,6 +68,65 @@ public class Solution {
 }
 ```
 
+
+updated 2011.11.21
+
+```java
+public class Solution {
+    public List<String> restoreIpAddresses(String s) {
+        List<String> res = new ArrayList<String>();
+        if (s == null || s.length() < 4 || s.length() > 12) {
+            return res;
+        }
+        helper(s, res, new ArrayList<String>());
+        return res;
+    }
+    
+    private void helper(String s, List<String> res, List<String> tempRes) {
+        if (tempRes.size() == 4) {
+            if (s.length() == 0) {
+                String ip = genIP(tempRes);
+                if (!res.contains(ip)) {
+                    res.add(ip);
+                }
+            }
+            return;
+        }
+        for (int i = 1; i <= Math.min(3, s.length()); i++) {
+            String ip = s.substring(0, i);
+            String remainString = s.substring(i, s.length());
+            if (isValid(ip)) {
+                tempRes.add(s.substring(0, i));
+                helper(remainString, res, tempRes);
+                tempRes.remove(tempRes.size() - 1);
+            }
+        }
+    }
+    
+    private boolean isValid(String s) {
+        if (s.charAt(0) == '0') {
+            return s.equals("0");
+        }
+        int val = Integer.parseInt(s);
+        if (val >= 0 && val <=255) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    private String genIP(List<String> tempRes) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < 4; i++) {
+            if (i != 0) {
+                sb.append(".");
+            }
+            sb.append(tempRes.get(i));
+        }
+        return sb.toString();
+    }
+}
+```
 ---
 ###Reference
 1. http://www.cnblogs.com/springfor/p/3886409.html
