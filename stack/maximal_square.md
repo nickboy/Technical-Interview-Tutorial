@@ -102,6 +102,59 @@ public class Solution {
 }
 ```
 
+
+updated 2015.11.21
+
+```java
+public class Solution {
+    public int maximalRectangle(char[][] matrix) {
+        if (matrix == null || matrix.length == 0) {
+            return 0;
+        }
+        
+        int rows = matrix.length;
+        int cols = matrix[0].length;
+        int[][] heights = new int[rows][cols];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                if (matrix[i][j] == '1') {
+                    heights[i][j] = (i == 0) ? 1 : heights[i - 1][j] + 1;
+                } else {
+                    heights[i][j] = 0;
+                }
+            }
+        }
+        
+        int max = 0;
+        for (int i = 0; i < rows; i++) {
+            int curArea = maxAreaHistogram(heights[i]);
+            max = Math.max(max, curArea);
+        }
+        
+        return max;
+    }
+    
+    private int maxAreaHistogram(int[] heights) {
+        if (heights == null || heights.length == 0) {
+            return 0;
+        }
+        
+        int len = heights.length;
+        Stack<Integer> s = new Stack<Integer>();
+        int maxArea = 0;
+        for (int i = 0; i <= len; i++) {
+            int cur = (i == len) ? -1 : heights[i];
+            while (!s.isEmpty() && cur < heights[s.peek()]) {
+                int h = heights[s.pop()];
+                int w = (s.isEmpty()) ? i : i - s.peek() - 1;
+                maxArea = Math.max(maxArea, w * h);
+            }
+            s.push(i);
+        }
+        return maxArea;
+    }
+}
+```
 ---
 ###Reference
 1. http://www.cnblogs.com/lichen782/p/leetcode_maximal_rectangle.html#3201418
