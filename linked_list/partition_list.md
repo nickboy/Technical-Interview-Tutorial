@@ -10,6 +10,10 @@
 
 分別建兩個鏈表，分別存放比 x 小的元素與比 x 大的元素，最後將兩個鏈表接起來即可，原始碼如下：
 
+
+>記得要把greater的下一個斷掉，否則會變成loop
+
+
 ```java
 
 public ListNode partition(ListNode head, int x) {
