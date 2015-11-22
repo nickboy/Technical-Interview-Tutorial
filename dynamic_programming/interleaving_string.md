@@ -43,4 +43,42 @@ public boolean isInterleave(String s1, String s2, String s3) {
 }
 ```
 
+
+updated 2015.11.22
+
+```java
+public class Solution {
+    public boolean isInterleave(String s1, String s2, String s3) {
+        if (s1 == null || s2 == null || s3 == null) {
+            return false;
+        }
+        int lenOne = s1.length();
+        int lenTwo = s2.length();
+        int lenThree = s3.length();
+        if (lenOne + lenTwo != lenThree) {
+            return false;
+        }
+        
+        boolean[][] dp = new boolean[lenOne + 1][lenTwo + 1];
+        dp[0][0] = true;
+        
+        for (int i = 1; i <=lenOne; i++) {
+            dp[i][0] = dp[i - 1][0] && (s1.charAt(i - 1) == s3.charAt(i - 1));
+        }
+        
+        for (int i = 1; i <= lenTwo; i++) {
+            dp[0][i] = dp[0][i - 1] && (s2.charAt(i - 1) == s3.charAt(i - 1));
+        }
+        for (int i = 1; i <= lenOne; i++) {
+            for (int j = 1; j <= lenTwo; j++) {
+                dp[i][j] = dp[i - 1][j] && (s1.charAt(i - 1) == s3.charAt(i + j - 1)) ||
+                            dp[i][j - 1] && (s2.charAt(j - 1) == s3.charAt(i + j - 1));
+            }
+        }
+        
+        return dp[lenOne][lenTwo];
+    }
+}
+```
+
 >Time Complexity O($$N^{2}$$)
