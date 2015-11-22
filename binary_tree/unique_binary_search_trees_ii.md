@@ -89,9 +89,50 @@ public class Solution {
 
 ```
 
+updated 2015.11.22
+
+```java
+public class Solution {
+    /**
+     * @paramn n: An integer
+     * @return: A list of root
+     */
+    public List<TreeNode> generateTrees(int n) {
+        if (n == 0) {
+            return new ArrayList<TreeNode>();
+        }
+        return helper(1,n);
+    
+    }
+    
+    public List<TreeNode> helper(int s, int e){
+        List<TreeNode> res = new ArrayList<TreeNode>(); 
+        if(s > e){
+            res.add(null);
+            return res;
+        }
+        for(int i=s; i<=e; i++){
+    
+            List<TreeNode> L = helper(s,i-1);
+            List<TreeNode> R = helper(i+1,e);
+            for(TreeNode l : L){
+    
+                for(TreeNode r : R){
+                    TreeNode node = new TreeNode(i);
+                    node.left = l;
+                    node.right = r;
+                    res.add(node);
+                 }
+            }
+        }
+        return res;
+    }
+}
+```
 
 
 ---
 ###Reference
 1. http://codeganker.blogspot.com/2014/04/unique-binary-search-trees-ii-leetcode.html
 2. http://www.cnblogs.com/springfor/p/3884029.html
+3. https://leetcode.com/discuss/59567/95%25-fast-concise-java-recursive-solution-with-explanation
