@@ -303,4 +303,5 @@
    * [Substring with Concatenation of All Words](difficult_problems/substring_with_concatenation_of_all_words.md)
    * [Scramble String](difficult_problems/scramble_string.md)
    * [Decode Ways](difficult_problems/decode_ways.md)
+   * Reverse Linked List II
 
