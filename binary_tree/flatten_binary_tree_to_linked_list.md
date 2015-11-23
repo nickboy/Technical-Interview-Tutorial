@@ -77,3 +77,42 @@ public class Solution {
     
 }
 ```
+
+
+updated 2011.11.23
+
+完全不用stack，只用指針即可，不斷把右子樹放到右子樹的最右兒子下面，接著往右邊繼續走，程式碼如下：
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public void flatten(TreeNode root) {
+        if (root == null || (root.left == null && root.right == null)) {
+            return;
+        }
+        
+        while (root != null) {
+            if (root.left != null) {
+                TreeNode right = root.right;
+                TreeNode cur = root.left;
+                while (cur.right != null) {
+                    cur = cur.right;
+                }
+                cur.right = right;
+                root.right = root.left;
+                root.left = null;
+                
+            }
+            root = root.right;
+        }
+    }
+}
+```
