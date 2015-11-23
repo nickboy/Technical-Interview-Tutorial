@@ -86,7 +86,7 @@
    * [Symmetric Tree](binary_tree/symmetric_tree.md)
    * [Minimum Depth of Binary Tree](binary_tree/minimum_depth_of_binary_tree.md)
    * [Path Sum](binary_tree/path_sum.md)
-   * Path Sum II
+   * [Path Sum II](binary_tree/path_sum_ii.md)
 * [Heap](heap.md)
    * [Heapify](heap/heapify.md)
    * [Data Stream Median](heap/data_stream_median.md)
