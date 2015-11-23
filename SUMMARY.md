@@ -83,6 +83,7 @@
    * [Verify Preorder Sequence in Binary Search Tree](binary_tree/verify_preorder_sequence_in_binary_search_tree.md)
    * [Binary Tree Longest Consecutive Sequence](binary_tree/binary_tree_longest_consecutive_sequence.md)
    * [Same Tree](binary_tree/same_tree.md)
+   * Symmetric Tree
 * [Heap](heap.md)
    * [Heapify](heap/heapify.md)
    * [Data Stream Median](heap/data_stream_median.md)
