@@ -84,6 +84,7 @@
    * [Binary Tree Longest Consecutive Sequence](binary_tree/binary_tree_longest_consecutive_sequence.md)
    * [Same Tree](binary_tree/same_tree.md)
    * [Symmetric Tree](binary_tree/symmetric_tree.md)
+   * Minimum Depth of Binary Tree
 * [Heap](heap.md)
    * [Heapify](heap/heapify.md)
    * [Data Stream Median](heap/data_stream_median.md)
