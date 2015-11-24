@@ -44,6 +44,7 @@
    * [Pow(x,n)](math/powx,n.md)
    * [Plus One](math/plus_one.md)
    * [Pascal Triangle](math/pascal_triangle.md)
+   * Pascal Triangle II
 * [Stack](stack.md)
    * [Evaluate Reverse Polish Notation](stack/evaluate_reverse_polish_notation.md)
    * [Max Tree](stack/max_tree.md)
