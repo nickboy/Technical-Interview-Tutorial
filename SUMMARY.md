@@ -311,4 +311,5 @@
    * [Scramble String](difficult_problems/scramble_string.md)
    * [Decode Ways](difficult_problems/decode_ways.md)
    * [Reverse Linked List II](difficult_problems/reverse_linked_list_ii.md)
+   * Binary Tree Maximum Path Sum
 
