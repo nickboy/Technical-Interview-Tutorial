@@ -84,3 +84,7 @@ public class Solution {
     }
 }
 ```
+
+---
+###Reference
+1. http://www.programcreek.com/2013/02/leetcode-binary-tree-maximum-path-sum-java/
