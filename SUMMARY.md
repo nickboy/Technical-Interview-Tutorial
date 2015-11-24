@@ -89,7 +89,7 @@
    * [Minimum Depth of Binary Tree](binary_tree/minimum_depth_of_binary_tree.md)
    * [Path Sum](binary_tree/path_sum.md)
    * [Path Sum II](binary_tree/path_sum_ii.md)
-   * Sum Root to Leaf Numbers
+   * [Sum Root to Leaf Numbers](binary_tree/sum_root_to_leaf_numbers.md)
 * [Heap](heap.md)
    * [Heapify](heap/heapify.md)
    * [Data Stream Median](heap/data_stream_median.md)
