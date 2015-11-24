@@ -127,6 +127,41 @@ public class Solution {
     }
 }
 ```
+
+
+updated 2015.11.24
+
+之前的方法太長而且會超時，在此使用memory search來降低複雜度，程式碼如下：
+
+```java
+public class Solution {
+    public List<String> wordBreak(String s, Set<String> wordDict) {
+        return dfs(s, wordDict, new HashMap<String, LinkedList<String>>());
+    }
+    
+    private List<String> dfs(String s, Set<String> wordDict, HashMap<String, LinkedList<String>> map) {
+        if (map.containsKey(s)) {
+            return map.get(s);
+        }
+        
+        LinkedList<String> list = new LinkedList<String>();
+        if (s.length() == 0) {
+            list.add("");
+            return list;
+        }
+        for (String word : wordDict) {
+            if (s.startsWith(word)) {
+                List<String> sublist = dfs(s.substring(word.length()), wordDict, map);
+                for (String sub : sublist) {
+                    list.add(word + (sub.isEmpty() ? "" : " ") + sub);
+                }
+            }
+        }
+        map.put(s, list);
+        return list;
+    }
+}
+```
 ---
 ###Reference
 1. http://blog.csdn.net/linhuanmars/article/details/22452163
