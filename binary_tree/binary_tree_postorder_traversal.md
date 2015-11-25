@@ -1,8 +1,21 @@
 # Binary Tree Postorder Traversal
 
-[]()
+[Leetcode](https://leetcode.com/problems/binary-tree-postorder-traversal/)
 
 題意：
+
+Given a binary tree, return the postorder traversal of its nodes' values.
+
+For example:
+Given binary tree {1,#,2,3},
+```
+   1
+    \
+     2
+    /
+   3
+   ```
+return [3,2,1].
 
 
 解題思路：
