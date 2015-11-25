@@ -320,5 +320,5 @@
    * [Word Ladder II](difficult_problems/word_ladder_ii.md)
    * [Word Break II](difficult_problems/word_break_ii.md)
    * [LRU Cache](difficult_problems/lru_cache.md)
-   * Reverse Words in a String
+   * [Reverse Words in a String](difficult_problems/reverse_words_in_a_string.md)
 
