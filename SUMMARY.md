@@ -90,7 +90,7 @@
    * [Path Sum](binary_tree/path_sum.md)
    * [Path Sum II](binary_tree/path_sum_ii.md)
    * [Sum Root to Leaf Numbers](binary_tree/sum_root_to_leaf_numbers.md)
-   * Binary Tree Postorder Traversal
+   * [Binary Tree Postorder Traversal](binary_tree/binary_tree_postorder_traversal.md)
 * [Heap](heap.md)
    * [Heapify](heap/heapify.md)
    * [Data Stream Median](heap/data_stream_median.md)
