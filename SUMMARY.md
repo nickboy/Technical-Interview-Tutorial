@@ -321,5 +321,5 @@
    * [Word Break II](difficult_problems/word_break_ii.md)
    * [LRU Cache](difficult_problems/lru_cache.md)
    * [Reverse Words in a String](difficult_problems/reverse_words_in_a_string.md)
-   * Binary Tree Upside Down
+   * [Binary Tree Upside Down](difficult_problems/binary_tree_upside_down.md)
 
