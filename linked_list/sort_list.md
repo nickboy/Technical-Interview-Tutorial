@@ -1,7 +1,14 @@
 # Sort List
 [原題網址](http://www.lintcode.com/en/problem/sort-list/)
 
+題意：
 
+Sort a linked list in O(n log n) time using constant space complexity.
+
+
+解題思路：
+
+不斷的把list切兩半用merge sort，記住要先處理後半段再把中間斷掉，再處理前半段，否則會無限循環。
 ```java
 public ListNode sortList(ListNode head) {
 
