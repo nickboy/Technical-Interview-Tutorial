@@ -1,5 +1,7 @@
 # Sort List
-[原題網址](http://www.lintcode.com/en/problem/sort-list/)
+[Lintcode](http://www.lintcode.com/en/problem/sort-list/)
+
+[Leetcode](https://leetcode.com/problems/sort-list/)
 
 題意：
 
