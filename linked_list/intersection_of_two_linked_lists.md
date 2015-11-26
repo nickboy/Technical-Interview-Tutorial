@@ -88,6 +88,62 @@ public class Solution {
 }
 ```
 
+神之解法
+
+"Two pointer solution (O(n+m) running time, O(1) memory):
+Maintain two pointers pA and pB initialized at the head of A and B, respectively. Then let them both traverse through the lists, one node at a time.
+When pA reaches the end of a list, then redirect it to the head of B (yes, B, that's right.); similarly when pB reaches the end of a list, redirect it the head of A.
+If at any point pA meets pB, then pA/pB is the intersection node.
+To see why the above trick would work, consider the following two lists: A = {1,3,5,7,9,11} and B = {2,4,9,11}, which are intersected at node '9'. Since B.length (=4) < A.length (=6), pB would reach the end of the merged list first, because pB traverses exactly 2 nodes less than pA does. By redirecting pB to head A, and pA to head B, we now ask pB to travel exactly 2 more nodes than pA would. So in the second iteration, they are guaranteed to reach the intersection node at the same time.
+If two lists have intersection, then their last nodes must be the same one. So when pA/pB reaches the end of a list, record the last element of A/B respectively. If the two last elements are not the same one, then the two lists have no intersections.
+"
+
+```java
+public class Solution {
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        if (headA == null || headB == null) {
+            return null;
+        }
+        
+        ListNode pA = headA;
+        ListNode pB = headB;
+        
+        ListNode tailA = null;
+        ListNode tailB = null;
+        
+        while (true) {
+            if (pA == null) {
+                pA = headB;
+            }
+            
+            if (pB == null) {
+                pB = headA;
+            }
+            
+            if (pA.next == null) {
+                tailA = pA;
+            }
+            
+            if (pB.next == null) {
+                tailB = pB;
+            }
+            
+            //The two links have different tails. So just return null;
+            if (tailA != null && tailB != null && tailA != tailB) {
+                return null;
+            }
+            
+            if (pA == pB) {
+                return pA;
+            }
+            
+            pA = pA.next;
+            pB = pB.next;
+        }
+    }
+}
+```
+
 ---
 ###Reference
 1. http://www.cnblogs.com/yuzhangcmu/p/4128794.html
