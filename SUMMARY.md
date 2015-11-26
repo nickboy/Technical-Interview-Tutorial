@@ -176,6 +176,7 @@
    * [3Sum Smaller](array/3sum_smaller.md)
    * [Spiral Matrix II](array/spiral_matrix_ii.md)
    * [Search in Rotated Sorted Array II](array/search_in_rotated_sorted_array_ii.md)
+   * Missing Ranges
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Longest Substring Without Repeating Characters](string/longest_substring_without_repeating_characters.md)
