@@ -209,7 +209,7 @@
    * [Repeated DNA Sequences](string/repeated_dna_sequences.md)
    * Length of Last Word
    * [Valid Palindrome](string/valid_palindrome.md)
-   * Compare Version Numbers
+   * [Compare Version Numbers](string/compare_version_numbers.md)
 * [Dynamic Programming](dynamic_programming.md)
    * [Jump Game](dynamic_programming/jump_game.md)
    * [Jump Game II](dynamic_programming/jump_game_ii.md)
