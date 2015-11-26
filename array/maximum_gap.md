@@ -4,6 +4,23 @@
 
 題意：
 
+Given an unsorted array, find the maximum difference between the successive elements in its sorted form.
+
+Return 0 if the array contains less than 2 elements.
+
+Have you met this question in a real interview? Yes
+
+Example
+
+Given ```[1, 9, 2, 5]```, the sorted form of it is ```[1, 2, 5, 9]```, the maximum gap is between ```5``` and ```9 = 4```.
+
+Note
+
+You may assume all elements in the array are non-negative integers and fit in the 32-bit signed integer range.
+
+Challenge
+Sort is easy but will cost O(nlogn) time. Try to solve it in linear time and space.
+
 解題思路：
 
 暴力法花 O(NlogN) 排序後再不斷跟前面的值比對，程式碼如下：
