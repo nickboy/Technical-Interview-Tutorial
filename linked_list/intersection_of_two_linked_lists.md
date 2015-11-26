@@ -88,7 +88,7 @@ public class Solution {
 }
 ```
 
-神之解法
+神之解法，由leetcode網友提供
 
 "Two pointer solution (O(n+m) running time, O(1) memory):
 Maintain two pointers pA and pB initialized at the head of A and B, respectively. Then let them both traverse through the lists, one node at a time.
