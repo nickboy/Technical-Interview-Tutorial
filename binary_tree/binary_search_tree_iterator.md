@@ -95,3 +95,62 @@ public class Solution {
 
 ```
 
+updated 2015.11.26
+
+```java
+/**
+ * Definition for binary tree
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+
+public class BSTIterator {
+    private Stack<TreeNode> stack = new Stack<TreeNode>();
+    public BSTIterator(TreeNode root) {
+        //start traverse root;
+        if (root != null) {
+            pushLeft(root);
+            
+        }
+    }
+    //keep traverse left subtree
+    //since left subtree also have smallest number
+    private void pushLeft(TreeNode node) {
+        while (node != null) {
+            stack.push(node);
+            node = node.left;
+        }
+    }
+    /** @return whether we have a next smallest number */
+    public boolean hasNext() {
+        return !stack.empty();
+    }
+
+    /** @return the next smallest number */
+    public int next() {
+        int result = 0;
+        if (!stack.empty()) {
+            //pop a value from the top of the stack
+            //then keep traverse right subtree.
+            TreeNode node = stack.pop();
+            result = node.val;
+            
+            //root and every elements in the left subtree have already push into stack
+            //start traverse right subtree
+            pushLeft(node.right);
+        }
+        return result;
+    }
+}
+
+/**
+ * Your BSTIterator will be called like this:
+ * BSTIterator i = new BSTIterator(root);
+ * while (i.hasNext()) v[f()] = i.next();
+ */
+```
+
