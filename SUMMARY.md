@@ -333,5 +333,5 @@
    * [Reverse Words in a String](difficult_problems/reverse_words_in_a_string.md)
    * [Binary Tree Upside Down](difficult_problems/binary_tree_upside_down.md)
    * [Maximum Gap](difficult_problems/maximum_gap.md)
-   * Course Schedule
+   * [Course Schedule](difficult_problems/course_schedule.md)
 
