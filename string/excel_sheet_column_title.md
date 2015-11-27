@@ -1,6 +1,8 @@
 # Excel Sheet Column TItle
 
-[Leetcode](https://leetcode.com/problems/excel-sheet-column-title/)
+[Leetcode 1](https://leetcode.com/problems/excel-sheet-column-title/)
+
+[Leetcode 2](https://leetcode.com/problems/excel-sheet-column-number/)
 
 題意：
 
