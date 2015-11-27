@@ -19,6 +19,8 @@ For example:
 
 解題思路：
 
+數字轉字串
+
 ```java
 public class Solution {
     public String convertToTitle(int n) {
@@ -36,6 +38,28 @@ public class Solution {
         }
         
         return sb.reverse().toString();
+    }
+}
+```
+
+
+字串轉數字
+
+```java
+public class Solution {
+    public int titleToNumber(String s) {
+        int sum = 0;
+        if (s == null || s.length() == 0) {
+            return 0;
+        }
+        int twentySix = 26;
+        int pow = 0;
+        for (int i = s.length() - 1; i >= 0; i--) {
+            int cur = (int) (s.charAt(i) - 'A' + 1);
+            sum += cur * Math.pow(twentySix, pow);
+            pow++;
+        }
+        return sum;
     }
 }
 ```
