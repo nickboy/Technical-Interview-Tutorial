@@ -31,7 +31,7 @@ For example, given the dungeon below, the initial health of the knight must be a
 
 >dp[i][j] = Max(1, Min(dp[i + 1][j], dp[i][j + 1]) - dungeon[i][j])
 
-dp[i][j] 表示由[0][0]走到[i][j]格時，最少需要多少生命。
+dp[i][j] 表示由[0][0]走到[i][j]格時，最少需要多少生命點數。
 
 其程式碼如下：
 
