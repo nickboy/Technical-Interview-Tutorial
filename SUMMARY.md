@@ -8,6 +8,7 @@
    * [Update Bits](bit_manipulation/update_bits.md)
    * [Binary Representation](bit_manipulation/binary_representation.md)
    * [Reverse Bits](bit_manipulation/reverse_bits.md)
+   * Number of 1 Bits
 * [Math](math.md)
    * [Add Binary](math/add_binary.md)
    * [Sqrt(x)](math/sqrtx.md)
