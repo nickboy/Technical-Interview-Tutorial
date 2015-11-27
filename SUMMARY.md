@@ -177,6 +177,7 @@
    * [Spiral Matrix II](array/spiral_matrix_ii.md)
    * [Search in Rotated Sorted Array II](array/search_in_rotated_sorted_array_ii.md)
    * [Missing Ranges](array/missing_ranges.md)
+   * Two Sum III - Data structure design
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Longest Substring Without Repeating Characters](string/longest_substring_without_repeating_characters.md)
