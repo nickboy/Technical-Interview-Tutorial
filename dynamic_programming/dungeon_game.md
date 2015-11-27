@@ -31,7 +31,7 @@ For example, given the dungeon below, the initial health of the knight must be a
 
 >dp[i][j] = Max(1, Min(dp[i + 1][j], dp[i][j + 1]) - dungeon[i][j])
 
-dp[i][j] 表示由[0][0]走到[i][j]格時，最少需要多少生命點數。
+dp[i][j]表示進入這個格子後保證knight不會死所需要的最小HP。如果一個格子的值為負，那麼進入這個格子之前knight需要有的最小HP是-dungeon[i][j] + 1.如果格子的值非負，那麼最小HP需求就是1.
 
 其程式碼如下：
 
@@ -65,3 +65,7 @@ public class Solution {
     }
 }
 ```
+
+---
+###Reference
+1. http://blog.csdn.net/likecool21/article/details/42516979
