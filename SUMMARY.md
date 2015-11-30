@@ -182,7 +182,7 @@
    * [Search in Rotated Sorted Array II](array/search_in_rotated_sorted_array_ii.md)
    * [Missing Ranges](array/missing_ranges.md)
    * [Two Sum III - Data structure design](array/two_sum_iii_-_data_structure_design.md)
-   * Kth Largest Element in an Array
+   * [Kth Largest Element in an Array](array/kth_largest_element_in_an_array.md)
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Longest Substring Without Repeating Characters](string/longest_substring_without_repeating_characters.md)
