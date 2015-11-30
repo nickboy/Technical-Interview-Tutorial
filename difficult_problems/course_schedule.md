@@ -111,6 +111,57 @@ public class Solution {
     }
 }
 ```
+
+Course Schedule II 
+
+與1完全一樣，只需要加個ordering的陣列來依序把課程編號加入。
+
+```java
+public class Solution {
+    public int[] findOrder(int numCourses, int[][] prerequisites) {
+        int[] ordering = new int[numCourses];
+        Arrays.fill(ordering, -1);
+        List<List<Integer>> lists = new ArrayList<List<Integer>>();
+        for (int i = 0; i < numCourses; i++) {
+            lists.add(new ArrayList<Integer>());
+        }
+        
+        int[] preNum = new int[numCourses];
+        for (int i = 0; i < prerequisites.length; i++) {
+            lists.get(prerequisites[i][1]).add(prerequisites[i][0]);
+            preNum[prerequisites[i][0]]++;
+        }
+        
+        Queue<Integer> q = new LinkedList<Integer>();
+        
+        for (int i = 0; i < numCourses; i++) {
+            if (preNum[i] == 0) {
+                q.offer(i);
+            }
+        }
+        
+        int idx = 0;
+        int count = numCourses;
+        while(!q.isEmpty()) {
+            int cur = q.poll();
+            ordering[idx++] = cur;
+            for (int i : lists.get(cur)) {
+                if (--preNum[i] == 0) {
+                    q.offer(i);
+                }
+            }
+            count--;
+        }
+        
+        if (count == 0) {
+            return ordering;
+        } else {
+            return new int[0];
+        }
+    }
+}
+```
+
 ---
 ###Reference
 1. http://www.cnblogs.com/grandyang/p/4484571.html
