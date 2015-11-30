@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 * [Trie](trie.md)
    * [Implement Trie](trie/implement_trie.md)
-   * Add and Search Word - Data structure design
+   * [Add and Search Word - Data structure design](trie/add_and_search_word_-_data_structure_design.md)
 * [Bit Manipulation](bit_manipulation.md)
    * [Flip Bits](bit_manipulation/flip_bits.md)
    * [Update Bits](bit_manipulation/update_bits.md)
