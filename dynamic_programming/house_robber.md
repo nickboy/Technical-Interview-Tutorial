@@ -92,3 +92,26 @@ public class Solution {
     }
 }
 ```
+
+updated 2015.11.29
+
+後來到一個神奇的解法，只需要O(1)的空間，其實可以轉化成奇偶問題，因為不能連續搶，其程式碼如下：
+
+```java
+public class Solution {
+    public int rob(int[] nums) {
+        int len = nums.length;
+        int odd = 0;
+        int even = 0;
+        for (int i = 0; i < len; i++) {
+            if (i % 2 == 0) {
+                odd = Math.max(odd + nums[i], even);
+            } else {
+                even = Math.max(odd, even + nums[i]);
+            }
+        }
+        
+        return Math.max(even ,odd);
+    }
+}
+```
