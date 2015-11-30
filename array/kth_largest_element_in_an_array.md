@@ -16,7 +16,7 @@ You may assume k is always valid, 1 ≦ k ≦ array's length.
 
 解題思路：
 
-使用 quick select來達到 O(logN)的時間複雜度，不斷的用pivot把陣列切兩半，其程式碼如下：
+使用 quick select來達到 O(N)的時間複雜度，不斷的用pivot把陣列切兩半，其程式碼如下：
 
 ```java
 public class Solution {
