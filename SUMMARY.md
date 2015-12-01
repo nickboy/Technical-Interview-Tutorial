@@ -185,7 +185,7 @@
    * [Kth Largest Element in an Array](array/kth_largest_element_in_an_array.md)
    * [Contains Duplicate](array/contains_duplicate.md)
    * [Contains Duplicates II](array/contains_duplicates_ii.md)
-   * Contains Duplicate III
+   * [Contains Duplicate III](array/contains_duplicate_iii.md)
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Longest Substring Without Repeating Characters](string/longest_substring_without_repeating_characters.md)
