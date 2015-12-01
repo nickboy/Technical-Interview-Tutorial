@@ -9,6 +9,56 @@ Given a complete binary tree, count the number of nodes.
 
 解題思路：
 
+
+updated 2015.12.1
+
+遞迴的作法，分別算左右子樹的高度，若高度相同，則此樹是full tree，則直接返回2^h-1即可，否則繼續遞迴下報
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public int countNodes(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        
+        int left = leftDepth(root);
+        int right = rightDepth(root);
+        if (left == right) {
+            return (1 << left) - 1;
+        } else {
+            return countNodes(root.left) + countNodes(root.right) + 1;
+        }
+    }
+    
+    private int leftDepth(TreeNode root) {
+        int depth = 0;
+        while (root != null) {
+            depth++;
+            root = root.left;
+        }
+        return depth;
+    }
+    
+    private int rightDepth(TreeNode root) {
+        int depth = 0;
+        while (root != null) {
+            depth++;
+            root = root.right;
+        }
+        return depth;
+    }
+}
+```
+
 網友 [書影](http://bookshadow.com/weblog/2015/06/06/leetcode-count-complete-tree-nodes/) 提供了以下思路：
 
 遞迴法：分別列舉左右子樹的高度，如果兩者一樣，表示此子樹為full bt，因此直接返回 $$2^h - 1$$即可，否則繼續往下遞迴，此法複雜度為指數型，leetcode無法通過。
