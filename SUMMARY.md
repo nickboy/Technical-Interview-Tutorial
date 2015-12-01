@@ -293,6 +293,7 @@
    * [Text Justification](high_frequency/text_justification.md)
    * [The Skyline Problem](high_frequency/the_skyline_problem.md)
 * [Unknown](unknown.md)
+   * Combination Sum III
    * [Combinations](unknown/combinations.md)
    * [Combination Sum](unknown/combination_sum.md)
    * [Combination Sum II](unknown/combination_sum_ii.md)
@@ -318,7 +319,6 @@
    * [Find the Celebrity](unknown/find_the_celebrity.md)
    * [Generate Parentheses](unknown/generate_parentheses.md)
    * [N-Queen II](unknown/n-queen_ii.md)
-   * Combination Sum III
 * [Sliding Window](sliding_window.md)
    * [Sliding Window Median](sliding_window/sliding_window_median.md)
    * [Sliding Window Maximum](sliding_window/sliding_window_maximum.md)
