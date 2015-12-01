@@ -28,6 +28,9 @@ Output:
 ```
 解題思路：
 
+為 combination sum的變形，給一個數字k與n，k表示組合中的元素個數，n表示目標值，元素只有從1-9。
+
+需要特別注意的就是是否滿足條件，若超出元素個數或是往下加已超過目標值的話，直接prune。
 
 ```java
 public class Solution {
