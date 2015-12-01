@@ -340,5 +340,5 @@
    * [Maximum Gap](difficult_problems/maximum_gap.md)
    * [Course Schedule](difficult_problems/course_schedule.md)
    * [Kth Largest Element in an Array](difficult_problems/kth_largest_element_in_an_array.md)
-   * The Skyline Problem
+   * [The Skyline Problem](difficult_problems/the_skyline_problem.md)
 
