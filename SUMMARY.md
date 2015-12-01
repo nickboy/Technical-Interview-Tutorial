@@ -293,10 +293,10 @@
    * [Text Justification](high_frequency/text_justification.md)
    * [The Skyline Problem](high_frequency/the_skyline_problem.md)
 * [Unknown](unknown.md)
-   * Combination Sum III
    * [Combinations](unknown/combinations.md)
    * [Combination Sum](unknown/combination_sum.md)
    * [Combination Sum II](unknown/combination_sum_ii.md)
+   * Combination Sum III
    * [Topological Sorting](unknown/topological_sorting.md)
    * [Word Ladder I](unknown/word_ladder_i.md)
    * [Word Ladder II](unknown/word_ladder_ii.md)
