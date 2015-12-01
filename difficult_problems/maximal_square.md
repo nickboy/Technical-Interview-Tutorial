@@ -1,0 +1,2 @@
+# Maximal Square
+
