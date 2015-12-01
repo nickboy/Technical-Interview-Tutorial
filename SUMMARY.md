@@ -337,5 +337,5 @@
    * [Binary Tree Upside Down](difficult_problems/binary_tree_upside_down.md)
    * [Maximum Gap](difficult_problems/maximum_gap.md)
    * [Course Schedule](difficult_problems/course_schedule.md)
-   * Kth Largest Element in an Array
+   * [Kth Largest Element in an Array](difficult_problems/kth_largest_element_in_an_array.md)
 
