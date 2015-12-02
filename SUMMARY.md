@@ -57,7 +57,7 @@
    * [Largest Rectangle in Histogram](stack/largest_rectangle_in_histogram.md)
    * [Maximal Square](stack/maximal_square.md)
    * [Simplify Path](stack/simplify_path.md)
-   * Implement Stack using Queues
+   * [Implement Stack using Queues](stack/implement_stack_using_queues.md)
 * [Binary Tree](binary_tree.md)
    * [Template](binary_tree/template.md)
    * [Inorder Traversal](binary_tree/inorder_traversal.md)
