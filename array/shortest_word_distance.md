@@ -1,2 +1,45 @@
 # Shortest Word Distance
 
+[Leetcode](https://leetcode.com/problems/shortest-word-distance/)
+
+
+題意：
+
+Given a list of words and two words word1 and word2, return the shortest distance between these two words in the list.
+
+For example,
+Assume that words = ["practice", "makes", "perfect", "coding", "makes"].
+
+Given word1 = “coding”, word2 = “practice”, return 3.
+Given word1 = "makes", word2 = "coding", return 1.
+
+Note:
+You may assume that word1 does not equal to word2, and word1 and word2 are both in the list.
+
+
+解題思路：
+
+
+只使用一個index來標記在當下字串之前遇到的另一個字的index為多少，記得再判斷index指的那個字與當下的字不同，再更新mindistance。
+```java
+public class Solution {
+    public int shortestDistance(String[] words, String word1, String word2) {
+        int index = -1;
+        int minDistance = Integer.MAX_VALUE;
+        for (int i = 0; i < words.length; i++) {
+            if (words[i].equals(word1) || words[i].equals(word2)) {
+                if (index != -1 && !words[index].equals(words[i])) {
+                    minDistance = Math.min(minDistance, i - index);
+                } 
+                index = i;
+            }
+        }
+        
+        return minDistance;
+    }
+}
+```
+
+---
+###Reference
+1. https://leetcode.com/discuss/61820/java-only-need-to-keep-one-index
