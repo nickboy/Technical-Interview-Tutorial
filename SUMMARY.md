@@ -225,6 +225,7 @@
    * [Compare Version Numbers](string/compare_version_numbers.md)
    * [Excel Sheet Column TItle](string/excel_sheet_column_title.md)
    * [Isomorphic Strings](string/isomorphic_strings.md)
+   * Different Ways to Add Parentheses
 * [Dynamic Programming](dynamic_programming.md)
    * [Jump Game](dynamic_programming/jump_game.md)
    * [Jump Game II](dynamic_programming/jump_game_ii.md)
