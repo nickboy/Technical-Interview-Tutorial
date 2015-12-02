@@ -41,7 +41,7 @@ public class Solution {
         int odd = 0;
         int even = 0;
         for (int i = left; i < right; i++) {
-            if (i % 2 == 0) {
+            if (i % 2 == 1) {
                 odd = Math.max(odd + nums[i], even);
             } else {
                 even = Math.max(odd, even + nums[i]);
