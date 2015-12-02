@@ -346,5 +346,5 @@
    * [Kth Largest Element in an Array](difficult_problems/kth_largest_element_in_an_array.md)
    * [The Skyline Problem](difficult_problems/the_skyline_problem.md)
    * [Maximal Square](difficult_problems/maximal_square.md)
-   * Basic Calculator
+   * [Basic Calculator](difficult_problems/basic_calculator.md)
 
