@@ -49,7 +49,7 @@
    * [Pascal Triangle](math/pascal_triangle.md)
    * [Pascal Triangle II](math/pascal_triangle_ii.md)
    * [Happy Number](math/happy_number.md)
-   * Rectangle Area
+   * [Rectangle Area](math/rectangle_area.md)
 * [Stack](stack.md)
    * [Evaluate Reverse Polish Notation](stack/evaluate_reverse_polish_notation.md)
    * [Max Tree](stack/max_tree.md)
