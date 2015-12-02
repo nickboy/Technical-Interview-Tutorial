@@ -9,6 +9,8 @@ Given an array of integers, find out whether there are two distinct indices i an
 
 解題思路：
 
+>The ```ceilingKey(K key)``` method is used to return the least key greater than or equal to the given key, or null if there is no such key.
+
 由[網友](https://codesolutiony.wordpress.com/2015/06/01/leetcode-contains-duplicate-iii/) 提供以下思路：
 
 > 用BST來維護前k個數，因此對於每個數，刪除第i-k-1個數是lgn，得到ceiling和lower key分別是lgn，最後將當前數加入BST是lgn。
