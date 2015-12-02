@@ -59,7 +59,7 @@
    * [Maximal Square](stack/maximal_square.md)
    * [Simplify Path](stack/simplify_path.md)
    * [Implement Stack using Queues](stack/implement_stack_using_queues.md)
-   * Implement Queue using Stacks
+   * [Implement Queue using Stacks](stack/implement_queue_using_stacks.md)
 * [Binary Tree](binary_tree.md)
    * [Template](binary_tree/template.md)
    * [Inorder Traversal](binary_tree/inorder_traversal.md)
