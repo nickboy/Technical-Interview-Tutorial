@@ -220,6 +220,7 @@
    * [Summary Ranges](string/summary_ranges.md)
    * [Strobogrammatic Number](string/strobogrammatic_number.md)
    * [Strobogrammatic Number II](string/strobogrammatic_number_ii.md)
+   * Strobogrammatic Number III
    * [Palindrome Permutation](string/palindrome_permutation.md)
    * [Encode and Decode Strings](string/encode_and_decode_strings.md)
    * [Alien Dictionary](string/alien_dictionary.md)
@@ -233,7 +234,6 @@
    * [Different Ways to Add Parentheses](string/different_ways_to_add_parentheses.md)
    * [Valid Anagram](string/valid_anagram.md)
    * [Group Shifted Strings](string/group_shifted_strings.md)
-   * Strobogrammatic Number III
 * [Dynamic Programming](dynamic_programming.md)
    * [Jump Game](dynamic_programming/jump_game.md)
    * [Jump Game II](dynamic_programming/jump_game_ii.md)
