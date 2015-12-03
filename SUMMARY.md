@@ -220,7 +220,7 @@
    * [Summary Ranges](string/summary_ranges.md)
    * [Strobogrammatic Number](string/strobogrammatic_number.md)
    * [Strobogrammatic Number II](string/strobogrammatic_number_ii.md)
-   * Strobogrammatic Number III
+   * [Strobogrammatic Number III](string/strobogrammatic_number_iii.md)
    * [Palindrome Permutation](string/palindrome_permutation.md)
    * [Encode and Decode Strings](string/encode_and_decode_strings.md)
    * [Alien Dictionary](string/alien_dictionary.md)
