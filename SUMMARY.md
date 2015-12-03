@@ -102,6 +102,7 @@
    * [Sum Root to Leaf Numbers](binary_tree/sum_root_to_leaf_numbers.md)
    * [Binary Tree Postorder Traversal](binary_tree/binary_tree_postorder_traversal.md)
    * [Binary Tree Upside Down](binary_tree/binary_tree_upside_down.md)
+   * Count Univalue Subtrees
 * [Heap](heap.md)
    * [Heapify](heap/heapify.md)
    * [Data Stream Median](heap/data_stream_median.md)
