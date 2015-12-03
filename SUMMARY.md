@@ -192,7 +192,7 @@
    * [Contains Duplicate III](array/contains_duplicate_iii.md)
    * [Shortest Word Distance](array/shortest_word_distance.md)
    * [Shortest Word Distance II](array/shortest_word_distance_ii.md)
-   * Shortest Word Distance III
+   * [Shortest Word Distance III](array/shortest_word_distance_iii.md)
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Longest Substring Without Repeating Characters](string/longest_substring_without_repeating_characters.md)
