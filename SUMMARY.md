@@ -233,6 +233,7 @@
    * [Different Ways to Add Parentheses](string/different_ways_to_add_parentheses.md)
    * [Valid Anagram](string/valid_anagram.md)
    * [Group Shifted Strings](string/group_shifted_strings.md)
+   * Strobogrammatic Number III
 * [Dynamic Programming](dynamic_programming.md)
    * [Jump Game](dynamic_programming/jump_game.md)
    * [Jump Game II](dynamic_programming/jump_game_ii.md)
