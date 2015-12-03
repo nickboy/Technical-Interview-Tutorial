@@ -360,5 +360,5 @@
    * [Maximal Square](difficult_problems/maximal_square.md)
    * [Basic Calculator](difficult_problems/basic_calculator.md)
    * [Basic Calculator II](difficult_problems/basic_calculator_ii.md)
-   * Count Univalue Subtrees
+   * [Count Univalue Subtrees](difficult_problems/count_univalue_subtrees.md)
 
