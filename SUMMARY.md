@@ -191,6 +191,7 @@
    * [Contains Duplicates II](array/contains_duplicates_ii.md)
    * [Contains Duplicate III](array/contains_duplicate_iii.md)
    * [Shortest Word Distance](array/shortest_word_distance.md)
+   * Shortest Word Distance II
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Longest Substring Without Repeating Characters](string/longest_substring_without_repeating_characters.md)
