@@ -51,6 +51,7 @@
    * [Happy Number](math/happy_number.md)
    * [Rectangle Area](math/rectangle_area.md)
    * [Basic Calculator II](math/basic_calculator_ii.md)
+   * Strobogrammatic Number
 * [Stack](stack.md)
    * [Evaluate Reverse Polish Notation](stack/evaluate_reverse_polish_notation.md)
    * [Max Tree](stack/max_tree.md)
