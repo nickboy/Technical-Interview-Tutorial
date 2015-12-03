@@ -1,6 +1,6 @@
 # Strobogrammatic Number II
 
-[]()
+[Leetcode](https://leetcode.com/problems/strobogrammatic-number-ii/)
 
 題意：
 
@@ -56,3 +56,6 @@ public class Solution {
     }
 }
 ```
+---
+###Reference
+1. https://leetcode.com/discuss/50412/ac-clean-java-solution
