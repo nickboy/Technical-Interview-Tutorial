@@ -13,6 +13,38 @@ Could you do it using only constant space complexity?
 
 解題思路：
 
+update on 2015.12.3
+
+遞迴解法，效率較低但程式碼較簡潔
+
+```java
+public class Solution {
+    public boolean verifyPreorder(int[] preorder) {
+        if(preorder == null || preorder.length == 0) return true;
+        return verify(preorder, 0, preorder.length - 1);
+    }
+    
+    private boolean verify(int[] a, int start, int end) {
+        if(start >= end) {
+            return true;
+        }
+        int pivot = a[start];
+        int bigger = -1;
+        
+        for(int i = start + 1; i <= end; i++) {
+            if(bigger == -1 && a[i] > pivot) bigger = i;
+            if(bigger != -1 && a[i] < pivot) return false;
+        }
+        
+        if(bigger == -1) {
+            return verify(a, start + 1, end);
+        } else {
+            return verify(a, start + 1, bigger - 1) && verify(a, bigger, end);
+        }
+    }
+}
+```
+
 用遞迴的暴力法，找出root後，再判斷第一個比root大的值，就為切割點，把值切成兩半遞迴下去作，但可能corner case沒考慮到，只過了38個case，其程式碼如下，之後再改進：
 
 ```java
