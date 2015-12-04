@@ -70,3 +70,61 @@ public class Solution {
     }
 }
 ```
+
+updated on 2015.12.3
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    List<String> res;
+    public List<String> binaryTreePaths(TreeNode root) {
+        res = new ArrayList<String>();
+        if (root == null) {
+            return res;
+        }
+        
+        helper(root, new ArrayList<Integer>());
+        return res;
+    }
+    
+    private void helper(TreeNode root, List<Integer> nodes) {
+        if (root == null) {
+            return;
+        }
+        
+        nodes.add(root.val);
+        if (root.left == null && root.right == null) {
+            res.add(genString(nodes));
+        }
+        if (root.left != null) {
+            helper(root.left, nodes);
+        }
+        if (root.right != null) {
+            helper(root.right, nodes);
+        }
+        
+        nodes.remove(nodes.size() - 1);
+        
+    }
+    
+    private String genString(List<Integer> nodes) {
+        StringBuilder sb = new StringBuilder();
+        
+        for (int i = 0; i < nodes.size(); i++) {
+            if (i != 0) {
+                sb.append("->");
+            }
+            sb.append(String.valueOf(nodes.get(i)));
+        }
+        return sb.toString();
+    }
+}
+```
