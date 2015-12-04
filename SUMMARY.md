@@ -337,6 +337,7 @@
    * [Find the Celebrity](unknown/find_the_celebrity.md)
    * [Generate Parentheses](unknown/generate_parentheses.md)
    * [N-Queen II](unknown/n-queen_ii.md)
+   * Factor Combinations
 * [Sliding Window](sliding_window.md)
    * [Sliding Window Median](sliding_window/sliding_window_median.md)
    * [Sliding Window Maximum](sliding_window/sliding_window_maximum.md)
