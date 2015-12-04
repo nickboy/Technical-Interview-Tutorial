@@ -39,7 +39,29 @@ public int addDigits(int num) {
 > Time Complexity：待分解
 
 ---
-另有$$O(1)$$的解法，假設有一數 100a+10b+c, then (100a+10b+c)%9=(a+99a+b+9b+c)%9=(a+b+c)%9
+網友 [書影](http://bookshadow.com/weblog/2015/08/16/leetcode-add-digits/) 提供以下觀查法
+
+方法II：觀察法
+
+根據提示，由於結果只有一位數，因此其可能的數字為0 - 9
+
+使用方法I的代碼循環輸出0 - 19的運行結果：
+```
+in  out  in  out
+0   0    10  1
+1   1    11  2
+2   2    12  3
+3   3    13  4
+4   4    14  5
+5   5    15  6
+6   6    16  7
+7   7    17  8
+8   8    18  9
+9   9    19  1
+```
+可以發現輸出與輸入的關係為：
+
+>out = (in - 1) % 9 + 1
 
 
 ```java
@@ -54,3 +76,7 @@ public int addDigits2(int num) {
 ```
 
 > Time Complexity：$$O(1)$$
+
+---
+###Reference
+1. http://bookshadow.com/weblog/2015/08/16/leetcode-add-digits/
