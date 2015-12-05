@@ -366,5 +366,5 @@
    * [Count Univalue Subtrees](difficult_problems/count_univalue_subtrees.md)
    * [Verify Preorder Sequence in Binary Search Tree](difficult_questions/verify_preorder_sequence_in_binary_search_tree.md)
    * [Graph Valid Tree](difficult_problems/graph_valid_tree.md)
-   * Palindrome Permutation II
+   * [Palindrome Permutation II](difficult_problems/palindrome_permutation_ii.md)
 
