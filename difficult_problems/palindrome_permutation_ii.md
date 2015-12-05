@@ -19,6 +19,12 @@ updated 2015.12.4
 
 網友神之解法
 
+1. 先用map來整理出所有char的個數，檢查一下char是否有兩個以上的奇數，若是的話，則無法造成任何迴文，若可則往下。
+2. 如果只有一個奇數char時，把它放在mid裡面。
+3. 接下來把每個偶數的char，取一半出來放到list中。
+4. 再利用permutation的方式用dfs來作。
+5. 當sb長度等於list長度時，則把當前的sb反轉之後append在原本sb後面，加入res中。
+
 
 ```java
 public class Solution {
