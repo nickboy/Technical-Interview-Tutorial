@@ -130,3 +130,4 @@ public class Codec {
 ---
 ###Reference
 1. https://leetcode.com/discuss/55020/ac-java-solution
+2. http://buttercola.blogspot.com/search?q=encode+and+decode+strings
