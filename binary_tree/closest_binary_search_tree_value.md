@@ -18,6 +18,50 @@ You are guaranteed to have only one unique value in the BST that is closest to t
 
 解題思路：
 
+updated 2015.12.5
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    double minDistance = Double.MAX_VALUE;
+    int res = 0;
+    public int closestValue(TreeNode root, double target) {
+        if (root == null) {
+            return 0;
+        }
+        helper(root, target);
+        return res;
+    }
+    
+    private void helper(TreeNode root, double target) {
+        if (root == null) {
+            return;
+        }
+        
+        if (Math.abs(root.val - target) < minDistance) {
+            minDistance = Math.abs(root.val - target);
+            res = root.val;
+        }
+        
+        if (target > root.val) {
+            helper(root.right, target);
+        } else {
+            helper(root.left, target);
+        }
+        
+        
+    }
+}
+```
+
 法一：遞迴
 
 不斷的拿diff去比較，回傳差距最小的那個節點的值
