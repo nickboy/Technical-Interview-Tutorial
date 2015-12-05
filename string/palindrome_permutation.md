@@ -14,6 +14,29 @@ For example,
 
 解題思路：
 
+update on 2015.12.4
+
+```java
+public class Solution {
+    public boolean canPermutePalindrome(String s) {
+        int[] map = new int[256];
+        for (int i = 0; i < s.length(); i++) {
+            map[s.charAt(i)]++;
+        }
+        
+        boolean oneBefore = false;
+        for (int i = 0; i < 256; i++) {
+            if (oneBefore && (map[i] % 2 == 1)) {
+                return false;
+            } else if (!oneBefore && (map[i] % 2 == 1)) {
+                oneBefore = true;
+            }
+        }
+        return true;
+    }
+}
+```
+
 使用一個hash map分別紀錄每個character的個數，接著根據以下情況來判斷
 
 1. 如果字串長度為偶數，則所有字元的字數皆為偶數
