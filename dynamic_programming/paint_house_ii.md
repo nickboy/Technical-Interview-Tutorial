@@ -63,6 +63,48 @@ public class Solution {
 }
 ```
 
+O(NK)解法，只需要紀錄成本最小的兩個值。
+
+```java
+public class Solution {
+    public int minCostII(int[][] costs) {
+        if (costs == null || costs.length == 0) {
+            return 0;
+        }
+        
+        int houses = costs.length;
+        int colors = costs[0].length;
+        
+        int[] dp = new int[colors];
+        int minOne = 0;
+        int minTwo = 0;
+        
+        for (int i = 0; i < houses; i++) {
+            int oldMinOne = minOne;
+            int oldMinTwo = minTwo;
+            
+            minOne = Integer.MAX_VALUE;
+            minTwo = Integer.MAX_VALUE;
+            
+            for (int j = 0; j < colors; j++) {
+                if (dp[j] != oldMinOne || oldMinOne == oldMinTwo) {
+                    dp[j] = oldMinOne + costs[i][j];
+                } else {
+                    dp[j] = oldMinTwo + costs[i][j];
+                }
+                
+                if (minOne <= dp[j]) {
+                    minTwo = Math.min(minTwo, dp[j]);
+                } else {
+                    minTwo = minOne;
+                    minOne = dp[j];
+                }
+            }
+        }
+        return minOne;
+    }
+}
+```
 
 ---
 ###Reference 
