@@ -82,6 +82,77 @@ public class Solution {
 }
 ```
 
+另外可維護兩個predecessors與sucessors的stack，接著再從兩個輸出最小的k個數，其程式碼如下：
+
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    Stack<Integer> predecessors;
+    Stack<Integer> successors;
+    public List<Integer> closestKValues(TreeNode root, double target, int k) {
+        List<Integer> res = new ArrayList<>();
+        predecessors = new Stack<>();
+        successors = new Stack<>();
+        if (root == null || k == 0) {
+            return res;
+        }
+        getPredecessors(root, target);
+        getSuccessors(root, target);
+        
+        for (int i = 0; i < k; i++) {
+            if (predecessors.isEmpty()) {
+                res.add(successors.pop());
+            } else if (successors.isEmpty()) {
+                res.add(predecessors.pop());
+            } else if (Math.abs((double)predecessors.peek() - target) < Math.abs((double)successors.peek() - target)) {
+                res.add(predecessors.pop());
+            } else {
+                res.add(successors.pop());
+            }
+        }
+        
+        return res;
+    }
+    
+    
+    private void getPredecessors(TreeNode root, double target) {
+        if (root == null) {
+            return;
+        }
+        
+        getPredecessors(root.left, target);
+        if (root.val > target) {
+            return;
+        }
+        predecessors.push(root.val);
+        
+        getPredecessors(root.right, target);
+    }
+    
+    private void getSuccessors(TreeNode root, double target) {
+        if (root == null) {
+            return;
+        }
+        
+        getSuccessors(root.right, target);
+        if (root.val <= target) {
+            return;
+        }
+        successors.push(root.val);
+        getSuccessors(root.left, target);
+    }
+}
+```
+
 
 
 
