@@ -269,7 +269,7 @@
    * [Dungeon Game](dynamic_programming/dungeon_game.md)
    * [House Robber II](dynamic_programming/house_robber_ii.md)
    * [Paint House](dynamic_programming/paint_house.md)
-   * Paint Houses II
+   * Paint House II
 * [Segment Tree](segment_tree.md)
    * [Segment Tree Query](segment_tree/segment_tree_query.md)
    * [Segment Tree Query II](segment_tree/segment_tree_query_ii.md)
