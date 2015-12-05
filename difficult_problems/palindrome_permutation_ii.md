@@ -139,6 +139,72 @@ public class Solution {
 }
 ```
 
+Hashmap可能太耗空間，我改用char array
+
+```java
+public class Solution {
+    public List<String> generatePalindromes(String s) {
+        int odd = 0;
+        String mid = "";
+        List<String> res = new ArrayList<>();
+        List<Character> list = new ArrayList<>();
+        int[] counts = new int[256];
+        
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            counts[c]++;
+            if (counts[c] % 2 == 1) {
+                odd++;
+            } else{
+                odd--;
+            }
+        }
+        if (odd > 1) {
+            return res;
+        }
+        
+        for (int i = 0; i < 256; i++) {
+            if (counts[i] % 2 == 1) {
+                mid += (char)i;
+                counts[i]--;
+                i--;
+            } else {
+                for (int j = 0; j < counts[i] / 2; j++) {
+                    list.add((char)i);
+                }
+            }
+        }
+        
+        boolean[] used = new boolean[list.size()];
+        
+        getPerm(list, mid, new boolean[list.size()], new StringBuilder(), res);
+        return res;
+    }
+    
+    private void getPerm(List<Character> list, String mid, boolean[] used, StringBuilder sb, List<String> res) {
+        if (sb.length() == list.size()) {
+            res.add(sb.toString() + mid + sb.reverse().toString());
+            sb.reverse();
+            return;
+        }
+        
+        for (int i = 0; i < list.size(); i++) {
+            if (i > 0 && list.get(i) == list.get(i - 1) && !used[i - 1]) {
+                continue;
+            }
+            
+            if (!used[i]) {
+                used[i] = true;
+                sb.append(list.get(i));
+                getPerm(list, mid, used, sb, res);
+                used[i] = false;
+                sb.setLength(sb.length() - 1);
+            }
+        }
+    }
+}
+```
+
 ---
 ###Reference
 1. https://leetcode.com/discuss/53626/ac-java-solution-with-explanation
