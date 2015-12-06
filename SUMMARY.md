@@ -370,5 +370,5 @@
    * [Verify Preorder Sequence in Binary Search Tree](difficult_questions/verify_preorder_sequence_in_binary_search_tree.md)
    * [Graph Valid Tree](difficult_problems/graph_valid_tree.md)
    * [Palindrome Permutation II](difficult_problems/palindrome_permutation_ii.md)
-   * Expression Add Operators
+   * [Expression Add Operators](difficult_problems/expression_add_operators.md)
 
