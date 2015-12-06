@@ -1,5 +1,24 @@
 #Longest Increasing Subsequence
-[原題網址](http://www.lintcode.com/en/problem/longest-increasing-subsequence/)
+[Lintcode](http://www.lintcode.com/en/problem/longest-increasing-subsequence/)
+
+[Leetcode](https://leetcode.com/problems/longest-increasing-subsequence/)
+
+題意：
+
+Given an unsorted array of integers, find the length of longest increasing subsequence.
+
+For example,
+Given ```[10, 9, 2, 5, 3, 7, 101, 18]```,
+The longest increasing subsequence is [2, 3, 7, 101], therefore the length is 4. Note that there may be more than one LIS combination, it is only necessary for you to return the length.
+
+Your algorithm should run in O(n^2) complexity.
+
+**Follow up:** Could you improve it to O(n log n) time complexity?
+
+
+解題思路：
+
+不斷的拿當前這個數與之前所有的數來比，並一邊更新值，最後比較max。
 
 ```java
 public int longestIncreasingSubsequence(int[] nums) {
