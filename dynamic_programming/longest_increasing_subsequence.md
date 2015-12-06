@@ -26,4 +26,29 @@ public int longestIncreasingSubsequence(int[] nums) {
     
 }
 ```
->Time Complexity：O(n)
+>Time Complexity：O(n^2)
+
+網友提供的神之O(nlogn)解法：
+
+```java
+public class Solution {
+    public int lengthOfLIS(int[] nums) {            
+        int[] dp = new int[nums.length];
+        int len = 0;
+
+        for(int x : nums) {
+            int i = Arrays.binarySearch(dp, 0, len, x);
+            if(i < 0) i = -(i + 1);
+            dp[i] = x;
+            if(i == len) len++;
+        }
+
+        return len;
+    }
+}
+```
+
+
+---
+###Reference
+1. https://leetcode.com/discuss/67609/short-java-solution-using-dp-o-n-log-n
