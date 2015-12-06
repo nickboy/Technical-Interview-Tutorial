@@ -159,7 +159,6 @@
    * [Longest Continuous Increasing Subsequence](array/longest_continuous_increasing_subsequence.md)
    * [The Smallest Difference](array/the_smallest_difference.md)
    * [Interleaving Positive and Negative Numbers](array/interleaving_positive_and_negative_numbers.md)
-   * [H-Index](array/h-index.md)
    * [Subarray Sum](array/subarray_sum.md)
    * [Subarray Sum II](array/subarray_sum_ii.md)
    * [Set Matrix Zeroes](matrix/set_matrix_zeroes.md)
@@ -191,6 +190,7 @@
    * [Two Sum III - Data structure design](array/two_sum_iii_-_data_structure_design.md)
    * [Kth Largest Element in an Array](array/kth_largest_element_in_an_array.md)
    * [Contains Duplicate](array/contains_duplicate.md)
+   * [H-Index](array/h-index.md)
    * H-Index II
    * [Contains Duplicates II](array/contains_duplicates_ii.md)
    * [Contains Duplicate III](array/contains_duplicate_iii.md)
