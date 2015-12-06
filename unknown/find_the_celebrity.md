@@ -47,3 +47,36 @@ public class Solution extends Relation {
     }
 }
 ```
+
+
+update on 2015.12.5
+
+```java
+/* The knows API is defined in the parent class Relation.
+      boolean knows(int a, int b); */
+
+public class Solution extends Relation {
+    public int findCelebrity(int n) {
+        
+        boolean[] isCelebrity = new boolean[n];
+        Arrays.fill(isCelebrity, true);
+        int celebrity = 0;
+        for (int i = 1; i < n; i++) {
+            if (knows(celebrity, i)) {
+                celebrity = i;
+            }
+        }
+        
+        for (int i = 0; i < n; i++) {
+            if (i != celebrity) {
+                if (!knows(i, celebrity) || knows(celebrity, i)) {
+                    return -1;
+                }
+            }
+        }
+        
+        return celebrity;
+        
+    }
+}
+```
