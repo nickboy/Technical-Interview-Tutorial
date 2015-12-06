@@ -33,6 +33,40 @@ isUnique("make") -> true
 
 解題思路：
 
+updated on 2015.12.6
+
+```java
+public class ValidWordAbbr {
+
+    HashMap<String, Set<String>> map = new HashMap<String, Set<String>>();
+    public ValidWordAbbr(String[] dictionary) {
+        for (String str : dictionary) {
+            String key = genKey(str);
+            if (!map.containsKey(key)) {
+                map.put(key, new HashSet<String>());
+            }
+            map.get(key).add(str);
+        }
+    }
+    
+    private String genKey(String str) {
+        if (str.length() <= 2) {
+            return str;
+        }
+        
+        String res = str.charAt(0) + Integer.toString(str.length() - 2) + str.charAt(str.length() - 1);
+        return res;
+    }
+
+    public boolean isUnique(String word) {
+        String key = genKey(word);
+        return !map.containsKey(key) || (map.get(key).size() == 1 && map.get(key).contains(word));
+    }
+}
+```
+
+2015.11.5
+
 ```java
 public class ValidWordAbbr {
     
