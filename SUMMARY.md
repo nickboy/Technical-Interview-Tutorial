@@ -381,5 +381,5 @@
    * [Graph Valid Tree](difficult_problems/graph_valid_tree.md)
    * [Palindrome Permutation II](difficult_problems/palindrome_permutation_ii.md)
    * [Expression Add Operators](difficult_problems/expression_add_operators.md)
-   * Serialize and Deserialize Binary Tree
+   * [Serialize and Deserialize Binary Tree](difficult_problems/serialize_and_deserialize_binary_tree.md)
 
