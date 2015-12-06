@@ -241,7 +241,7 @@
    * [Valid Anagram](string/valid_anagram.md)
    * [Group Shifted Strings](string/group_shifted_strings.md)
    * [Palindrome Permutation II](string/palindrome_permutation_ii.md)
-   * Word Pattern II
+   * [Word Pattern II](string/word_pattern_ii.md)
 * [Dynamic Programming](dynamic_programming.md)
    * [Jump Game](dynamic_programming/jump_game.md)
    * [Jump Game II](dynamic_programming/jump_game_ii.md)
