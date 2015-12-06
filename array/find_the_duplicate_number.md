@@ -78,4 +78,5 @@ public class Solution {
 
 ---
 ###Reference
-1. 
+1. https://leetcode.com/discuss/69766/share-my-solution-o-n-time-o-1-space-12-ms
+2. https://www.quora.com/How-does-Floyds-cycle-finding-algorithm-work
