@@ -276,6 +276,7 @@
    * [House Robber II](dynamic_programming/house_robber_ii.md)
    * [Paint House](dynamic_programming/paint_house.md)
    * [Paint House II](dynamic_programming/paint_house_ii.md)
+   * Flip Game
 * [Segment Tree](segment_tree.md)
    * [Segment Tree Query](segment_tree/segment_tree_query.md)
    * [Segment Tree Query II](segment_tree/segment_tree_query_ii.md)
