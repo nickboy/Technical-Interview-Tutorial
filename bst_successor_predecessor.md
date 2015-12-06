@@ -15,7 +15,7 @@ public TreeNode successor(TreeNode root, TreeNode p) {
 }
 ```
 **Predecessor**
-
+```
 public TreeNode predecessor(TreeNode root, TreeNode p) {
   if (root == null)
     return null;
@@ -27,7 +27,7 @@ public TreeNode predecessor(TreeNode root, TreeNode p) {
     return (right != null) ? right : root;
   }
 }
-
+```
 ---
 ###Refernce
 1. https://leetcode.com/discuss/59787/share-my-java-recursive-solution
