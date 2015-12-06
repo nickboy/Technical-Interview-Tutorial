@@ -105,7 +105,7 @@
    * [Binary Tree Postorder Traversal](binary_tree/binary_tree_postorder_traversal.md)
    * [Binary Tree Upside Down](binary_tree/binary_tree_upside_down.md)
    * [Count Univalue Subtrees](binary_tree/count_univalue_subtrees.md)
-   * Inorder Successor in BST
+   * [Inorder Successor in BST](binary_tree/inorder_successor_in_bst.md)
 * [Heap](heap.md)
    * [Heapify](heap/heapify.md)
    * [Data Stream Median](heap/data_stream_median.md)
