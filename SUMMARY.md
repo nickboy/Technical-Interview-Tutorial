@@ -301,6 +301,7 @@
    * [Meeting Room II](graph/meeting_room_ii.md)
    * [Graph Valid Tree](graph/graph_valid_tree.md)
    * [Clone Graph](graph/clone_graph.md)
+   * Walls and Gates
 * [High Frequency](high_frequency.md)
    * [Sum](high_frequency/sum.md)
    * [2 Sum](high_frequency/2_sum.md)
