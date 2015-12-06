@@ -191,7 +191,7 @@
    * [Kth Largest Element in an Array](array/kth_largest_element_in_an_array.md)
    * [Contains Duplicate](array/contains_duplicate.md)
    * [H-Index](array/h-index.md)
-   * H-Index II
+   * [H-Index II](array/h-index_ii.md)
    * [Contains Duplicates II](array/contains_duplicates_ii.md)
    * [Contains Duplicate III](array/contains_duplicate_iii.md)
    * [Shortest Word Distance](array/shortest_word_distance.md)
