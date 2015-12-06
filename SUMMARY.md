@@ -191,12 +191,12 @@
    * [Two Sum III - Data structure design](array/two_sum_iii_-_data_structure_design.md)
    * [Kth Largest Element in an Array](array/kth_largest_element_in_an_array.md)
    * [Contains Duplicate](array/contains_duplicate.md)
+   * H-Index II
    * [Contains Duplicates II](array/contains_duplicates_ii.md)
    * [Contains Duplicate III](array/contains_duplicate_iii.md)
    * [Shortest Word Distance](array/shortest_word_distance.md)
    * [Shortest Word Distance II](array/shortest_word_distance_ii.md)
    * [Shortest Word Distance III](array/shortest_word_distance_iii.md)
-   * H-Index II
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Longest Substring Without Repeating Characters](string/longest_substring_without_repeating_characters.md)
