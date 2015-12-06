@@ -277,7 +277,7 @@
    * [Paint House](dynamic_programming/paint_house.md)
    * [Paint House II](dynamic_programming/paint_house_ii.md)
    * [Flip Game](dynamic_programming/flip_game.md)
-   * Flip Game II
+   * [Flip Game II](dynamic_programming/flip_game_ii.md)
 * [Segment Tree](segment_tree.md)
    * [Segment Tree Query](segment_tree/segment_tree_query.md)
    * [Segment Tree Query II](segment_tree/segment_tree_query_ii.md)
