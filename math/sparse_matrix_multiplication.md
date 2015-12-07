@@ -55,7 +55,7 @@ public class Solution {
 }
 ```
 
-因是sparse matrix，必包含非常多的0 ，因此我們用row major的一一判斷，一但A[i][k]為0 的話，後面也不需要作了，可以省去非常多的時間，其程式碼如下：
+因是sparse matrix，必包含非常多的0 ，因此我們用column major的一一判斷，一但A[i][k]為0 的話，後面也不需要作了，可以省去非常多的時間，其程式碼如下：
 
 ```java
 public class Solution {
