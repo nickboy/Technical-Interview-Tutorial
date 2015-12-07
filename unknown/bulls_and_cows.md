@@ -1,6 +1,6 @@
 # Bulls and Cows
 
-[]()
+[Leetcode](https://leetcode.com/problems/bulls-and-cows/)
 
 題意：
 
@@ -31,6 +31,40 @@ In this case, the 1st 1 in friend's guess is a bull, the 2nd or 3rd 1 is a cow, 
 You may assume that the secret number and your friend's guess only contain digits, and their lengths are always equal.
 
 解題思路：
+
+update 2015.12.6
+
+用兩個bucket即可，只要值與位置相同，則bulls++，否則在對應的位置++，最後再掃一次找0-9中個數較小的來計算cows，程式碼如下：
+
+
+```java
+public class Solution {
+    public String getHint(String secret, String guess) {
+        if (secret == null || guess == null || secret.length() == 0 || guess.length() == 0) {
+            return "";
+        }
+        
+        int[] sArray = new int[10];
+        int[] gArray = new int[10];
+        int bulls = 0;
+        for (int i = 0; i < secret.length(); i++) {
+            if (secret.charAt(i) != guess.charAt(i)) {
+                sArray[secret.charAt(i) - '0']++;
+                gArray[guess.charAt(i) - '0']++;
+            } else {
+                bulls++;
+            }
+        }
+        
+        int cows = 0;
+        for (int i = 0; i < 10; i++) {
+            cows += Math.min(sArray[i], gArray[i]);
+        }
+        
+        return bulls + "A" + cows + "B";
+    }
+}
+```
 
 使用hashmap，以及一個matched的array來判斷。
 
