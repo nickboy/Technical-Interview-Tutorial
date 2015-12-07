@@ -84,4 +84,4 @@ public class Solution {
 
 ---
 ###Reference
-1. https://leetcode.com/discuss/68246/c-java-python-binary-search-solution-with-explanation
+1. https://leetcode.com/discuss/71912/easiest-java-solution
