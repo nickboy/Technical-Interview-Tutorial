@@ -386,5 +386,4 @@
    * [Serialize and Deserialize Binary Tree](difficult_problems/serialize_and_deserialize_binary_tree.md)
    * [Smallest Rectangle Enclosing Black Pixels](difficult_problems/smallest_rectangle_enclosing_black_pixels.md)
    * [Remove Invalid Parentheses](difficult_problems/remove_invalid_parentheses.md)
-   * Smallest Rectangle Enclosing Black Pixels
 
