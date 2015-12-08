@@ -387,5 +387,5 @@
    * [Smallest Rectangle Enclosing Black Pixels](difficult_problems/smallest_rectangle_enclosing_black_pixels.md)
    * [Remove Invalid Parentheses](difficult_problems/remove_invalid_parentheses.md)
    * [Range Sum Query 2D - Immutable](difficult_problems/range_sum_query_2d_-_immutable.md)
-   * Wildcard Matching
+   * [Wildcard Matching](difficult_problems/wildcard_matching.md)
 
