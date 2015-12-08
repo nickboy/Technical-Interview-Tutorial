@@ -386,5 +386,5 @@
    * [Serialize and Deserialize Binary Tree](difficult_problems/serialize_and_deserialize_binary_tree.md)
    * [Smallest Rectangle Enclosing Black Pixels](difficult_problems/smallest_rectangle_enclosing_black_pixels.md)
    * [Remove Invalid Parentheses](difficult_problems/remove_invalid_parentheses.md)
-   * Range Sum Query 2D - Immutable
+   * [Range Sum Query 2D - Immutable](difficult_problems/range_sum_query_2d_-_immutable.md)
 
