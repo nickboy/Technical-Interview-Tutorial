@@ -391,4 +391,5 @@
    * [Range Sum Query 2D - Immutable](difficult_problems/range_sum_query_2d_-_immutable.md)
    * [Wildcard Matching](difficult_problems/wildcard_matching.md)
    * [Count of Smaller Numbers After Self](difficult_problems/count_of_smaller_numbers_after_self.md)
+   * Shortest Palindrome
 
