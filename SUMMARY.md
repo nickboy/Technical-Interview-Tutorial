@@ -284,6 +284,7 @@
    * [Paint House II](dynamic_programming/paint_house_ii.md)
    * [Flip Game](dynamic_programming/flip_game.md)
    * [Flip Game II](dynamic_programming/flip_game_ii.md)
+   * Best Time to Buy and Sell Stock with Cooldown
 * [Segment Tree](segment_tree.md)
    * [Segment Tree Query](segment_tree/segment_tree_query.md)
    * [Segment Tree Query II](segment_tree/segment_tree_query_ii.md)
