@@ -249,7 +249,7 @@
    * [Remove Invalid Parentheses](string/remove_invalid_parentheses.md)
    * [Valid Parentheses](string/valid_parentheses.md)
    * [Generate Parentheses](string/generate_parentheses.md)
-   * Maximum Product of Word Lengths
+   * [Maximum Product of Word Lengths](string/maximum_product_of_word_lengths.md)
 * [Dynamic Programming](dynamic_programming.md)
    * [Jump Game](dynamic_programming/jump_game.md)
    * [Jump Game II](dynamic_programming/jump_game_ii.md)
