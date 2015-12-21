@@ -19,7 +19,7 @@ The solution set must not contain duplicate quadruplets.
 
 解題思路：
 
-用3sum再加一層，但是會超時。
+用3sum再加一層，SUM == target 的條件要放在前面。
 
 ```java
 public class Solution {
@@ -44,16 +44,12 @@ public class Solution {
                 int right = nums.length - 1;
                 while (left < right) {
                     int sum = nums[i] + nums[j] + nums[left] + nums[right];
-                    if (sum < target) {
-                        left++;
-                    } else if (sum > target) {
-                        right--;
-                    } else {
+                    if (sum == target) {
                         List<Integer> tempRes = new ArrayList<>();
-                        tempRes.add(i);
-                        tempRes.add(j);
-                        tempRes.add(left);
-                        tempRes.add(right);
+                        tempRes.add(nums[i]);
+                        tempRes.add(nums[j]);
+                        tempRes.add(nums[left]);
+                        tempRes.add(nums[right]);
                         res.add(tempRes);
                         left++;
                         right--;
@@ -65,6 +61,10 @@ public class Solution {
                         while (left < right && nums[right + 1] == nums[right]) {
                             right--;
                         }
+                    } else if (sum > target) {
+                        right--;
+                    } else {
+                        left++;   
                     }
                 }
             }
