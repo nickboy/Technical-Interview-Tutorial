@@ -3,25 +3,30 @@
 
 最暴力的解法就是新建一個array，每個值只加一次，但是這需要花 O(n) 的空間複雜度，因此有一個 in space 的解法是利用兩個指針 (pos 與 i)， pos 負責遍歷整個 array ， i 負責維護 unique element 的最後一個位置，如果遇到與前一個相同的 element 則直接移動 pos ，否則將該 pos 的值 assign 給 i 的位置。
 
-
+updated on 2015.12.20
 ```java
-public int removeDuplicates(int[] nums) {
-    // write your code here
-    if (nums.length == 0 || nums == null) {
-        return 0;
-    }
-    //use two pointer approach
-    //first pointer point to last non duplicate element
-    //second pointer travse whole list.
-    int pos = 0;
-    for (int i = 0; i < nums.length; i++) {
-        if (nums[i] != nums[pos]) {
-            pos += 1;
-            nums[pos] = nums[i];
+public class Solution {
+    public int removeDuplicates(int[] nums) {
+        // write your code here
+        if (nums == null || nums.length < 2) {
+            if (nums != null) {
+                return nums.length;
+            } else {
+                return 0;
+            }
         }
+        //use two pointer approach
+        //first pointer point to last non duplicate element
+        //second pointer travse whole list.
+        int pos = 1;
+        for (int i = 0; i < nums.length; i++) {
+            if (i != 0 && nums[i - 1] != nums[i]) {
+                nums[pos++] = nums[i];
+            }
+        }
+        // since index is start from 0
+        return pos;
     }
-    // since index is start from 0
-    return pos + 1;
 }
 ```
 
