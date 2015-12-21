@@ -10,7 +10,7 @@
 
 updated on 2015.12.21
 
-使用dp來解，網友[Lexi]() 提供以下思路：
+使用dp來解，網友[Lexi](https://leetcodenotes.wordpress.com/2013/10/19/leetcode-longest-valid-parentheses-%E8%BF%99%E7%A7%8D%E6%8B%AC%E5%8F%B7%E7%BB%84%E5%90%88%EF%BC%8C%E6%9C%80%E9%95%BF%E7%9A%84valid%E6%8B%AC%E5%8F%B7%E7%BB%84%E5%90%88%E6%9C%89%E5%A4%9A/) 提供以下思路：
 
 - d[i]: 以i開頭的最長valid parentheses有多長。
 
@@ -109,6 +109,16 @@ public class Solution {
 ```
 
 另外可用 stack 法，stack中存放尚未配對的括號，只要一但找到能配對的括號，則pop掉，並算長度，否則就push進去。
+
+網友[Lexi](https://leetcodenotes.wordpress.com/2013/10/19/leetcode-longest-valid-parentheses-%E8%BF%99%E7%A7%8D%E6%8B%AC%E5%8F%B7%E7%BB%84%E5%90%88%EF%BC%8C%E6%9C%80%E9%95%BF%E7%9A%84valid%E6%8B%AC%E5%8F%B7%E7%BB%84%E5%90%88%E6%9C%89%E5%A4%9A/) 提供以下思路：
+
+1. stack裡面裝的一直是「還沒配好對的那些可憐的括號的index」
+
+2. 是'('的時候push
+
+3. 是')'的時候，說明可能配對了；看stack top是不是左括號，不是的話，push當前右括號
+
+4. 是的話，pop那個配對的左括號，然後update res：i和top的（最後一個配不成對的）index相減，就是i屬於的這一段的當前最長。如果一pop就整個棧空了，說明前面全配好對了，那res就是最大=i+1
 
 程式碼如下：
 
