@@ -6,6 +6,52 @@
 
 > Each number in C may only be used once in the combination.
 
+
+updated on 2015.12.21
+
+```java
+public class Solution {
+    List<List<Integer>> res;
+    public List<List<Integer>> combinationSum2(int[] candidates, int target) {
+        res = new ArrayList<>();
+        if (candidates == null || candidates.length == 0) {
+            return res;
+        }
+        Arrays.sort(candidates);
+        helper(candidates, new ArrayList<Integer>(), target, 0);
+        return res;
+    }
+    
+    private void helper(int[] candidates, ArrayList<Integer> tempRes, int target, int pos) {
+        if (target == 0) {
+            if (!res.contains(tempRes)) {
+                res.add(new ArrayList<Integer>(tempRes));
+            }
+            return;
+        }
+        
+        if (pos < candidates.length && candidates[pos] > target) {
+            return;
+        }
+        
+        int prev = -1;
+        for (int i = pos; i < candidates.length; i++) {
+            if (candidates[i] > target) {
+                return;
+            }
+            
+            if (prev != -1 && prev == candidates[i]) {
+                continue;
+            }
+            
+            tempRes.add(candidates[i]);
+            helper(candidates, tempRes, target - candidates[i], i + 1);
+            tempRes.remove(tempRes.size() - 1);
+        }
+    }
+}
+```
+
 ```java
 public List<List<Integer>> combinationSum2(int[] num, int target) {
     List<List<Integer>> result = new ArrayList<List<Integer>>();
