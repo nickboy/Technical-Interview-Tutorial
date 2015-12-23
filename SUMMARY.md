@@ -237,7 +237,7 @@
    * [Alien Dictionary](string/alien_dictionary.md)
    * [Implement strStr()](String/implement_strstr.md)
    * [Repeated DNA Sequences](string/repeated_dna_sequences.md)
-   * Length of Last Word
+   * [Length of Last Word](string/length_of_last_word_i.md)
    * [Valid Palindrome](string/valid_palindrome.md)
    * [Compare Version Numbers](string/compare_version_numbers.md)
    * [Excel Sheet Column TItle](string/excel_sheet_column_title.md)
