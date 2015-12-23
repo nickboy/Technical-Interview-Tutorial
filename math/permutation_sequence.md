@@ -71,6 +71,46 @@ class Solution {
 
 ```
 
+法二：
+
+參考網友 [tso](https://leetcode.com/discuss/42700/explain-like-im-five-java-solution-in-o-n) 的解法，不斷的找出每個位元應該是什麼數，但仍超時。
+
+```java
+public class Solution {
+    public String getPermutation(int n, int k) {
+
+        List<Integer> numbers = new ArrayList<>();
+        int[] factorial = new int[n + 1];
+        StringBuilder sb = new StringBuilder();
+        
+        // create an array of factorial lookup
+        // factorial[] = {1, 1, 2, 6, 24, ... n!};
+        int product = 1;
+        factorial[0] = 1;
+        for (int i = 1; i <= n; i++) {
+            product *= i;
+            factorial[i] = product;
+        }
+        
+        // create a list of numbers to get indices
+        for (int i = 1; i <= n; i++) {
+            numbers.add(i);
+        }
+        
+        k--;
+        
+        for (int i = 1; i <= n; i++) {
+            int index = k / factorial[n - i];
+            int val = numbers.get(index);
+            sb.append(val);
+            k -= index * factorial[n - i];
+            numbers.remove(index); // 重要
+        }
+        
+        return String.valueOf(sb);
+    }
+}
+```
 另有數學解法：
 
 
