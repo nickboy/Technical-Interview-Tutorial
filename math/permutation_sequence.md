@@ -77,4 +77,4 @@ class Solution {
 ---
 ###Reference
 1. http://blog.hfknight.com/?p=1303
-2. 
+2. https://leetcode.com/discuss/42700/explain-like-im-five-java-solution-in-o-n
