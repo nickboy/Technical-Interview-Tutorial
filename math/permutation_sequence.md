@@ -111,6 +111,44 @@ public class Solution {
     }
 }
 ```
+
+與上面類似的解法，但accept：
+
+```java
+public class Solution {
+    public String getPermutation(int n, int k){
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        StringBuilder sb = new StringBuilder();
+        for(int i=1; i<=n; i++) {
+            list.add(i);
+        }
+        int nth = k-1;
+        int divider = factorial(n-1);  
+        while(n>1) {
+            int index = nth/divider;
+            nth = nth%divider;
+            sb.append(list.get(index));
+            list.remove(index);
+            divider /= n-1;
+            n--;            
+        }
+        sb.append(list.get(0));// append last digit
+    
+        return sb.toString();
+    }
+    
+    public int factorial(int n) {  // use tail recursion
+        return fact(n, 1);
+    }
+    private int fact(int n, int k) {
+        if(n==0)
+            return k;
+        else {
+            return fact(n-1, n*k);
+        }
+    }
+}
+```
 另有數學解法：
 
 
