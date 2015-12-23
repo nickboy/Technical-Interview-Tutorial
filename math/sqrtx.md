@@ -40,24 +40,3 @@ public class Solution {
 }
 ```
 
-updated on 2015.12.23
-
-遞迴作法，會超時
-
-```java
-public class Solution {
-    public double myPow(double x, int n) {
-        if (x == 0) {
-            return 0;
-        }
-        if (n == 0) {
-            return 1.0;
-        }
-        if (n % 2 == 0) {
-            return myPow(x, n / 2) * myPow(x, n / 2);
-        } else {
-            return myPow(x, n / 2) * myPow(x, n / 2) * x;
-        }
-    }
-}
-```
