@@ -42,6 +42,8 @@ public class Solution {
         int len = s.length();
         int[] nums = new int[len];
         nums[0] = checkOne(s.charAt(0));
+        
+        // 乘以nums[0]是要為了預防01 這種不合法的編碼
         nums[1] = (checkTwo(s.charAt(0), s.charAt(1))) + checkOne(s.charAt(1)) * nums[0];
         for (int i = 2 ; i < len; i++) {
             if (checkOne(s.charAt(i)) == 1) {
