@@ -14,6 +14,54 @@ Write a function to determine if a given target is in the array.
 
 解題思路：
 
+updated on 2015.12.25
+
+要考慮大於等於小於太煩雜了，直接一律改成以下
+
+>target >= nums[mid] && target <= nums[right]
+
+>target >= nums[left] && target <= nums[mid]
+
+
+```java
+public class Solution {
+    public boolean search(int[] nums, int target) {
+        if (nums == null || nums.length == 0) {
+            return false;
+        }
+        
+        int left = 0;
+        int right = nums.length - 1;
+        
+        while (left + 1 < right) {
+            int mid = left + (right - left) / 2;
+            
+            if (nums[mid] < nums[right]) {
+                if (target >= nums[mid] && target <= nums[right]) {
+                    left = mid;
+                } else {
+                    right = mid;
+                }
+            } else if (nums[mid] > nums[right]){
+                if (target >= nums[left] && target <= nums[mid]) {
+                    right = mid;
+                } else {
+                    left = mid;
+                }
+            } else {
+                right--;
+            }
+        }
+        
+        if (nums[left] == target || nums[right] == target) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+```
+
 九章模版，差別在於，如果有遇到重複的，則直接start往前移。
 
 ```java
