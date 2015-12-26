@@ -56,6 +56,60 @@ public class Solution {
 }
 ```
 
+Morris Traversal 利用Threaded BT 來達到O(1)的空間複雜度。
+
+詳細說明請參考網友精彩的解說 [Link](http://www.cnblogs.com/AnnieKim/archive/2013/06/15/morristraversal.html)
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> res = new ArrayList<Integer>();
+        if (root == null) {
+            return res;
+        }
+        
+        TreeNode cur = root;
+        TreeNode prev = null;
+        
+        while (cur != null) {
+            if (cur.left == null) {
+                res.add(cur.val);
+                cur = cur.right;
+            } else {
+                
+                // find predecessor
+                prev = cur.left;
+                while (prev.right != null && prev.right != cur) {
+                    prev = prev.right;
+                }
+                
+                // 如果前驅節點的右孩子為空，將它的右孩子設置為當前節點。當前節點更新為當前節點的左孩子。
+                if (prev.right == null) {
+                    prev.right = cur;
+                    cur = cur.left;
+                } else {
+                    // 如果前驅節點的右孩子為當前節點，將它的右孩子重新設為空（恢復樹的形狀）。輸出當前節點。當前節點更新為當前節點的右孩子。
+                    prev.right = null;
+                    res.add(cur.val);
+                    cur = cur.right;
+                }
+            }
+        }
+        
+        return res;
+    }
+}
+```
+
 ```java
 public class Solution {
     /**
