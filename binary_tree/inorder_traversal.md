@@ -60,6 +60,9 @@ Morris Traversal 利用Threaded BT 來達到O(1)的空間複雜度。
 
 詳細說明請參考網友精彩的解說 [Link](http://www.cnblogs.com/AnnieKim/archive/2013/06/15/morristraversal.html)
 
+>在Morris方法中不需要為每個節點額外分配指針指向其前驅（predecessor）和後繼節點（successor），只需要利用葉子節點中的左右空指針指向某種順序遍歷下的前驅節點或後繼節點就可以了。
+
+
 ```java
 /**
  * Definition for a binary tree node.
