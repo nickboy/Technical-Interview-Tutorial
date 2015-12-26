@@ -27,3 +27,34 @@ public int maxDepth(TreeNode root) {
 分析一下時間複雜度，由於每個點我們都會走過一次，複雜度取決於這棵樹上有多少節點 n 可得：
 
 >時間複雜度 O(n)
+
+
+updated on 2015.12.26
+
+Iterative solution
+```java
+public int maxDepth(TreeNode root) {
+    if (root == null)
+        return 0;
+
+    Deque<TreeNode> stack = new LinkedList<TreeNode>();
+
+    stack.push(root);
+    int count = 0;
+
+    while (!stack.isEmpty()) {
+        int size = stack.size();
+        while (size-- > 0) {
+            TreeNode cur = stack.pop();
+            if (cur.left != null)
+                stack.addLast(cur.left);
+            if (cur.right != null)
+                stack.addLast(cur.right);
+        }
+        count++;
+
+    }
+    return count;
+
+}
+```
