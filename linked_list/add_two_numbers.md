@@ -16,6 +16,32 @@ Given 3->1->5 and 5->9->2, return 8->0->8.
 
 解題思路：
 
+updated on 2015.12.27
+
+網友提供了簡潔程式碼：
+
+```java
+public class Solution {
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        ListNode prev = new ListNode(0);
+        ListNode head = prev;
+        int carry = 0;
+        while (l1 != null || l2 != null || carry != 0) {
+            ListNode cur = new ListNode(0);
+            int sum = ((l2 == null) ? 0 : l2.val) + ((l1 == null) ? 0 : l1.val) + carry;
+            cur.val = sum % 10;
+            carry = sum / 10;
+            prev.next = cur;
+            prev = cur;
+
+            l1 = (l1 == null) ? l1 : l1.next;
+            l2 = (l2 == null) ? l2 : l2.next;
+        }
+        return head.next;
+    }
+}
+```
+
 此為CC150的題，先用了非遞迴方式實作，程式碼長了點，程式碼如下：
 
 ```java
