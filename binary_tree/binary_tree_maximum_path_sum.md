@@ -1,5 +1,48 @@
 # Binary Tree Maximum Path Sum
 
+[Leetcode](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
+
+題意：
+
+
+解題思路：
+
+
+updated on 2015.12.29
+
+網友提供了更簡潔的解法如下：
+
+
+```java
+public class Solution {
+    
+    int max = Integer.MIN_VALUE;
+    
+    public int maxPathSum(TreeNode root) {
+        dfs(root);
+        return max;
+    }
+    
+    private int dfs(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        
+        // 2 possible choices
+        // 1.Already calculated in left or right child
+        // 2.left max path + right max path + root
+        
+        int leftMax = dfs(root.left);
+        int rightMax = dfs(root.right);
+        int cur = leftMax + rightMax + root.val;
+        max = Math.max(cur, max);
+        
+        return Math.max(0, root.val + Math.max(leftMax, rightMax));
+    }
+}
+```
+
+九章解法：
 
 ```java
 public class Solution {
@@ -46,3 +89,7 @@ public class Solution {
     }
 }
 ```
+
+---
+###Reference
+1. https://leetcode.com/discuss/54166/a-recursive-solution-with-comment
