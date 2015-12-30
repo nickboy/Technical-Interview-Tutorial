@@ -111,3 +111,4 @@ public class Solution {
 ---
 ###Reference
 1. http://www.shuatiblog.com/blog/2014/05/31/Candy/
+2. http://zhaohongze.com/wordpress/2013/12/10/leetcode-candy/
