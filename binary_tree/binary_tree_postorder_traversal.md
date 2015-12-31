@@ -20,6 +20,32 @@ return [3,2,1].
 
 解題思路：
 
+
+updated on 2015.12.30
+
+使用linked list的特性，不斷把值加到list的最前端即可，其餘作法都與preorder一樣。插入的時間仍是o(1)
+
+```java
+public List<Integer> postorderTraversal(TreeNode root) {
+    LinkedList<Integer> ans = new LinkedList<>();
+    Stack<TreeNode> stack = new Stack<>();
+    if (root == null) return ans;
+
+    stack.push(root);
+    while (!stack.isEmpty()) {
+        TreeNode cur = stack.pop();
+        ans.addFirst(cur.val);
+        if (cur.left != null) {
+            stack.push(cur.left);
+        }
+        if (cur.right != null) {
+            stack.push(cur.right);
+        } 
+    }
+    return ans;
+}
+```
+
 網友[胖虎](http://blog.csdn.net/ljphhj/article/details/21369053) 提供以下思路，此法會破壞樹的結構：
 
 "我們寫一個while循環，while循環結束的條件是棧中沒有任何結點。
