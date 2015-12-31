@@ -400,5 +400,5 @@
    * [Count of Smaller Numbers After Self](difficult_problems/count_of_smaller_numbers_after_self.md)
    * [Shortest Palindrome](difficult_problems/shortest_palindrome.md)
    * [Permutation Sequence](difficult_problems/permutation_sequence.md)
-   * Binary Tree Traversal
+   * [Binary Tree Traversal](difficult_problems/binary_tree_traversal.md)
 
