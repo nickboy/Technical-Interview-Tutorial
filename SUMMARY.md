@@ -111,7 +111,7 @@
    * [Inorder Successor in BST](binary_tree/inorder_successor_in_bst.md)
    * [Serialize and Deserialize Binary Tree](binary_tree/serialize_and_deserialize_binary_tree.md)
    * [Binary Tree Level Order Traversal II](binary_tree/binary_tree_level_order_traversal_ii.md)
-   * Binary Tree Preorder Traversal
+   * [Binary Tree Preorder Traversal](binary_tree/binary_tree_preorder_traversal.md)
 * [Heap](heap.md)
    * [Heapify](heap/heapify.md)
    * [Data Stream Median](heap/data_stream_median.md)
