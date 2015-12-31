@@ -1,6 +1,6 @@
 # Binary Tree Preorder Traversal
 
-[]()
+[Leetcode]https://leetcode.com/problems/binary-tree-preorder-traversal/
 
 題意：
 
