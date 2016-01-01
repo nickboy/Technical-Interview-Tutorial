@@ -27,7 +27,11 @@ There will be at least one building. If it is not possible to build such house a
 
 解題思路：
 
+使用bfs來作。
 
+>dist[i][j] is the empty land (i, j) to all the buildings.
+
+>grid[i][j] is reused as the accessibility.
 
 ```java
 public class Solution {
