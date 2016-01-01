@@ -42,6 +42,7 @@ public class Solution {
         
         for (int i = 1; i <= amount; i++) {
             for (int j = 0; j < coins.length; j++) {
+                //要注意是否該dp無法換，即等於Integer.MAX_VALUE
                 if (coins[j] > i || dp[i - coins[j]] == Integer.MAX_VALUE) {
                     continue;
                 }
