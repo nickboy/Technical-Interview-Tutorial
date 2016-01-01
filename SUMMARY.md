@@ -321,6 +321,7 @@
    * [Clone Graph](graph/clone_graph.md)
    * [Walls and Gates](graph/walls_and_gates.md)
    * [Number of Connected Components in an Undirected Graph](graph/number_of_connected_components_in_an_undirected_gr.md)
+   * Shortest Distance from All Buildings
 * [High Frequency](high_frequency.md)
    * [Sum](high_frequency/sum.md)
    * [2 Sum](high_frequency/2_sum.md)
