@@ -364,7 +364,7 @@
    * [N-Queen II](unknown/n-queen_ii.md)
    * [Factor Combinations](unknown/factor_combinations.md)
    * [Subsets](unknown/subsets.md)
-   * Generalized Abbreviation
+   * [Generalized Abbreviation](unknown/generalized_abbreviation.md)
 * [Sliding Window](sliding_window.md)
    * [Sliding Window Median](sliding_window/sliding_window_median.md)
    * [Sliding Window Maximum](sliding_window/sliding_window_maximum.md)
