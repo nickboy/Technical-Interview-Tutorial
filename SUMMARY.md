@@ -58,7 +58,7 @@
    * [Best Meeting Point](math/best_meeting_point.md)
    * [Sparse Matrix Multiplication](math/sparse_matrix_multiplication.md)
    * [Super Ugly Number](math/super_ugly_number.md)
-   * Bulb Switcher
+   * [Bulb Switcher](math/bulb_switcher.md)
 * [Stack](stack.md)
    * [Evaluate Reverse Polish Notation](stack/evaluate_reverse_polish_notation.md)
    * [Max Tree](stack/max_tree.md)
