@@ -27,7 +27,7 @@ There will be at least one building. If it is not possible to build such house a
 
 解題思路：
 
-使用bfs來作。
+難，很多細節要注意，記住map的xy座標跟我們一般二維陣列的座標不同，使用bfs來作。
 
 >dist[i][j] is the empty land (i, j) to all the buildings.
 
