@@ -1,5 +1,72 @@
 #Best Time to Buy and Sell Stock with Cooldown 
 
+
+題意：
+
+
+解題思路：
+
+
+updated on 2016.1.1
+
+以下由網友 [書影]()提供精美的說明
+
+引入輔助數組sells和buys
+```
+sells[i]表示在第i天賣出股票所能獲得的最大累積收益
+buys[i]表示在第i天買入股票所能獲得的最大累積收益
+```
+初始化令sells[0] = 0，buys[0] = -prices[0]
+
+記第i天與第i-1天的價格差：delta = price[i] - price[i - 1]
+
+狀態轉移方程為：
+```
+sells[i] = max(buys[i - 1] + prices[i], sells[i - 1] + delta) 
+buys[i] = max(sells[i - 2] - prices[i], buys[i - 1] - delta)
+```
+上述方程的含義為：
+```
+第i天賣出的最大累積收益 = max(第i-1天買入~第i天賣出的最大累積收益, 第i-1天賣出後反悔~改為第i天賣出的最大累積收益)
+第i天買入的最大累積收益 = max(第i-2天賣出~第i天買入的最大累積收益, 第i-1天買入後反悔~改為第i天買入的最大累積收益)
+```
+而實際上：
+```
+第i-1天賣出後反悔，改為第i天賣出 等價於 第i-1天持有股票，第i天再賣出
+第i-1天買入後反悔，改為第i天買入 等價於 第i-1天沒有股票，第i天再買入
+```
+
+```java
+public class Solution {
+    public int maxProfit(int[] prices) {
+        if (prices == null || prices.length == 0) {
+            return 0;
+        }
+        
+        int len = prices.length;
+        int[] buys = new int[len];
+        int[] sells = new int[len];
+        int max = Integer.MIN_VALUE;
+        buys[0] = -prices[0];
+        sells[0] = 0;
+        
+        for (int i = 1; i < prices.length; i++) {
+            int delta = prices[i] - prices[i - 1];
+            
+            sells[i] = Math.max(buys[i - 1] + prices[i], sells[i - 1] + delta);
+            
+            int temp = (i > 1) ? sells[i - 2] - prices[i] : 0;
+            buys[i] = Math.max(buys[i - 1] - delta, temp);
+            
+            max = Math.max(sells[i], max);
+        }
+        
+        return max;
+        
+        
+    }
+}
+```
 **1. Define States**
 
 To represent the decision at index i:
