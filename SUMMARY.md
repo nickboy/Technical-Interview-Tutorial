@@ -113,6 +113,7 @@
    * [Serialize and Deserialize Binary Tree](binary_tree/serialize_and_deserialize_binary_tree.md)
    * [Binary Tree Level Order Traversal II](binary_tree/binary_tree_level_order_traversal_ii.md)
    * [Binary Tree Preorder Traversal](binary_tree/binary_tree_preorder_traversal.md)
+   * Binary Tree Vertical Order Traversal
 * [Heap](heap.md)
    * [Heapify](heap/heapify.md)
    * [Data Stream Median](heap/data_stream_median.md)
