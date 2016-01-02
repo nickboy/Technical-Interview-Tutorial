@@ -209,6 +209,7 @@
    * [Shortest Word Distance III](array/shortest_word_distance_iii.md)
    * [Find the Duplicate Number](array/find_the_duplicate_number.md)
    * [4 Sum](array/4_sum.md)
+   * Wiggle Sort II
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Longest Substring Without Repeating Characters](string/longest_substring_without_repeating_characters.md)
