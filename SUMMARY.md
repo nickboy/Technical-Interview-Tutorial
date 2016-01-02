@@ -308,7 +308,7 @@
    * [Interleaving String](dynamic_programming/interleaving_string.md)
    * [Segment Tree Build II](segment_tree/segment_tree_build_ii.md)
    * [Count of Smaller Numbers After Itself](segment_tree/count_of_smaller_numbers_after_itself.md)
-   * Range Sum Query - Mutable
+   * [Range Sum Query - Mutable](segment_tree/range_sum_query_-_mutable.md)
 * [Graph](graph.md)
    * [Find the Connected Component in the Undirected Graph](graph/find_the_connected_component_in_the_undirected_graph.md)
    * [Number of Islands](graph/number_of_islands.md)
