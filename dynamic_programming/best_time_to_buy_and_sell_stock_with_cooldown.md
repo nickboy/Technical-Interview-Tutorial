@@ -9,7 +9,7 @@
 
 updated on 2016.1.1
 
-以下由網友 [書影]()提供精美的說明
+以下由網友 [書影](http://bookshadow.com/weblog/2015/11/24/leetcode-best-time-to-buy-and-sell-stock-with-cooldown/)提供精美的說明
 
 引入輔助數組sells和buys
 ```
@@ -67,6 +67,7 @@ public class Solution {
     }
 }
 ```
+
 **1. Define States**
 
 To represent the decision at index i:
