@@ -68,6 +68,40 @@ public class Solution {
 }
 ```
 
+或
+
+```java
+public class Solution {
+    public int maxProfit(int[] prices) {
+        if (prices == null || prices.length == 0) {
+            return 0;
+        }
+        
+        int len = prices.length;
+        int[] buys = new int[len];
+        int[] sells = new int[len];
+        int max = Integer.MIN_VALUE;
+        buys[0] = -prices[0];
+        sells[0] = 0;
+        
+        for (int i = 1; i < prices.length; i++) {
+            int delta = prices[i] - prices[i - 1];
+            
+            sells[i] = Math.max(buys[i - 1] + prices[i], sells[i - 1] + delta);
+            
+            int temp = (i > 1) ? sells[i - 2] - prices[i] : 0;
+            buys[i] = Math.max(buys[i - 1] - delta, temp);
+            
+            max = Math.max(sells[i], max);
+        }
+        
+        return max;
+        
+        
+    }
+}
+```
+
 **1. Define States**
 
 To represent the decision at index i:
