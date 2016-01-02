@@ -137,6 +137,8 @@ class SegmentTree {
 
 實作線段樹需要太多程式碼，網友 [rikimberley](https://leetcode.com/discuss/74222/java-using-binary-indexed-tree-with-clear-explanation)提供的神奇簡單作法：
 
+>詳細怎麼實作的可以參考以下[連結](https://www.topcoder.com/community/data-science/data-science-tutorials/binary-indexed-trees/)
+
 ```java
 public class NumArray {
     /**
