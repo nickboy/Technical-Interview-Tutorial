@@ -70,36 +70,24 @@ public class Solution {
 
 或
 
-```java
-public class Solution {
-    public int maxProfit(int[] prices) {
-        if (prices == null || prices.length == 0) {
-            return 0;
-        }
-        
-        int len = prices.length;
-        int[] buys = new int[len];
-        int[] sells = new int[len];
-        int max = Integer.MIN_VALUE;
-        buys[0] = -prices[0];
-        sells[0] = 0;
-        
-        for (int i = 1; i < prices.length; i++) {
-            int delta = prices[i] - prices[i - 1];
-            
-            sells[i] = Math.max(buys[i - 1] + prices[i], sells[i - 1] + delta);
-            
-            int temp = (i > 1) ? sells[i - 2] - prices[i] : 0;
-            buys[i] = Math.max(buys[i - 1] - delta, temp);
-            
-            max = Math.max(sells[i], max);
-        }
-        
-        return max;
-        
-        
-    }
-}
+```python
+class Solution(object):
+    def maxProfit(self, prices):
+        """
+        :type prices: List[int]
+        :rtype: int
+        """
+        size = len(prices)
+        if size < 2:
+            return 0
+        buys = [None] * size
+        sells = [None] * size
+        sells[0], sells[1] = 0, max(0, prices[1] - prices[0])
+        buys[0], buys[1] = -prices[0], max(-prices[0], -prices[1])
+        for x in range(2, size):
+            sells[x] = max(sells[x - 1], buys[x - 1] + prices[x])
+            buys[x] = max(buys[x - 1], sells[x - 2] - prices[x])
+        return sells[-1]
 ```
 
 **1. Define States**
