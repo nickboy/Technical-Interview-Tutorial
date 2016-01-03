@@ -33,6 +33,54 @@ Longest consecutive sequence path is ```2-3```,not```3-2-1```, so return 2.
 
 解題思路：
 
+updated 2016.1.3
+
+非遞迴解法：使用一個stack加上一個hashmap來紀錄該treenode最長嚴格連續遞增序列的長度為多少。
+
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public int longestConsecutive(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        
+        int max = 1;
+        Stack<TreeNode> stack = new Stack<>();
+        HashMap<TreeNode, Integer> map = new HashMap<>();
+        stack.push(root);
+        map.put(root, 1);
+        while (!stack.isEmpty()) {
+            TreeNode cur = stack.pop();
+            int left = (cur.left != null && (cur.left.val - 1) == cur.val) ? map.get(cur) + 1 : 1;
+            int right = (cur.right != null && (cur.right.val - 1) == cur.val) ? map.get(cur) + 1 : 1;
+            
+            max = Math.max(max, Math.max(left, right));
+            if (cur.right != null) {
+                stack.push(cur.right);
+                map.put(cur.right, right);
+            }
+            
+            if (cur.left != null) {
+                stack.push(cur.left);
+                map.put(cur.left, left);
+            }
+        }
+        
+        return max;
+    }
+}
+```
+
 使用遞迴去作，此連續子序列是嚴格遞增的，所以必須記住parent的值，與當前的值作比較，如果當前值比parent少一，則len++，否則len設為1重新往下找，因左子樹或是右子樹有可能有更比len更長的子序列，因此最後需要與左右子樹遞迴得到的值與當前的len作比較，取最長的，程式碼如下：
 
 ```java
@@ -68,3 +116,4 @@ public class Solution {
 ---
 ###Reference
 1. http://www.cnblogs.com/jcliBlogger/p/4923745.html
+2. https://leetcode.com/discuss/66548/recursive-solution-bottom-iteration-solution-using-stack
