@@ -26,7 +26,7 @@ updated on 2016.1.3
 
 實作線段樹需要太多程式碼，網友 [rikimberley](https://leetcode.com/discuss/74222/java-using-binary-indexed-tree-with-clear-explanation)提供的神奇簡單作法：
 
->詳細怎麼實作的可以參考以下[連結](https://www.topcoder.com/community/data-science/data-science-tutorials/binary-indexed-trees/)
+>詳細怎麼實作的可以參考以下，太詳細了[連結](https://www.topcoder.com/community/data-science/data-science-tutorials/binary-indexed-trees/)
 
 > i -= (i & -i) 表示是要把數中二元表示法的最右邊的去掉，可以節省很多時間，不需要shift 32次。如果是long可以節省更多時間。
 
