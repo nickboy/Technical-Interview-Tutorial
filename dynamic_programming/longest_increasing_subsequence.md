@@ -49,7 +49,7 @@ public int longestIncreasingSubsequence(int[] nums) {
 
 網友提供的神之O(nlogn)解法：
 
-會用 ```i = -(i + 1)```是因為以下java binary search的回傳值
+會用 ```i = -(i + 1)```是因為以下java binary search的回傳值，如果元素存在的話，則直接回傳index，否則會回傳 ```(-(insertion point) - 1)```，這是需要注意的。
 
 官方說明如下
 
