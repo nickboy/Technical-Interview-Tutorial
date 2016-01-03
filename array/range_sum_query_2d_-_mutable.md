@@ -103,3 +103,6 @@ public class NumMatrix {
 // numMatrix.update(1, 1, 10);
 // numMatrix.sumRegion(1, 2, 3, 4);
 ```
+---
+###Reference
+1. https://leetcode.com/discuss/72685/share-my-java-2-d-binary-indexed-tree-solution
