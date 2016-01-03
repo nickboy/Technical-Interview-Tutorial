@@ -51,6 +51,8 @@ public int longestIncreasingSubsequence(int[] nums) {
 
 會用 ```i = -(i + 1)```是因為以下java binary search的回傳值，如果元素存在的話，則直接回傳index，否則會回傳 ```(-(insertion point) - 1)```，這是需要注意的。
 
+> 也就是說如果找到元素在dp陣列裡的話，則dp陣列不變，否則把該新的值插入正確的位置。index表示目前array中最後一個元素的index是什麼。
+
 官方說明如下
 
 >**Returns:**
