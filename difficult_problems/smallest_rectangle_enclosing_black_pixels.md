@@ -21,6 +21,51 @@ Return 6.
 
 解題思路：
 
+updated on 2016.1.3
+
+```java
+public class Solution {
+    public int minArea(char[][] image, int x, int y) {
+        if (image == null || image.length == 0) {
+            return 0;
+        }
+        
+        int rows = image.length;
+        int cols = image[0].length;
+        
+        int[] axis = new int[4];
+        axis[0] = rows - 1; // upper
+        axis[1] = 0; //bottom
+        axis[2] = cols - 1; // left;
+        axis[3] = 0; // right;
+        
+        dfs(image, x, y, axis);
+        
+        return (axis[1] - axis[0] + 1) * (axis[3] - axis[2] + 1);
+        
+    }
+    
+    private void dfs(char[][] image, int x, int y, int[] axis) {
+        int rows = image.length;
+        int cols = image[0].length;
+        if (x < 0 || x >= rows || y < 0 || y >= cols || image[x][y] == '0') {
+            return;
+        }
+        
+        image[x][y] = '0';
+        axis[0] = Math.min(x, axis[0]);
+        axis[1] = Math.max(x, axis[1]);
+        axis[2] = Math.min(y, axis[2]);
+        axis[3] = Math.max(y, axis[3]);
+        
+        dfs(image, x - 1, y, axis);
+        dfs(image, x + 1, y, axis);
+        dfs(image, x, y - 1, axis);
+        dfs(image, x, y + 1, axis);
+    }
+}
+```
+
 主要是作以下的事情
 
 >- top = search row [0...x], find first row contain 1,
