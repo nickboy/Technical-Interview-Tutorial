@@ -212,7 +212,7 @@
    * [4 Sum](array/4_sum.md)
    * [Wiggle Sort II](array/wiggle_sort_ii.md)
    * [Range Sum Query 2D - Immutable](array/range_sum_query_2d_-_immutable.md)
-   * Range Sum Query 2D - Mutable
+   * [Range Sum Query 2D - Mutable](array/range_sum_query_2d_-_mutable.md)
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Longest Substring Without Repeating Characters](string/longest_substring_without_repeating_characters.md)
