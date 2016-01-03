@@ -211,6 +211,7 @@
    * [Find the Duplicate Number](array/find_the_duplicate_number.md)
    * [4 Sum](array/4_sum.md)
    * [Wiggle Sort II](array/wiggle_sort_ii.md)
+   * Range Sum Query 2D - Immutable
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Longest Substring Without Repeating Characters](string/longest_substring_without_repeating_characters.md)
