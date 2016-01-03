@@ -49,6 +49,13 @@ public int longestIncreasingSubsequence(int[] nums) {
 
 網友提供的神之O(nlogn)解法：
 
+會用 ```i = -(i + 1)```是因為以下java binary search的回傳值
+
+官方說明如下
+
+>**Returns:**
+index of the search key, if it is contained in the array within the specified range; otherwise, (-(insertion point) - 1). The insertion point is defined as the point at which the key would be inserted into the array: the index of the first element in the range greater than the key, or toIndex if all elements in the range are less than the specified key. Note that this guarantees that the return value will be >= 0 if and only if the key is found.
+
 ```java
 public class Solution {
     public int lengthOfLIS(int[] nums) {            
