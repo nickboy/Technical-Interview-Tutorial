@@ -6,8 +6,6 @@
 * [Trie](trie.md)
    * [Implement Trie](trie/implement_trie.md)
    * [Add and Search Word - Data structure design](trie/add_and_search_word_-_data_structure_design.md)
-* [SQL](sql.md)
-   * Second Highest Salary
 * [Bit Manipulation](bit_manipulation.md)
    * [Flip Bits](bit_manipulation/flip_bits.md)
    * [Update Bits](bit_manipulation/update_bits.md)
@@ -299,6 +297,8 @@
    * [Flip Game II](dynamic_programming/flip_game_ii.md)
    * [Best Time to Buy and Sell Stock with Cooldown](dynamic_programming/best_time_to_buy_and_sell_stock_with_cooldown.md)
    * [Coin Change](dynamic_programming/coin_change.md)
+* [SQL](sql.md)
+   * Second Highest Salary
 * [Segment Tree](segment_tree.md)
    * [Segment Tree Query](segment_tree/segment_tree_query.md)
    * [Segment Tree Query II](segment_tree/segment_tree_query_ii.md)
