@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
    * [SQL](sql.md)
+       * Second Highest Salary
 * [Template](template.md)
    * [BST Successor Predecessor](bst_successor_predecessor.md)
 * [Trie](trie.md)
