@@ -1,0 +1,2 @@
+# Nth Highest Salary
+
