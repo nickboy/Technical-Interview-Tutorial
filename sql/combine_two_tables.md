@@ -43,3 +43,8 @@ SELECT Person.FirstName, Person.LastName, Address.City, Address.State
 FROM Person LEFT JOIN Address ON Person.PersonId = Address.PersonId;
 
 ```
+
+
+---
+###Reference
+1. https://leetcode.com/discuss/21216/its-a-simple-question-of-left-join-my-solution-attached
