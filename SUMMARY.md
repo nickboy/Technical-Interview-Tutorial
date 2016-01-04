@@ -1,13 +1,13 @@
 # Summary
 
 * [Introduction](README.md)
-   * [SQL](sql.md)
-       * Second Highest Salary
 * [Template](template.md)
    * [BST Successor Predecessor](bst_successor_predecessor.md)
 * [Trie](trie.md)
    * [Implement Trie](trie/implement_trie.md)
    * [Add and Search Word - Data structure design](trie/add_and_search_word_-_data_structure_design.md)
+* [SQL](sql.md)
+   * Second Highest Salary
 * [Bit Manipulation](bit_manipulation.md)
    * [Flip Bits](bit_manipulation/flip_bits.md)
    * [Update Bits](bit_manipulation/update_bits.md)
