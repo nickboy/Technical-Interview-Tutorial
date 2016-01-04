@@ -382,7 +382,7 @@
    * [Peeking Iterator](iterator/peeking_iterator.md)
    * [Zigzag Iterator](iterator/zigzag_iterator.md)
 * [SQL](sql.md)
-   * Second Highest Salary
+   * [Second Highest Salary](sql/second_highest_salary.md)
 * [Difficult Problems](difficult_problems.md)
    * [Reverse Nodes in k-Group](difficult_problems/reverse_nodes_in_k-group.md)
    * [Substring with Concatenation of All Words](difficult_problems/substring_with_concatenation_of_all_words.md)
