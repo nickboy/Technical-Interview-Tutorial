@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-   * SQL
+   * [SQL](sql.md)
 * [Template](template.md)
    * [BST Successor Predecessor](bst_successor_predecessor.md)
 * [Trie](trie.md)
