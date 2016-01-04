@@ -297,8 +297,6 @@
    * [Flip Game II](dynamic_programming/flip_game_ii.md)
    * [Best Time to Buy and Sell Stock with Cooldown](dynamic_programming/best_time_to_buy_and_sell_stock_with_cooldown.md)
    * [Coin Change](dynamic_programming/coin_change.md)
-* [SQL](sql.md)
-   * Second Highest Salary
 * [Segment Tree](segment_tree.md)
    * [Segment Tree Query](segment_tree/segment_tree_query.md)
    * [Segment Tree Query II](segment_tree/segment_tree_query_ii.md)
@@ -383,6 +381,8 @@
 * [Iterator](iterator.md)
    * [Peeking Iterator](iterator/peeking_iterator.md)
    * [Zigzag Iterator](iterator/zigzag_iterator.md)
+* [SQL](sql.md)
+   * Second Highest Salary
 * [Difficult Problems](difficult_problems.md)
    * [Reverse Nodes in k-Group](difficult_problems/reverse_nodes_in_k-group.md)
    * [Substring with Concatenation of All Words](difficult_problems/substring_with_concatenation_of_all_words.md)
