@@ -51,7 +51,3 @@ public class Solution {
     }
 }
 ```
-
----
-###Reference
-1. https://leetcode.com/discuss/61820/java-only-need-to-keep-one-index
