@@ -216,6 +216,7 @@
    * [Range Sum Query 2D - Immutable](array/range_sum_query_2d_-_immutable.md)
    * [Range Sum Query 2D - Mutable](array/range_sum_query_2d_-_mutable.md)
    * [2 Sum](array/2_sum.md)
+   * Maximum Size Subarray Sum Equals k
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Longest Substring Without Repeating Characters](string/longest_substring_without_repeating_characters.md)
