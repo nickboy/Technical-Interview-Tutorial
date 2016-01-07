@@ -217,7 +217,7 @@
    * [Range Sum Query 2D - Mutable](array/range_sum_query_2d_-_mutable.md)
    * [2 Sum](array/2_sum.md)
    * [Maximum Size Subarray Sum Equals k](array/maximum_size_subarray_sum_equals_k.md)
-   * Majority Number
+   * [Majority Number](array/majority_number.md)
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Longest Substring Without Repeating Characters](string/longest_substring_without_repeating_characters.md)
