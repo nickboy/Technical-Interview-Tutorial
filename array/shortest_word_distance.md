@@ -19,6 +19,38 @@ You may assume that word1 does not equal to word2, and word1 and word2 are both 
 
 解題思路：
 
+updated 2016.1.7
+
+較naive，但程式較複雜點。
+
+```java
+public class Solution {
+    public int shortestDistance(String[] words, String word1, String word2) {
+        if (words == null || words.length < 2) {
+            return 0;
+        }
+        
+        int idxOne = -1;
+        int idxTwo = -1;
+        int minLength = Integer.MAX_VALUE;
+        
+        for (int i = 0; i < words.length; i++) {
+            if (words[i].equals(word1)) {
+                idxOne = i;
+            } else if (words[i].equals(word2)) {
+                idxTwo = i;
+            }
+            
+            if (idxOne != -1 && idxTwo != -1) {
+                minLength = Math.min(minLength, Math.abs(idxOne - idxTwo));
+            }
+        }
+        
+        return minLength;
+    }
+}
+```
+
 
 只使用一個index來標記在當下字串之前遇到的另一個字的index為多少，記得再判斷index指的那個字與當下的字不同，再更新mindistance。
 ```java
