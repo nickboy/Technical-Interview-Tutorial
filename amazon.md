@@ -1,5 +1,9 @@
 # Amazon
 
+
+---
+Before 2015.2.1
+
 **Coding:**
 1. [Compare Version Number](string/compare_version_numbers.md)
 2. [Valid Palindrome](string/valid_palindrome.md)
@@ -23,7 +27,9 @@
 1. Hotel Management system
 2. Online booking system
 3. 設計動物園(Animal Kindom)
-4. What is good OO design?
+4. What is good OO design
+5. Design Vending machine
+6. TicTacToe
 
 **Data Structure:**
 1. [Interface vs Abstract Class](http://www.programmerinterview.com/index.php/java-questions/interface-vs-abstract-class/)
