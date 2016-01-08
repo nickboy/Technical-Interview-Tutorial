@@ -60,7 +60,7 @@
    * [Sparse Matrix Multiplication](math/sparse_matrix_multiplication.md)
    * [Super Ugly Number](math/super_ugly_number.md)
    * [Bulb Switcher](math/bulb_switcher.md)
-   * Power of Three
+   * [Power of Three](math/power_of_three.md)
 * [Stack](stack.md)
    * [Evaluate Reverse Polish Notation](stack/evaluate_reverse_polish_notation.md)
    * [Max Tree](stack/max_tree.md)
