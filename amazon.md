@@ -19,7 +19,9 @@
 
 **Data Structure:**
 1. [Interface vs Abstract Class](http://www.programmerinterview.com/index.php/java-questions/interface-vs-abstract-class/)
-2. 
+2. 設計電話本用什麼DS (Trie?)
 
 
 **Behavioral Questions:**
+1. Challanging part of project
+2. 
