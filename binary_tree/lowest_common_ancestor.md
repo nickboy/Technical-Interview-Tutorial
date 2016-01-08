@@ -1,5 +1,56 @@
 # Lowest common Ancestor
 
+[]()
+
+題意：
+
+
+解題思路：
+
+updated 2016.1.7
+
+```java
+public class Solution {
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        boolean change=true;
+        while(change){       //when p and q on the two side of BST (or one is equal to root), exit the loop
+            change=false;
+            while(p.val<root.val&&q.val<root.val){
+                root=root.left;
+                change=true;
+            }
+
+            while(p.val>root.val&&q.val>root.val){
+                root=root.right;
+                change=true;
+            }
+        }
+
+
+        return root;
+
+    }
+}
+```
+
+
+```java
+public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        if (root == null) return root;
+        TreeNode current = root;
+        while (current != null && current != p && current != q){
+            if (current.val <= p.val && current.val <= q.val) {
+                current = current.right;
+            } else if (current.val >= p.val && current.val >= q.val){
+                current = current.left;
+            } else {
+                break;
+            }
+        }
+        return current;
+    }
+
+```
 當每個節點只有left與right兩個指針時，使用以下解法，
 如果A和B都在root裡，返回A和B的最近公共祖先
 如果只有a在root為根的子樹裡，返回a
