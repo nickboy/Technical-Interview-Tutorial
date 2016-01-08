@@ -22,11 +22,12 @@
 1. Hotel Management system
 2. Online booking system
 3. 設計動物園(Animal Kindom)
-4. HashMap vs TreeMap
+4. What is good OO design?
 
 **Data Structure:**
 1. [Interface vs Abstract Class](http://www.programmerinterview.com/index.php/java-questions/interface-vs-abstract-class/)
 2. 設計電話本用什麼DS (Trie?)
+3. HashMap vs TreeMap
 
 **Database:**
 1. ACID (Atomicity, Consistency, Isolation, Durability)
@@ -34,7 +35,8 @@
 
 **Behavioral Questions:**
 1. Challanging part of project
-2. 
+2. Tell me one of the most chanllege technical problems
+
 
 **Programming Language:**
 1. Garbage Collection,abstract vs interface, where primitive(heap) and object(stack) stored.
