@@ -14,6 +14,7 @@
 11. [Inorder Traversal BST](binary_tree/inorder_traversal.md)
 12. [Reverse Linked List](linked_list/reverse_linked_list.md)
 13. [Flat Binary Tree](binary_tree/flatten_binary_tree_to_linked_list.md)
+14. [Inetersection of Two Lists](linked_list/intersection_of_two_linked_lists.md)
 
 **System Design:**
 1. Hotel Management system
