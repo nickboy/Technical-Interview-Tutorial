@@ -17,6 +17,7 @@
 14. [Inetersection of Two Lists](linked_list/intersection_of_two_linked_lists.md)
 15. [Valid Sudoku](array/valid_sudoku.md)
 16. [Flood Fill](array/sorrounded_regions.md)
+17. [Anagram](string/anagrams.md)
 
 **System Design:**
 1. Hotel Management system
