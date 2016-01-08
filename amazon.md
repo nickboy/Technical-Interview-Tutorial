@@ -9,6 +9,7 @@
 6. [3th largest or kth largest](http://www.geeksforgeeks.org/k-largestor-smallest-elements-in-an-array/)
 7. [2 Sum](array/2_sum.md), return all valid pairs (HashMap solution, sort and move towards middle solution) [234Sum](http://www.sigmainfy.com/blog/summary-of-ksum-problems.html)
 8. [Print path in Binary Tree](binary_tree/binary_tree_path.html)
+9. Top K values (use maxHeap)
 
 **System Design:**
 1. Hotel Management system
@@ -16,5 +17,9 @@
 3. 設計動物園(Animal Kindom)
 4. 
 
-**Data Structure**
+**Data Structure:**
 1. [Interface vs Abstract Class](http://www.programmerinterview.com/index.php/java-questions/interface-vs-abstract-class/)
+2. 
+
+
+**Behavioral Questions:**
