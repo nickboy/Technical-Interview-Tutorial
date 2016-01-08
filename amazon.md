@@ -22,6 +22,8 @@ Before 2015.2.1
 15. [Valid Sudoku](array/valid_sudoku.md)
 16. [Flood Fill](array/sorrounded_regions.md)
 17. [Anagram](string/anagrams.md)
+18. count string 中的words，edge cases
+19. [Binary Tree Zigzag Level Order Traversal](binary_tree/binary_tree_zigzag_level_order_traversal.md)
 
 **System Design:**
 1. Hotel Management system
