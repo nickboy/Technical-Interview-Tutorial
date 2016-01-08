@@ -7,7 +7,7 @@
 4. [Second Largest Number](array/find_second_largest_number.md)
 5. Find highest order digit of a byte
 6. [3th largest or kth largest](http://www.geeksforgeeks.org/k-largestor-smallest-elements-in-an-array/)
-7. 2Sum, return all valid pairs (HashMap solution, sort and move towards middle solution) [234Sum](http://www.sigmainfy.com/blog/summary-of-ksum-problems.html)
+7. [2 Sum](array/2_sum.md), return all valid pairs (HashMap solution, sort and move towards middle solution) [234Sum](http://www.sigmainfy.com/blog/summary-of-ksum-problems.html)
 
 **System Design:**
 1. Hotel Management system
