@@ -11,6 +11,7 @@
 8. [Print path in Binary Tree](binary_tree/binary_tree_path.html)
 9. Top K values (use minHeap)[array/find_top_k_elements_in_array.md]
 10. Search Binary Search Tree
+11. [Inorder Traversal BST](binary_tree/inorder_traversal.md)
 
 **System Design:**
 1. Hotel Management system
