@@ -5,6 +5,8 @@
 2. [Valid Palindrome](string/valid_palindrome.md)
 3. [Nth fibonacci](http://www.geeksforgeeks.org/program-for-nth-fibonacci-number/)
 4. [Second Largest Number](array/find_second_largest_number.md)
+5. Find highest order digit of a byte
+6. [3th largest or kth largest](http://www.geeksforgeeks.org/k-largestor-smallest-elements-in-an-array/)
 
 **System Design:**
 1. Hotel Management system
