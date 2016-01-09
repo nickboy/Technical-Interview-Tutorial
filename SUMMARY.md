@@ -223,7 +223,7 @@
    * [Majority Number](array/majority_number.md)
    * [Find Second Largest Number](array/find_second_largest_number.md)
    * [Find Top K Elements in Array](array/find_top_k_elements_in_array.md)
-   * Range Sum Query - Immutable
+   * [Range Sum Query - Immutable](array/range_sum_query_-_immutable.md)
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Longest Substring Without Repeating Characters](string/longest_substring_without_repeating_characters.md)
