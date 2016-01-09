@@ -7,6 +7,7 @@
 4. [Subsets](unknown/subsets.md)
 5. [Subsets II](unknown/subsets_ii.md)
 6. [Missing Number](math/find_the_missing_number.md)
+7. [Maximum Subarray](array/maximum_subarray.md)
 
 ---
 Before 2015.2.1
