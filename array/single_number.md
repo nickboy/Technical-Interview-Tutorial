@@ -22,3 +22,26 @@ public int singleNumber(int[] A) {
 ```
 
 >Time Complexity：$$O(N)$$，因只需遍歷一次陣列即可。
+
+updated on 2016.1.9
+
+O(NlogN)的解法，先排序後再兩個兩個比較
+
+```java
+public class Solution {
+    public int singleNumber(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
+        
+        Arrays.sort(nums);
+        for (int i = 1; i < nums.length; i = i + 2) {
+            if (nums[i - 1] != nums[i]) {
+                return nums[i - 1];
+            }
+        }
+        
+        return nums[nums.length - 1];
+    }
+}
+```
