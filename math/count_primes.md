@@ -42,29 +42,34 @@ i = 3 時，把所有3的倍數，即6，9全改為false。
 
 其程式碼如下：
 
+updated on 2016.1.8
+
 ```java
-public int countPrimes(int n) {
-    if (n <= 1)
-        return 0;
-        
-    boolean[] isPrime = new boolean[n];
-    Arrays.fill(isPrime, true);
-    double sqrtNum = Math.sqrt(n);
-    
-    for(int i = 2; i < sqrtNum; i++ ) {
-        if(isPrime[i]) {
-            for(int j = i*i; j < n; j = j + i) {
-                isPrime[j] = false;
-            }
+public class Solution {
+    public int countPrimes(int n) {
+        if (n <= 1) {
+            return 0;
         }
         
+        int[] isPrime = new int[n];
+        Arrays.fill(isPrime, 1);
+        double sqrtN = Math.sqrt(n);
+        
+        for (int i = 2; i < sqrtN; i++) {
+            if (isPrime[i] == 1) {
+                for (int j = i + i; j < n; j = j + i) {
+                    isPrime[j] = 0;
+                }
+            }
+            
+        }
+        
+        int count = 0;
+        for (int i = 2; i < n; i++) {
+            count += isPrime[i];
+        }
+        
+        return count;
     }
-    
-    int count = 0;
-    for(int i = 2; i < n; i++) {
-        count += isPrime[i] ? 1 : 0; 
-    }
-    
-    return count;
 }
 ```
