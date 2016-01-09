@@ -13,6 +13,28 @@ For example, given nums = [3, 5, 2, 1, 6, 4], one possible answer is [1, 6, 2, 5
 
 updated on 2016.1.9
 
+O(n) 解法：
+
+直接不斷的與前一個作比較，並依index的奇偶性值來判斷
+
+```java
+public class Solution {
+    public void wiggleSort(int[] nums) {
+        if (nums == null || nums.length < 2) {
+            return;
+        }
+        
+        for (int i = 1; i < nums.length; i++) {
+            if ((i % 2 == 0 && nums[i - 1] < nums[i]) || (i % 2 == 1 && nums[i - 1] > nums[i])) {
+                int temp = nums[i - 1];
+                nums[i - 1] = nums[i];
+                nums[i] = temp;
+            }
+        }
+    }
+}
+```
+
 O(nlogn)解法：
 
 先排序花o(nlogn)，接著遇到奇數位時，把它和相鄰的交換即可。
