@@ -11,6 +11,28 @@ For example, given nums = [3, 5, 2, 1, 6, 4], one possible answer is [1, 6, 2, 5
 
 解題思路：
 
+updated on 2016.1.9
+
+O(nlogn)解法：
+
+先排序花o(nlogn)，接著遇到奇數位時，把它和相鄰的交換即可。
+
+```java
+public class Solution {
+    public void wiggleSort(int[] nums) {
+        Arrays.sort(nums);
+
+        for(int i = 0; i < nums.length - 1; i++) {
+            if(i % 2 == 1) {
+                int temp = nums[i];
+                nums[i] = nums[i + 1];
+                nums[i + 1] = temp;
+            }
+        }
+    }
+}
+```
+
 i等於偶數時，找最小的來換，奇數時，找最大的來換，花O(N^2)。
 
 ```java
