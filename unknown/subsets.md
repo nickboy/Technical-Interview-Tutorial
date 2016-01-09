@@ -85,3 +85,34 @@ public class Solution {
     
 }
 ```
+
+Bit manipulation:
+
+```java
+public class Solution {
+    public List<List<Integer>> subsets(int[] nums) {
+        List<List<Integer>> res = new ArrayList<>();
+
+        if (nums == null || nums.length == 0) {
+            return res;   
+        }
+        
+        Arrays.sort(nums);
+        
+        int powerOfTwo = (int)Math.pow(2, nums.length);
+        for (int i = 0; i < powerOfTwo; i++) {
+            List<Integer> list = new ArrayList<>();
+            for (int j = 0; j < nums.length; j++) {
+                if (((i >> j) & 1) == 1) {
+                    list.add(nums[j]);
+                }
+            }
+            res.add(list);
+        }
+        
+        return res;
+    }
+    
+    
+}
+```
