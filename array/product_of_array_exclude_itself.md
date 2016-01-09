@@ -90,6 +90,8 @@ public ArrayList<Long> productExcludeItself(ArrayList<Integer> A) {
 
 updated on 2016.1.9
 
+需要O(N) space
+
 ```java
 public class Solution {
     public int[] productExceptSelf(int[] nums) {
@@ -119,6 +121,31 @@ public class Solution {
         
         return res;
     }
+}
+```
+
+O(1) Space
+
+```java
+public int[] productExceptSelf(int[] nums) {
+
+    int len = nums.length;
+    int [] output = new int[len];
+
+    int leftMult = 1, rightMult = 1;
+
+    for(int i = len-1; i >= 0; i--){
+        output[i] = rightMult;
+        rightMult *= nums[i];
+    }
+    for(int j = 0; j < len; j++){
+        output[j] *= leftMult;
+        leftMult *= nums[j];
+
+    }
+
+    return output; 
+
 }
 ```
 
