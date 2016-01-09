@@ -13,6 +13,24 @@ Given 1->2->3->3->4->5->3, val = 3, you should return the list as 1->2->4->5
 
 解題思路：
 
+updated on 2016.1.8
+
+**Recursive:**
+```java
+public class Solution {
+    public ListNode removeElements(ListNode head, int val) {
+        if (head == null) {
+            return null;
+        }
+        
+        head.next = removeElements(head.next, val);
+        
+        return head.val == val ? head.next : head;
+    }
+}
+```
+
+**Iterative:**
 
 ```java
 /**
