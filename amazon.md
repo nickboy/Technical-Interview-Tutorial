@@ -6,6 +6,7 @@
 3. [Vertical sum of tree](binary_tree/binary_tree_vertical_order_traversal.md)
 4. [Subsets](unknown/subsets.md)
 5. [Subsets II](unknown/subsets_ii.md)
+6. [Missing Number](math/find_the_missing_number.md)
 
 ---
 Before 2015.2.1
