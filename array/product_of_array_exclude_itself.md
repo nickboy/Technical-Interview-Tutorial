@@ -88,4 +88,38 @@ public ArrayList<Long> productExcludeItself(ArrayList<Integer> A) {
 }
 ```
 
+updated on 2016.1.9
+
+```java
+public class Solution {
+    public int[] productExceptSelf(int[] nums) {
+        
+        if (nums == null || nums.length == 0) {
+            return new int[0];
+        }
+        
+        int len = nums.length;
+        int[] left = new int[len];
+        int[] right = new int[len];
+        
+        left[0] = 1;
+        for (int i = 1; i < left.length; i++) {
+            left[i] = left[i - 1] * nums[i - 1];
+        }
+        
+        right[len - 1] = 1;
+        for (int i = len - 2; i >= 0; i--) {
+            right[i] = right[i + 1] * nums[i + 1];
+        }
+        
+        int[] res = new int[len];
+        for (int i = 0; i < len; i++) {
+            res[i] = left[i] * right[i];
+        }
+        
+        return res;
+    }
+}
+```
+
 >credit to : http://algorithm.yuanbin.me/zh-cn/integer_array/product_of_array_exclude_itself.html
