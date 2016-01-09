@@ -40,6 +40,12 @@ Before 2015.2.1
 4. What is good OO design
 5. Design Vending machine
 6. TicTacToe
+7. Chess Game [1](http://amitcodes.com/2014/02/04/object-oriented-design-for-chess-game/) [2](http://stackoverflow.com/questions/4168002/object-oriented-design-for-a-chess-game)
+8. Design library, track records of books, CDs (cc150). 
+9. File system (cc150)
+10. Deck (cc150, or deck.java)
+11. Wallet
+12. Design Hashtable
 
 **Data Structure:**
 1. [Interface vs Abstract Class](http://www.programmerinterview.com/index.php/java-questions/interface-vs-abstract-class/)
