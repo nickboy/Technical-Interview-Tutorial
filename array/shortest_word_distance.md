@@ -21,7 +21,7 @@ You may assume that word1 does not equal to word2, and word1 and word2 are both 
 
 updated 2016.1.7
 
-較naive，但程式較複雜點。
+較naive，但程式較複雜點，為什麼找到了還要繼續判斷而不直接返回，是因為陣列中面能含有兩個以上相同的字串。
 
 ```java
 public class Solution {
@@ -41,6 +41,7 @@ public class Solution {
                 idxTwo = i;
             }
             
+            // 為什麼找到了還要繼續判斷而不直接返回，是因為陣列中面能含有兩個以上相同的字串
             if (idxOne != -1 && idxTwo != -1) {
                 minLength = Math.min(minLength, Math.abs(idxOne - idxTwo));
             }
