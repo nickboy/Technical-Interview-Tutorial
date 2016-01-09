@@ -24,6 +24,47 @@ Example
 
 解題思路：
 
+updated on 2016.1.9
+
+```java
+public class Solution {
+    public int myAtoi(String str) {
+        boolean isPositive = true;
+        int maxDiv10 = Integer.MAX_VALUE / 10;
+        int val = 0;
+        int i = 0;
+        
+        while (i < str.length() && str.charAt(i) == ' ') {
+            i++;
+        }
+        
+        if (i < str.length() && (str.charAt(i) == '+' || str.charAt(i) == '-')) {
+            if (str.charAt(i) == '-') {
+                isPositive = false;
+            }
+            i++;
+        }
+        
+        while (i < str.length() && Character.isDigit(str.charAt(i))) {
+            int digit = str.charAt(i) - '0';
+
+            if (val > maxDiv10 || val == maxDiv10 && digit >= 8) {
+                return isPositive ? Integer.MAX_VALUE : Integer.MIN_VALUE;
+            }
+            
+            val = val * 10 + digit;
+            i++;
+        }
+        
+        if (!isPositive) {
+            return -val;
+        } else {
+            return val;
+        }
+    }
+}
+```
+
 不知為什麼 Lintcode 把這題分到 hard，在leetcode是 easy。
 
 照著數字的特性寫即可，記得忽略前面的空白，與判斷是否有正負號來決定數字是正還是負的。
