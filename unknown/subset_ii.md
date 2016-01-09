@@ -57,3 +57,41 @@ public class Solution {
     }
 }
 ```
+
+**Bit Manipulation:**
+
+```java
+public class Solution {
+    public List<List<Integer>> subsetsWithDup(int[] nums) {
+        List<List<Integer>> res = new ArrayList<>();
+
+        if (nums == null || nums.length == 0) {
+            return res;   
+        }
+
+        Arrays.sort(nums);
+
+        int powerOfTwo = (int)Math.pow(2, nums.length);
+        for (int i = 0; i < powerOfTwo; i++) {
+            List<Integer> list = new ArrayList<>();
+            boolean isIllegal = false;
+            for (int j = 0; j < nums.length; j++) {
+                if (j > 0 && (nums[j] == nums[j - 1]) && ((i >> (j - 1)) & 1) == 0) {
+                    isIllegal = true;
+                    break;
+                } else {
+                    list.add(nums[j]);
+                }
+            }
+            if (isIllegal == false) {
+                res.add(list);
+            }
+            
+        }
+
+        return res;
+    }
+
+
+}
+```
