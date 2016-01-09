@@ -118,7 +118,7 @@
    * [Binary Tree Preorder Traversal](binary_tree/binary_tree_preorder_traversal.md)
    * [Binary Tree Vertical Order Traversal](binary_tree/binary_tree_vertical_order_traversal.md)
    * [Invert Binary Tree](binary_tree/invert_binary_tree.md)
-   * Find paths in a binary search tree summing to a target value
+   * Path Sum III
 * [Heap](heap.md)
    * [Heapify](heap/heapify.md)
    * [Data Stream Median](heap/data_stream_median.md)
