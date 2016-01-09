@@ -56,3 +56,32 @@ public class Solution {
     }
 }
 ```
+
+非遞迴：
+
+```java
+public class Solution {
+    public List<List<Integer>> subsets(int[] nums) {
+        List<List<Integer>> res = new ArrayList<>();
+        res.add(new ArrayList<Integer>());
+        if (nums == null || nums.length == 0) {
+            return res;   
+        }
+        
+        Arrays.sort(nums);
+        
+        for (int i = 0; i < nums.length; i++) {
+            int size = res.size();
+            for (int j = 0; j < size; j++) {
+                List<Integer> tempRes = new ArrayList<Integer>(res.get(j));
+                tempRes.add(nums[i]);
+                res.add(tempRes);
+            }
+        }
+        
+        return res;
+    }
+    
+    
+}
+```
