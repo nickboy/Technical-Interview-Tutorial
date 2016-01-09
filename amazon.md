@@ -2,7 +2,7 @@
 
 **Coding:**
 1. [Find paths in a binary search tree summing to a target value](binary_tree/path_sum_iii.md)
-2. mirror tree
+2. [Mirror tree](binary_tree/symmetric_tree.md)
 3. [Vertical sum of tree](binary_tree/binary_tree_vertical_order_traversal.md)
 
 ---
