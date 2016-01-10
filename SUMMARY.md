@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-   * Design
+   * [Design](design.md)
 * [Template](template.md)
    * [BST Successor Predecessor](bst_successor_predecessor.md)
 * [Knowledge](knowledge.md)
