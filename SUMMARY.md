@@ -6,7 +6,7 @@
    * [BST Successor Predecessor](bst_successor_predecessor.md)
 * [Knowledge](knowledge.md)
    * [Basic Concept](knowledge/basic_concept.md)
-   * Data Structure
+   * [Data Structure](knowledge/data_structure.md)
 * [Amazon](amazon.md)
 * [Trie](trie.md)
    * [Implement Trie](trie/implement_trie.md)
