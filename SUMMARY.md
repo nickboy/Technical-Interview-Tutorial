@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
    * Design
+   * Knowledge
 * [Template](template.md)
    * [BST Successor Predecessor](bst_successor_predecessor.md)
 * [Amazon](amazon.md)
