@@ -5,7 +5,7 @@
 * [Template](template.md)
    * [BST Successor Predecessor](bst_successor_predecessor.md)
 * [Knowledge](knowledge.md)
-   * Basic Concept
+   * [Basic Concept](knowledge/basic_concept.md)
 * [Amazon](amazon.md)
 * [Trie](trie.md)
    * [Implement Trie](trie/implement_trie.md)
