@@ -4,7 +4,6 @@
    * Design
 * [Template](template.md)
    * [BST Successor Predecessor](bst_successor_predecessor.md)
-* [Basic Concept](amazon/basic_concept.md)
 * [Knowledge](knowledge.md)
 * [Amazon](amazon.md)
 * [Trie](trie.md)
