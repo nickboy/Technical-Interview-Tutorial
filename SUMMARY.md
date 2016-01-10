@@ -8,6 +8,7 @@
    * [Basic Concept](knowledge/basic_concept.md)
    * [Data Structure](knowledge/data_structure.md)
    * [Design Pattern](knowledge/design_pattern.md)
+   * Java Knowledge
 * [Amazon](amazon.md)
 * [Trie](trie.md)
    * [Implement Trie](trie/implement_trie.md)
