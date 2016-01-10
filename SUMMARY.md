@@ -5,7 +5,7 @@
 * [Template](template.md)
    * [BST Successor Predecessor](bst_successor_predecessor.md)
 * [Amazon](amazon.md)
-   * Basic Concept
+   * [Basic Concept](amazon/basic_concept.md)
 * [Trie](trie.md)
    * [Implement Trie](trie/implement_trie.md)
    * [Add and Search Word - Data structure design](trie/add_and_search_word_-_data_structure_design.md)
