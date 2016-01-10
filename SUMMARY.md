@@ -2,9 +2,9 @@
 
 * [Introduction](README.md)
    * Design
-   * Knowledge
 * [Template](template.md)
    * [BST Successor Predecessor](bst_successor_predecessor.md)
+* Knowledge
 * [Amazon](amazon.md)
    * [Basic Concept](amazon/basic_concept.md)
 * [Trie](trie.md)
