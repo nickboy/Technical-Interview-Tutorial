@@ -13,6 +13,41 @@ Could you do it using only constant space complexity?
 
 解題思路：
 
+updated on 2016.1.10
+
+注意找切割點的寫法，其他就是不斷的二分去檢查。
+
+```java
+public class Solution {
+    public boolean verifyPreorder(int[] preorder) {
+        if (preorder == null || preorder.length < 2) {
+            return true;
+        }
+        
+        return helper(preorder, 0, preorder.length - 1, Integer.MIN_VALUE, Integer.MAX_VALUE);
+    }
+    
+    private boolean helper(int[] preorder, int start , int end, int min, int max) {
+        if (start > end) {
+            return true;
+        }
+        
+        int rootValue = preorder[start];
+        if (rootValue < min || rootValue > max) {
+            return false;
+        }
+        
+        int rightIndex = start;
+        while (rightIndex <= end && preorder[rightIndex] <= rootValue) {
+            rightIndex++;
+        }
+        
+        return helper(preorder, start + 1, rightIndex - 1, min, rootValue) &&
+                helper(preorder, rightIndex, end, rootValue, max);
+    }
+}
+```
+
 update on 2015.12.3
 
 遞迴解法，效率較低但程式碼較簡潔
