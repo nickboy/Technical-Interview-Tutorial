@@ -22,12 +22,15 @@ Contents:
 ## Java Keywords
 + Access modifiers
 
-  | modifier | access in same package | access in different package |
-  | -------- | ---------------------- | --------------------------- |
-  | private  |         no             |          no                 |
-  | public   |         yes            |         yes                 |
-  | default  |         yes            |          no                 |
-  | protected|         yes            |     only if extend class    |  
+ 
+
+
+| modifier | access in same package | access in different package |
+| -------- | ---------------------- | --------------------------- |
+| private  |         no             |          no                 |
+| public   |         yes            |         yes                 |
+| default  |         yes            |          no                 |
+| protected|         yes            |     only if extend class    |  
   
 + `final` keyword
   - can be assigned to variable, method, class, object
