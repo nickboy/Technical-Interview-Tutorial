@@ -9,7 +9,7 @@
    * [Data Structure](knowledge/data_structure.md)
    * [Design Pattern](knowledge/design_pattern.md)
    * [Java Knowledge](knowledge/java_knowledge.md)
-   * Sorting
+   * [Sorting](knowledge/sorting.md)
 * [Amazon](amazon.md)
 * [Trie](trie.md)
    * [Implement Trie](trie/implement_trie.md)
