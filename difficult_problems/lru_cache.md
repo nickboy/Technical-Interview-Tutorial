@@ -12,6 +12,43 @@ Design and implement a data structure for Least Recently Used (LRU) cache. It sh
 
 解題思路：
 
+updated on 2016.1.10
+
+java有個新的類叫LinkedHashMap可以使用。
+
+```java
+import java.util.*;
+
+public class LRUCache {
+    LinkedHashMap<Integer,Integer> map;
+    int capacity;
+
+    public LRUCache(int capacity) {
+        this.capacity = capacity;
+        map = new LinkedHashMap<Integer,Integer>(capacity + 1);
+    }
+
+    public int get(int key) {
+        Integer val = map.get(key);
+        if(val == null) {
+            return -1;
+        } else {
+            map.remove(key); // reorder
+            map.put(key, val);
+            return val.intValue();
+        }
+    }
+
+    public void set(int key, int value) {
+        map.remove(key); // reorder
+        map.put(key, value);
+        if(map.size() > capacity) {
+            map.remove(map.entrySet().iterator().next().getKey());
+        }
+    }
+}
+```
+
 首先要知道LRU(Least Recently Used) Cache是什麼，由於cache是memory的子集，cache會存放最近使用的page，當cache滿的時候需要讀入新的page時，他會將最不常使用的page移出cache才有空間讀入新的page。
 
 我們可以使用一個雙向鍊表(Double Linked List)來幫助我們，因為我們常常要從尾部把頁面移除，從前面加入新頁面。
