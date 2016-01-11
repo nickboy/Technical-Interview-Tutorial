@@ -14,7 +14,36 @@ Design and implement a data structure for Least Recently Used (LRU) cache. It sh
 
 updated on 2016.1.10
 
-java有個新的類叫LinkedHashMap可以使用。
+java有個新的類叫LinkedHashMap可以使用，另外還可以override他原本的removeEldestElement方法，程式碼如下：
+
+```java
+import java.util.*;
+
+public class LRUCache {
+    private int capacity;
+    private Map<Integer, Integer> map;
+
+    public LRUCache(int c) {
+      this.capacity = c;
+      this.map = new LinkedHashMap<Integer, Integer>(capacity, 0.75f, true) {
+        protected boolean removeEldestEntry(Map.Entry<Integer, Integer> eldest) {
+            return size() > capacity;
+        }
+      };
+    }
+
+    public int get(int key) {
+        if (!map.containsKey(key)) {
+            return -1;
+        }
+        return map.get(key);
+    }
+
+    public void set(int key, int value) {
+        map.put(key, value);
+    }
+}
+```
 
 ```java
 import java.util.*;
