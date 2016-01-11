@@ -5,6 +5,7 @@
    * [BST Successor Predecessor](bst_successor_predecessor.md)
 * [Design](design.md)
    * [Amazon](design/amazon.md)
+   * Deck
 * [Knowledge](knowledge.md)
    * [Basic Concept](knowledge/basic_concept.md)
    * [Data Structure](knowledge/data_structure.md)
