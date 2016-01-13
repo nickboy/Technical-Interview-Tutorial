@@ -7,6 +7,8 @@ updated on 2016.1.13
 
 下面的太長了，我們使用不斷的作binary search來作，找下限，就是不斷的把right往左推，找上限就是把left往右推，其程式碼如下：
 
+>此法複雜度較複雜，如果target有n個重複的數，我們需要作n+1次的binary search。
+
 ```java
 public int[] searchRange(int[] A, int target) {
     int index = binarySearch(A, 0, A.length-1, target);
