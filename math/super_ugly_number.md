@@ -40,12 +40,10 @@ public class Solution {
             if (n == 0) {
                 return cur;
             }
-            if (n > q.size()) {
-                for (int i = 0; i < primes.length; i++) {
-                    q.offer(cur * primes[i]);
-                }
+
+            for (int i = 0; i < primes.length; i++) {
+                q.offer(cur * primes[i]);
             }
-            
         }
         
         return 0;
