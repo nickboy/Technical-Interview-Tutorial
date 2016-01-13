@@ -16,6 +16,44 @@ Note:
 
 解題思路：
 
+updated on 2016.1.12
+
+維護一個priorityQueue，但queue會爆掉。
+
+
+```java
+public class Solution {
+    public int nthSuperUglyNumber(int n, int[] primes) {
+        if (n == 0 || primes == null || primes.length == 0) {
+            return 0;
+        }
+        
+        PriorityQueue<Integer> q = new PriorityQueue<Integer>();
+        q.offer(1);
+        for (int i = 0; i < primes.length; i++) {
+            q.offer(primes[i]);
+        }
+        
+        while (!q.isEmpty()) {
+            int cur = q.poll();
+            n--;
+            if (n == 0) {
+                return cur;
+            }
+            if (n > q.size()) {
+                for (int i = 0; i < primes.length; i++) {
+                    q.offer(cur * primes[i]);
+                }
+            }
+            
+        }
+        
+        return 0;
+    }
+}
+
+```
+
 和原本的ugly number類似
 
 ```java
