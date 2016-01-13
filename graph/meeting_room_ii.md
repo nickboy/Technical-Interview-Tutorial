@@ -76,6 +76,53 @@ public class Solution {
 }
 ```
 
+updated on 2016.1.12
+
+```java
+/**
+ * Definition for an interval.
+ * public class Interval {
+ *     int start;
+ *     int end;
+ *     Interval() { start = 0; end = 0; }
+ *     Interval(int s, int e) { start = s; end = e; }
+ * }
+ */
+public class Solution {
+    
+    public class IntervalComparator implements Comparator<Interval> {
+        public int compare(Interval one, Interval two) {
+            if (one.start != two.start) {
+                return one.start - two.start;
+            } else {
+                return two.end - one.end;
+            }
+        }
+    }
+    
+    
+    public int minMeetingRooms(Interval[] intervals) {
+        if (intervals == null || intervals.length == 0) {
+            return 0;
+        }
+        
+        Arrays.sort(intervals, new IntervalComparator());
+        PriorityQueue<Integer> q = new PriorityQueue<Integer>();
+        
+        q.offer(intervals[0].end);
+        for (int i = 1; i < intervals.length; i++) {
+            int val = q.peek();
+            Interval in = intervals[i];
+            if (val <= in.start) {
+                q.poll();
+            }
+            q.offer(in.end);
+        }
+        return q.size();
+    }
+}
+```
+
 ---
 ###Reference
 1. http://blog.csdn.net/pointbreak1/article/details/48840671
