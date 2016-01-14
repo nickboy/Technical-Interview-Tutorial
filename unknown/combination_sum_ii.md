@@ -47,6 +47,7 @@ public class Solution {
             tempRes.add(candidates[i]);
             helper(candidates, tempRes, target - candidates[i], i + 1);
             tempRes.remove(tempRes.size() - 1);
+            prev = candidates[i];
         }
     }
 }
