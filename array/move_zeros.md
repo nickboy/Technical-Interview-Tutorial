@@ -74,3 +74,6 @@ public class Solution {
     }
 }
 ```
+---
+###Reference
+1. https://leetcode.com/discuss/70169/1ms-java-solution
