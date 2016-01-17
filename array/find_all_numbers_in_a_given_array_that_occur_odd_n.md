@@ -22,6 +22,6 @@
                         }
                 }. 1point3acres.com/bbs
                 
-                return result;. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+                return result;
         }
 ```
