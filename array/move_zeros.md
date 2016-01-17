@@ -32,6 +32,22 @@ public void moveZeroes(int[] nums) {
 }
 ```
 
+
+```java
+public void moveZeroes(int[] nums) {
+    int j = 0; // The index of the leftmost zero in nums.
+    for(int i = 0; i < nums.length; i++){
+        if(nums[i] != 0){
+            if(i > j){ // i can only be larger than or equal to j.
+                nums[j] = nums[i];
+                nums[i] = 0;
+            }
+            j++;
+        }
+    }
+}
+```
+
 使用兩根指針，一個不斷指向陣列中最靠前的0元素，另一根從該指針的後面去找一個元零元素，最後再將兩根指針元素交換即可，其程式碼如下：
 
 ```java
