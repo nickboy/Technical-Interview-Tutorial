@@ -15,6 +15,23 @@ Minimize the total number of operations.
 
 解題思路：
 
+updated on 2016.1.17
+
+```java
+public void moveZeroes(int[] nums) {
+
+    int j = 0;
+    for(int i = 0; i < nums.length; i++) {
+        if(nums[i] != 0) {
+            int temp = nums[j];
+            nums[j] = nums[i];
+            nums[i] = temp;
+            j++;
+        }
+    }
+}
+```
+
 使用兩根指針，一個不斷指向陣列中最靠前的0元素，另一根從該指針的後面去找一個元零元素，最後再將兩根指針元素交換即可，其程式碼如下：
 
 ```java
