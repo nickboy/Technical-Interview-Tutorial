@@ -18,7 +18,7 @@
                                 count++;
                         }
                         if (count % 2 == 1) {
-                                result.add(val);. From 1point 3acres bbs
+                                result.add(val);
                         }
                 }
                 
