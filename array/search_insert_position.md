@@ -20,7 +20,31 @@ Example
 Challenge
 O(log(n)) time
 
-題意：
+解題思路：
+
+updated 2016.1.17
+
+```java
+public class Solution {
+    public int searchInsert(int[] nums, int target) {
+        int left = 0;
+        int right = nums.length - 1;
+        
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (nums[mid] == target) {
+                return mid;
+            } else if (nums[mid] > target) {
+                right = mid - 1;
+            } else {
+                left = mid + 1;
+            }
+        }
+        
+        return left;
+    }
+}
+```
 
 暴力法掃一次，找到比target大的第一個數的位置，花 O(N)，程式碼如下：
 
