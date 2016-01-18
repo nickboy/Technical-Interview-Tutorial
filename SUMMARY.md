@@ -6,7 +6,7 @@
 * [Design](design.md)
    * [Amazon](design/amazon.md)
    * [Deck](design/deck.md)
-   * Jukebox
+   * [Jukebox](design/jukebox.md)
 * [Knowledge](knowledge.md)
    * [Basic Concept](knowledge/basic_concept.md)
    * [Data Structure](knowledge/data_structure.md)
