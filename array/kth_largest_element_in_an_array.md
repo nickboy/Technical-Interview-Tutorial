@@ -16,6 +16,8 @@ You may assume k is always valid, 1 ≦ k ≦ array's length.
 
 解題思路：
 
+updated on 2016.1.18
+
 用heap來作更簡單，但得看面試官給不給用。
 
 ```java
