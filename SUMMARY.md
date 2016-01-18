@@ -235,7 +235,7 @@
    * [Find Top K Elements in Array](array/find_top_k_elements_in_array.md)
    * [Range Sum Query - Immutable](array/range_sum_query_-_immutable.md)
    * [Find all numbers in a given array that occur odd number of times](array/find_all_numbers_in_a_given_array_that_occur_odd_n.md)
-   * Find Minimum in Rotated Sorted Array II
+   * [Find Minimum in Rotated Sorted Array II](array/find_minimum_in_rotated_sorted_array_ii.md)
 * [String](string.md)
    * [Anagrams](string/anagrams.md)
    * [Longest Substring Without Repeating Characters](string/longest_substring_without_repeating_characters.md)
