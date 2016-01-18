@@ -14,3 +14,8 @@ Ans :
     9. browser decodes response (e.g. if it's gzipped)
     10. browser determines what to do with response (e.g. is it a HTML page, is it an image, is it a sound clip?)
     11. browser renders response, or offers a download dialog for unrecognized types
+    
+    
+---
+###Reference
+1. http://stackoverflow.com/questions/2092527/what-happens-when-you-type-in-a-url-in-browser
