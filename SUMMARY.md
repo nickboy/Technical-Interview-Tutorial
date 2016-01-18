@@ -7,7 +7,7 @@
    * [Amazon](design/amazon.md)
    * [Deck](design/deck.md)
    * [Jukebox](design/jukebox.md)
-   * ParkingLot
+   * [ParkingLot](design/parkinglot.md)
 * [Knowledge](knowledge.md)
    * [Basic Concept](knowledge/basic_concept.md)
    * [Data Structure](knowledge/data_structure.md)
