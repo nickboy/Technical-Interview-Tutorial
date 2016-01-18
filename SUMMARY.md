@@ -15,7 +15,7 @@
    * [Design Pattern](knowledge/design_pattern.md)
    * [Java Knowledge](knowledge/java_knowledge.md)
    * [Sorting](knowledge/sorting.md)
-   * Network
+   * [Network](knowledge/network.md)
 * [Amazon](amazon.md)
 * [Trie](trie.md)
    * [Implement Trie](trie/implement_trie.md)
