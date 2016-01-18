@@ -8,6 +8,7 @@
    * [Deck](design/deck.md)
    * [Jukebox](design/jukebox.md)
    * [ParkingLot](design/parkinglot.md)
+   * OnlineReaderSystem
 * [Knowledge](knowledge.md)
    * [Basic Concept](knowledge/basic_concept.md)
    * [Data Structure](knowledge/data_structure.md)
