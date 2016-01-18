@@ -75,6 +75,24 @@ public class User {
 		this.name = name;
 	}
 
-	
+	private long ID;
+	public long getID() {
+		return ID;
+	}
+
+	public void setID(long ID) {
+		this.ID = ID;
+	}
+
+	public User(long ID, String name) {
+		this.name = name;
+		this.ID = ID;
+	}
+
+	public User getUser() {
+		return this;
+	}
+
+	public static User addUser(String name, long iD){}
 }
 ```
