@@ -10,7 +10,7 @@
    * [ParkingLot](design/parkinglot.md)
    * [OnlineReaderSystem](design/onlinereadersystem.md)
    * [FileSystem](design/filesystem.md)
-   * HashFunction
+   * [HashFunction](design/hashfunction.md)
 * [Knowledge](knowledge.md)
    * [Basic Concept](knowledge/basic_concept.md)
    * [Data Structure](knowledge/data_structure.md)
