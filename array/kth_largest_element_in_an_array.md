@@ -16,6 +16,27 @@ You may assume k is always valid, 1 ≦ k ≦ array's length.
 
 解題思路：
 
+用heap來作更簡單，但得看面試官給不給用。
+
+```java
+public class Solution {
+    public int findKthLargest(int[] nums, int k) {
+        PriorityQueue<Integer> res = new PriorityQueue<Integer>();
+        
+        for (int i = 0; i < nums.length; i++) {
+            if (res.size() < k) {
+                res.offer(nums[i]);
+            } else if (res.peek() < nums[i]) {
+                res.poll();
+                res.offer(nums[i]);
+            }
+        }
+        
+        return res.poll();
+    }
+}
+```
+
 使用 quick select來達到 O(N)的時間複雜度，不斷的用pivot把陣列切兩半，其程式碼如下：
 
 ```java
