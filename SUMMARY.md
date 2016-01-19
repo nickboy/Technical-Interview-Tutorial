@@ -11,6 +11,7 @@
    * [OnlineReaderSystem](design/onlinereadersystem.md)
    * [FileSystem](design/filesystem.md)
    * [HashFunction](design/hashfunction.md)
+   * Deck2
 * [Knowledge](knowledge.md)
    * [Basic Concept](knowledge/basic_concept.md)
    * [Data Structure](knowledge/data_structure.md)
