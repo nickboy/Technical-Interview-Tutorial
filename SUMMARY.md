@@ -6,7 +6,7 @@
 * [Design](design.md)
    * [Amazon](design/amazon.md)
    * [Deck](design/deck.md)
-   * Deck2
+   * [Deck2](design/deck2.md)
    * [Jukebox](design/jukebox.md)
    * [ParkingLot](design/parkinglot.md)
    * [OnlineReaderSystem](design/onlinereadersystem.md)
