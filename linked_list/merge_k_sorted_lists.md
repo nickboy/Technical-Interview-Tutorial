@@ -67,3 +67,44 @@ public class  DPSolution {
 ---
 
 2. Heap 法：
+
+
+```java
+public ListNode mergeKLists(ArrayList<ListNode> lists) {
+    PriorityQueue<ListNode> heap = new PriorityQueue<ListNode>(10,new Comparator<ListNode>(){
+            @Override
+            public int compare(ListNode n1, ListNode n2)
+            {
+                return n1.val-n2.val;
+            }
+        });
+    for(int i=0;i<lists.size();i++)
+    {
+        ListNode node = lists.get(i); 
+        if(node!=null)
+        {
+            heap.offer(node);
+        }
+    }
+    ListNode head = null;
+    ListNode pre = head;
+    while(heap.size()>0)
+    {
+        ListNode cur = heap.poll();
+        if(head == null)
+        {
+            head = cur;
+            pre = head;
+        }
+        else
+        {
+            pre.next = cur;
+        }
+        pre = cur;
+        if(cur.next!=null)
+            heap.offer(cur.next);
+    }
+    return head;
+}
+```
+
