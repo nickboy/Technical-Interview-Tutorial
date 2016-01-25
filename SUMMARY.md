@@ -329,7 +329,6 @@
    * [Flip Game II](dynamic_programming/flip_game_ii.md)
    * [Best Time to Buy and Sell Stock with Cooldown](dynamic_programming/best_time_to_buy_and_sell_stock_with_cooldown.md)
    * [Coin Change](dynamic_programming/coin_change.md)
-   * Coin Change
 * [Segment Tree](segment_tree.md)
    * [Segment Tree Query](segment_tree/segment_tree_query.md)
    * [Segment Tree Query II](segment_tree/segment_tree_query_ii.md)
