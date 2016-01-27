@@ -23,6 +23,40 @@ isMatch("aab", "c*a*b") → false
 
 解題思路：
 
+updated 2016.1.27
+
+```java
+public class Solution {
+    public boolean isMatch(String s, String p) {
+        
+        int sLen = s.length();
+        int pLen = p.length();
+        boolean[][] dp = new boolean[sLen + 1][pLen + 1];
+        dp[0][0] = true;
+        
+        for (int i = 1; i <= sLen; i++) {
+            dp[i][0] = false;
+        }
+        
+        for (int i = 1; i <= pLen; i++) {
+            dp[0][i] = dp[0][i - 1] && p.charAt(i - 1) == '*';
+        }
+        
+        for (int i = 1; i <= sLen; i++) {
+            for (int j = 1; j <= pLen; j++) {
+                if (p.charAt(j - 1) != '*') {
+                    dp[i][j] = dp[i - 1][j - 1] && (s.charAt(i - 1) == p.charAt(j - 1) || p.charAt(j - 1) == '?');
+                } else {
+                    dp[i][j] = dp[i - 1][j] || dp[i][j - 1];
+                }
+            }
+        }
+        
+        return dp[sLen][pLen];
+    }
+}
+```
+
 DP 解法，在Leetcode上無法通過最後一個case，會超時：
 
 網友[今際の國の呵呵君](http://hehejun.blogspot.com/2014/11/leetcodewildcard-matching.html) 提供了以下思路：
