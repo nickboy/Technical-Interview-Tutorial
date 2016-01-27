@@ -16,6 +16,34 @@ Return ```100```
 
 解題思路：
 
+updated 2016.1.27
+
+```java
+public class Solution {
+    public String addBinary(String a, String b) {
+        if (a == null || b == null) {
+            return (a == null) ? b : a;
+        }
+        
+        int carry = 0;
+        StringBuilder sb = new StringBuilder();
+        
+        for (int i = a.length() - 1, j = b.length() - 1; i >= 0 || j >= 0 || carry > 0; i--, j --) {
+            int sum = 0;
+            sum += (i >= 0) ? a.charAt(i) - '0' : 0;
+            sum += (j >= 0) ? b.charAt(j) - '0' : 0;
+            sum += carry;
+            
+            carry = sum / 2;
+            sum %= 2;
+            sb.append(sum);
+        }
+        
+        return sb.reverse().toString();
+    }
+}
+```
+
 從兩個字串的最右邊開始 (即字串的lenght - 1)，一一往左推進，直到其中一方到底了，接著再把還沒到底的字串一一與carry相加再繼續往左推進，直到該字串也到底了，最後看carry是否為1，若是則再把carry附到最前。
 
 程式碼如下，有點長，日後有改良版再附上：
