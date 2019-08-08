@@ -35,3 +35,31 @@ public String longestCommonPrefix(String[] strs) {
     return res;
 }
 ```
+
+
+找到一個更簡潔的方法，拿第一個字串當作prefix，不斷的去與剩下的字串比較，只要```strs[idx].indexOf(prefix) != 0```(代表找不到或是index不在啟始位置)，則不斷縮短prefix。
+
+```java
+class Solution {
+    public String longestCommonPrefix(String[] strs) {
+        if (strs == null || strs.length == 0) {
+            return "";
+        }
+        
+        String prefix = strs[0];
+        int idx = 1;
+        
+        while (idx < strs.length) {
+            
+            while (strs[idx].indexOf(prefix) != 0) {
+                prefix = prefix.substring(0, prefix.length() - 1);
+            }
+            idx++;
+        }
+        
+        return prefix;
+    }
+}
+```
+
+來源：[Medium link](https://medium.com/@desolution/從leetcode學演算法-2-d4189f53018e)
