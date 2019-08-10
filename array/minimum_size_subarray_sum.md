@@ -49,7 +49,37 @@ public int minimumSize(int[] nums, int s) {
 
 "這個解法要用到二分查找法，思路是，我們建立一個比原數組長一位的sums數組，其中sums[i]表示nums數組中[0, i - 1]的和，然後我們對於sums中每一個值sums[i]，用二分查找法找到子數組的右邊界位置，使該子數組之和大於sums[i] + s，然後我們更新最短長度的距離即可。"
 
+Update [2019.8.10]
 
+找到另一種方法較直觀，是先不斷移動右指針，而在tempSum大於S時才不斷調整左指針。
+
+註：Leetcode現在更新為0為invalid result。
+
+```java
+class Solution {
+    public int minSubArrayLen(int s, int[] nums) {
+
+        if (nums == null || nums.length == 0) {
+            return 0;     
+        }
+        
+        int minLength = Integer.MAX_VALUE;
+        int end = 0;
+        int tempSum = 0;
+        
+        for (int l = 0, r = 0; r < nums.length; r++ ) {
+            tempSum += nums[r];
+            
+            while (tempSum >= s) {
+                minLength = Math.min(minLength, r - l + 1);
+                tempSum -= nums[l++];
+            }
+        }
+        
+        return minLength == Integer.MAX_VALUE ? 0 : minLength;
+    }
+}
+```
 
 
 ---
