@@ -6,21 +6,21 @@
 
 由於不知道陣列的大小，我們可以使用類似Expernential backoff方法，從陣列的第一個開始找，如果還是比target小的話，往第二個找，接著第四個，每次index乘以2，當比對的值比target大時，開始使用binary search來搜。
 
-
+由於每次index是以2的倍數移動，因此可以確定的是當找到index時，前半段的值都比target小，所以我們可以指定start= index / 2，來當binary search的啟點。
 
 ```java
 class Solution {
     public int search(ArrayReader reader, int target) {
-        
+
         int count = 1;
-        
+
         while (reader.get(count) < target) {
             count = count * 2;
         }
         
         int start = count / 2;
         int end = count;
-        
+
         while ( start + 1 < end) {
             int mid = start + (end - start) / 2;
             if (reader.get(mid) < target) {
@@ -29,19 +29,21 @@ class Solution {
                 end = mid;
             } 
         }
-        
+
         if (reader.get(start) == target) {
             return start;
         }
-        
+
         if (reader.get(end) == target) {
             return end; 
         }
-        
+
         return -1;
     }
 }
 ```
+
+#### 時間複雜度：
 
 
 
