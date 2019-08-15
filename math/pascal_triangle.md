@@ -21,6 +21,8 @@ Return
 
 解題思路：
 
+保持一個pre list，每次在pre list的第一個位置加1，再接著修改中間的值，最後加回result list。
+
 ```java
 public class Solution {
     public List<List<Integer>> generate(int numRows) {
@@ -67,8 +69,6 @@ public class Solution {
 
 }
 ```
-
- 
 
 ---
 
