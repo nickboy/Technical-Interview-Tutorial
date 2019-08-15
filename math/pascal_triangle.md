@@ -6,7 +6,7 @@
 
 Given numRows, generate the first numRows of Pascal's triangle.
 
-For example, given numRows = 5,
+For example, given numRows = 5,  
 Return
 
 ```
@@ -41,11 +41,41 @@ public class Solution {
             pre = cur;
             res.add(cur);
         }
-        
+
         return res;
     }
 }
 ```
+
+More elegant solution \[Updated on 2019.8.13\]
+
+```java
+public class Solution {
+    public List<List<Integer>> generate(int numRows)
+    {
+        List<List<Integer>> allrows = new ArrayList<List<Integer>>();
+        ArrayList<Integer> row = new ArrayList<Integer>();
+        for(int i=0;i<numRows;i++)
+        {
+            row.add(0, 1);
+            for(int j = 1; j < row.size() - 1; j++)
+                row.set(j, row.get(j) + row.get(j + 1));
+            allrows.add(new ArrayList<Integer>(row));
+        }
+        return allrows;
+    }
+
+}
+```
+
+ 
+
 ---
-###Reference
-1. http://blog.csdn.net/linhuanmars/article/details/23311527
+
+### Reference
+
+1. [http://blog.csdn.net/linhuanmars/article/details/23311527](http://blog.csdn.net/linhuanmars/article/details/23311527)
+2. [https://leetcode.com/problems/pascals-triangle/discuss/38141/My-concise-solution-in-Java](https://leetcode.com/problems/pascals-triangle/discuss/38141/My-concise-solution-in-Java)
+
+
+
