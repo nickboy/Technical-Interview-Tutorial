@@ -292,6 +292,7 @@
   * [Maximum Product of Word Lengths](string/maximum_product_of_word_lengths.md)
   * [Remove Duplicate Letters](string/remove_duplicate_letters.md)
   * [String Shift](string/string_shift.md)
+  * [Remove K Digits](string/remove-k-digits.md)
 * [Dynamic Programming](dynamic_programming.md)
   * [Jump Game](dynamic_programming/jump_game.md)
   * [Jump Game II](dynamic_programming/jump_game_ii.md)
