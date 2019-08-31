@@ -12,10 +12,12 @@ Updated 2019.9.1
 
 More elegant way on Element Programming Interview.
 
+> The beauty of this solution is that it reduces the reverse problem to the most fundamental delete and insert problem: in the case of`1 2 3 4`, for`t = 2..4`, each iteration you pick`t`out, and then insert it to the head of the window \(`p.next`\).
+
 ```java
 class Solution {
     public ListNode reverseBetween(ListNode head, int m, int n) {
-        
+
         ListNode dummy = new ListNode(0);
         dummy.next = head;
         ListNode prev = dummy;
@@ -23,22 +25,20 @@ class Solution {
         while (pos++ < m) {
             prev = prev.next;
         }
-        
+
         ListNode cur = prev.next;
-        
+
         while (m++ < n) {
             ListNode next = cur.next;
             cur.next = next.next;
             next.next = prev.next;
             prev.next = next;
         }
-        
+
         return dummy.next;
     }
 }
 ```
-
-
 
 updated 2015.12.25
 
@@ -154,6 +154,7 @@ public class Solution {
 ### Reference
 
 1. [http://www.jiuzhang.com/solutions/reverse-linked-list-ii/](http://www.jiuzhang.com/solutions/reverse-linked-list-ii/)
+2. [https://leetcode.com/problems/reverse-linked-list-ii/discuss/30666/Simple-Java-solution-with-clear-explanation](https://leetcode.com/problems/reverse-linked-list-ii/discuss/30666/Simple-Java-solution-with-clear-explanation)
 
 
 
