@@ -6,15 +6,14 @@
 
 Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
 
-For example,
-"A man, a plan, a canal: Panama" is a palindrome.
+For example,  
+"A man, a plan, a canal: Panama" is a palindrome.  
 "race a car" is not a palindrome.
 
-Note:
+Note:  
 Have you consider that the string might be empty? This is a good question to ask during an interview.
 
 For the purpose of this problem, we define empty string as valid palindrome.
-
 
 解題思路：
 
@@ -26,14 +25,14 @@ public class Solution {
         if (s == null || s.length() < 2) {
             return true;
         }
-        
+
         int left = 0;
         int right = s.length() - 1;
         while (left <= right) {
-            while (left <= right && !Character.isLetter(s.charAt(left)) && !Character.isDigit(s.charAt(left))) {
+            while (left <= right && !Character.isLetterOrDigit(s.charAt(left))) {
                 left++;
             }
-            while (left <= right && !Character.isLetter(s.charAt(right)) && !Character.isDigit(s.charAt(right))) {
+            while (left <= right && !Character.isLetterOrDigit(s.charAt(right))) {
                 right--;
             }
             if (left <= right) {
@@ -45,9 +44,12 @@ public class Solution {
                 left++;
                 right--;
             }
-            
+
         }
         return true;
     }
 }
 ```
+
+
+
