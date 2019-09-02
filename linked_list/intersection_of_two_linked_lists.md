@@ -27,7 +27,7 @@ Your code should preferably run in O\(n\) time and use only O\(1\) memory.
 
 解題思路：
 
-簡單方法是使用一個HashSet來存放經過的所有node，如果遇到走過的node，則是internsection，但此法無法通過兩個list各只有一個元素。
+簡單方法是使用一個HashSet來存放經過的所有node，如果遇到走過的node，則是internsection，但此法會需要o\(n\)的空間複雜度。
 
 ```java
 public class Solution {
@@ -35,20 +35,8 @@ public class Solution {
         
         Set<ListNode> set = new HashSet<>();
         
-        while (headA != null && headB != null) {
-            if (set.contains(headA) || set.contains(headB)) {
-                return set.contains(headA) ? headA : headB;
-            }
-            set.add(headA);
-            set.add(headB);
-            headA = headA.next;
-            headB = headB.next;
-        }
-        
         while (headA != null) {
-            if (set.contains(headA)) {
-                return headA;
-            }
+            set.add(headA);
             headA = headA.next;
         }
         
@@ -63,8 +51,6 @@ public class Solution {
     }
 }
 ```
-
-
 
 先找出兩條 list 的長度，接著長的那條先走lenA - lenB步，接著較短的那條也跟著一起走直到走到底或是找到交插口。
 
