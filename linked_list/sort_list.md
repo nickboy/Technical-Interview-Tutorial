@@ -1,16 +1,17 @@
 # Sort List
+
 [Lintcode](http://www.lintcode.com/en/problem/sort-list/)
 
 [Leetcode](https://leetcode.com/problems/sort-list/)
 
 題意：
 
-Sort a linked list in O(n log n) time using constant space complexity.
-
+Sort a linked list in O\(n log n\) time using constant space complexity.
 
 解題思路：
 
 不斷的把list切兩半用merge sort，記住要先處理後半段再把中間斷掉，再處理前半段，否則會無限循環。
+
 ```java
 public ListNode sortList(ListNode head) {
 
@@ -27,6 +28,8 @@ public ListNode sortList(ListNode head) {
     }
 
     public ListNode findMiddle(ListNode head) {
+        // Start from head.next matters, otherwise we will have stack over flow 
+        // when there is only two nodes in the list since it will always have a list with two nodes.
         ListNode slow = head, fast = head.next;
         while ( fast != null && fast.next != null ) {
             slow = slow.next;
@@ -57,3 +60,6 @@ public ListNode sortList(ListNode head) {
         return dummy.next;
     }
 ```
+
+
+
