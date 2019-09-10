@@ -16,17 +16,17 @@ public class Solution {
      * @param grid a boolean 2D matrix
      * @return an integer
      */
-     
+
     public int numIslands(boolean[][] grid) {
-        
+
         if (grid == null || grid.length == 0) {
             return 0;
         }
-        
+
         int m = grid.length;
         int n = grid[0].length;
         int count = 0;
-        
+
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 if (grid[i][j] == true) {
@@ -35,17 +35,17 @@ public class Solution {
                 }
             }
         }
-        
+
         return count;
-        
+
     }
-    
+
     private void dfsMark(boolean[][] grid, int row, int col, int rows, int cols) {
         // 方向矩陣，用來幫助我們探測當前節點的上下左右節點
         int[][] directions = new int[][] { {-1, 0}, {1, 0}, {0, -1}, {0, 1} };
         // 因該點已走過，直接設為false以防下次再經過
         grid[row][col] = false;
-        
+
         for (int i = 0; i < directions.length; i++) {
             int newRow = row + directions[i][0];
             int newCol = col + directions[i][1];
@@ -58,10 +58,9 @@ public class Solution {
         }
     }
 }
-
 ```
 
->Time Complexity：O($$N^{2}$$)
+> Time Complexity：O\($$N^{2}$$\)
 
 ---
 
@@ -70,15 +69,15 @@ public int numIslands(boolean[][] grid) {
     if ( grid == null || grid.length == 0 || grid[0].length == 0 ) {
         return 0;
     }
-    
+
     int[] dx = {1,0,-1,0};
     int[] dy = {0,-1,0,1};
     int m = grid.length;
     int n = grid[0].length;
-    
+
     Map<Integer, Integer> map = new HashMap<Integer, Integer>();
     int count = 0;
-    
+
     for ( int i = 0 ; i < m ; i++ ) {
         for ( int j = 0 ; j < n ; j++ ) {
             if ( grid[i][j] && !map.containsKey(j*m+i) ) {
@@ -104,3 +103,6 @@ public int numIslands(boolean[][] grid) {
     return count;
 }
 ```
+
+
+

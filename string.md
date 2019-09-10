@@ -10,7 +10,7 @@
 
 #### 解法：
 
-##### \[排序\] 
+##### \[排序\]
 
 ###### 使用一個Map&lt;String, Integer&gt; map 來紀錄各個字串出現的次數，接著再靠出現的次數把key entry排列，最後輸出K個字串，此法最簡單，但是需要 $$O(NlogN)$$時間與 $$O(N)$$的空間複雜度。
 
@@ -46,12 +46,12 @@ class Solution {
         if (words == null || words.length == 0 || k == 0) {
             return result;
         }
-        
+
         Map<String, Integer> map = new HashMap<>();
         for (String word : words) {
             map.put(word, map.getOrDefault(word, 0) + 1);
         }
-        
+
         PriorityQueue<String> queue = new PriorityQueue<>(
             (w1, w2) -> {
                 if (map.get(w1) == map.get(w2)) {
@@ -61,23 +61,23 @@ class Solution {
                 }
             }
         );
-        
+
         for (String key : map.keySet()) {
             queue.offer(key);
             if (queue.size() > k) {
                 queue.poll();
             }
         }
-        
+
         while (!queue.isEmpty()) {
             result.add(queue.poll());
         }
-        
+
         Collections.reverse(result);
         return result;
-        
+
     }
-}  
+}
 ```
 
 
