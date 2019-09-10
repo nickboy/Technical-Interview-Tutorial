@@ -295,6 +295,7 @@
   * [String Shift](string/string_shift.md)
   * [Remove K Digits](string/remove-k-digits.md)
   * [Valid Palindrome II](string/valid-palindrome-ii.md)
+  * Top K Frequent Words
 * [Dynamic Programming](dynamic_programming.md)
   * [Jump Game](dynamic_programming/jump_game.md)
   * [Jump Game II](dynamic_programming/jump_game_ii.md)
