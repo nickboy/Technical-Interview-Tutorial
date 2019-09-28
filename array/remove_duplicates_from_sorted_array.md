@@ -1,8 +1,31 @@
 # Remove Duplicates from Sorted Array I
+
 [原題網址](http://www.lintcode.com/en/problem/remove-duplicates-from-sorted-array/)
 
-最暴力的解法就是新建一個array，每個值只加一次，但是這需要花 O(n) 的空間複雜度，因此有一個 in space 的解法是利用兩個指針 (pos 與 i)， pos 負責遍歷整個 array ， i 負責維護 unique element 的最後一個位置，如果遇到與前一個相同的 element 則直接移動 pos ，否則將該 pos 的值 assign 給 i 的位置。
+最暴力的解法就是新建一個array，每個值只加一次，但是這需要花 O\(n\) 的空間複雜度，因此有一個 in space 的解法是利用兩個指針 \(pos 與 i\)， pos 負責遍歷整個 array ， i 負責維護 unique element 的最後一個位置，如果遇到與前一個相同的 element 則直接移動 pos ，否則將該 pos 的值 assign 給 i 的位置。
 
+Updated on 2019.9.25
+
+此法可以套模版，假設最多可重覆m次，則**pos**與**i**啟始位置為**m**，且每次檢查 **nums\[pos - m\] != nums\[i\]**
+
+```java
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        if (nums == null || nums.length < 1) {
+            return nums.length;
+        }
+        
+        int i;
+        int j;
+        for (i = m, j = m; i < nums.length; i++) {
+            if (nums[j - m] != nums[i]) {
+                nums[j++] = nums[i];
+            }
+        }
+        return j;
+    }
+}
+```
 
 updated on 2016.1.7
 
@@ -12,7 +35,7 @@ public class Solution {
         if (nums == null || nums.length == 0) {
             return 0;
         }
-        
+
         int pos = 1;
         for (int i = 1; i < nums.length; i++) {
             if (nums[i - 1] != nums[i]) {
@@ -24,8 +47,8 @@ public class Solution {
 }
 ```
 
-
 updated on 2015.12.20
+
 ```java
 public class Solution {
     public int removeDuplicates(int[] nums) {
@@ -52,13 +75,13 @@ public class Solution {
 }
 ```
 
-
 # Remove Duplicates from Sorted Array II
 
 [原題網址](http://www.lintcode.com/en/problem/remove-duplicates-from-sorted-array-ii/)
->Follow up for "Remove Duplicates":
 
->What if duplicates are allowed at most twice?
+> Follow up for "Remove Duplicates":
+>
+> What if duplicates are allowed at most twice?
 
 解題思路：
 
@@ -66,11 +89,11 @@ public class Solution {
 
 ```java
 public int removeDuplicates(int[] nums) {
-        
+
     if (nums == null || nums.length == 0) {
         return 0;
     }
-    
+
     // pos 用來紀錄目前要assign值的位置
     // count 表示 目前相同的元素出現過幾次
     int pos = 0;
@@ -86,11 +109,11 @@ public int removeDuplicates(int[] nums) {
             // 則 count 為 1
             count = 1;
         }
-        
+
         // 每次皆把值assign給pos的位置，除非 count 大於 2
         nums[pos++] = nums[i];
     }
-    
+
     return pos;
 }
 ```
@@ -98,6 +121,7 @@ public int removeDuplicates(int[] nums) {
 ---
 
 另一寫法
+
 ```java
 public int removeDuplicates(int[] nums) {
     int len = nums.length;
@@ -130,3 +154,10 @@ public int removeDuplicates(int[] nums) {
     return pre;
 }
 ```
+
+###### Reference
+
+* [https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/discuss/27970/Share-my-O\(N\)-time-and-O\(1\)-solution-when-duplicates-are-allowed-at-most-K-times](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/discuss/27970/Share-my-O%28N%29-time-and-O%281%29-solution-when-duplicates-are-allowed-at-most-K-times)
+
+
+
