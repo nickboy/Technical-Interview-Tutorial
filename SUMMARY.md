@@ -137,6 +137,7 @@
   * [Binary Tree Vertical Order Traversal](binary_tree/binary_tree_vertical_order_traversal.md)
   * [Invert Binary Tree](binary_tree/invert_binary_tree.md)
   * [Path Sum III](binary_tree/path_sum_iii.md)
+  * [Convert BST to Greater Tree](binary_tree/convert-bst-to-greater-tree.md)
 * [Heap](heap.md)
   * [Heapify](heap/heapify.md)
   * [Data Stream Median](heap/data_stream_median.md)
