@@ -79,6 +79,7 @@
   * [Power of Three](math/power_of_three.md)
   * [Perfect Number](math/perfect_number.md)
   * [Armstrong Number](math/armstrong-number.md)
+  * Sort Transformed Array
 * [Stack](stack.md)
   * [Evaluate Reverse Polish Notation](stack/evaluate_reverse_polish_notation.md)
   * [Max Tree](stack/max_tree.md)
