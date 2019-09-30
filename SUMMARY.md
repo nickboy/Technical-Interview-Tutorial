@@ -139,6 +139,7 @@
   * [Path Sum III](binary_tree/path_sum_iii.md)
   * [Convert BST to Greater Tree](binary_tree/convert-bst-to-greater-tree.md)
   * [Second Minimum Node In a Binary Tree](binary_tree/second-minimum-node-in-a-binary-tree.md)
+  * [Inorder Successor in BST II](binary_tree/inorder-successor-in-bst-ii.md)
 * [Heap](heap.md)
   * [Heapify](heap/heapify.md)
   * [Data Stream Median](heap/data_stream_median.md)
