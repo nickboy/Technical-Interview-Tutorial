@@ -13,13 +13,7 @@
 ```
 Input: 
 nums = 
-[-4,-2,2,4]
-, a = 
-1
-, b = 
-3
-, c = 
-5
+[-4,-2,2,4], a = 1, b = 3, c = 5
 Output: 
 [3,9,15,33]
 ```
@@ -28,14 +22,7 @@ Output:
 
 ```
 Input: 
-nums = 
-[-4,-2,2,4]
-, a = 
--1
-, b = 
-3
-, c = 
-5
+nums = [-4,-2,2,4], a = -1, b = 3, c = 5
 Output: 
 [-23,-5,1,7]
 ```
@@ -46,7 +33,7 @@ Output:
 
 最簡單的方法即是將每個數算出來並排序，但需耗費$$O(NlogN)$$時間。
 
-###### Option 2: 
+###### Option 2:
 
 數學解法，可惜數學不好沒想到，參考了網上教學後得知以下規則
 
@@ -62,12 +49,12 @@ class Solution {
         if (nums == null) {
             return nums;
         }
-        
+
         int length = nums.length;
         int[] result = new int[length];
         int left = 0;
         int right = length - 1;
-        
+
         if (a > 0) {
             int cur = length - 1;
             while (left <= right) {
@@ -91,10 +78,10 @@ class Solution {
                 }
             }
         }
-        
+
         return result;
     }
-    
+
     public int quadraticFunction(int val, int a, int b, int c) {
         int result = a * (val * val) + val * b + c;
         return result;
