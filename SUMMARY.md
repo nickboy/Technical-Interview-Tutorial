@@ -249,6 +249,7 @@
   * [Find all numbers in a given array that occur odd number of times](array/find_all_numbers_in_a_given_array_that_occur_odd_n.md)
   * [Find Minimum in Rotated Sorted Array II](array/find_minimum_in_rotated_sorted_array_ii.md)
   * [Search in a Sorted Array of Unknown Size](array/search-in-a-sorted-array-of-unknown-size.md)
+  * [Squares of a Sorted Array](array/squares-of-a-sorted-array.md)
 * [String](string.md)
   * [Anagrams](string/anagrams.md)
   * [Longest Substring Without Repeating Characters](string/longest_substring_without_repeating_characters.md)
