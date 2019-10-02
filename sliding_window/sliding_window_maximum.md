@@ -111,8 +111,8 @@ public ArrayList<Integer> maxSlidingWindow(int[] nums, int k) {
 
 ```java
 class Solution {
-    public int[] maxSlidingWindow(int[] a, int k) {		
-	
+    public int[] maxSlidingWindow(int[] a, int k) {        
+
         if (a == null || k <= 0) {
             return new int[0];
         }
@@ -129,7 +129,7 @@ class Solution {
             while (!deque.isEmpty() && deque.peek() < (i - k + 1)) {
                 deque.poll();
             }
-            
+
             // remove smaller numbers in k range as they are useless
             while (!deque.isEmpty() && a[deque.peekLast()] < a[i]) {
                 deque.pollLast();
@@ -146,5 +146,12 @@ class Solution {
 }
 ```
 
+##### Reference:
+
+* [https://www.youtube.com/watch?v=2SXqBsTR6a8](https://www.youtube.com/watch?v=2SXqBsTR6a8)
+
+* [https://leetcode.com/problems/sliding-window-maximum/solution/](https://leetcode.com/problems/sliding-window-maximum/solution/)
+
+* 
 
 
