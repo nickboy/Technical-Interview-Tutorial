@@ -40,7 +40,7 @@ public class Solution {
         map['C' - 'A'] = 1;
         map['G' - 'A'] = 2;
         map['T' - 'A'] = 3;
-    
+
         for(int i = 0; i < s.length() - 9; i++) {
             int v = 0;
             for(int j = i; j < i + 10; j++) {
@@ -102,6 +102,9 @@ public class Solution {
 ### Reference
 
 1. [http://blog.csdn.net/wzy\_1988/article/details/44224749](http://blog.csdn.net/wzy_1988/article/details/44224749)
+2. https://leetcode.com/problems/repeated-dna-sequences/discuss/53867/Clean-Java-solution-\(hashmap-%2B-bits-manipulation\)
+
+
 
 
 
