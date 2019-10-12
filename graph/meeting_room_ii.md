@@ -121,16 +121,42 @@ public class Solution {
 }
 ```
 
- 
-
 ---
 
-##### Really nice illustration from JobQ on [Leetcode](https://leetcode.com/problems/meeting-rooms-ii/discuss/67855/Explanation-of-%22Super-Easy-Java-Solution-Beats-98.8%22-from-%40pinkfloyda)![](https://i.loli.net/2018/09/24/5ba81e5ea9d15.jpg)
+##### \[Update on 2019.10.11\]
+
+Solution from magicyuli on Leetcode
+
+```java
+public class Solution {
+    public int minMeetingRooms(Interval[] intervals) {
+        int[] starts = new int[intervals.length];
+        int[] ends = new int[intervals.length];
+        for(int i=0; i<intervals.length; i++) {
+            starts[i] = intervals[i].start;
+            ends[i] = intervals[i].end;
+        }
+        Arrays.sort(starts);
+        Arrays.sort(ends);
+        int rooms = 0;
+        int endsItr = 0;
+        for(int i=0; i<starts.length; i++) {
+            if(starts[i]<ends[endsItr])
+                rooms++;
+            else
+                endsItr++;
+        }
+        return rooms;
+    }
+}
+```
+
+##### Really nice illustration from JobQ on [Leetcode](https://leetcode.com/problems/meeting-rooms-ii/discuss/67855/Explanation-of-"Super-Easy-Java-Solution-Beats-98.8"-from-%40pinkfloyda)![](https://i.loli.net/2018/09/24/5ba81e5ea9d15.jpg)
 
 ##### Reference
 
 1. [http://blog.csdn.net/pointbreak1/article/details/48840671](http://blog.csdn.net/pointbreak1/article/details/48840671)
-2. [https://leetcode.com/problems/meeting-rooms-ii/discuss/67855/Explanation-of-%22Super-Easy-Java-Solution-Beats-98.8%22-from-%40pinkfloyda](https://leetcode.com/problems/meeting-rooms-ii/discuss/67855/Explanation-of-%22Super-Easy-Java-Solution-Beats-98.8%22-from-%40pinkfloyda)   \(Really nice illustration\)
+2. [https://leetcode.com/problems/meeting-rooms-ii/discuss/67855/Explanation-of-%22Super-Easy-Java-Solution-Beats-98.8%22-from-%40pinkfloyda](https://leetcode.com/problems/meeting-rooms-ii/discuss/67855/Explanation-of-"Super-Easy-Java-Solution-Beats-98.8"-from-%40pinkfloyda)   \(Really nice illustration\)
 
 
 
