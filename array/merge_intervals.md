@@ -1,7 +1,5 @@
 # Merge Intervals
 
-
-
 題意：
 
 Given a collection of intervals, merge all overlapping intervals.
@@ -24,10 +22,10 @@ class Solution {
         if (intervals.length <= 1) {
             return intervals;
         }
-        
+
         // Sort the interval arry by the start time.
         Arrays.sort(intervals, (i1, i2) -> Integer.compare(i1[0], i2[0]));
-        
+
         List<int[]> result = new ArrayList<>();
         int[] newInterval = intervals[0];
         result.add(newInterval);
@@ -39,7 +37,7 @@ class Solution {
                 result.add(newInterval);
             }
         }
-        
+
         return result.toArray(new int[result.size()][]);
     }
 }
@@ -139,9 +137,17 @@ public class Solution {
 
 ---
 
-### Reference
+##### 類似問題:
 
-1. [http://bangbingsyb.blogspot.com/2014/11/leetcode-merge-intervals.html](http://bangbingsyb.blogspot.com/2014/11/leetcode-merge-intervals.html)
+* [252 Meeting Rooms](https://leetcode.com/problems/meeting-rooms/)
+
+* [253 Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)
+
+* [435 Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
+
+##### Reference
+
+1. ##### [http://bangbingsyb.blogspot.com/2014/11/leetcode-merge-intervals.html](http://bangbingsyb.blogspot.com/2014/11/leetcode-merge-intervals.html)
 2. [https://leetcode.com/problems/merge-intervals/discuss/21222/A-simple-Java-solution](https://leetcode.com/problems/merge-intervals/discuss/21222/A-simple-Java-solution)
 
 
