@@ -251,6 +251,7 @@
   * [Find Minimum in Rotated Sorted Array II](array/find_minimum_in_rotated_sorted_array_ii.md)
   * [Search in a Sorted Array of Unknown Size](array/search-in-a-sorted-array-of-unknown-size.md)
   * [Squares of a Sorted Array](array/squares-of-a-sorted-array.md)
+  * [Sort an Array](array/sort-an-array.md)
 * [String](string.md)
   * [Anagrams](string/anagrams.md)
   * [Longest Substring Without Repeating Characters](string/longest_substring_without_repeating_characters.md)
