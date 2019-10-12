@@ -125,6 +125,32 @@ public class Solution {
 
 ##### \[Update on 2019.10.11\]
 
+Replaced with Lambda function
+
+```java
+class Solution {
+    public int minMeetingRooms(int[][] intervals) {
+        if (intervals.length <= 1) {
+            return intervals.length;
+        }
+        
+        Arrays.sort(intervals, (i1, i2) -> Integer.compare(i1[0], i2[0]));
+        PriorityQueue<Integer> q = new PriorityQueue<>();
+        
+        q.offer(intervals[0][1]);
+        for (int i = 1; i < intervals.length; i++) {
+            int val = q.peek();
+            if (intervals[i][0] >= val) {
+                q.poll();   
+            }
+            q.offer(intervals[i][1]);
+        }
+        
+        return q.size();
+    }
+}
+```
+
 Solution from magicyuli on Leetcode
 
 ```java
@@ -151,12 +177,12 @@ public class Solution {
 }
 ```
 
-##### Really nice illustration from JobQ on [Leetcode](https://leetcode.com/problems/meeting-rooms-ii/discuss/67855/Explanation-of-"Super-Easy-Java-Solution-Beats-98.8"-from-%40pinkfloyda)![](https://i.loli.net/2018/09/24/5ba81e5ea9d15.jpg)
+##### Really nice illustration from JobQ on \[Leetcode\]\([https://leetcode.com/problems/meeting-rooms-ii/discuss/67855/Explanation-of-"Super-Easy-Java-Solution-Beats-98.8"-from-%40pinkfloyda\)!\[\]\(https://i.loli.net/2018/09/24/5ba81e5ea9d15.jpg](https://leetcode.com/problems/meeting-rooms-ii/discuss/67855/Explanation-of-"Super-Easy-Java-Solution-Beats-98.8"-from-%40pinkfloyda%29![]%28https://i.loli.net/2018/09/24/5ba81e5ea9d15.jpg)\)
 
 ##### Reference
 
 1. [http://blog.csdn.net/pointbreak1/article/details/48840671](http://blog.csdn.net/pointbreak1/article/details/48840671)
-2. [https://leetcode.com/problems/meeting-rooms-ii/discuss/67855/Explanation-of-%22Super-Easy-Java-Solution-Beats-98.8%22-from-%40pinkfloyda](https://leetcode.com/problems/meeting-rooms-ii/discuss/67855/Explanation-of-"Super-Easy-Java-Solution-Beats-98.8"-from-%40pinkfloyda)   \(Really nice illustration\)
+2. \[[https://leetcode.com/problems/meeting-rooms-ii/discuss/67855/Explanation-of-"Super-Easy-Java-Solution-Beats-98.8"-from-%40pinkfloyda\]\(https://leetcode.com/problems/meeting-rooms-ii/discuss/67855/Explanation-of-"Super-Easy-Java-Solution-Beats-98.8"-from-%40pinkfloyda](https://leetcode.com/problems/meeting-rooms-ii/discuss/67855/Explanation-of-"Super-Easy-Java-Solution-Beats-98.8"-from-%40pinkfloyda]%28https://leetcode.com/problems/meeting-rooms-ii/discuss/67855/Explanation-of-"Super-Easy-Java-Solution-Beats-98.8"-from-%40pinkfloyda)\)   \(Really nice illustration\)
 
 
 
