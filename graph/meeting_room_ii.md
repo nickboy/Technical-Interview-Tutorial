@@ -4,15 +4,14 @@
 
 題意：
 
-Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si < ei), find the minimum number of conference rooms required.
+Given an array of meeting time intervals consisting of start and end times \[\[s1,e1\],\[s2,e2\],...\] \(si &lt; ei\), find the minimum number of conference rooms required.
 
 For example,
 
-Given [[0, 30],[5, 10],[15, 20]],
+Given \[\[0, 30\],\[5, 10\],\[15, 20\]\],  
 return 2.
 
 為[Meeting Room]() 的follow up，在此找出最少需要多少會議室。
-
 
 解題思路：
 
@@ -21,7 +20,6 @@ return 2.
 1. HEAP為空，表示前面沒會議，或是沒有衝突
 2. HEAP頂端元素比當前interval的start小，表示與前面的沒有衝突到，把先結束的會議移掉，再把目前的會議放進去。
 3. HEAP頂端元素比當前interval的start大，表示衝了，所以直接塞進去，前面的也拿不出來了。
-
 
 ```java
 /**
@@ -34,7 +32,7 @@ return 2.
  * }
  */
 public class Solution {
-    
+
     public class IntervalComparator implements Comparator<Interval> {
         @Override
         public int compare(Interval iOne, Interval iTwo) {
@@ -45,12 +43,12 @@ public class Solution {
             }
         }
     }
-    
+
     public int minMeetingRooms(Interval[] intervals) {
         if (intervals == null || intervals.length == 0) {
             return 0;
         }
-        
+
         Arrays.sort(intervals, new IntervalComparator());
         PriorityQueue<Integer> q = new PriorityQueue<Integer>();
         int room = 0;
@@ -69,9 +67,9 @@ public class Solution {
                 q.add(intervals[i].end);
             }
         }
-        
+
         return room;
-        
+
     }
 }
 ```
@@ -89,7 +87,7 @@ updated on 2016.1.12
  * }
  */
 public class Solution {
-    
+
     public class IntervalComparator implements Comparator<Interval> {
         public int compare(Interval one, Interval two) {
             if (one.start != two.start) {
@@ -99,16 +97,16 @@ public class Solution {
             }
         }
     }
-    
-    
+
+
     public int minMeetingRooms(Interval[] intervals) {
         if (intervals == null || intervals.length == 0) {
             return 0;
         }
-        
+
         Arrays.sort(intervals, new IntervalComparator());
         PriorityQueue<Integer> q = new PriorityQueue<Integer>();
-        
+
         q.offer(intervals[0].end);
         for (int i = 1; i < intervals.length; i++) {
             int val = q.peek();
@@ -123,6 +121,16 @@ public class Solution {
 }
 ```
 
+ 
+
 ---
-###Reference
-1. http://blog.csdn.net/pointbreak1/article/details/48840671
+
+##### Really nice illustration from JobQ on [Leetcode](https://leetcode.com/problems/meeting-rooms-ii/discuss/67855/Explanation-of-%22Super-Easy-Java-Solution-Beats-98.8%22-from-%40pinkfloyda)![](https://i.loli.net/2018/09/24/5ba81e5ea9d15.jpg)
+
+##### Reference
+
+1. [http://blog.csdn.net/pointbreak1/article/details/48840671](http://blog.csdn.net/pointbreak1/article/details/48840671)
+2. [https://leetcode.com/problems/meeting-rooms-ii/discuss/67855/Explanation-of-%22Super-Easy-Java-Solution-Beats-98.8%22-from-%40pinkfloyda](https://leetcode.com/problems/meeting-rooms-ii/discuss/67855/Explanation-of-%22Super-Easy-Java-Solution-Beats-98.8%22-from-%40pinkfloyda)   \(Really nice illustration\)
+
+
+
