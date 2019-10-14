@@ -3,10 +3,43 @@
 [原題網址](http://www.lintcode.com/en/problem/insert-node-in-a-binary-search-tree/)
 
 > Given a binary search tree and a new tree node, insert the node into the tree. You should keep the tree still be a valid binary search tree.
+>
+> 題目要新加入一個數子到二元搜索樹 BST
 
-> 題目要新加入一個數子到二元搜索樹 BST 
+\[Update on 2019.10.13\]
 
-有關二元搜索樹 [Binary Search Tree]() 的特性，之前介紹過
+有另一個解法只需要一個指針，來自於網友[TuWang](https://github.com/awangdev/LintCode/blob/master/Java/Count%20of%20Smaller%20Number%20before%20itself.java).
+
+```js
+class Solution {
+    public TreeNode insertIntoBST(TreeNode root, int val) {
+        if (root == null) {
+            return new TreeNode(val);
+        }
+        
+        TreeNode dummy = root;
+        while (root != null) {
+            if (root.val >= val) {
+                if (root.left == null) {
+                    root.left = new TreeNode(val);
+                    break;
+                }
+                root = root.left;
+            } else {
+                if (root.right == null) {
+                    root.right = new TreeNode(val);
+                    break;
+                }
+                root = root.right;
+            }
+        }
+        
+        return dummy;
+    }
+}
+```
+
+有關二元搜索樹 [Binary Search Tree]() 的特性，之前介紹過  
 ，`父節點`要比`左子樹`大並且比`右子樹`小。因此在解這題時，必須要一直比較每個節點，如果比一個節點 `node_A` 大，往節點的右子樹 `node_A.right` 比較；相反地，若是比結點小，往節點的左子樹 `node_A.left` 比較。當比較後我們找到一個空的位置 `null` ，就是我們要加入的點。先來看看題目給的輸入參數和要回傳的資料：
 
 ```
@@ -15,7 +48,7 @@
 @return: The root of the new binary search tree.
 ```
 
-考慮到重複一直做相同動作`比較->左或右`，用遞迴的方式去編寫這個程式是最直覺的，並且想法是帶有 Divide & Conquer 的觀念。
+考慮到重複一直做相同動作`比較->左或右`，用遞迴的方式去編寫這個程式是最直覺的，並且想法是帶有 Divide & Conquer 的觀念。  
 如果新加入的節點 `node` 是要加入`右子樹`， `root` 的右子樹就是會一個加入 `node` 後回傳的一棵樹，也就是再呼叫程式自己本身而得到的樹：
 
 ```java
@@ -23,7 +56,7 @@ public TreeNode insertNode(TreeNode root, TreeNode node) {
     if ( root == null ) { // 邊界條件
         return node;
     }
-    
+
     if ( node.val > root.val ) {
         root.right = insertNode(root.right, node);
     } else {
@@ -39,7 +72,7 @@ public TreeNode insertNode(TreeNode root, TreeNode node) {
 public class Solution {
 
     public TreeNode insertNode(TreeNode root, TreeNode node) {
-        
+
         if (root == null) {
             return node;
         }
@@ -63,4 +96,7 @@ public class Solution {
 }
 ```
 
-> 時間複雜度 O(logn)
+> 時間複雜度 O\(logn\)
+
+
+
